@@ -1,9 +1,7 @@
-
-
-<h2>Deploy Your Machine Learning Model as a REST API with Docker using pyhton
+<h2>Run Your Machine Learning Model as a REST API using jupyterLab
 </h2>
 
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/angular.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/angular.png "Logo Title Text 1")
+![./images/angular.png](./images/angular.png)
 
 
 <h2>****  PART1 ****</h2>
@@ -202,14 +200,12 @@ if __name__ == '__main__':
 Okay, are you ready?
 
 <h4>Step 5</h4>
- Run the file `app.py` if no error occur open browser and navigate to `http://localhost:5002/` and you will see 'Hello World!'.
+ Run the file `app.py` if no error occur open browser and navigate to `http://host-ip:5002/` and you will see 'Hello World!'.
    Now our server is online and listening to request.
 
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/mlGUI.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/mlGUI.png "Logo Title Text 1")
+![./images/mlGUI.png](./images/mlGUI.png)
 
 
-<h4>Step 6</h4>
-<h5>Deploy the code as a microservice using docker</h5>
 First, create a file  `requirements.txt` to add all the librairies require for our app
 Add the following text to newly created  `requirements.txt`
 
@@ -221,54 +217,9 @@ scipy
 matplotlib
 flask-cors
 ```
-Now   create  the `Dockerfile` and add following commands to docker
-```
-FROM ubuntu:latest
-RUN apt-get update -y
-FROM python:3
-COPY . /app
-WORKDIR /app
-RUN pip install --no-cache-dir -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
-EXPOSE 5002
-```
-Now we are done for this step.Now we will create and deploy our docker image
-
-<h4>Step 7 </h4>
-
-Run Following command to create image of docker for our app (Run this command in terminal after nvaigating to project directory)
-
-```
-docker build -t abcdef:latest .
-
-```
 
 
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/mlDocker00.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/mlDocker00.png "Logo Title Text 1")
-
-
-here `abcdef` is the name of image you change it to your choice
-
-now run the following command in terminal to deploy and making it online.
-
-```
-docker run -d -p 5002:5002 abcdef`
-```
-now our app is listening on port 5002
-to check the if your image is running or not  use the following command
-
-```
-docker ps -a
-```
-
-
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/mlDocker.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/mlDocker.png "Logo Title Text 1")
-
-
-you will see the name of your image in list `abcdef` (in this case) and status should be `up` .Now navigate to `http://localhost:5002/` and you will see 'Hello World!'.
-
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/mlGUI.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/mlGUI.png "Logo Title Text 1")
+![./images/mlGUI.png](./images/mlGUI.png)
    
 
 
@@ -286,7 +237,7 @@ ng new RestClientAngularWeb
 cd RestClientAngularWeb
 ng serve
 ```
-if everything works as expected then open browser and navigate to `http://localhost:4200/` and you should see the default angular homepage
+if everything works as expected then open browser and navigate to `http://<host-ip>:4200/` and you should see the default angular homepage
 
 
 <h4>Step 2</h4>
@@ -399,125 +350,29 @@ make sure that flask server is up and running we disscussed in part1
 !!!!!!!!!!!!!!!
 
 
-Now run the command `ng serve` from terminal inside the angular project folder 
-if everything works as expected then open browser and navigate to `http://localhost:4200/` and you will see the homepage with form to enter the data for prediction and you result will be on bottom coming from REST server
+Now run the command `ng serve --host 0.0.0.0` from terminal inside the angular project folder 
+if everything works as expected then open browser and navigate to `http://host-ip:4200/` and you will see the homepage with form to enter the data for prediction and you result will be on bottom coming from REST server
 
 
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI1.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI1.png "Logo Title Text 1")
+![./images/angularGUI1.png](./images/angularGUI1.png)
 
 
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI2.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI2.png "Logo Title Text 1")
+![./images/angularGUI2.png](./images/angularGUI2.png)
+
+![./images/angularGUI1.png](./images/angularGUI1.png)
 
 
-<h4>Step 6 </h4>
-Now   create  the `Dockerfile` and add following commands to docker
+![./images/angularGUI2.png](./images/angularGUI2.png)
+
  
-```
-# base image
-FROM node:12.2.0
-
-# install chrome for protractor tests
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-RUN apt-get update && apt-get install -yq google-chrome-stable
-
-# set working directory
-WORKDIR /app
-
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-
-# install and cache app dependencies
-COPY package.json /app/package.json
-RUN npm install
-RUN npm install -g @angular/cli
-
-# add app
-COPY . /app
-
-# start app
-CMD ng serve --host 0.0.0.0
-```
- 
-Now we are done for this step.its time to create and deploy our docker image
-<h4>Step 7</h4>
-Create a .dockerignore as well and add following lines:
-
-```
-node_modules
-.git
-.gitignore
-```
-
-This will speed up the Docker build process as our local dependencies and git repo will not be sent to the Docker daemon.
-<h4>Step 7 </h4>
-<h5>Deploy with docker</h5>
-Run Following command to create image of docker for our app (Run this command in terminal after nvaigating to project directory)
-
-```
-docker build -t angel:latest .
-```
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/angularB1.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/angularB1.png "Logo Title Text 1")
-
-here `angel` is the name of image you change it too
-now run the following command in terminal to up the app
-
-```
-docker run -v "${PWD}:/app" -v /app/node_modules -p 4200:4200 --rm angel:latest
-```
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/angularB2.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/angularB2.png "Logo Title Text 1")
-now our app is listening on port 4200
-to check the if your image is running or not  use the following command
-
-```
-docker ps -a
-```
-you will see the name of your image in list `angel` (in this case) and status should be up.Now navigate to `http://localhost:4200/` and you will see GUI with form to take parameters from user
-
-
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI1.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI1.png "Logo Title Text 1")
-
-
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI2.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI2.png "Logo Title Text 1")
-
-
-
-
-<h2>****  PART3 ****</h2>
-<h3>Dockerize our application for ready to Deploy anywhere</h3>
-
-  Now Create the file `docker-compose.yml` and add the following lines
-  
-  ```
-  version: "2"
-
-services:
-  ml_rest:
-    build: ML_REST
-    ports:
-    - "5002:5002"
-    
-
-  angle:
-    build: RestClientAngularWeb
-    ports:
-    - "4200:4200"
-```
- Now open the terminal navigate to our project directory and run the following command 
- 
- ```
- docker-compose up
- 
- ```
- 
- ![https://github.com/fenago/microservices/blob/master/coin/mdimg/dockerRest1.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/dockerRest1.png "Logo Title Text 1")
+![./images/dockerRest1.png](./images/dockerRest1.png)
  
  
-  ![https://github.com/fenago/microservices/blob/master/coin/mdimg/dockerRest2.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/dockerRest2.png "Logo Title Text 1")
+![./images/dockerRest2.png](./images/dockerRest2.png)
   
   
-Now wait to finish it.Once finished open the browser and navigate to localhost:5002 for FLASK app trsting and localhost:4200 angular app and you will see the GUI to enter the parameter to get prediction 
+Now wait to finish it. Once finished open the browser and navigate to <host-ip>:5002 for FLASK app trsting and <host-ip>:4200 angular app and you will see the GUI to enter the parameter to get prediction 
 
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/mlGUI.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/mlGUI.png "Logo Title Text 1")
+![./images/mlGUI.png](./images/mlGUI.png)
 
-![https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI2.png](https://github.com/fenago/microservices/blob/master/coin/mdimg/angularGUI2.png "Logo Title Text 1")
+![./images/angularGUI2.png](./images/angularGUI2.png)
