@@ -1,16 +1,5 @@
-**Python Machine Learning Mini-Course** {style="margin-top: 0in; margin-bottom: 0.15in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; page-break-after: auto"}
+**Python Machine Learning Mini-Course**
 =======================================
-
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on
-September 26, 2016 in [**Python Machine
-Learning**](https://machinelearningmastery.com/category/python-machine-learning/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on August 21, 2019
 
 ### ***From******Developer******to******Machine Learning Practitioner******in 14 Days*** 
 
@@ -29,24 +18,6 @@ book](https://machinelearningmastery.com/machine-learning-with-python/),
 with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started.
-
--   **Update Oct/2016**: Updated examples for sklearn v0.18.
-
--   **Update Feb/2018**: Update Python and library versions.
-
--   **Update Mar/2018**: Added alternate link to download some datasets
-    as the originals appear to have been taken down.
-
--   **Update May/2019**: Fixed warning messages for latest version of
-    scikit-learn .
-
-![](../quia_ipsa_html_72d34400b349c3d2.jpg)
-
-Python Machine Learning Mini-Course
-
-Photo by [Dave
-Young](https://www.flickr.com/photos/dcysurfer/7056436373/), some rights
-reserved.
 
 **Who Is This Mini-Course For?** 
 --------------------------------
@@ -172,34 +143,27 @@ Start Python for the first time by typing “python” at the command line.
 Check the versions of everything you are going to need using the code
 below:
 
-  ---- ------------------------------------------------------------
+```
 # Python version
 import sys
 print('Python: {}'.format(sys.version))
 # scipy
 import scipy
- print('scipy: {}'.format(scipy.__version__))
+print('scipy: {}'.format(scipy.__version__))
 # numpy
 import numpy
 print('numpy: {}'.format(numpy.__version__))
 # matplotlib
- import matplotlib
+import matplotlib
 print('matplotlib: {}'.format(matplotlib.__version__))
 # pandas
-  14   import pandas
-  15   print('pandas: {}'.format(pandas.__version__))
-  16   # scikit-learn
-  17   import sklearn
-  18   print('sklearn: {}'.format(sklearn.__version__))
-  ---- ------------------------------------------------------------
+import pandas
+print('pandas: {}'.format(pandas.__version__))
+# scikit-learn
+import sklearn
+print('sklearn: {}'.format(sklearn.__version__))
+```
 
-If there are any errors, stop. Now is the time to fix them.
-
-Need help? See this tutorial:
-
--   [How to Setup a Python Environment for Machine Learning and Deep
-    Learning with
-    Anaconda](https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/)
 
 **Lesson 2: Get Around In Python, NumPy, Matplotlib and Pandas.** 
 -----------------------------------------------------------------
@@ -226,21 +190,14 @@ For example, below is a simple example of creating a Pandas
 **DataFrame**.
 
 ```
-  1   # dataframe
-      
-  2   import numpy
-      
-  3   import pandas
-      
-  4   myarray = numpy.array([[1, 2, 3], [4, 5, 6]])
-      
-  5   rownames = ['a', 'b']
-      
-  6   colnames = ['one', 'two', 'three']
-      
-  7   mydataframe = pandas.DataFrame(myarray, index=rownames, columns=colnames)
-      
-  8   print(mydataframe)
+# dataframe
+import numpy
+import pandas
+myarray = numpy.array([[1, 2, 3], [4, 5, 6]])
+rownames = ['a', 'b']
+colnames = ['one', 'two', 'three']
+mydataframe = pandas.DataFrame(myarray, index=rownames, columns=colnames)
+print(mydataframe)
 ```
 
 **Lesson 3: Load Data From CSV** 
@@ -274,19 +231,14 @@ To get you started, below is a snippet that will load the Pima Indians
 onset of diabetes dataset using Pandas directly from the UCI Machine
 Learning Repository.
 
--
-  1   # Load CSV using Pandas from URL
-      
-  2   import pandas
-      
-  3   url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-      
-  4   names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-      
-  5   data = pandas.read_csv(url, names=names)
-      
-  6   print(data.shape)
--
+```
+# Load CSV using Pandas from URL
+import pandas
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(url, names=names)
+print(data.shape)
+```
 
 Well done for making it this far! Hang in there.
 
@@ -323,21 +275,15 @@ the Pandas DataFrame.
 The below example loads the Pima Indians onset of diabetes dataset and
 summarizes the distribution of each attribute.
 
--
-  1   # Statistical Summary
-      
-  2   import pandas
-      
-  3   url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-      
-  4   names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-      
-  5   data = pandas.read_csv(url, names=names)
-      
-  6   description = data.describe()
-      
-  7   print(description)
--
+```
+# Statistical Summary
+import pandas
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(url, names=names)
+description = data.describe()
+print(description)
+```
 
 **Try it out!**
 
@@ -365,25 +311,17 @@ using the helper functions provided on the Pandas DataFrame.
 For example, the snippet below will load the diabetes dataset and create
 a scatterplot matrix of the dataset.
 
--
-  1   # Scatter Plot Matrix
-      
-  2   import matplotlib.pyplot as plt
-      
-  3   import pandas
-      
-  4   from pandas.plotting import scatter_matrix
-      
-  5   url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-      
-  6   names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-      
-  7   data = pandas.read_csv(url, names=names)
-      
-  8   scatter_matrix(data)
-      
-  9   plt.show()
--
+```
+# Scatter Plot Matrix
+import matplotlib.pyplot as plt
+import pandas
+from pandas.plotting import scatter_matrix
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(url, names=names)
+scatter_matrix(data)
+plt.show()
+```
 
 ![](../quia_ipsa_html_97bc995fd51d7a83.png)
 
@@ -424,17 +362,17 @@ from sklearn.preprocessing import StandardScaler
 import pandas
 import numpy
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
- names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 dataframe = pandas.read_csv(url, names=names)
 array = dataframe.values
 # separate array into input and output components
 X = array[:,0:8]
- Y = array[:,8]
+Y = array[:,8]
 scaler = StandardScaler().fit(X)
 rescaledX = scaler.transform(X)
-  14   # summarize transformed data
-  15   numpy.set_printoptions(precision=3)
-  16   print(rescaledX[0:5,:])
+# summarize transformed data
+numpy.set_printoptions(precision=3)
+print(rescaledX[0:5,:])
 ```
 
 **Lesson 7: Algorithm Evaluation With Resampling Methods** 
@@ -471,16 +409,16 @@ from pandas import read_csv
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
- url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 dataframe = read_csv(url, names=names)
 array = dataframe.values
 X = array[:,0:8]
- Y = array[:,8]
+Y = array[:,8]
 kfold = KFold(n_splits=10, random_state=7)
 model = LogisticRegression(solver='liblinear')
-  14   results = cross_val_score(model, X, Y, cv=kfold)
-  15   print("Accuracy: %.3f%% (%.3f%%)") % (results.mean()\*100.0, results.std()\*100.0)
+results = cross_val_score(model, X, Y, cv=kfold)
+print("Accuracy: %.3f%% (%.3f%%)") % (results.mean()*100.0, results.std()*100.0)
 ```
 
 What accuracy did you get? Let me know in the comments.
@@ -515,17 +453,17 @@ from pandas import read_csv
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
- url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 dataframe = read_csv(url, names=names)
 array = dataframe.values
 X = array[:,0:8]
- Y = array[:,8]
+Y = array[:,8]
 kfold = KFold(n_splits=10, random_state=7)
 model = LogisticRegression(solver='liblinear')
-  14   scoring = 'neg_log_loss'
-  15   results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
-  16   print("Logloss: %.3f (%.3f)") % (results.mean(), results.std())
+scoring = 'neg_log_loss'
+results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
+print("Logloss: %.3f (%.3f)") % (results.mean(), results.std())
 ```
 
 What log loss did you get? Let me know in the comments.
@@ -562,17 +500,17 @@ from pandas import read_csv
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.neighbors import KNeighborsRegressor
- url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.data"
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.data"
 names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
 dataframe = read_csv(url, delim_whitespace=True, names=names)
 array = dataframe.values
 X = array[:,0:13]
- Y = array[:,13]
+Y = array[:,13]
 kfold = KFold(n_splits=10, random_state=7)
 model = KNeighborsRegressor()
-  14   scoring = 'neg_mean_squared_error'
-  15   results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
-  16   print(results.mean())
+scoring = 'neg_mean_squared_error'
+results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
+print(results.mean())
 ```
 
 What mean squared error did you get? Let me know in the comments.
@@ -605,29 +543,29 @@ from pandas import read_csv
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
- from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 # load dataset
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 dataframe = read_csv(url, names=names)
- array = dataframe.values
+array = dataframe.values
 X = array[:,0:8]
 Y = array[:,8]
-  14   # prepare models
-  15   models = []
-  16   models.append(('LR', LogisticRegression(solver='liblinear')))
-  17   models.append(('LDA', LinearDiscriminantAnalysis()))
-  18   # evaluate each model in turn
-  19   results = []
-  20   names = []
-  21   scoring = 'accuracy'
-       for name, model in models:
-  23   kfold = KFold(n_splits=10, random_state=7)
-  24   cv_results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
-  25   results.append(cv_results)
-  26   names.append(name)
-  27   msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
-  28   print(msg)
+# prepare models
+models = []
+models.append(('LR', LogisticRegression(solver='liblinear')))
+models.append(('LDA', LinearDiscriminantAnalysis()))
+# evaluate each model in turn
+results = []
+names = []
+scoring = 'accuracy'
+for name, model in models:
+	kfold = KFold(n_splits=10, random_state=7)
+	cv_results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
+	results.append(cv_results)
+	names.append(name)
+	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+	print(msg)
 ```
 
 Which algorithm got better results? Can you do better? Let me know in
@@ -661,19 +599,19 @@ from pandas import read_csv
 import numpy
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import GridSearchCV
- url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 dataframe = read_csv(url, names=names)
 array = dataframe.values
 X = array[:,0:8]
- Y = array[:,8]
+Y = array[:,8]
 alphas = numpy.array([1,0.1,0.01,0.001,0.0001,0])
 param_grid = dict(alpha=alphas)
-  14   model = Ridge()
-  15   grid = GridSearchCV(estimator=model, param_grid=param_grid, cv=3)
-  16   grid.fit(X, Y)
-  17   print(grid.best_score_)
-  18   print(grid.best_estimator_.alpha)
+model = Ridge()
+grid = GridSearchCV(estimator=model, param_grid=param_grid, cv=3)
+grid.fit(X, Y)
+print(grid.best_score_)
+print(grid.best_estimator_.alpha)
 ```
 
 Which parameters achieved the best results? Can you do better? Let me
@@ -711,18 +649,18 @@ from pandas import read_csv
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestClassifier
- url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 dataframe = read_csv(url, names=names)
 array = dataframe.values
 X = array[:,0:8]
- Y = array[:,8]
+Y = array[:,8]
 num_trees = 100
 max_features = 3
-  14   kfold = KFold(n_splits=10, random_state=7)
-  15   model = RandomForestClassifier(n_estimators=num_trees, max_features=max_features)
-  16   results = cross_val_score(model, X, Y, cv=kfold)
-  17   print(results.mean())
+kfold = KFold(n_splits=10, random_state=7)
+model = RandomForestClassifier(n_estimators=num_trees, max_features=max_features)
+results = cross_val_score(model, X, Y, cv=kfold)
+print(results.mean())
 ```
 
 Can you devise a better ensemble? Let me know in the comments.
@@ -745,38 +683,35 @@ For example, the snippet below shows how you can create a Logistic
 Regression model, save it to file, then load it later and make
 predictions on unseen data.
 
-```--------
+```
 # Save Model Using Pickle
 from pandas import read_csv
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 import pickle
- url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 dataframe = read_csv(url, names=names)
 array = dataframe.values
 X = array[:,0:8]
- Y = array[:,8]
+Y = array[:,8]
 test_size = 0.33
 seed = 7
-  14   X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=test_size, random_state=seed)
-  15   # Fit the model on 33%
-  16   model = LogisticRegression(solver='liblinear')
-  17   model.fit(X_train, Y_train)
-  18   # save the model to disk
-  19   filename = 'finalized_model.sav'
-  20   pickle.dump(model, open(filename, 'wb'))
-  21   \
-        \
-       # some time later...
-  23   
-       \
-  24    \
-  25   # load the model from disk
-  26   loaded_model = pickle.load(open(filename, 'rb'))
-  27   result = loaded_model.score(X_test, Y_test)
-       print(result)
-```--------
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=test_size, random_state=seed)
+# Fit the model on 33%
+model = LogisticRegression(solver='liblinear')
+model.fit(X_train, Y_train)
+# save the model to disk
+filename = 'finalized_model.sav'
+pickle.dump(model, open(filename, 'wb'))
+ 
+# some time later...
+ 
+# load the model from disk
+loaded_model = pickle.load(open(filename, 'rb'))
+result = loaded_model.score(X_test, Y_test)
+print(result)
+```
 
 **Lesson 14: Hello World End-to-End Project** 
 ---------------------------------------------
@@ -814,11 +749,6 @@ comments.
 **The End!** 
 ------------
 
-**(*****Look How Far You Have Come*****)** 
-------------------------------------------
-
-You made it. Well done!
-
 Take a moment and look back at how far you have come.
 
 -   You started off with an interest in machine learning and a strong
@@ -839,6 +769,3 @@ Take a moment and look back at how far you have come.
 -   Using a standard template, the recipes and experience you have
     gathered you are now capable of working through new and different
     predictive modeling machine learning problems on your own.
-
-\
-

@@ -224,23 +224,16 @@ way.
 For example, the snippet of code below will load a text file, split
 tokens by whitespace and convert each token to lowercase.
 
-  --- ------------------------------------------
-  1   filename = '...'
-      
-  2   file = open(filename, 'rt')
-      
-  3   text = file.read()
-      
-  4   file.close()
-      
-  5   # split into words by white space
-      
-  6   words = text.split()
-      
-  7   # convert to lowercase
-      
-  8   words = [word.lower() for word in words]
-  --- ------------------------------------------
+```
+filename = '...'
+file = open(filename, 'rt')
+text = file.read()
+file.close()
+# split into words by white space
+words = text.split()
+# convert to lowercase
+words = [word.lower() for word in words]
+```
 
 You can imagine how this snippet could be extended to handle and
 normalize Unicode characters, remove punctuation and so on.
@@ -254,45 +247,40 @@ Toolkit or NLTK for short.
 You can install this library using pip by typing the following on the
 command line:
 
-  --- --------------------------
-  1   sudo pip install -U nltk
-  --- --------------------------
+```
+sudo pip install -U nltk
+```
 
 After it is installed, you must also install the datasets used by the
 library, either via a Python script:
 
-  --- -----------------
-  1   import nltk
-      
-  2   nltk.download()
-  --- -----------------
+```
+import nltk
+nltk.download()
+
+```
 
 or via a command line:
 
-  --- -------------------------------
-  1   python -m nltk.downloader all
-  --- -------------------------------
+```
+python -m nltk.downloader all
+
+```
 
 Once installed, you can use the API to tokenize text. For example, the
 snippet below will load and tokenize an ASCII text file.
 
-  --- ------------------------------------------
-  1   # load data
-      
-  2   filename = '...'
-      
-  3   file = open(filename, 'rt')
-      
-  4   text = file.read()
-      
-  5   file.close()
-      
-  6   # split into words
-      
-  7   from nltk.tokenize import word\_tokenize
-      
-  8   tokens = word\_tokenize(text)
-  --- ------------------------------------------
+```
+# load data
+filename = '...'
+file = open(filename, 'rt')
+text = file.read()
+file.close()
+# split into words
+from nltk.tokenize import word_tokenize
+tokens = word_tokenize(text)
+
+```
 
 There are many tools available in this library and you can further
 refine the clean tokens using your own manual methods, such as removing
@@ -367,25 +355,25 @@ across all documents called TfidfVectorizer.
 The snippet below shows how to train the TfidfVectorizer bag-of-words
 encoder and use it to encode multiple small text documents.
 
-  ---- --------------------------------------------------------------
-from sklearn.feature\_extraction.text import TfidfVectorizer
+```
+from sklearn.feature_extraction.text import TfidfVectorizer
 # list of text documents
 text = ["The quick brown fox jumped over the lazy dog.",
-"The dog.",
-"The fox"]
- # create the transform
+		"The dog.",
+		"The fox"]
+# create the transform
 vectorizer = TfidfVectorizer()
 # tokenize and build vocab
 vectorizer.fit(text)
 # summarize
- print(vectorizer.vocabulary\_)
-print(vectorizer.idf\_)
+print(vectorizer.vocabulary_)
+print(vectorizer.idf_)
 # encode document
-  14   vector = vectorizer.transform([text[0]])
-  15   # summarize encoded vector
-  16   print(vector.shape)
-  17   print(vector.toarray())
-  ---- --------------------------------------------------------------
+vector = vectorizer.transform([text[0]])
+# summarize encoded vector
+print(vector.shape)
+print(vector.toarray())
+```
 
 ### **Bag-of-Words with Keras** 
 
@@ -400,27 +388,27 @@ prior to encoding the words.
 The snippet below demonstrates how to train and encode some small text
 documents using the Keras API and the ‘count’ type scoring of words.
 
-  ---- ---------------------------------------------------------
+```
 from keras.preprocessing.text import Tokenizer
 # define 5 documents
 docs = ['Well done!',
-'Good work',
-'Great effort',
- 'nice work',
-'Excellent!']
+		'Good work',
+		'Great effort',
+		'nice work',
+		'Excellent!']
 # create the tokenizer
 t = Tokenizer()
 # fit the tokenizer on the documents
- t.fit\_on\_texts(docs)
+t.fit_on_texts(docs)
 # summarize what was learned
-print(t.word\_counts)
-  14   print(t.document\_count)
-  15   print(t.word\_index)
-  16   print(t.word\_docs)
-  17   # integer encode documents
-  18   encoded\_docs = t.texts\_to\_matrix(docs, mode='count')
-  19   print(encoded\_docs)
-  ---- ---------------------------------------------------------
+print(t.word_counts)
+print(t.document_count)
+print(t.word_index)
+print(t.word_docs)
+# integer encode documents
+encoded_docs = t.texts_to_matrix(docs, mode='count')
+print(encoded_docs)
+```
 
 ### **Your Task** 
 
@@ -478,31 +466,31 @@ representations from text documents,
 You can install Gensim using pip by typing the following on your command
 line:
 
-  --- -----------------------
-  1   pip install -U gensim
-  --- -----------------------
+```
+pip install -U gensim
+```
 
 The snippet below shows how to define a few contrived sentences and
 train a word embedding representation in Gensim.
 
-  ---- -----------------------------------------------------------------------------
+```
 from gensim.models import Word2Vec
 # define training data
 sentences = [['this', 'is', 'the', 'first', 'sentence', 'for', 'word2vec'],
-['this', 'is', 'the', 'second', 'sentence'],
-['yet', 'another', 'sentence'],
- ['one', 'more', 'sentence'],
-['and', 'the', 'final', 'sentence']]
+			['this', 'is', 'the', 'second', 'sentence'],
+			['yet', 'another', 'sentence'],
+			['one', 'more', 'sentence'],
+			['and', 'the', 'final', 'sentence']]
 # train model
-model = Word2Vec(sentences, min\_count=1)
+model = Word2Vec(sentences, min_count=1)
 # summarize the loaded model
- print(model)
+print(model)
 # summarize vocabulary
 words = list(model.wv.vocab)
-  14   print(words)
-  15   # access vector for one word
-  16   print(model['sentence'])
-  ---- -----------------------------------------------------------------------------
+print(words)
+# access vector for one word
+print(model['sentence'])
+```
 
 ### **Use Embeddings** 
 
@@ -517,29 +505,29 @@ Analysis or PCA, available in scikit-learn.
 The snippet below shows how to train a word embedding model and then
 plot a two-dimensional projection of all words in the vocabulary.
 
-  ---- -----------------------------------------------------------------------------
+```
 from gensim.models import Word2Vec
 from sklearn.decomposition import PCA
 from matplotlib import pyplot
 # define training data
 sentences = [['this', 'is', 'the', 'first', 'sentence', 'for', 'word2vec'],
- ['this', 'is', 'the', 'second', 'sentence'],
-['yet', 'another', 'sentence'],
-['one', 'more', 'sentence'],
-['and', 'the', 'final', 'sentence']]
+			['this', 'is', 'the', 'second', 'sentence'],
+			['yet', 'another', 'sentence'],
+			['one', 'more', 'sentence'],
+			['and', 'the', 'final', 'sentence']]
 # train model
- model = Word2Vec(sentences, min\_count=1)
+model = Word2Vec(sentences, min_count=1)
 # fit a 2D PCA model to the vectors
 X = model[model.wv.vocab]
-  14   pca = PCA(n\_components=2)
-  15   result = pca.fit\_transform(X)
-  16   # create a scatter plot of the projection
-  17   pyplot.scatter(result[:, 0], result[:, 1])
-  18   words = list(model.wv.vocab)
-  19   for i, word in enumerate(words):
-  20   pyplot.annotate(word, xy=(result[i, 0], result[i, 1]))
-  21   pyplot.show()
-  ---- -----------------------------------------------------------------------------
+pca = PCA(n_components=2)
+result = pca.fit_transform(X)
+# create a scatter plot of the projection
+pyplot.scatter(result[:, 0], result[:, 1])
+words = list(model.wv.vocab)
+for i, word in enumerate(words):
+	pyplot.annotate(word, xy=(result[i, 0], result[i, 1]))
+pyplot.show()
+```
 
 ### **Your Task** 
 
@@ -585,16 +573,16 @@ the *input\_dim* which is the size of the vocabulary, the *output\_dim*
 which is the size of the vector space of the embedding, and optionally
 the *input\_length* which is the number of words in input sequences.
 
-  --- --------------------------------------------------------------
-  1   layer = Embedding(input\_dim, output\_dim, input\_length=??)
-  --- --------------------------------------------------------------
+```
+layer = Embedding(input_dim, output_dim, input_length=??)
+```
 
 Or, more concretely, a vocabulary of 200 words, a distributed
 representation of 32 dimensions and an input length of 50 words.
 
-  --- ----------------------------------------------
-  1   layer = Embedding(200, 32, input\_length=50)
-  --- ----------------------------------------------
+```
+layer = Embedding(200, 32, input_length=50)
+```
 
 ### **Embedding with Model** 
 
@@ -612,25 +600,24 @@ associated output label both the network weights and the distributed
 representation will be tuned to the specific data.
 
 ```
----
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Flatten
 from keras.layers.embeddings import Embedding
 # define problem
- vocab\_size = 100
-max\_length = 32
+vocab_size = 100
+max_length = 32
 # define the model
 model = Sequential()
-model.add(Embedding(vocab\_size, 8, input\_length=max\_length))
- model.add(Flatten())
+model.add(Embedding(vocab_size, 8, input_length=max_length))
+model.add(Flatten())
 model.add(Dense(1, activation='sigmoid'))
 # compile the model
-  14   model.compile(optimizer='adam', loss='binary\_crossentropy', metrics=['accuracy'])
-  15   # summarize the model
-  16   print(model.summary())
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+# summarize the model
+print(model.summary())
 ```
----
+
 
 It is also possible to initialize the Embedding layer with pre-trained
 weights, such as those prepared by Gensim and to configure the layer to
@@ -706,20 +693,20 @@ This type of model can be defined in the Keras Python deep learning
 library. The snippet below shows an example of a deep learning model for
 classifying text documents as one of two classes.
 
-  ---- -------------------------------------------------------------------
+```
 # define problem
-vocab\_size = 100
-max\_length = 200
+vocab_size = 100
+max_length = 200
 # define model
 model = Sequential()
- model.add(Embedding(vocab\_size, 100, input\_length=max\_length))
-model.add(Conv1D(filters=32, kernel\_size=8, activation='relu'))
-model.add(MaxPooling1D(pool\_size=2))
+model.add(Embedding(vocab_size, 100, input_length=max_length))
+model.add(Conv1D(filters=32, kernel_size=8, activation='relu'))
+model.add(MaxPooling1D(pool_size=2))
 model.add(Flatten())
 model.add(Dense(10, activation='relu'))
- model.add(Dense(1, activation='sigmoid'))
+model.add(Dense(1, activation='sigmoid'))
 print(model.summary())
-  ---- -------------------------------------------------------------------
+```
 
 ### **Your Task** 
 
@@ -783,26 +770,6 @@ model on the movie review dataset:
 
 5.  Evaluate the model on the test dataset.
 
-Bonus points if you can demonstrate your model by making a prediction on
-a new movie review, contrived or real. Extra bonus points if you can
-compare your model to a neural bag-of-words model.
-
-Post your code and model skill in the comments below. I would love to
-see what you can come up with. Simpler models are preferred, but also
-try going really deep and see what happens.
-
-### **More Information** 
-
--   [How to Prepare Movie Review Data for Sentiment
-    Analysis](https://machinelearningmastery.com/prepare-movie-review-data-sentiment-analysis/)
-
--   [How to Develop a Deep Learning Bag-of-Words Model for Predicting
-    Movie Review
-    Sentiment](https://machinelearningmastery.com/deep-learning-bag-of-words-model-sentiment-analysis/)
-
--   [How to Develop a Word Embedding Model for Predicting Movie Review
-    Sentiment](https://machinelearningmastery.com/develop-word-embedding-model-predicting-movie-review-sentiment/)
-
 **The End!** 
 ------------
 
@@ -838,9 +805,3 @@ You discovered:
 
 This is just the beginning of your journey with deep learning for
 natural language processing. Keep practicing and developing your skills.
-
-Take the next step and check out my [book on deep learning for
-NLP](https://machinelearningmastery.com/deep-learning-for-nlp/)
-
-\
-

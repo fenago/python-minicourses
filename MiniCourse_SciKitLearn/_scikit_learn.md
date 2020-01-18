@@ -1,22 +1,4 @@
-**Machine Learning Algorithm Recipes in scikit-learn** {style="margin-top: 0in; margin-bottom: 0.15in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; page-break-after: auto"}
-======================================================
-
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on June
-20, 2014 in [**Python Machine
-Learning**](https://machinelearningmastery.com/category/python-machine-learning/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on August 21, 2019
-
-You have to get your hands dirty.
-
-You can read all of the blog posts and watch all the videos in the
-world, but you’re not actually going to start really get machine
-learning until you start practicing.
+**Machine Learning Algorithm Recipes in scikit-learn**
 
 The [scikit-learn Python
 library](http://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/)
@@ -77,24 +59,24 @@ dataset. Because this is a mutli-class classification problem and
 logistic regression makes predictions between 0 and 1, a one-vs-all
 scheme is used (one model per class).
 
-  ---- ------------------------------------------------------------
+```
 # Logistic Regression
 from sklearn import datasets
 from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 # load the iris datasets
- dataset = datasets.load_iris()
+dataset = datasets.load_iris()
 # fit a logistic regression model to the data
 model = LogisticRegression()
 model.fit(dataset.data, dataset.target)
 print(model)
- # make predictions
+# make predictions
 expected = dataset.target
 predicted = model.predict(dataset.data)
-  14   # summarize the fit of the model
-  15   print(metrics.classification_report(expected, predicted))
-  16   print(metrics.confusion_matrix(expected, predicted))
-  ---- ------------------------------------------------------------
+# summarize the fit of the model
+print(metrics.classification_report(expected, predicted))
+print(metrics.confusion_matrix(expected, predicted))
+```
 
 For more information see the [API reference for Logistic
 Regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression)
@@ -111,24 +93,24 @@ each attribute to the class variable.
 This recipe shows the fitting of an Naive Bayes model to the iris
 dataset.
 
-  ---- ------------------------------------------------------------
+```
 # Gaussian Naive Bayes
 from sklearn import datasets
 from sklearn import metrics
 from sklearn.naive_bayes import GaussianNB
 # load the iris datasets
- dataset = datasets.load_iris()
+dataset = datasets.load_iris()
 # fit a Naive Bayes model to the data
 model = GaussianNB()
 model.fit(dataset.data, dataset.target)
 print(model)
- # make predictions
+# make predictions
 expected = dataset.target
 predicted = model.predict(dataset.data)
-  14   # summarize the fit of the model
-  15   print(metrics.classification_report(expected, predicted))
-  16   print(metrics.confusion_matrix(expected, predicted))
-  ---- ------------------------------------------------------------
+# summarize the fit of the model
+print(metrics.classification_report(expected, predicted))
+print(metrics.confusion_matrix(expected, predicted))
+```
 
 For more information see the [API reference for the Gaussian Naive
 Bayes](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html#sklearn.naive_bayes.GaussianNB)
@@ -147,24 +129,24 @@ The kNN algorithm can be used for classification or regression.
 This recipe shows use of the kNN model to make predictions for the iris
 dataset.
 
-  ---- ------------------------------------------------------------
+```
 # k-Nearest Neighbor
 from sklearn import datasets
 from sklearn import metrics
 from sklearn.neighbors import KNeighborsClassifier
 # load iris the datasets
- dataset = datasets.load_iris()
+dataset = datasets.load_iris()
 # fit a k-nearest neighbor model to the data
 model = KNeighborsClassifier()
 model.fit(dataset.data, dataset.target)
 print(model)
- # make predictions
+# make predictions
 expected = dataset.target
 predicted = model.predict(dataset.data)
-  14   # summarize the fit of the model
-  15   print(metrics.classification_report(expected, predicted))
-  16   print(metrics.confusion_matrix(expected, predicted))
-  ---- ------------------------------------------------------------
+# summarize the fit of the model
+print(metrics.classification_report(expected, predicted))
+print(metrics.confusion_matrix(expected, predicted))
+```
 
 For more information see the [API reference for the k-Nearest
 Neighbor](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier)
@@ -183,24 +165,24 @@ classification or regression.
 This recipe shows use of the CART model to make predictions for the iris
 dataset.
 
-  ---- ------------------------------------------------------------
-# Decision Tree Classifier
+```
+# k-Nearest Neighbor
 from sklearn import datasets
 from sklearn import metrics
-from sklearn.tree import DecisionTreeClassifier
-# load the iris datasets
- dataset = datasets.load_iris()
-# fit a CART model to the data
-model = DecisionTreeClassifier()
+from sklearn.neighbors import KNeighborsClassifier
+# load iris the datasets
+dataset = datasets.load_iris()
+# fit a k-nearest neighbor model to the data
+model = KNeighborsClassifier()
 model.fit(dataset.data, dataset.target)
 print(model)
- # make predictions
+# make predictions
 expected = dataset.target
 predicted = model.predict(dataset.data)
-  14   # summarize the fit of the model
-  15   print(metrics.classification_report(expected, predicted))
-  16   print(metrics.confusion_matrix(expected, predicted))
-  ---- ------------------------------------------------------------
+# summarize the fit of the model
+print(metrics.classification_report(expected, predicted))
+print(metrics.confusion_matrix(expected, predicted))
+```
 
 For more information see the [API reference for
 CART](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier)
@@ -221,24 +203,24 @@ modeling the function with a minimum amount of allowable error.
 This recipe shows use of the SVM model to make predictions for the iris
 dataset.
 
-  ---- ------------------------------------------------------------
+```
 # Support Vector Machine
 from sklearn import datasets
 from sklearn import metrics
 from sklearn.svm import SVC
 # load the iris datasets
- dataset = datasets.load_iris()
+dataset = datasets.load_iris()
 # fit a SVM model to the data
 model = SVC()
 model.fit(dataset.data, dataset.target)
 print(model)
- # make predictions
+# make predictions
 expected = dataset.target
 predicted = model.predict(dataset.data)
-  14   # summarize the fit of the model
-  15   print(metrics.classification_report(expected, predicted))
-  16   print(metrics.confusion_matrix(expected, predicted))
-  ---- ------------------------------------------------------------
+# summarize the fit of the model
+print(metrics.classification_report(expected, predicted))
+print(metrics.confusion_matrix(expected, predicted))
+```
 
 For more information see the [API reference for
 SVM](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
@@ -257,29 +239,10 @@ using scikit-learn, right now. Stop reading and start practicing. Pick
 one recipe and run it, then start to play with the parameters and see
 what effect that has on the results.
 
-\
-
-\
-
-\
-
 ![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
 
-\
 
-**A Gentle Introduction to Scikit-Learn: A Python Machine Learning Library** {style="margin-top: 0in; margin-bottom: 0.15in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; page-break-after: auto"}
-============================================================================
-
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on April
-16, 2014 in [**Python Machine
-Learning**](https://machinelearningmastery.com/category/python-machine-learning/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on August 21, 2019
+**A Gentle Introduction to Scikit-Learn: A Python Machine Learning Library**
 
 If you are a Python programmer or you are looking for a robust library
 you can use to bring machine learning into a production system then a
@@ -415,46 +378,46 @@ Finally, the classification accuracy and a [confusion
 matrix](https://machinelearningmastery.com/confusion-matrix-machine-learning/)
 is printed.
 
-  ---- ------------------------------------------------------------
+```
 # Sample Decision Tree Classifier
 from sklearn import datasets
 from sklearn import metrics
 from sklearn.tree import DecisionTreeClassifier
 # load the iris datasets
- dataset = datasets.load_iris()
+dataset = datasets.load_iris()
 # fit a CART model to the data
 model = DecisionTreeClassifier()
 model.fit(dataset.data, dataset.target)
 print(model)
- # make predictions
+# make predictions
 expected = dataset.target
 predicted = model.predict(dataset.data)
-  14   # summarize the fit of the model
-  15   print(metrics.classification_report(expected, predicted))
-  16   print(metrics.confusion_matrix(expected, predicted))
-  ---- ------------------------------------------------------------
+# summarize the fit of the model
+print(metrics.classification_report(expected, predicted))
+print(metrics.confusion_matrix(expected, predicted))
+```
 
 Running this example produces the following output, showing you the
 details of the trained model, the skill of the model according to some
 common metrics and a confusion matrix.
 
-  ---- -------------------------------------------------------------------------------
+```
 DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
-max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
-min_samples_split=2, min_weight_fraction_leaf=0.0,
-presort=False, random_state=None, splitter='best')
-precision recall f1-score support
- 0 1.00 1.00 1.00 50
-1 1.00 1.00 1.00 50
-2 1.00 1.00 1.00 50
-avg / total 1.00 1.00 1.00 150
-[[50 0 0]
- [ 0 50 0]
-[ 0 0 50]]
-
-  14   
-  15   
-  ---- -------------------------------------------------------------------------------
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=False, random_state=None, splitter='best')
+         	precision    recall  f1-score   support
+ 
+          0   	1.00      1.00      1.00        50
+          1   	1.00      1.00      1.00        50
+          2   	1.00      1.00      1.00        50
+ 
+avg / total   	1.00      1.00      1.00   	150
+ 
+[[50  0  0]
+[ 0 50  0]
+[ 0  0 50]]
+```
 
 **Who is using it?** 
 --------------------
@@ -515,42 +478,9 @@ it’s vision, there are some papers you may want to check-out.
 -   [API design for machine learning software: experiences from the
     scikit-learn project](http://arxiv.org/abs/1309.0238) (2013)
 
-### **Books** 
-
-If you are looking for a good book, I recommend “Building Machine
-Learning Systems with Python”. It’s well written and the examples are
-interesting.
-
--   [Learning scikit-learn: Machine Learning in
-    Python](http://www.amazon.com/dp/1783281936?tag=inspiredalgor-20)
-    (2013)
-
--   [Building Machine Learning Systems with
-    Python](http://www.amazon.com/dp/1782161406?tag=inspiredalgor-20)
-    (2013)
-
--   [Statistics, Data Mining, and Machine Learning in Astronomy: A
-    Practical Python Guide for the Analysis of Survey
-    Data](http://www.amazon.com/dp/0691151687?tag=inspiredalgor-20)
-    (2014)
-
-\
-
 ![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
 
-**How To Compare Machine Learning Algorithms in Python with scikit-learn** {style="margin-top: 0in; margin-bottom: 0.15in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; page-break-after: auto"}
-==========================================================================
-
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on June
-1, 2016 in [**Python Machine
-Learning**](https://machinelearningmastery.com/category/python-machine-learning/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on December 13, 2019
+**How To Compare Machine Learning Algorithms in Python with scikit-learn**
 
 It is important to compare the performance of multiple different machine
 learning algorithms consistently.
@@ -569,16 +499,10 @@ with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started.
 
--   **Update Mar/2018**: Added alternate link to download the dataset as
-    the original appears to have been taken down.
-
 ![](../soluta_consectetur_iusto_html_d2b6f6ef1950fe9b.jpg)
 
 How To Compare Machine Learning Algorithms in Python with scikit-learn
 
-Photo by [Michael
-Knight](https://www.flickr.com/photos/mknightphoto/2295688304/), some
-rights reserved.
 
 **Choose The Best Machine Learning Model** 
 ------------------------------------------
@@ -610,17 +534,6 @@ model accuracies.
 
 In the next section you will discover exactly how you can do that in
 Python with scikit-learn.
-
-### **Need help with Machine Learning in Python?** 
-
-Take my free 2-week email course and discover data prep, algorithms and
-more (with code).
-
-Click to sign-up now and also get a free PDF Ebook version of the
-course.
-
-[**Start Your FREE Mini-Course
-Now!**](https://machinelearningmastery.leadpages.co/leadbox/146d399f3f72a2%3A164f8be4f346dc/5655869022797824/)
 
 **Compare Machine Learning Algorithms Consistently** 
 ----------------------------------------------------
@@ -671,64 +584,59 @@ import pandas
 import matplotlib.pyplot as plt
 from sklearn import model_selection
 from sklearn.linear_model import LogisticRegression
- from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
- # load dataset
+# load dataset
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-  14   dataframe = pandas.read_csv(url, names=names)
-  15   array = dataframe.values
-  16   X = array[:,0:8]
-  17   Y = array[:,8]
-  18   # prepare configuration for cross validation test harness
-  19   seed = 7
-  20   # prepare models
-  21   models = []
-       models.append(('LR', LogisticRegression()))
-  23   models.append(('LDA', LinearDiscriminantAnalysis()))
-  24   models.append(('KNN', KNeighborsClassifier()))
-  25   models.append(('CART', DecisionTreeClassifier()))
-  26   models.append(('NB', GaussianNB()))
-  27   models.append(('SVM', SVC()))
-  28   # evaluate each model in turn
-  29   results = []
-  30   names = []
-  31   scoring = 'accuracy'
-  32   for name, model in models:
-  33   kfold = model_selection.KFold(n_splits=10, random_state=seed)
-  34   cv_results = model_selection.cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
-  35   results.append(cv_results)
-  36   names.append(name)
-  37   msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
-  38   print(msg)
-  39   # boxplot algorithm comparison
-  40   fig = plt.figure()
-  41   fig.suptitle('Algorithm Comparison')
-  42   ax = fig.add_subplot(111)
-  43   plt.boxplot(results)
-  44   ax.set_xticklabels(names)
-  45   plt.show()
+dataframe = pandas.read_csv(url, names=names)
+array = dataframe.values
+X = array[:,0:8]
+Y = array[:,8]
+# prepare configuration for cross validation test harness
+seed = 7
+# prepare models
+models = []
+models.append(('LR', LogisticRegression()))
+models.append(('LDA', LinearDiscriminantAnalysis()))
+models.append(('KNN', KNeighborsClassifier()))
+models.append(('CART', DecisionTreeClassifier()))
+models.append(('NB', GaussianNB()))
+models.append(('SVM', SVC()))
+# evaluate each model in turn
+results = []
+names = []
+scoring = 'accuracy'
+for name, model in models:
+	kfold = model_selection.KFold(n_splits=10, random_state=seed)
+	cv_results = model_selection.cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
+	results.append(cv_results)
+	names.append(name)
+	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+	print(msg)
+# boxplot algorithm comparison
+fig = plt.figure()
+fig.suptitle('Algorithm Comparison')
+ax = fig.add_subplot(111)
+plt.boxplot(results)
+ax.set_xticklabels(names)
+plt.show()
 ```
 
 Running the example provides a list of each algorithm short name, the
 mean accuracy and the standard deviation accuracy.
 
-  --- ---------------------------
-  1   LR: 0.769515 (0.048411)
-      
-  2   LDA: 0.773462 (0.051592)
-      
-  3   KNN: 0.726555 (0.061821)
-      
-  4   CART: 0.695232 (0.062517)
-      
-  5   NB: 0.755178 (0.042766)
-      
-  6   SVM: 0.651025 (0.072141)
-  --- ---------------------------
+```
+LR: 0.769515 (0.048411)
+LDA: 0.773462 (0.051592)
+KNN: 0.726555 (0.061821)
+CART: 0.695232 (0.062517)
+NB: 0.755178 (0.042766)
+SVM: 0.651025 (0.072141)
+```
 
 The example also provides a box and whisker plot showing the spread of
 the accuracy scores across each cross validation fold for each
@@ -755,23 +663,9 @@ box and whisker plot.
 You can use this recipe as a template for evaluating multiple algorithms
 on your own problems.
 
-\
-
 ![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
 
-**How to Generate Test Datasets in Python with scikit-learn** {style="margin-top: 0in; margin-bottom: 0.15in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; page-break-after: auto"}
-=============================================================
-
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on
-January 15, 2018 in [**Python Machine
-Learning**](https://machinelearningmastery.com/category/python-machine-learning/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on January 10, 2020
+**How to Generate Test Datasets in Python with scikit-learn**
 
 Test datasets are small contrived datasets that let you test a machine
 learning algorithm or test harness.
@@ -873,29 +767,28 @@ The example below generates a 2D dataset of samples with three blobs as
 a multi-class classification prediction problem. Each observation has
 two inputs and 0, 1, or 2 class values.
 
-  --- --------------------------------------------------------------
-  1   # generate 2d classification dataset
-      
-  2   X, y = make_blobs(n_samples=100, centers=3, n_features=2)
-  --- --------------------------------------------------------------
+```
+# generate 2d classification dataset
+X, y = make_blobs(n_samples=100, centers=3, n_features=2)
+```
 
 The complete example is listed below.
 
-  ---- -------------------------------------------------------------------------------
+```
 from sklearn.datasets import make_blobs
 from matplotlib import pyplot
 from pandas import DataFrame
 # generate 2d classification dataset
 X, y = make_blobs(n_samples=100, centers=3, n_features=2)
- # scatter plot, dots colored by class value
+# scatter plot, dots colored by class value
 df = DataFrame(dict(x=X[:,0], y=X[:,1], label=y))
 colors = {0:'red', 1:'blue', 2:'green'}
 fig, ax = pyplot.subplots()
 grouped = df.groupby('label')
- for key, group in grouped:
-group.plot(ax=ax, kind='scatter', x='x', y='y', label=key, color=colors[key])
+for key, group in grouped:
+    group.plot(ax=ax, kind='scatter', x='x', y='y', label=key, color=colors[key])
 pyplot.show()
-  ---- -------------------------------------------------------------------------------
+```
 
 Running the example generates the inputs and outputs for the problem and
 then creates a handy 2D plot showing points for the different classes
@@ -926,29 +819,28 @@ learning nonlinear class boundaries.
 
 The example below generates a moon dataset with moderate noise.
 
-  --- -----------------------------------------------
-  1   # generate 2d classification dataset
-      
-  2   X, y = make_moons(n_samples=100, noise=0.1)
-  --- -----------------------------------------------
+```
+# generate 2d classification dataset
+X, y = make_moons(n_samples=100, noise=0.1)
+```
 
 The complete example is listed below.
 
-  ---- -------------------------------------------------------------------------------
+```
 from sklearn.datasets import make_moons
 from matplotlib import pyplot
 from pandas import DataFrame
 # generate 2d classification dataset
 X, y = make_moons(n_samples=100, noise=0.1)
- # scatter plot, dots colored by class value
+# scatter plot, dots colored by class value
 df = DataFrame(dict(x=X[:,0], y=X[:,1], label=y))
 colors = {0:'red', 1:'blue'}
 fig, ax = pyplot.subplots()
 grouped = df.groupby('label')
- for key, group in grouped:
-group.plot(ax=ax, kind='scatter', x='x', y='y', label=key, color=colors[key])
+for key, group in grouped:
+    group.plot(ax=ax, kind='scatter', x='x', y='y', label=key, color=colors[key])
 pyplot.show()
-  ---- -------------------------------------------------------------------------------
+```
 
 Running the example generates and plots the dataset for review, again
 coloring samples by their assigned class.
@@ -972,29 +864,28 @@ non-linear manifolds.
 
 The example below generates a circles dataset with some noise.
 
-  --- --------------------------------------------------
-  1   # generate 2d classification dataset
-      
-  2   X, y = make_circles(n_samples=100, noise=0.05)
-  --- --------------------------------------------------
+```
+# generate 2d classification dataset
+X, y = make_circles(n_samples=100, noise=0.05)
+```
 
 The complete example is listed below.
 
-  ---- -------------------------------------------------------------------------------
+```
 from sklearn.datasets import make_circles
 from matplotlib import pyplot
 from pandas import DataFrame
 # generate 2d classification dataset
 X, y = make_circles(n_samples=100, noise=0.05)
- # scatter plot, dots colored by class value
+# scatter plot, dots colored by class value
 df = DataFrame(dict(x=X[:,0], y=X[:,1], label=y))
 colors = {0:'red', 1:'blue'}
 fig, ax = pyplot.subplots()
 grouped = df.groupby('label')
- for key, group in grouped:
-group.plot(ax=ax, kind='scatter', x='x', y='y', label=key, color=colors[key])
+for key, group in grouped:
+    group.plot(ax=ax, kind='scatter', x='x', y='y', label=key, color=colors[key])
 pyplot.show()
-  ---- -------------------------------------------------------------------------------
+```
 
 Running the example generates and plots the dataset for review.
 
@@ -1021,29 +912,22 @@ regression function.
 The example below will generate 100 examples with one input feature and
 one output feature with modest noise.
 
-  --- -------------------------------------------------------------------
-  1   # generate regression dataset
-      
-  2   X, y = make_regression(n_samples=100, n_features=1, noise=0.1)
-  --- -------------------------------------------------------------------
+```
+# generate regression dataset
+X, y = make_regression(n_samples=100, n_features=1, noise=0.1)
+```
 
 The complete example is listed below.
 
-  --- -------------------------------------------------------------------
-  1   from sklearn.datasets import make_regression
-      
-  2   from matplotlib import pyplot
-      
-  3   # generate regression dataset
-      
-  4   X, y = make_regression(n_samples=100, n_features=1, noise=0.1)
-      
-  5   # plot regression dataset
-      
-  6   pyplot.scatter(X,y)
-      
-  7   pyplot.show()
-  --- -------------------------------------------------------------------
+```
+from sklearn.datasets import make_regression
+from matplotlib import pyplot
+# generate regression dataset
+X, y = make_regression(n_samples=100, n_features=1, noise=0.1)
+# plot regression dataset
+pyplot.scatter(X,y)
+pyplot.show()
+```
 
 Running the example will generate the data and plot the X and y
 relationship, which, given that it is linear, is quite boring.
@@ -1097,25 +981,9 @@ Specifically, you learned:
 
 -   How to generate linear regression prediction test problems.
 
-\
-
-\
-
 ![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
 
-**How to Load Data in Python with Scikit-Learn** {style="margin-top: 0in; margin-bottom: 0.17in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; page-break-after: auto"}
-================================================
-
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on July
-9, 2014 in [**Python Machine
-Learning**](https://machinelearningmastery.com/category/python-machine-learning/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on December 13, 2019
+**How to Load Data in Python with Scikit-Learn**
 
 Before you can build machine learning models, you need to load your data
 into memory.
@@ -1131,16 +999,11 @@ with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started.
 
--   **Update March/2018**: Added alternate link to download the dataset
-    as the original appears to have been taken down.
 
 ![](../soluta_consectetur_iusto_html_c35324a7b4a5064f.jpg)
 
 Load CSV Data
 
-Photo by [Jim
-Makos](https://www.flickr.com/photos/jim-makos/13775073055), some rights
-reserved
 
 **Packaged Datasets** 
 ---------------------
@@ -1153,15 +1016,12 @@ library feature before using it in your own work.
 This recipe demonstrates how to load the famous [Iris flowers
 dataset](http://en.wikipedia.org/wiki/Iris_flower_data_set).
 
-  --- -------------------------------------------------------------------
-  1   # Load the packaged iris flowers dataset
-      
-  2   # Iris flower dataset (4x150, reals, multi-label classification)
-      
-  3   iris = load_iris()
-      
-  4   print(iris)
-  --- -------------------------------------------------------------------
+```
+# Load the packaged iris flowers dataset
+# Iris flower dataset (4x150, reals, multi-label classification)
+iris = load_iris()
+print(iris)
+```
 
 **Load from CSV** 
 -----------------
@@ -1189,12 +1049,12 @@ import numpy as np
 import urllib
 # URL for the Pima Indians Diabetes dataset (UCI Machine Learning Repository)
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
- # download the file
+# download the file
 raw_data = urllib.urlopen(url)
 # load the CSV file as a numpy matrix
 dataset = np.loadtxt(raw_data, delimiter=",")
 print(dataset.shape)
- # separate the data from the target attributes
+# separate the data from the target attributes
 X = dataset[:,0:7]
 y = dataset[:,8]
 ```
@@ -1212,28 +1072,11 @@ way of opening CSV files from the web using the [urllib
 library](https://docs.python.org/2/library/urllib.html) and how you can
 read that data as a NumPy matrix for use in scikit-learn.
 
-\
- \
-
 ![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
 
-**How to Make Predictions with scikit-learn** {style="margin-top: 0in; margin-bottom: 0.15in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
-=============================================
+**How to Make Predictions with scikit-learn**
 
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on April
-6, 2018 in [**Python Machine
-Learning**](https://machinelearningmastery.com/category/python-machine-learning/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on January 10, 2020
-
-#### **How to predict classification or regression outcomes** {align="center" style="margin-top: 0in; margin-bottom: 0.08in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
-
-#### **with scikit-learn models in Python.** {align="center" style="margin-top: 0in; margin-bottom: 0.08in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+#### **How to predict classification or regression outcomes**
 
 Once you choose and fit a final machine learning model in scikit-learn,
 you can use it to make predictions on new data instances.
@@ -1262,8 +1105,6 @@ book](https://machinelearningmastery.com/machine-learning-with-python/),
 with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started.
-
--   **Updated Jan/2020**: Updated for changes in scikit-learn v0.22 API.
 
 ![](../soluta_consectetur_iusto_html_13af4d9855a2406f.jpg)
 
@@ -1315,23 +1156,16 @@ Although we are using *LogisticRegression* in this tutorial, the same
 functions are available on practically all classification algorithms in
 scikit-learn.
 
-```----
-  1   # example of training a final classification model
-      
-  2   from sklearn.linear_model import LogisticRegression
-      
-  3   from sklearn.datasets import make_blobs
-      
-  4   # generate 2d classification dataset
-      
-  5   X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
-      
-  6   # fit final model
-      
-  7   model = LogisticRegression()
-      
-  8   model.fit(X, y)
-```----
+```
+# example of training a final classification model
+from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import make_blobs
+# generate 2d classification dataset
+X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
+# fit final model
+model = LogisticRegression()
+model.fit(X, y)
+```
 
 After finalizing your model, you may want to save the model to file,
 e.g. via pickle. Once saved, you can load the model any time and use it
@@ -1362,11 +1196,10 @@ For example, we have one or more data instances in an array called
 *Xnew*. This can be passed to the *predict()* function on our model in
 order to predict the class values for each instance in the array.
 
-  --- ----------------------------
-  1   Xnew = [[...], [...]]
-      
-  2   ynew = model.predict(Xnew)
-  --- ----------------------------
+```
+Xnew = [[...], [...]]
+ynew = model.predict(Xnew)
+```
 
 ### **Multiple Class Predictions** 
 
@@ -1374,62 +1207,58 @@ Let’s make this concrete with an example of predicting multiple data
 instances at once.
 
 ```
-
 # example of training a final classification model
 from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import make_blobs
 # generate 2d classification dataset
 X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
- # fit final model
+# fit final model
 model = LogisticRegression()
 model.fit(X, y)
 # new instances where we do not know the answer
 Xnew, _ = make_blobs(n_samples=3, centers=2, n_features=2, random_state=1)
- # make a prediction
+# make a prediction
 ynew = model.predict(Xnew)
 # show the inputs and predicted outputs
-  14   for i in range(len(Xnew)):
-  15   print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
+for i in range(len(Xnew)):
+	print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
 ```
-
 
 Running the example predicts the class for the three new data instances,
 then prints the data and the predictions together.
 
-  --- ------------------------------------------
-  1   X=[-0.79415228 2.10495117], Predicted=0
-      
-  2   X=[-8.25290074 -4.71455545], Predicted=1
-      
-  3   X=[-2.18773166 3.33352125], Predicted=0
-  --- ------------------------------------------
+```
+X=[-0.79415228  2.10495117], Predicted=0
+X=[-8.25290074 -4.71455545], Predicted=1
+X=[-2.18773166  3.33352125], Predicted=0
+```
 
 ### **Single Class Prediction** 
 
 If you had just one new data instance, you can provide this as instance
 wrapped in an array to the *predict()* function; for example:
 
-  ---- -------------------------------------------------------------------------------
+```
 # example of making a single class prediction
 from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import make_blobs
 # generate 2d classification dataset
 X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
- # fit final model
+# fit final model
 model = LogisticRegression()
 model.fit(X, y)
 # define one new instance
 Xnew = [[-0.79415228, 2.10495117]]
- # make a prediction
+# make a prediction
 ynew = model.predict(Xnew)
 print("X=%s, Predicted=%s" % (Xnew[0], ynew[0]))
-  ---- -------------------------------------------------------------------------------
+```
 
 Running the example prints the single instance and the predicted class.
 
-  --- ------------------------------------------
-  1   X=[-0.79415228, 2.10495117], Predicted=0
-  --- ------------------------------------------
+```
+X=[-0.79415228, 2.10495117], Predicted=0
+```
 
 ### **A Note on Class Labels** 
 
@@ -1455,11 +1284,10 @@ model returns the probability for each outcome class as a value between
 You can make these types of predictions in scikit-learn by calling the
 *predict_proba()* function, for example:
 
-  --- -----------------------------------
-  1   Xnew = [[...], [...]]
-      
-  2   ynew = model.predict_proba(Xnew)
-  --- -----------------------------------
+```
+Xnew = [[...], [...]]
+ynew = model.predict_proba(Xnew)
+```
 
 This function is only available on those classification models capable
 of making a probability prediction, which is most, but not all, models.
@@ -1468,36 +1296,32 @@ The example below makes a probability prediction for each example in the
 *Xnew* array of data instance.
 
 ```
-
 # example of making multiple probability predictions
 from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import make_blobs
 # generate 2d classification dataset
 X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
- # fit final model
+# fit final model
 model = LogisticRegression()
 model.fit(X, y)
 # new instances where we do not know the answer
 Xnew, _ = make_blobs(n_samples=3, centers=2, n_features=2, random_state=1)
- # make a prediction
+# make a prediction
 ynew = model.predict_proba(Xnew)
 # show the inputs and predicted probabilities
-  14   for i in range(len(Xnew)):
-  15   print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
+for i in range(len(Xnew)):
+	print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
 ```
-
 
 Running the instance makes the probability predictions and then prints
 the input data instance and the probability of each instance belonging
 to the first and second classes (0 and 1).
 
-  --- ------------------------------------------------------------------------
-  1   X=[-0.79415228 2.10495117], Predicted=[0.94556472 0.05443528]
-      
-  2   X=[-8.25290074 -4.71455545], Predicted=[3.60980873e-04 9.99639019e-01]
-      
-  3   X=[-2.18773166 3.33352125], Predicted=[0.98437415 0.01562585]
-  --- ------------------------------------------------------------------------
+```
+X=[-0.79415228 2.10495117], Predicted=[0.94556472 0.05443528]
+X=[-8.25290074 -4.71455545], Predicted=[3.60980873e-04 9.99639019e-01]
+X=[-2.18773166 3.33352125], Predicted=[0.98437415 0.01562585]
+```
 
 This can be helpful in your application if you want to present the
 probabilities to the user for expert interpretation.
@@ -1513,23 +1337,16 @@ Below is an example of a finalized *LinearRegression* model. Again, the
 functions demonstrated for making regression predictions apply to all of
 the regression models available in scikit-learn.
 
-```---------
-  1   # example of training a final regression model
-      
-  2   from sklearn.linear_model import LinearRegression
-      
-  3   from sklearn.datasets import make_regression
-      
-  4   # generate regression dataset
-      
-  5   X, y = make_regression(n_samples=100, n_features=2, noise=0.1, random_state=1)
-      
-  6   # fit final model
-      
-  7   model = LinearRegression()
-      
-  8   model.fit(X, y)
-```---------
+```
+# example of training a final regression model
+from sklearn.linear_model import LinearRegression
+from sklearn.datasets import make_regression
+# generate regression dataset
+X, y = make_regression(n_samples=100, n_features=2, noise=0.1, random_state=1)
+# fit final model
+model = LinearRegression()
+model.fit(X, y)
+```
 
 We can predict quantities with the finalized regression model by calling
 the *predict()* function on the finalized model.
@@ -1543,35 +1360,31 @@ The example below demonstrates how to make regression predictions on
 multiple data instances with an unknown expected outcome.
 
 ```
------
 # example of training a final regression model
 from sklearn.linear_model import LinearRegression
 from sklearn.datasets import make_regression
 # generate regression dataset
 X, y = make_regression(n_samples=100, n_features=2, noise=0.1)
- # fit final model
+# fit final model
 model = LinearRegression()
 model.fit(X, y)
 # new instances where we do not know the answer
 Xnew, _ = make_regression(n_samples=3, n_features=2, noise=0.1, random_state=1)
- # make a prediction
+# make a prediction
 ynew = model.predict(Xnew)
 # show the inputs and predicted outputs
-  14   for i in range(len(Xnew)):
-  15   print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
+for i in range(len(Xnew)):
+	print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
 ```
------
 
 Running the example makes multiple predictions, then prints the inputs
 and predictions side-by-side for review.
 
-  --- -----------------------------------------------------------
-  1   X=[-1.07296862 -0.52817175], Predicted=-61.32459258381131
-      
-  2   X=[-0.61175641 1.62434536], Predicted=-30.922508147981667
-      
-  3   X=[-2.3015387 0.86540763], Predicted=-127.34448527071137
-  --- -----------------------------------------------------------
+```
+X=[-1.07296862 -0.52817175], Predicted=-61.32459258381131
+X=[-0.61175641 1.62434536], Predicted=-30.922508147981667
+X=[-2.3015387 0.86540763], Predicted=-127.34448527071137
+```
 
 ### **Single Regression Prediction** 
 
@@ -1581,29 +1394,29 @@ array.
 
 For example:
 
-  ---- -------------------------------------------------------------------
+```
 # example of training a final regression model
 from sklearn.linear_model import LinearRegression
 from sklearn.datasets import make_regression
 # generate regression dataset
 X, y = make_regression(n_samples=100, n_features=2, noise=0.1)
- # fit final model
+# fit final model
 model = LinearRegression()
 model.fit(X, y)
 # define one new data instance
 Xnew = [[-1.07296862, -0.52817175]]
- # make a prediction
+# make a prediction
 ynew = model.predict(Xnew)
 # show the inputs and predicted outputs
-  14   print("X=%s, Predicted=%s" % (Xnew[0], ynew[0]))
-  ---- -------------------------------------------------------------------
+print("X=%s, Predicted=%s" % (Xnew[0], ynew[0]))
+```
 
 Running the example makes a single prediction and prints the data
 instance and prediction for review.
 
-  --- ------------------------------------------------------------
-  1   X=[-1.07296862, -0.52817175], Predicted=-77.17947088762787
-  --- ------------------------------------------------------------
+```
+X=[-1.07296862, -0.52817175], Predicted=-77.17947088762787
+```
 
 **Further Reading** 
 -------------------
@@ -1634,11 +1447,3 @@ Specifically, you learned:
 -   How to make class and probability predictions in scikit-learn.
 
 -   How to make regression predictions in scikit-learn.
-
-\
- \
-
-\
-
-\
-

@@ -1,16 +1,5 @@
-**Weka Machine Learning Mini-Course** {style="margin-top: 0in; margin-bottom: 0.15in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; page-break-after: auto"}
-=====================================
+**Weka Machine Learning Mini-Course**
 
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on August
-15, 2016 in [**Weka Machine
-Learning**](https://machinelearningmastery.com/category/weka-machine-learning/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on August 22, 2019
 
 ### ***Become A Machine Learning Practitioner in 14-Days*** 
 
@@ -45,16 +34,6 @@ with 18 step-by-step tutorials and 3 projects with Weka.
 
 Let’s get started.
 
-(**Tip**: Y*ou might want to print or bookmark this page so that you can
-refer back to it later*)
-
-![](../sint_ut_html_1175daadbb7c7c5.jpg)
-
-Applied Machine Learning With Weka Mini-Course
-
-Photo by [Leon
-Yaakov](https://www.flickr.com/photos/106447493@N05/15549957014/), some
-rights reserved.
 
 **Who Is This Mini-Course For?** 
 --------------------------------
@@ -129,24 +108,6 @@ You’re going to have to do some work though, a little reading, a little
 tinkering in Weka. You want to get started in applied machine learning
 right?
 
-(**Tip**: *All of the answers these lessons can be found on this blog,
-use the search feature*)
-
-Any questions at all, please post in the comments below.
-
-Share your results in the comments.
-
-Hang in there, don’t give up!
-
-### **Need more help with Weka for Machine Learning?** 
-
-Take my free 14-day email course and discover how to use the platform
-step-by-step.
-
-Click to sign-up and also get a free PDF Ebook version of the course.
-
-[**Start Your FREE Mini-Course
-Now!**](https://machinelearningmastery.leadpages.co/leadbox/144d0b573f72a2%3A164f8be4f346dc/5675267779461120/)
 
 **Lesson 01: Download and Install Weka** 
 ----------------------------------------
@@ -192,10 +153,10 @@ In this lesson you will load a standard dataset in the Weka Explorer.
 1.  Start Weka (click on the bird icon), this will start the Weka GUI
     Chooser.
 
-2.  Click the “Explorer” button, this will open the Weka Explorer
+2.  Click the "Explorer" button, this will open the Weka Explorer
     interface.
 
-3.  Click the “Open file…” button and navigate to the data/ directory in
+3.  Click the "Open file…" button and navigate to the data/ directory in
     your Weka installation and load the diabetes.arff dataset.
 
 Note, if you do not have a data/ directory in your Weka installation, or
@@ -226,17 +187,17 @@ In this lesson you will use Weka to learn more about your data.
 
 3.  Load the data/diabetes.arff dataset.
 
-4.  Click on different attributes in the “Attributes” list and review
-    the details in the “Selected attribute” pane.
+4.  Click on different attributes in the "Attributes" list and review
+    the details in the "Selected attribute" pane.
 
-5.  Click the “Visualize All” button to review all attribute
+5.  Click the "Visualize All" button to review all attribute
     distributions.
 
-6.  Click the “Visualize” tab and review the scatter plot matrix for all
+6.  Click the "Visualize" tab and review the scatter plot matrix for all
     attributes.
 
 Get comfortable reviewing the details for different attributes in the
-“Preprocess” tab and tuning the scatter plot matrix in the “Visualize”
+"Preprocess" tab and tuning the scatter plot matrix in the "Visualize"
 tab.
 
 **Lesson 04: Rescale Your Data** 
@@ -255,12 +216,12 @@ rescaling them to the consistent range of 0-to-1.
 
 2.  Load the data/diabetes.arff dataset.
 
-3.  Click the “Choose” button in the “Filter” pane and select
+3.  Click the "Choose" button in the "Filter" pane and select
     unsupervised.attribute.Normalize.
 
-4.  Click the “Apply” button.
+4.  Click the "Apply" button.
 
-Review the details for each attribute in the “Selected attribute” pane
+Review the details for each attribute in the "Selected attribute" pane
 and note the change to the scale.
 
 Explore using other data filters such as the Standardize filter.
@@ -268,8 +229,8 @@ Explore using other data filters such as the Standardize filter.
 Explore configuring filters by clicking on the name of the loaded filter
 and changing it’s parameters.
 
-Test out saving modified datasets for later use by clicking the “Save…”
-button on the “Preprocess” tab.
+Test out saving modified datasets for later use by clicking the "Save…"
+button on the "Preprocess" tab.
 
 **Lesson 05: Perform Feature Selection on Your Data** 
 -----------------------------------------------------
@@ -287,18 +248,18 @@ selection methods.
 
 2.  Load the data/diabetes.arff dataset.
 
-3.  Click the “Select attributes” tab.
+3.  Click the "Select attributes" tab.
 
-4.  Click the “Choose” button in the “Attribute Evaluator” pane and
-    select the “CorrelationAttributeEval”.
+4.  Click the "Choose" button in the "Attribute Evaluator" pane and
+    select the "CorrelationAttributeEval".
 
     1.  You will be presented with a dialog asking you to change to the
-        “Ranker” search method, needed when using this feature selection
-        method. Click the “Yes” button.
+        "Ranker" search method, needed when using this feature selection
+        method. Click the "Yes" button.
 
-5.  Click the “Start” button to run the feature selection method.
+5.  Click the "Start" button to run the feature selection method.
 
-Review the output in the “Attribute selection output” pane and note the
+Review the output in the "Attribute selection output" pane and note the
 correlation scores for each attribute, the larger numbers indicating the
 more relevant features.
 
@@ -306,7 +267,7 @@ Explore other feature selection methods such as the use of information
 gain (entropy).
 
 Explore selecting features to removal from your dataset in the
-“Preprocess” tab and the “Remove” button.
+"Preprocess" tab and the "Remove" button.
 
 **Lesson 06: Machine Learning Algorithms in Weka** 
 --------------------------------------------------
@@ -323,25 +284,25 @@ algorithms in Weka.
 
 2.  Load the data/diabetes.arff dataset.
 
-3.  Click the “Classify” tab.
+3.  Click the "Classify" tab.
 
-4.  Click the “Choose” button and note the different groupings for
+4.  Click the "Choose" button and note the different groupings for
     algorithms.
 
 5.  Click the name of the selected algorithm to configure it.
 
-6.  Click the “More” button on the configuration window to learn more
+6.  Click the "More" button on the configuration window to learn more
     about the implementation.
 
-7.  Click the “Capabilities” button on the configuration window to learn
+7.  Click the "Capabilities" button on the configuration window to learn
     more about how it can be used.
 
-8.  Note the “Open” and “Save” buttons on the window where different
+8.  Note the "Open" and "Save" buttons on the window where different
     configurations can be saved and loaded.
 
 9.  Hover on a configuration parameter and note the tooltip help.
 
-10. Click the “Start” button to run an algorithm.
+10. Click the "Start" button to run an algorithm.
 
 Browse the algorithms available. Note that some algorithms are
 unavailable given whether your dataset is a classification (predict a
@@ -364,36 +325,36 @@ evaluate the performance of an algorithm in Weka.
 
 2.  Load the data/diabetes.arff dataset.
 
-3.  Click the “Classify” tab.
+3.  Click the "Classify" tab.
 
-The “Test options” pane lists the various different techniques that you
+The "Test options" pane lists the various different techniques that you
 can use to evaluate the performance of an algorithm.
 
--   The gold standard is 10-fold “Cross Validation”. This is selected by
+-   The gold standard is 10-fold "Cross Validation". This is selected by
     default. For a small dataset, the number of folds can be adjusted
     from 10 to 5 or even 3.
 
 -   If your dataset is very large and you want to evaluate algorithms
-    quickly, you can use the “Percentage split” option. By default, this
+    quickly, you can use the "Percentage split" option. By default, this
     option will train on 66% of your dataset and use the remaining 34%
     to evaluate the performance of your model.
 
 -   Alternately, if you have a separate file containing a validation
     dataset, you can evaluate your model on that by selecting the
-    “Supplied test set” option. Your model will be trained on the entire
+    "Supplied test set" option. Your model will be trained on the entire
     training dataset and evaluated on the separate dataset.
 
 -   Finally, you can evaluate the performance of your model on the whole
     training dataset. This is useful if you are more interested in a
     descriptive than a predictive model.
 
-Click the “Start” button to run a given algorithm with your chosen test
+Click the "Start" button to run a given algorithm with your chosen test
 option.
 
 Experiment with different Test options.
 
 Further refine the test options in the configuration provided by
-clicking the “More options…” button.
+clicking the "More options…" button.
 
 **Lesson 08: Baseline Performance On Your Data** 
 ------------------------------------------------
@@ -411,16 +372,16 @@ as a baseline for classification and regression algorithms.
 
 2.  Load the data/diabetes.arff dataset.
 
-3.  Click the “Classify” tab. The ZeroR algorithm is chosen by default.
+3.  Click the "Classify" tab. The ZeroR algorithm is chosen by default.
 
-4.  Click the “Start” button.
+4.  Click the "Start" button.
 
 This will run the ZeroR algorithm using 10-fold cross validation on your
 dataset.
 
 The ZeroR algorithm also called the Zero Rule is an algorithm that you
 can use to calculate a baseline of performance for all algorithms on
-your dataset. It is the “worst” result and any algorithm that shows a
+your dataset. It is the "worst" result and any algorithm that shows a
 better performance has some skill on your problem.
 
 On a classification algorithm, the ZeroR algorithm will always predict
@@ -449,9 +410,9 @@ you can use on your classification problems.
 
 2.  Load the data/diabetes.arff dataset.
 
-3.  Click the “Classify” tab.
+3.  Click the "Classify" tab.
 
-4.  Click the “Choose” button.
+4.  Click the "Choose" button.
 
 5 Top algorithms that you can use for classification include:
 
@@ -478,7 +439,7 @@ algorithms can be used for regression.
 
 Regression is the prediction of a real valued outcome (like a dollar
 amount), different from classification that predicts a category (like
-“dog” or “cat”).
+"dog" or "cat").
 
 In this lesson you will discover 5 top regression algorithms that you
 can use on your regression problems.
@@ -488,8 +449,8 @@ datasets from the [Weka dataset download
 webpage](http://www.cs.waikato.ac.nz/ml/weka/datasets.html). Download
 the datasets-numeric.jar archive of regression problems, titled:
 
--   “A jar file containing 37 regression problems, obtained from various
-    sources”
+-   "A jar file containing 37 regression problems, obtained from various
+    sources"
 
 Use your favorite unzip program to unzip the .jar file and you will have
 a new directory called numeric/ containing 37 regression problems that
@@ -499,9 +460,9 @@ you can work with.
 
 2.  Load the data/housing.arff dataset.
 
-3.  Click the “Classify” tab.
+3.  Click the "Classify" tab.
 
-4.  Click the “Choose” button.
+4.  Click the "Choose" button.
 
 5 Top algorithms that you can use for regression include:
 
@@ -537,9 +498,9 @@ learning algorithms that you can use.
 
 2.  Load the data/diabetes.arff dataset.
 
-3.  Click the “Classify” tab.
+3.  Click the "Classify" tab.
 
-4.  Click the “Choose” button.
+4.  Click the "Choose" button.
 
 5 Top ensemble algorithms that you can use include:
 
@@ -576,23 +537,23 @@ In this lesson you will design your first experiment in Weka and
 discover how to use the Weka Experiment Environment to compare the
 performance of machine learning algorithms.
 
-1.  Open the “Weka Chooser GUI”.
+1.  Open the "Weka Chooser GUI".
 
-2.  Click the “Experimenter” button to open the “Weka Experiment
-    Environment”.
+2.  Click the "Experimenter" button to open the "Weka Experiment
+    Environment".
 
-3.  Click the “New” button.
+3.  Click the "New" button.
 
-4.  Click the “Add new…” button in the “Datasets” pane and select
-    “data/diabetes.arff”.
+4.  Click the "Add new…" button in the "Datasets" pane and select
+    "data/diabetes.arff".
 
-5.  Click the “Add new…” button in the “Algorithms” pane and add “ZeroR”
-    and “IBk”.
+5.  Click the "Add new…" button in the "Algorithms" pane and add "ZeroR"
+    and "IBk".
 
-6.  Click the “Run” tab and click the “Start” button.
+6.  Click the "Run" tab and click the "Start" button.
 
-7.  Click the “Analyse” tab and click the “Experiment” button and then
-    the “Perform test” button.
+7.  Click the "Analyse" tab and click the "Experiment" button and then
+    the "Perform test" button.
 
 You just designed, executed and analysed the results of your first
 controlled experiment in Weka.
@@ -602,11 +563,11 @@ configuration on the diabetes dataset.
 
 The results show that IBK has a higher classification accuracy than
 ZeroR and that this difference is statistically significant (the little
-“v” character next to the result).
+"v" character next to the result).
 
 Expand the experiment and add more algorithms and rerun the experiment.
 
-Change the “Test base” on the “Analyse” tab to change which set of
+Change the "Test base" on the "Analyse" tab to change which set of
 results is taken as the reference for comparison to the other results.
 
 **Lesson 13: Tune Algorithm Parameters** 
@@ -625,27 +586,27 @@ whether the differences are statistically significant.
 In this lesson you are going to design an experiment to compare the
 parameters of the k-Nearest Neighbors algorithm.
 
-1.  Open the “Weka Chooser GUI”.
+1.  Open the "Weka Chooser GUI".
 
-2.  Click the “Experimenter” button to open the “Weka Experiment
-    Environment”
+2.  Click the "Experimenter" button to open the "Weka Experiment
+    Environment"
 
-3.  Click the “New” button.
+3.  Click the "New" button.
 
-4.  Click the “Add new…” button in the “Datasets” pane and select
-    “data/diabetes.arff”.
+4.  Click the "Add new…" button in the "Datasets" pane and select
+    "data/diabetes.arff".
 
-5.  Click the “Add new…” button in the “Algorithms” pane and add 3 copes
-    of the “IBk” algorithm.
+5.  Click the "Add new…" button in the "Algorithms" pane and add 3 copes
+    of the "IBk" algorithm.
 
-6.  Click each IBk algorithm in the list and click the “Edit selected…”
-    button and change “KNN” to 1, 3, 5 for each of the 3 different
+6.  Click each IBk algorithm in the list and click the "Edit selected…"
+    button and change "KNN" to 1, 3, 5 for each of the 3 different
     algorithms.
 
-7.  Click the “Run” tab and click the “Start” button.
+7.  Click the "Run" tab and click the "Start" button.
 
-8.  Click the “Analyse” tab and click the “Experiment” button and then
-    the “Perform test” button.
+8.  Click the "Analyse" tab and click the "Experiment" button and then
+    the "Perform test" button.
 
 You just designed, executed and analyzed the results of a controlled
 experiment to compare algorithm parameters.
@@ -670,13 +631,13 @@ save it to a file for later use.
 
 2.  Load the data/diabetes.arff dataset.
 
-3.  Click the “Classify” tab.
+3.  Click the "Classify" tab.
 
-4.  Change the “Test options” to “Use training set” and click the
-    “Start” button.
+4.  Change the "Test options" to "Use training set" and click the
+    "Start" button.
 
-5.  Right click on the results in the “Result list” and click “Save
-    model” and enter a filename like “diabetes-final”.
+5.  Right click on the results in the "Result list" and click "Save
+    model" and enter a filename like "diabetes-final".
 
 You have just trained a final model on the entire training dataset and
 saved the resulting model to a file.
@@ -684,20 +645,20 @@ saved the resulting model to a file.
 You can load this model back into Weka and use it to make predictions on
 new data.
 
-1.  Right-click on the “Result list” click “Load model” and select your
-    model file (“diabetes-final.model”).
+1.  Right-click on the "Result list" click "Load model" and select your
+    model file ("diabetes-final.model").
 
-2.  Change the “Test options” to “Supplied test set” and choose
+2.  Change the "Test options" to "Supplied test set" and choose
     data/diabetes.arff (this could be a new file for which you do not
     have predictions)
 
-3.  Click “More options” in the “Test options” and change “Output
-    predictions” to “Plain Text”
+3.  Click "More options" in the "Test options" and change "Output
+    predictions" to "Plain Text"
 
-4.  Right click on the loaded model and choose “Re-evaluate model on
-    current test set”.
+4.  Right click on the loaded model and choose "Re-evaluate model on
+    current test set".
 
-The new predictions will now be listed in the “Classifier output” pane.
+The new predictions will now be listed in the "Classifier output" pane.
 
 Experiment saving different models and making predictions for entirely
 new datasets.
@@ -721,6 +682,3 @@ Take a moment and look back at how far you have come:
 Don’t make light of this, you have come a long way in a short amount of
 time. This is just the beginning of your journey in applied machine
 learning with Weka. Keep practicing and developing your skills.
-
-\
-

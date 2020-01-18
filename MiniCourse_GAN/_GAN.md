@@ -12,9 +12,9 @@ Tweet **Share**
 
 Last Updated on July 12, 2019
 
-#### **Generative Adversarial Networks With Python Crash Course.** {align="center" style="margin-top: 0in; margin-bottom: 0.08in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+#### **Generative Adversarial Networks With Python Crash Course.**
 
-#### **Bring Generative Adversarial Networks to Your Project in 7 Days.** {align="center" style="margin-top: 0in; margin-bottom: 0.08in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+#### **Bring Generative Adversarial Networks to Your Project in 7 Days.**
 
 Generative Adversarial Networks, or GANs for short, are a deep learning
 technique for training generative models.
@@ -32,9 +32,6 @@ Python in seven days.
 it.
 
 Let’s get started.
-
--   **Update Jul/2019**: Changed order of LeakyReLU and BatchNorm layers
-    (thanks Chee).
 
 ![](../recusandae_ut_doloremque_html_c2085eb9f9febb16.jpg)
 
@@ -312,23 +309,22 @@ LeakyReLU activation with a slope of 0.2 and a batch normalization
 layer.
 
 ```
------
 ...
 # define the discriminator model
 model = Sequential()
 # downsample to 14x14
 model.add(Conv2D(64, (3,3), strides=(2, 2), padding='same', input_shape=(28,28,3)))
- model.add(BatchNormalization())
+model.add(BatchNormalization())
 model.add(LeakyReLU(alpha=0.2))
 # downsample to 7x7
 model.add(Conv2D(64, (3,3), strides=(2, 2), padding='same'))
 model.add(BatchNormalization())
- model.add(LeakyReLU(alpha=0.2))
+model.add(LeakyReLU(alpha=0.2))
 # classify
 model.add(Flatten())
-  14   model.add(Dense(1, activation='sigmoid'))
+model.add(Dense(1, activation='sigmoid'))
 ```
------
+
 
 ### **Generator Model** 
 
@@ -348,26 +344,27 @@ GANs.
 The output is a three channel image with pixel values in the range
 [-1,1] via the tanh activation function.
 
-  ---- ----------------------------------------------------------------------
+
+```
 ...
 # define the generator model
 model = Sequential()
 # foundation for 7x7 image
-n_nodes = 64 \* 7 \* 7
- model.add(Dense(n_nodes, input_dim=100))
+n_nodes = 64 * 7 * 7
+model.add(Dense(n_nodes, input_dim=100))
 model.add(BatchNormalization())
 model.add(LeakyReLU(alpha=0.2))
 model.add(Reshape((7, 7, 64)))
 # upsample to 14x14
- model.add(Conv2DTranspose(64, (3,3), strides=(2,2), padding='same'))
+model.add(Conv2DTranspose(64, (3,3), strides=(2,2), padding='same'))
 model.add(BatchNormalization())
 model.add(LeakyReLU(alpha=0.2))
-  14   # upsample to 28x28
-  15   model.add(Conv2DTranspose(64, (3,3), strides=(2,2), padding='same'))
-  16   model.add(BatchNormalization())
-  17   model.add(LeakyReLU(alpha=0.2))
-  18   model.add(Conv2D(3, (3,3), activation='tanh', padding='same'))
-  ---- ----------------------------------------------------------------------
+# upsample to 28x28
+model.add(Conv2DTranspose(64, (3,3), strides=(2,2), padding='same'))
+model.add(BatchNormalization())
+model.add(LeakyReLU(alpha=0.2))
+model.add(Conv2D(3, (3,3), activation='tanh', padding='same'))
+```
 
 ### **Your Task** 
 
@@ -409,13 +406,11 @@ As is the best practice, the model can be optimized using the
 version of stochastic gradient descent with a small learning rate and
 conservative momentum.
 
-```---------
-  1   ...
-      
-  2   # compile model
-      
-  3   model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
-```---------
+```
+...
+# compile model
+model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
+```
 
 ### **Generator Loss** 
 
@@ -443,23 +438,21 @@ standalone discriminator model and the same Adam version of stochastic
 gradient descent to perform the optimization.
 
 ```
----
 # create the composite model for training the generator
 generator = ...
 discriminator = ...
 ...
 # make weights in the discriminator not trainable
- d_model.trainable = False
+d_model.trainable = False
 # connect them
 model = Sequential()
 # add generator
 model.add(generator)
- # add the discriminator
+# add the discriminator
 model.add(discriminator)
 # compile model
-  14   model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
+model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
 ```
----
 
 ### **Your Task** 
 
@@ -504,23 +497,23 @@ The example below demonstrates the GAN training algorithm.
 discriminator = ...
 generator = ...
 gan_model = ...
- n_batch = 16
+n_batch = 16
 latent_dim = 100
 for i in range(10000)
-# get randomly selected 'real' samples
-X_real, y_real = select_real_samples(dataset, n_batch)
- # generate 'fake' examples
-X_fake, y_fake = generate_fake_samples(generator, latent_dim, n_batch)
-# create training set for the discriminator
-  14   X, y = vstack((X_real, X_fake)), vstack((y_real, y_fake))
-  15   # update discriminator model weights
-  16   d_loss = discriminator.train_on_batch(X, y)
-  17   # prepare points in latent space as input for the generator
-  18   X_gan = generate_latent_points(latent_dim, n_batch)
-  19   # create inverted labels for the fake samples
-  20   y_gan = ones((n_batch, 1))
-  21   # update the generator via the discriminator's error
-       g_loss = gan_model.train_on_batch(X_gan, y_gan)
+	# get randomly selected 'real' samples
+	X_real, y_real = select_real_samples(dataset, n_batch)
+	# generate 'fake' examples
+	X_fake, y_fake = generate_fake_samples(generator, latent_dim, n_batch)
+	# create training set for the discriminator
+	X, y = vstack((X_real, X_fake)), vstack((y_real, y_fake))
+	# update discriminator model weights
+	d_loss = discriminator.train_on_batch(X, y)
+	# prepare points in latent space as input for the generator
+	X_gan = generate_latent_points(latent_dim, n_batch)
+	# create inverted labels for the fake samples
+	y_gan = ones((n_batch, 1))
+	# update the generator via the discriminator's error
+	g_loss = gan_model.train_on_batch(X_gan, y_gan)
 ```
 
 ### **Your Task** 
