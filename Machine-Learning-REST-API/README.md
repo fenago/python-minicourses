@@ -1,7 +1,24 @@
 <h2>Run Your Machine Learning Model as a REST API using jupyterLab
 </h2>
 
-![./images/angular.png](./images/angular.png)
+![](./images/angular.png)
+
+#### Pre-reqs:
+- Google Chrome (Recommended)
+
+#### Lab Environment
+Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
+
+**Note:** Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
+
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab1_MachineLearning_Rest_API`
+
+
+There should be two terminals opened already. Run following command in these terminals:
+
+**Terminal 1:** `cd ~/work/python-minicourses/Machine-Learning-REST-API/ML_REST` 
+
+**Terminal 2:** `cd ~/work/python-minicourses/Machine-Learning-REST-API/RestClientAngular` 
 
 
 <h2>****  PART1 ****</h2>
@@ -203,7 +220,7 @@ Okay, are you ready?
  Run the file `app.py` if no error occur open browser and navigate to `http://host-ip:5002/` and you will see 'Hello World!'.
    Now our server is online and listening to request.
 
-![./images/mlGUI.png](./images/mlGUI.png)
+![](./images/mlGUI.png)
 
 
 First, create a file  `requirements.txt` to add all the librairies require for our app
@@ -219,7 +236,7 @@ flask-cors
 ```
 
 
-![./images/mlGUI.png](./images/mlGUI.png)
+![](./images/mlGUI.png)
    
 
 
@@ -241,7 +258,7 @@ if everything works as expected then open browser and navigate to `http://<host-
 
 
 <h4>Step 2</h4>
-Now open the project folder with visual code or any of your favourite editor
+Now open the project folder with the editor
 
 Open the file `src/app/app.module.ts`
 we need to import httpclient,FormsModule,ReactiveFormsModule
@@ -345,38 +362,18 @@ In this step we had created a form to take input from user and submit to call FL
  
 <h4>Step 5 </h4>
 
-!!!Important!!!
+**Important**
 
 - Make sure that flask server is up and running we disscussed in part 1.
 - Also, update `RestClientAngularWeb\src\app\app.component.ts` line no **25** with `public-ip` on which jupyterLab is running. 
 Use`localhost` if you running jupyterLab container locally. We will send rest call to flask api from the angular application.
-
-!!!!!!!!!!!!!!!
 
 
 Now run the command `ng serve --host 0.0.0.0` from terminal inside the angular project folder 
 if everything works as expected then open browser and navigate to `http://host-ip:4200/` and you will see the homepage with form to enter the data for prediction and you result will be on bottom coming from REST server
 
 
-![./images/angularGUI1.png](./images/angularGUI1.png)
+![](./images/angularGUI1.png)
 
 
-![./images/angularGUI2.png](./images/angularGUI2.png)
-
-![./images/angularGUI1.png](./images/angularGUI1.png)
-
-
-![./images/angularGUI2.png](./images/angularGUI2.png)
-
- 
-![./images/dockerRest1.png](./images/dockerRest1.png)
- 
- 
-![./images/dockerRest2.png](./images/dockerRest2.png)
-  
-  
-Now wait to finish it. Once finished open the browser and navigate to <host-ip>:5002 for FLASK app trsting and <host-ip>:4200 angular app and you will see the GUI to enter the parameter to get prediction 
-
-![./images/mlGUI.png](./images/mlGUI.png)
-
-![./images/angularGUI2.png](./images/angularGUI2.png)
+![](./images/angularGUI2.png)
