@@ -45,7 +45,7 @@ Photo by [Matthias
 Ripp](https://www.flickr.com/photos/56218409@N03/15238615085/), some
 rights reserved.
 
-**Who Is This Crash-Course For?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Who Is This Crash-Course For?** 
 ---------------------------------
 
 Before we get started, let’s make sure you are in the right place.
@@ -80,7 +80,7 @@ step-by-step tutorial here:
 -   [How to Set Up a Python Environment for Machine Learning and Deep
     Learning](https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/)
 
-**Crash-Course Overview** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Crash-Course Overview** 
 -------------------------
 
 This crash course is broken down into seven lessons.
@@ -125,7 +125,7 @@ out tutorials, see my book on the topic titled “[Generative Adversarial
 Networks with
 Python](https://machinelearningmastery.com/generative_adversarial_networks/).”
 
-### **Want to Develop GANs from Scratch?** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Want to Develop GANs from Scratch?** 
 
 Take my free 7-day email crash course now (with sample code).
 
@@ -134,7 +134,7 @@ Click to sign-up and also get a free PDF Ebook version of the course.
 [**Download Your FREE
 Mini-Course**](https://machinelearningmastery.lpages.co/leadbox/162526e1b172a2%3A164f8be4f346dc/5926953912500224/)
 
-**Lesson 01: What Are Generative Adversarial Networks?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 01: What Are Generative Adversarial Networks?** 
 --------------------------------------------------------
 
 In this lesson, you will discover what GANs are and the basic model
@@ -161,7 +161,7 @@ The two models are trained together in a zero-sum game, adversarial,
 until the discriminator model is fooled about half the time, meaning the
 generator model is generating plausible examples.
 
-### **The Generator** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **The Generator** 
 
 The generator model takes a fixed-length random vector as input and
 generates an image in the domain.
@@ -172,7 +172,7 @@ latent space), and the vector is used to seed the generative process.
 After training, the generator model is kept and used to generate new
 samples.
 
-### **The Discriminator** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **The Discriminator** 
 
 The discriminator model takes an example from the domain as input (real
 or generated) and predicts a binary class label of real or fake
@@ -187,7 +187,7 @@ model.
 After the training process, the discriminator model is discarded as we
 are interested in the generator.
 
-### **GAN Training** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **GAN Training** 
 
 The two models, the generator and discriminator, are trained together.
 
@@ -207,7 +207,7 @@ toward generating images that are more likely to fool the discriminator.
 
 This process is then repeated for a given number of training iterations.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to list three possible applications for
 Generative Adversarial Networks. You may get ideas from looking at
@@ -219,7 +219,7 @@ discover.
 In the next lesson, you will discover tips and tricks for the successful
 training of GAN models.
 
-**Lesson 02: GAN Tips, Tricks, and Hacks** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 02: GAN Tips, Tricks, and Hacks** 
 ------------------------------------------
 
 In this lesson, you will discover the tips, tricks, and hacks that you
@@ -274,7 +274,7 @@ These heuristics have been hard won by practitioners testing and
 evaluating hundreds or thousands of combinations of configuration
 operations on a range of problems.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to list three additional GAN tips or hacks
 that can be used during training.
@@ -285,7 +285,7 @@ discover.
 In the next lesson, you will discover how to implement simple
 discriminator and generator models.
 
-**Lesson 03: Discriminator and Generator Models** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 03: Discriminator and Generator Models** 
 -------------------------------------------------
 
 In this lesson, you will discover how to implement a simple
@@ -294,7 +294,7 @@ discriminator and generator model using the Keras deep learning library.
 We will assume the images in our domain are 28×28 pixels in size and
 color, meaning they have three color channels.
 
-### **Discriminator Model** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Discriminator Model** 
 
 The discriminator model accepts an image with the with size 28x28x3
 pixels and must classify it as real (1) or fake (0) via the sigmoid
@@ -312,36 +312,23 @@ LeakyReLU activation with a slope of 0.2 and a batch normalization
 layer.
 
   ---- --------------------------------------------------------------------------------------
-  1    ...
-       
-  2    \# define the discriminator model
-       
-  3    model = Sequential()
-       
-  4    \# downsample to 14x14
-       
-  5    model.add(Conv2D(64, (3,3), strides=(2, 2), padding='same', input\_shape=(28,28,3)))
-       
-  6    model.add(BatchNormalization())
-       
-  7    model.add(LeakyReLU(alpha=0.2))
-       
-  8    \# downsample to 7x7
-       
-  9    model.add(Conv2D(64, (3,3), strides=(2, 2), padding='same'))
-       
-  10   model.add(BatchNormalization())
-       
-  11   model.add(LeakyReLU(alpha=0.2))
-       
-  12   \# classify
-       
-  13   model.add(Flatten())
-       
+...
+# define the discriminator model
+model = Sequential()
+# downsample to 14x14
+model.add(Conv2D(64, (3,3), strides=(2, 2), padding='same', input_shape=(28,28,3)))
+ model.add(BatchNormalization())
+model.add(LeakyReLU(alpha=0.2))
+# downsample to 7x7
+model.add(Conv2D(64, (3,3), strides=(2, 2), padding='same'))
+model.add(BatchNormalization())
+ model.add(LeakyReLU(alpha=0.2))
+# classify
+model.add(Flatten())
   14   model.add(Dense(1, activation='sigmoid'))
   ---- --------------------------------------------------------------------------------------
 
-### **Generator Model** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Generator Model** 
 
 The generator model takes a 100-dimensional point in the latent space as
 input and generates a 28x28x3.
@@ -360,44 +347,27 @@ The output is a three channel image with pixel values in the range
 [-1,1] via the tanh activation function.
 
   ---- ----------------------------------------------------------------------
-  1    ...
-       
-  2    \# define the generator model
-       
-  3    model = Sequential()
-       
-  4    \# foundation for 7x7 image
-       
-  5    n\_nodes = 64 \* 7 \* 7
-       
-  6    model.add(Dense(n\_nodes, input\_dim=100))
-       
-  7    model.add(BatchNormalization())
-       
-  8    model.add(LeakyReLU(alpha=0.2))
-       
-  9    model.add(Reshape((7, 7, 64)))
-       
-  10   \# upsample to 14x14
-       
-  11   model.add(Conv2DTranspose(64, (3,3), strides=(2,2), padding='same'))
-       
-  12   model.add(BatchNormalization())
-       
-  13   model.add(LeakyReLU(alpha=0.2))
-       
-  14   \# upsample to 28x28
-       
+...
+# define the generator model
+model = Sequential()
+# foundation for 7x7 image
+n_nodes = 64 \* 7 \* 7
+ model.add(Dense(n_nodes, input_dim=100))
+model.add(BatchNormalization())
+model.add(LeakyReLU(alpha=0.2))
+model.add(Reshape((7, 7, 64)))
+# upsample to 14x14
+ model.add(Conv2DTranspose(64, (3,3), strides=(2,2), padding='same'))
+model.add(BatchNormalization())
+model.add(LeakyReLU(alpha=0.2))
+  14   # upsample to 28x28
   15   model.add(Conv2DTranspose(64, (3,3), strides=(2,2), padding='same'))
-       
   16   model.add(BatchNormalization())
-       
   17   model.add(LeakyReLU(alpha=0.2))
-       
   18   model.add(Conv2D(3, (3,3), activation='tanh', padding='same'))
   ---- ----------------------------------------------------------------------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to implement both the discriminator models
 and summarize their structure.
@@ -411,14 +381,14 @@ discover.
 In the next lesson, you will discover how to configure the loss
 functions for training the GAN models.
 
-**Lesson 04: GAN Loss Functions** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 04: GAN Loss Functions** 
 ---------------------------------
 
 In this lesson, you will discover how to configure the [loss
 functions](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)
 used for training the GAN model weights.
 
-### **Discriminator Loss** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Discriminator Loss** 
 
 The discriminator model is optimized to maximize the probability of
 correctly identifying real images from the dataset and fake or synthetic
@@ -437,15 +407,15 @@ As is the best practice, the model can be optimized using the
 version of stochastic gradient descent with a small learning rate and
 conservative momentum.
 
-  --- ------------------------------------------------------------------------------------
+```---------
   1   ...
       
-  2   \# compile model
+  2   # compile model
       
-  3   model.compile(loss='binary\_crossentropy', optimizer=Adam(lr=0.0002, beta\_1=0.5))
-  --- ------------------------------------------------------------------------------------
+  3   model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
+```---------
 
-### **Generator Loss** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Generator Loss** 
 
 The generator is not updated directly and there is no loss for this
 model.
@@ -471,36 +441,23 @@ standalone discriminator model and the same Adam version of stochastic
 gradient descent to perform the optimization.
 
   ---- ------------------------------------------------------------------------------------
-  1    \# create the composite model for training the generator
-       
-  2    generator = ...
-       
-  3    discriminator = ...
-       
-  4    ...
-       
-  5    \# make weights in the discriminator not trainable
-       
-  6    d\_model.trainable = False
-       
-  7    \# connect them
-       
-  8    model = Sequential()
-       
-  9    \# add generator
-       
-  10   model.add(generator)
-       
-  11   \# add the discriminator
-       
-  12   model.add(discriminator)
-       
-  13   \# compile model
-       
-  14   model.compile(loss='binary\_crossentropy', optimizer=Adam(lr=0.0002, beta\_1=0.5))
+# create the composite model for training the generator
+generator = ...
+discriminator = ...
+...
+# make weights in the discriminator not trainable
+ d_model.trainable = False
+# connect them
+model = Sequential()
+# add generator
+model.add(generator)
+ # add the discriminator
+model.add(discriminator)
+# compile model
+  14   model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
   ---- ------------------------------------------------------------------------------------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to research and summarize three additional
 types of loss function that can be used to train the GAN models.
@@ -511,7 +468,7 @@ discover.
 In the next lesson, you will discover the training algorithm used to
 update the model weights for the GAN.
 
-**Lesson 05: GAN Training Algorithm** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 05: GAN Training Algorithm** 
 -------------------------------------
 
 In this lesson, you will discover the GAN training algorithm.
@@ -524,7 +481,7 @@ images and using the current generator model to generate a batch of fake
 images. You can develop small functions to perform these two operations.
 
 These real and fake images are then used to update the discriminator
-model directly via a call to the *train\_on\_batch()* Keras function.
+model directly via a call to the *train_on_batch()* Keras function.
 
 Next, points in latent space can be generated as input for the composite
 generator-discriminator model and labels of “real” (class=1) can be
@@ -537,53 +494,32 @@ the quality of the generated images.
 
 The example below demonstrates the GAN training algorithm.
 
-  ---- ------------------------------------------------------------------------------
-  1    ...
-       
-  2    \# gan training algorithm
-       
-  3    discriminator = ...
-       
-  4    generator = ...
-       
-  5    gan\_model = ...
-       
-  6    n\_batch = 16
-       
-  7    latent\_dim = 100
-       
-  8    for i in range(10000)
-       
-  9    \# get randomly selected 'real' samples
-       
-  10   X\_real, y\_real = select\_real\_samples(dataset, n\_batch)
-       
-  11   \# generate 'fake' examples
-       
-  12   X\_fake, y\_fake = generate\_fake\_samples(generator, latent\_dim, n\_batch)
-       
-  13   \# create training set for the discriminator
-       
-  14   X, y = vstack((X\_real, X\_fake)), vstack((y\_real, y\_fake))
-       
-  15   \# update discriminator model weights
-       
-  16   d\_loss = discriminator.train\_on\_batch(X, y)
-       
-  17   \# prepare points in latent space as input for the generator
-       
-  18   X\_gan = generate\_latent\_points(latent\_dim, n\_batch)
-       
-  19   \# create inverted labels for the fake samples
-       
-  20   y\_gan = ones((n\_batch, 1))
-       
-  21   \# update the generator via the discriminator's error
-       
-  22   g\_loss = gan\_model.train\_on\_batch(X\_gan, y\_gan)
-  ---- ------------------------------------------------------------------------------
+```
+...
+# gan training algorithm
+discriminator = ...
+generator = ...
+gan_model = ...
+ n_batch = 16
+latent_dim = 100
+for i in range(10000)
+# get randomly selected 'real' samples
+X_real, y_real = select_real_samples(dataset, n_batch)
+ # generate 'fake' examples
+X_fake, y_fake = generate_fake_samples(generator, latent_dim, n_batch)
+# create training set for the discriminator
+  14   X, y = vstack((X_real, X_fake)), vstack((y_real, y_fake))
+  15   # update discriminator model weights
+  16   d_loss = discriminator.train_on_batch(X, y)
+  17   # prepare points in latent space as input for the generator
+  18   X_gan = generate_latent_points(latent_dim, n_batch)
+  19   # create inverted labels for the fake samples
+  20   y_gan = ones((n_batch, 1))
+  21   # update the generator via the discriminator's error
+       g_loss = gan_model.train_on_batch(X_gan, y_gan)
+```
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to tie together the elements from this and
 the prior lessons and train a GAN on a small image dataset such as
@@ -597,7 +533,7 @@ discover.
 In the next lesson, you will discover the application of GANs for image
 translation.
 
-**Lesson 06: GANs for Image Translation** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 06: GANs for Image Translation** 
 -----------------------------------------
 
 In this lesson, you will discover GANs used for image translation.
@@ -613,7 +549,7 @@ dataset.
 GANs can be trained to perform image-to-image translation and two
 examples include the Pix2Pix and the CycleGAN.
 
-### **Pix2Pix** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Pix2Pix** 
 
 The Pix2Pix GAN is a general approach for image-to-image translation.
 
@@ -642,7 +578,7 @@ The loss for the generator is comprised of a composite of both the
 adversarial loss of a normal GAN model and the L1 loss between the
 generated and expected translated image.
 
-### **CycleGAN** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **CycleGAN** 
 
 A limitation of the Pix2Pix model is that it requires a dataset of
 paired examples before and after the desired translation.
@@ -676,7 +612,7 @@ also true: that an output from the second generator can be fed as input
 to the first generator and the result should match the input to the
 second generator.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to list five examples of image-to-image
 translation you might like to explore with GAN models.
@@ -687,13 +623,13 @@ discover.
 In the next lesson, you will discover some of the recent advancements in
 GAN models.
 
-**Lesson 07: Advanced GANs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 07: Advanced GANs** 
 ----------------------------
 
 In this lesson, you will discover some of the more advanced GAN that are
 demonstrating remarkable results.
 
-### **BigGAN** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **BigGAN** 
 
 The BigGAN is an approach to pull together a suite of recent best
 practices in training GANs and scaling up the batch size and number of
@@ -712,7 +648,7 @@ The resulting BigGAN generator model is capable of generating
 high-quality 256×256 and 512×512 images across a wide range of image
 classes.
 
-### **Progressive Growing GAN** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Progressive Growing GAN** 
 
 Progressive Growing GAN is an extension to the GAN training process that
 allows for the stable training of generator models that can output large
@@ -727,7 +663,7 @@ Perhaps the most impressive accomplishment of the Progressive Growing
 GAN is the generation of large 1024×1024 pixel photorealistic generated
 faces.
 
-### **StyleGAN** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **StyleGAN** 
 
 The Style Generative Adversarial Network, or StyleGAN for short, is an
 extension to the GAN architecture that proposes large changes to the
@@ -749,7 +685,7 @@ resolutions control high-level styles such as pose and hairstyle, blocks
 at higher resolutions control color schemes and very fine details like
 freckles and placement of hair strands.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to list 3 examples of how you might use
 models capable of generating large photorealistic images.
@@ -759,10 +695,10 @@ discover.
 
 This was the final lesson.
 
-**The End!** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**The End!** 
 ------------
 
-**(Look How Far You Have Come)** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**(Look How Far You Have Come)** 
 --------------------------------
 
 You made it. Well done!

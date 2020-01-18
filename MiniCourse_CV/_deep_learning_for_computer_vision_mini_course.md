@@ -639,7 +639,7 @@ from PIL import Image
 
 \
 
-image = Image.open('bondi\_beach.jpg')
+image = Image.open('bondi_beach.jpg')
 
 \
 
@@ -647,7 +647,7 @@ pixels = asarray(image)
 
 \
 
-\# confirm pixel range is 0-255
+# confirm pixel range is 0-255
 
 \
 
@@ -685,7 +685,7 @@ Listing 1: Example of normalizing pixel values.
 
 ^2^[https://www.flickr.com/photos/isapisa/45545118405/](https://www.flickr.com/photos/isapisa/45545118405/)
 
-^3^[https://machinelearningmastery.com/wp-content/uploads/2019/01/bondi\_beach.jpg](https://machinelearningmastery.com/wp-content/uploads/2019/01/bondi_beach.jpg)
+^3^[https://machinelearningmastery.com/wp-content/uploads/2019/01/bondi_beach.jpg](https://machinelearningmastery.com/wp-content/uploads/2019/01/bondi_beach.jpg)
 
 \
 
@@ -831,7 +831,7 @@ from keras.layers import Dense
 
 \
 
-model.add(Conv2D(32, (3,3), input\_shape=(256, 256, 1)))
+model.add(Conv2D(32, (3,3), input_shape=(256, 256, 1)))
 
 \
 
@@ -934,13 +934,13 @@ your internet connection.
 \
 
 -   example of using a pre-trained model as a classifier from
-    keras.preprocessing.image import load\_img
+    keras.preprocessing.image import load_img
 
 \
 
-from keras.preprocessing.image import img\_to\_array from
-keras.applications.vgg16 import preprocess\_input from
-keras.applications.vgg16 import decode\_predictions from
+from keras.preprocessing.image import img_to_array from
+keras.applications.vgg16 import preprocess_input from
+keras.applications.vgg16 import decode_predictions from
 keras.applications.vgg16 import VGG16
 
 \
@@ -949,12 +949,12 @@ keras.applications.vgg16 import VGG16
 
 \
 
-image = load\_img('dog.jpg', target\_size=(224, 224))
+image = load_img('dog.jpg', target_size=(224, 224))
 
 \
 
 -   convert the image pixels to a numpy array image =
-    img\_to\_array(image)
+    img_to_array(image)
 
 \
 
@@ -967,7 +967,7 @@ image.shape[2]))
 
 \
 
--   prepare the image for the VGG model image = preprocess\_input(image)
+-   prepare the image for the VGG model image = preprocess_input(image)
 
 \
 
@@ -988,7 +988,7 @@ model = VGG16()
 
 \
 
-label = decode\_predictions(yhat)
+label = decode_predictions(yhat)
 
 \
 
@@ -1093,7 +1093,7 @@ minutes on a modern CPU; no GPU is required.
 \
 
 -   fit a cnn on the fashion mnist dataset from keras.datasets import
-    fashion\_mnist from keras.utils import to\_categorical from
+    fashion_mnist from keras.utils import to_categorical from
     keras.models import Sequential from keras.layers import Conv2D
 
 \
@@ -1110,11 +1110,11 @@ from keras.layers import Flatten
 
 \
 
-(trainX, trainY), (testX, testY) = fashion\_mnist.load\_data()
+(trainX, trainY), (testX, testY) = fashion_mnist.load_data()
 
 \
 
-\# reshape dataset to have a single channel
+# reshape dataset to have a single channel
 
 \
 
@@ -1126,7 +1126,7 @@ testX = testX.reshape((testX.shape[0], 28, 28, 1))
 
 \
 
-\# convert from integers to floats
+# convert from integers to floats
 
 \
 
@@ -1134,7 +1134,7 @@ trainX, testX = trainX.astype('float32'), testX.astype('float32')
 
 \
 
-\# normalize to range 0-1
+# normalize to range 0-1
 
 \
 
@@ -1142,11 +1142,11 @@ trainX,testX = trainX / 255.0, testX / 255.0
 
 \
 
-\# one hot encode target values
+# one hot encode target values
 
 \
 
-trainY, testY = to\_categorical(trainY), to\_categorical(testY)
+trainY, testY = to_categorical(trainY), to_categorical(testY)
 
 \
 
@@ -1155,7 +1155,7 @@ trainY, testY = to\_categorical(trainY), to\_categorical(testY)
 \
 
 model.add(Conv2D(32, (3, 3), activation='relu',
-kernel\_initializer='he\_uniform', input\_shape=(28, 28, 1)))
+kernel_initializer='he_uniform', input_shape=(28, 28, 1)))
 
 \
 
@@ -1168,12 +1168,12 @@ model.add(Flatten())
 \
 
 model.add(Dense(100, activation='relu',
-kernel\_initializer='he\_uniform')) model.add(Dense(10,
+kernel_initializer='he_uniform')) model.add(Dense(10,
 activation='softmax'))
 
 \
 
-model.compile(optimizer='adam', loss='categorical\_crossentropy',
+model.compile(optimizer='adam', loss='categorical_crossentropy',
 metrics=['accuracy'])
 
 \
@@ -1182,11 +1182,11 @@ metrics=['accuracy'])
 
 \
 
-model.fit(trainX, trainY, epochs=10, batch\_size=32, verbose=2)
+model.fit(trainX, trainY, epochs=10, batch_size=32, verbose=2)
 
 \
 
-\# evaluate model
+# evaluate model
 
 \
 
@@ -1290,12 +1290,12 @@ be used to train a convolutional neural network model.
 
 \
 
--   example using image augmentation from numpy import expand\_dims
+-   example using image augmentation from numpy import expand_dims
 
 \
 
-from keras.preprocessing.image import load\_img from
-keras.preprocessing.image import img\_to\_array
+from keras.preprocessing.image import load_img from
+keras.preprocessing.image import img_to_array
 
 \
 
@@ -1308,15 +1308,15 @@ import pyplot
 
 \
 
-img = load\_img('bird.jpg')
+img = load_img('bird.jpg')
 
 \
 
--   convert to numpy array data = img\_to\_array(img)
+-   convert to numpy array data = img_to_array(img)
 
 \
 
--   expand dimension to one sample samples = expand\_dims(data, 0)
+-   expand dimension to one sample samples = expand_dims(data, 0)
 
 \
 
@@ -1324,16 +1324,16 @@ img = load\_img('bird.jpg')
 
 \
 
-datagen = ImageDataGenerator(horizontal\_flip=True, vertical\_flip=True,
-rotation\_range=90)
+datagen = ImageDataGenerator(horizontal_flip=True, vertical_flip=True,
+rotation_range=90)
 
 \
 
-\# prepare iterator
+# prepare iterator
 
 \
 
-it = datagen.flow(samples, batch\_size=1)
+it = datagen.flow(samples, batch_size=1)
 
 \
 
@@ -1505,7 +1505,7 @@ pixels = pyplot.imread('street.jpg')
 
 \
 
-faces = detector.detect\_faces(pixels)
+faces = detector.detect_faces(pixels)
 
 \
 
@@ -1540,7 +1540,7 @@ faces = detector.detect\_faces(pixels)
 
 \
 
-\# create the shape
+# create the shape
 
 \
 
@@ -1548,7 +1548,7 @@ rect = Rectangle((x, y), width, height, fill=False, color='red')
 
 \
 
--   draw the box ax.add\_patch(rect)
+-   draw the box ax.add_patch(rect)
 
 \
 

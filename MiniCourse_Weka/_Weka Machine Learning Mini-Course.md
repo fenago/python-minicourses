@@ -12,7 +12,7 @@ Tweet **Share**
 
 Last Updated on August 22, 2019
 
-### ***Become A Machine Learning Practitioner in 14-Days*** {.western align="center" style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### ***Become A Machine Learning Practitioner in 14-Days*** 
 
 Machine learning is a fascinating study, but how do you actually use it
 on your own problems?
@@ -56,7 +56,7 @@ Photo by [Leon
 Yaakov](https://www.flickr.com/photos/106447493@N05/15549957014/), some
 rights reserved.
 
-**Who Is This Mini-Course For?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Who Is This Mini-Course For?** 
 --------------------------------
 
 Before we get started, let’s make sure you are in the right place. The
@@ -80,7 +80,7 @@ to a developer who can use the Weka platform to work through a dataset
 from beginning to end and deliver a set of predictions or a high
 performance model.
 
-**Mini-Course Overview (what to expect)** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Mini-Course Overview (what to expect)** 
 -----------------------------------------
 
 This mini-course is divided into 14 parts.
@@ -138,7 +138,7 @@ Share your results in the comments.
 
 Hang in there, don’t give up!
 
-### **Need more help with Weka for Machine Learning?** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Need more help with Weka for Machine Learning?** 
 
 Take my free 14-day email course and discover how to use the platform
 step-by-step.
@@ -148,7 +148,7 @@ Click to sign-up and also get a free PDF Ebook version of the course.
 [**Start Your FREE Mini-Course
 Now!**](https://machinelearningmastery.leadpages.co/leadbox/144d0b573f72a2%3A164f8be4f346dc/5675267779461120/)
 
-**Lesson 01: Download and Install Weka** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 01: Download and Install Weka** 
 ----------------------------------------
 
 The first thing to do is install the Weka software on your workstation.
@@ -172,7 +172,7 @@ downloading and installing a version bundled with Java.
     page](http://www.cs.waikato.ac.nz/ml/weka/downloading.html),
     download and install Weka on your workstation.
 
-**Lesson 02: Load Standard Machine Learning Datasets** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 02: Load Standard Machine Learning Datasets** 
 ------------------------------------------------------
 
 Now that you have Weka installed, you need to load data.
@@ -210,7 +210,7 @@ Try loading some of the other datasets in the data/ directory.
 Try downloading a raw CSV file from the [UCI Machine Learning
 repository](http://archive.ics.uci.edu/ml/) and loading it in Weka.
 
-**Lesson 03: Descriptive Stats and Visualization** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 03: Descriptive Stats and Visualization** 
 --------------------------------------------------
 
 Once you can load data in Weka, it is important to take a look at it.
@@ -239,7 +239,7 @@ Get comfortable reviewing the details for different attributes in the
 “Preprocess” tab and tuning the scatter plot matrix in the “Visualize”
 tab.
 
-**Lesson 04: Rescale Your Data** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 04: Rescale Your Data** 
 --------------------------------
 
 Raw data is often not suitable for modeling.
@@ -271,7 +271,7 @@ and changing it’s parameters.
 Test out saving modified datasets for later use by clicking the “Save…”
 button on the “Preprocess” tab.
 
-**Lesson 05: Perform Feature Selection on Your Data** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 05: Perform Feature Selection on Your Data** 
 -----------------------------------------------------
 
 Not all of the attributes in your dataset may be relevant to the
@@ -308,7 +308,7 @@ gain (entropy).
 Explore selecting features to removal from your dataset in the
 “Preprocess” tab and the “Remove” button.
 
-**Lesson 06: Machine Learning Algorithms in Weka** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 06: Machine Learning Algorithms in Weka** 
 --------------------------------------------------
 
 A key benefit of the Weka workbench is the large number of machine
@@ -351,7 +351,7 @@ Explore and learn more about the various algorithms available in Weka.
 
 Get confidence choosing and configuring algorithms.
 
-**Lesson 07: Estimate Model Performance** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 07: Estimate Model Performance** 
 -----------------------------------------
 
 Now that you know how to choose and configure different algorithms, you
@@ -395,7 +395,7 @@ Experiment with different Test options.
 Further refine the test options in the configuration provided by
 clicking the “More options…” button.
 
-**Lesson 08: Baseline Performance On Your Data** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 08: Baseline Performance On Your Data** 
 ------------------------------------------------
 
 When you start evaluating multiple machine learning algorithms on your
@@ -437,7 +437,7 @@ Experiment with the ZeroR algorithm on a range of different datasets. It
 is the algorithm you should always run first before all others to
 develop a baseline.
 
-**Lesson 09: Tour of Classification Algorithms** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 09: Tour of Classification Algorithms** 
 ------------------------------------------------
 
 Weka provides a large number of classification algorithms.
@@ -470,7 +470,7 @@ Experiment with each of these top algorithms.
 Try them out on different classification datasets, such as those with
 two classes and those with more.
 
-**Lesson 10: Tour of Regression Algorithms** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 10: Tour of Regression Algorithms** 
 --------------------------------------------
 
 Classification algorithms is Weka’s specialty, but many of these
@@ -519,7 +519,7 @@ Experiment with each of these top algorithms.
 
 Try them out on different regression datasets.
 
-**Lesson 11: Tour of Ensemble Algorithms** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 11: Tour of Ensemble Algorithms** 
 ------------------------------------------
 
 Weka is very easy to use and this may be its biggest advantage over
@@ -562,7 +562,7 @@ result in better performance.
 
 Try them out on different classification and regression datasets.
 
-**Lesson 12: Compare the Performance of Algorithms** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 12: Compare the Performance of Algorithms** 
 ----------------------------------------------------
 
 Weka provides a different tool specifically designed for comparing
@@ -609,7 +609,7 @@ Expand the experiment and add more algorithms and rerun the experiment.
 Change the “Test base” on the “Analyse” tab to change which set of
 results is taken as the reference for comparison to the other results.
 
-**Lesson 13: Tune Algorithm Parameters** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 13: Tune Algorithm Parameters** 
 ----------------------------------------
 
 To get the most out of a machine learning algorithm you must tune the
@@ -657,7 +657,7 @@ Explore changing other configuration properties of KNN and build
 confidence in developing experiments to tune machine learning
 algorithms.
 
-**Lesson 14: Save Your Model** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 14: Save Your Model** 
 ------------------------------
 
 Once you have found a top performing model on your problem you need to
@@ -702,7 +702,7 @@ The new predictions will now be listed in the “Classifier output” pane.
 Experiment saving different models and making predictions for entirely
 new datasets.
 
-**Machine Learning With Weka Mini-Course Review** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Machine Learning With Weka Mini-Course Review** 
 -------------------------------------------------
 
 Congratulations, you made it. Well done!

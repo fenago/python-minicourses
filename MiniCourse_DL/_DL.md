@@ -37,7 +37,7 @@ Applied Deep Learning in Python Mini-Course
 Photo by [darkday](https://www.flickr.com/photos/drainrat/15783392494/),
 some rights reserved.
 
-**Who Is This Mini-Course For?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Who Is This Mini-Course For?** 
 --------------------------------
 
 Before we get started, let’s make sure you are in the right place. The
@@ -65,7 +65,7 @@ It will take you from a developer that knows a little machine learning
 in Python to a developer who can get results and bring the power of Deep
 Learning to your own projects.
 
-**Mini-Course Overview (what to expect)** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Mini-Course Overview (what to expect)** 
 -----------------------------------------
 
 This mini-course is divided into 14 parts.
@@ -124,7 +124,7 @@ Share your results in the comments.
 
 Hang in there, don’t give up!
 
-### **Need help with Deep Learning in Python?** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Need help with Deep Learning in Python?** 
 
 Take my free 2-week email course and discover MLPs, CNNs and LSTMs (with
 code).
@@ -135,7 +135,7 @@ course.
 [**Start Your FREE Mini-Course
 Now!**](https://machinelearningmastery.leadpages.co/leadbox/142d6e873f72a2%3A164f8be4f346dc/5657382461898752/)
 
-**Lesson 01: Introduction to Theano** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 01: Introduction to Theano** 
 -------------------------------------
 
 Theano is a Python library for fast numerical computation to aid in the
@@ -164,37 +164,25 @@ A small example of a Theano program that you can use as a starting point
 is listed below:
 
   ---- -------------------------------------------------------------------
-  1    import theano
-       
-  2    from theano import tensor
-       
-  3    \# declare two symbolic floating-point scalars
-       
-  4    a = tensor.dscalar()
-       
-  5    b = tensor.dscalar()
-       
-  6    \# create a simple expression
-       
-  7    c = a + b
-       
-  8    \# convert the expression into a callable object that takes (a,b)
-       
-  9    \# values as input and computes a value for c
-       
-  10   f = theano.function([a,b], c)
-       
-  11   \# bind 1.5 to 'a', 2.5 to 'b', and evaluate 'c'
-       
-  12   result = f(1.5, 2.5)
-       
-  13   print(result)
+import theano
+from theano import tensor
+# declare two symbolic floating-point scalars
+a = tensor.dscalar()
+b = tensor.dscalar()
+ # create a simple expression
+c = a + b
+# convert the expression into a callable object that takes (a,b)
+# values as input and computes a value for c
+f = theano.function([a,b], c)
+ # bind 1.5 to 'a', 2.5 to 'b', and evaluate 'c'
+result = f(1.5, 2.5)
+print(result)
   ---- -------------------------------------------------------------------
 
 Learn more about Theano on the [Theano
 homepage](http://deeplearning.net/software/theano/).
 
-**Lesson 02: Introduction to TensorFlow** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 02: Introduction to TensorFlow** 
 -----------------------------------------
 
 TensorFlow is a Python library for fast numerical computing created and
@@ -221,39 +209,26 @@ A small example of a TensorFlow program that you can use as a starting
 point is listed below:
 
   ---- ---------------------------------------------------------------
-  1    \# Example of TensorFlow library
-       
-  2    import tensorflow as tf
-       
-  3    import tensorflow.compat.v1 as tf
-       
-  4    tf.disable\_v2\_behavior()
-       
-  5    \# declare two symbolic floating-point scalars
-       
-  6    a = tf.placeholder(tf.float32)
-       
-  7    b = tf.placeholder(tf.float32)
-       
-  8    \# create a simple symbolic expression using the add function
-       
-  9    add = tf.add(a, b)
-       
-  10   \# bind 1.5 to 'a', 2.5 to 'b', and evaluate 'c'
-       
-  11   sess = tf.Session()
-       
-  12   binding = {a: 1.5, b: 2.5}
-       
-  13   c = sess.run(add, feed\_dict=binding)
-       
+# Example of TensorFlow library
+import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable\_v2\_behavior()
+# declare two symbolic floating-point scalars
+ a = tf.placeholder(tf.float32)
+b = tf.placeholder(tf.float32)
+# create a simple symbolic expression using the add function
+add = tf.add(a, b)
+# bind 1.5 to 'a', 2.5 to 'b', and evaluate 'c'
+ sess = tf.Session()
+binding = {a: 1.5, b: 2.5}
+c = sess.run(add, feed\_dict=binding)
   14   print(c)
   ---- ---------------------------------------------------------------
 
 Learn more about TensorFlow on the [TensorFlow
 homepage](https://www.tensorflow.org/).
 
-**Lesson 03: Introduction to Keras** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 03: Introduction to Keras** 
 ------------------------------------
 
 A difficulty of both Theano and TensorFlow is that it can take a lot of
@@ -303,7 +278,7 @@ upcoming lessons where we will implement our first model.
 You can learn more about the Keras library on the [Keras
 homepage](http://keras.io/).
 
-**Lesson 04: Crash Course in Multi-Layer Perceptrons** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 04: Crash Course in Multi-Layer Perceptrons** 
 ------------------------------------------------------
 
 Artificial neural networks are a fascinating area of study, although
@@ -344,7 +319,7 @@ terminology.
 Dig a little deeper into terms like neuron, weights, activation
 function, learning rate and more.
 
-**Lesson 05: Develop Your First Neural Network in Keras** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 05: Develop Your First Neural Network in Keras** 
 ---------------------------------------------------------
 
 Keras allows you to develop and evaluate deep learning models in very
@@ -380,38 +355,22 @@ Download the dataset and place it in your current working directory.
     Details](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.names).
 
   ---- -------------------------------------------------------------------------------------
-  1    from keras.models import Sequential
-       
-  2    from keras.layers import Dense
-       
-  3    \# Load the dataset
-       
-  4    dataset = numpy.loadtxt("pima-indians-diabetes.csv", delimiter=",")
-       
-  5    X = dataset[:,0:8]
-       
-  6    Y = dataset[:,8]
-       
-  7    \# Define and Compile
-       
-  8    model = Sequential()
-       
-  9    model.add(Dense(12, input\_dim=8, activation='relu'))
-       
-  10   model.add(Dense(8, activation='relu'))
-       
-  11   model.add(Dense(1, activation='sigmoid'))
-       
-  12   model.compile(loss='binary\_crossentropy' , optimizer='adam', metrics=['accuracy'])
-       
-  13   \# Fit the model
-       
+from keras.models import Sequential
+from keras.layers import Dense
+# Load the dataset
+dataset = numpy.loadtxt("pima-indians-diabetes.csv", delimiter=",")
+X = dataset[:,0:8]
+ Y = dataset[:,8]
+# Define and Compile
+model = Sequential()
+model.add(Dense(12, input\_dim=8, activation='relu'))
+model.add(Dense(8, activation='relu'))
+ model.add(Dense(1, activation='sigmoid'))
+model.compile(loss='binary\_crossentropy' , optimizer='adam', metrics=['accuracy'])
+# Fit the model
   14   model.fit(X, Y, epochs=150, batch\_size=10)
-       
-  15   \# Evaluate the model
-       
+  15   # Evaluate the model
   16   scores = model.evaluate(X, Y)
-       
   17   print("%s: %.2f%%" % (model.metrics\_names[1], scores[1]\*100))
   ---- -------------------------------------------------------------------------------------
 
@@ -421,7 +380,7 @@ example.
 Learn more about the [Keras API for simple model
 development](http://keras.io/models/sequential/).
 
-**Lesson 06: Use Keras Models With Scikit-Learn** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 06: Use Keras Models With Scikit-Learn** 
 -------------------------------------------------
 
 The scikit-learn library is a general purpose machine learning framework
@@ -448,31 +407,23 @@ For example, you can define an instance of the KerasClassifier and the
 custom function to create your model as follows:
 
   ---- ---------------------------------------------------------------------------------
-  1    \# Function to create model, required for KerasClassifier
-       
-  2    def create\_model():
-       
-  3    \# Create model
-       
-  4    model = Sequential()
-       
-  5    ...
-       
-  6    \# Compile model
-       
-  7    model.compile(...)
-       
-  8    return model
-       
-  9    \
+# Function to create model, required for KerasClassifier
+def create\_model():
+# Create model
+model = Sequential()
+...
+ # Compile model
+model.compile(...)
+return model
+\
         \
-  10   
-       \# create classifier for use in scikit-learn
-  11   
+
+       # create classifier for use in scikit-learn
+ 
        model = KerasClassifier(build\_fn=create\_model, nb\_epoch=150, batch\_size=10)
-  12   
-       \# evaluate model using 10-fold cross validation in scikit-learn
-  13   
+
+       # evaluate model using 10-fold cross validation in scikit-learn
+
        kfold = StratifiedKFold(n\_splits=10, shuffle=True, random\_state=seed)
   14   
        results = cross\_val\_score(model, X, Y, cv=kfold)
@@ -482,7 +433,7 @@ Learn more about using your Keras deep learning models with scikit-learn
 on the [Wrappers for the Sciki-Learn API
 webpage](http://keras.io/scikit-learn-api/).
 
-**Lesson 07: Plot Model Training History** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 07: Plot Model Training History** 
 ------------------------------------------
 
 You can learn a lot about neural networks and deep learning models by
@@ -508,7 +459,7 @@ For example, you can print the list of metrics collected by your history
 object as follows:
 
   --- -------------------------------
-  1   \# list all data in history
+  1   # list all data in history
       
   2   history = model.fit(...)
       
@@ -518,7 +469,7 @@ object as follows:
 You can learn more about the [History object and the callback API in
 Keras](http://keras.io/callbacks/#history).
 
-**Lesson 08: Save Your Best Model During Training With Checkpointing** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 08: Save Your Best Model During Training With Checkpointing** 
 ----------------------------------------------------------------------
 
 Application checkpointing is a fault tolerance technique for long
@@ -542,7 +493,7 @@ Keras to keep track of the best model observed during training.
 You could define a ModelCheckpoint that saves network weights to the
 same file each time an improvement is observed. For example:
 
-  --- ---------------------------------------------------------------------------------------------------------------
+```------------------------------------
   1   from keras.callbacks import ModelCheckpoint
       
   2   ...
@@ -551,15 +502,15 @@ same file each time an improvement is observed. For example:
       
   4   callbacks\_list = [checkpoint]
       
-  5   \# Fit the model
+  5   # Fit the model
       
   6   model.fit(..., callbacks=callbacks\_list)
-  --- ---------------------------------------------------------------------------------------------------------------
+```------------------------------------
 
 Learn more about using the [ModelCheckpoint callback in
 Keras](http://keras.io/callbacks/#modelcheckpoint).
 
-**Lesson 09: Reduce Overfitting With Dropout Regularization** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 09: Reduce Overfitting With Dropout Regularization** 
 -------------------------------------------------------------
 
 A big problem with neural networks is that they can overlearn your
@@ -595,7 +546,7 @@ and add it to your model as follows:
 You can learn more [about dropout in
 Keras](http://keras.io/layers/core/#dropout).
 
-**Lesson 10: Lift Performance With Learning Rate Schedules** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 10: Lift Performance With Learning Rate Schedules** 
 ------------------------------------------------------------
 
 You can often get a boost in the performance of your model by using a
@@ -634,7 +585,7 @@ and drops by 0.0001 each epoch as follows:
 You can learn more about the [SGD class in Keras
 here](http://keras.io/optimizers/#sgd).
 
-**Lesson 11: Crash Course in Convolutional Neural Networks** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 11: Crash Course in Convolutional Neural Networks** 
 ------------------------------------------------------------
 
 Convolutional Neural Networks are a powerful artificial neural network
@@ -669,7 +620,7 @@ Don’t worry too much about how they work just yet, just learn the
 terminology and configuration of the various layers used in this type of
 network.
 
-**Lesson 12: Handwritten Digit Recognition** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 12: Handwritten Digit Recognition** 
 --------------------------------------------
 
 Handwriting digit recognition is a difficult computer vision
@@ -734,7 +685,7 @@ also provides a handy helper function to achieve:
 As a final tip, here is a model definition that you can use as a
 starting point:
 
-  --- -----------------------------------------------------------------------------------------
+```--------------
   1   model = Sequential()
       
   2   model.add(Conv2D(32, (3, 3), padding='valid', input\_shape=(28, 28, 1),
@@ -750,9 +701,9 @@ starting point:
   7   model.add(Dense(num\_classes, activation='softmax'))
       
   8   model.compile(loss='categorical\_crossentropy', optimizer='adam', metrics=['accuracy'])
-  --- -----------------------------------------------------------------------------------------
+```--------------
 
-**Lesson 13: Object Recognition in Small Photographs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 13: Object Recognition in Small Photographs** 
 ------------------------------------------------------
 
 Object recognition is a problem where your model must indicate what is
@@ -785,30 +736,20 @@ For example, you can load the CIFAR-10 dataset in Keras and prepare it
 for use with a convolutional neural network as follows:
 
   ---- ---------------------------------------------------------------------------
-  1    from keras.datasets import cifar10
-       
-  2    from keras.utils import np\_utils
-       
-  3    \# load data
-       
-  4    (X\_train, y\_train), (X\_test, y\_test) = cifar10.load\_data()
-       
-  5    \# normalize inputs from 0-255 to 0.0-1.0
-       
-  6    X\_train = X\_train.astype('float32') X\_test = X\_test.astype('float32')
-       
-  7    X\_train = X\_train / 255.0
-       
-  8    X\_test = X\_test / 255.0
-       
-  9    \# one hot encode outputs
-       
-  10   y\_train = np\_utils.to\_categorical(y\_train)
-       
-  11   y\_test = np\_utils.to\_categorical(y\_test)
+from keras.datasets import cifar10
+from keras.utils import np\_utils
+# load data
+(X\_train, y\_train), (X\_test, y\_test) = cifar10.load\_data()
+# normalize inputs from 0-255 to 0.0-1.0
+ X\_train = X\_train.astype('float32') X\_test = X\_test.astype('float32')
+X\_train = X\_train / 255.0
+X\_test = X\_test / 255.0
+# one hot encode outputs
+y\_train = np\_utils.to\_categorical(y\_train)
+ y\_test = np\_utils.to\_categorical(y\_test)
   ---- ---------------------------------------------------------------------------
 
-**Lesson 14: Improve Generalization With Data Augmentation** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 14: Improve Generalization With Data Augmentation** 
 ------------------------------------------------------------
 
 Data preparation is required when working with neural network and deep
@@ -836,61 +777,37 @@ For example, the example below creates random rotations of up to 90
 degrees of images in the MNIST dataset.
 
   ---- ----------------------------------------------------------------------------
-  1    \# Random Rotations
-       
-  2    from keras.datasets import mnist
-       
-  3    from keras.preprocessing.image import ImageDataGenerator
-       
-  4    from matplotlib import pyplot
-       
-  5    \# load data
-       
-  6    (X\_train, y\_train), (X\_test, y\_test) = mnist.load\_data()
-       
-  7    \# reshape to be [samples][pixels][width][height]
-       
-  8    X\_train = X\_train.reshape((X\_train.shape[0], 28, 28, 1))
-       
-  9    X\_test = X\_test.reshape((X\_test.shape[0], 28, 28, 1))
-       
-  10   \# convert from int to float
-       
-  11   X\_train = X\_train.astype('float32')
-       
-  12   X\_test = X\_test.astype('float32')
-       
-  13   \# define data preparation
-       
+# Random Rotations
+from keras.datasets import mnist
+from keras.preprocessing.image import ImageDataGenerator
+from matplotlib import pyplot
+# load data
+ (X\_train, y\_train), (X\_test, y\_test) = mnist.load\_data()
+# reshape to be [samples][pixels][width][height]
+X\_train = X\_train.reshape((X\_train.shape[0], 28, 28, 1))
+X\_test = X\_test.reshape((X\_test.shape[0], 28, 28, 1))
+# convert from int to float
+ X\_train = X\_train.astype('float32')
+X\_test = X\_test.astype('float32')
+# define data preparation
   14   datagen = ImageDataGenerator(rotation\_range=90)
-       
-  15   \# fit parameters from data
-       
+  15   # fit parameters from data
   16   datagen.fit(X\_train)
-       
-  17   \# configure batch size and retrieve one batch of images
-       
+  17   # configure batch size and retrieve one batch of images
   18   for X\_batch, y\_batch in datagen.flow(X\_train, y\_train, batch\_size=9):
-       
-  19   \# create a grid of 3 \* 3 images
-       
+  19   # create a grid of 3 \* 3 images
   20   for i in range(0, 9):
-       
   21   pyplot.subplot(330 + 1 + i)
-       
-  22   pyplot.imshow(X\_batch[i].reshape(28, 28), cmap=pyplot.get\_cmap('gray'))
-       
-  23   \# show the plot
-       
+       pyplot.imshow(X\_batch[i].reshape(28, 28), cmap=pyplot.get\_cmap('gray'))
+  23   # show the plot
   24   pyplot.show()
-       
   25   break
   ---- ----------------------------------------------------------------------------
 
 You can learn more about the [Keras image augmentation
 API](http://keras.io/preprocessing/image/).
 
-**Deep Learning Mini-Course Review** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Deep Learning Mini-Course Review** 
 ------------------------------------
 
 Congratulations, you made it. Well done!

@@ -1,4 +1,4 @@
-**Who Is This Crash-Course For?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Who Is This Crash-Course For?** 
 ---------------------------------
 
 Before we get started, let’s make sure you are in the right place.
@@ -30,7 +30,7 @@ with your environment, you can follow the step-by-step tutorial here:
     Learning With
     Anaconda](https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/)
 
-### **Want Better Results with Deep Learning?** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Want Better Results with Deep Learning?** 
 
 Take my free 7-day email crash course now (with sample code).
 
@@ -39,7 +39,7 @@ Click to sign-up and also get a free PDF Ebook version of the course.
 [**Download Your FREE
 Mini-Course**](https://machinelearningmastery.lpages.co/leadbox/1433e7773f72a2%3A164f8be4f346dc/5764144745676800/)
 
-**Crash-Course Overview** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Crash-Course Overview** 
 -------------------------
 
 This crash course is broken down into seven lessons.
@@ -85,7 +85,7 @@ Hang in there; don’t give up.
 out tutorials, see my book on the topic titled “[Better Deep
 Learning](https://machinelearningmastery.com/better-deep-learning/).”
 
-**Lesson 01: Better Deep Learning Framework** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 01: Better Deep Learning Framework** 
 ---------------------------------------------
 
 In this lesson, you will discover a framework that you can use to
@@ -135,7 +135,7 @@ You can use this framework to first diagnose the type of problem that
 you have and then identify a technique to evaluate to attempt to address
 your problem.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson, you must list two techniques or areas of focus that
 belong to each of the three areas of the framework.
@@ -146,12 +146,12 @@ the three areas as part of this mini-course.
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **Next** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Next** 
 
 In the next lesson, you will discover how to control the speed of
 learning with the batch size.
 
-**Lesson 02: Batch Size** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 02: Batch Size** 
 -------------------------
 
 In this lesson, you will discover the importance of the [batch
@@ -183,94 +183,57 @@ example:
 Keras allows you to configure the batch size via the *batch\_size*
 argument to the *fit()* function, for example:
 
-  --- ---------------------------------------------------------------------------
-  1   \# fit model
+```
+  1   # fit model
       
   2   history = model.fit(trainX, trainy, epochs=1000, batch\_size=len(trainX))
-  --- ---------------------------------------------------------------------------
+```
 
 The example below demonstrates a Multilayer Perceptron with batch
 gradient descent on a binary classification problem.
 
-  ---- -----------------------------------------------------------------------------------------------------------------------
-  1    \# example of batch gradient descent
-       
-  2    from sklearn.datasets import make\_circles
-       
-  3    from keras.layers import Dense
-       
-  4    from keras.models import Sequential
-       
-  5    from keras.optimizers import SGD
-       
-  6    from matplotlib import pyplot
-       
-  7    \# generate dataset
-       
-  8    X, y = make\_circles(n\_samples=1000, noise=0.1, random\_state=1)
-       
-  9    \# split into train and test
-       
-  10   n\_train = 500
-       
-  11   trainX, testX = X[:n\_train, :], X[n\_train:, :]
-       
-  12   trainy, testy = y[:n\_train], y[n\_train:]
-       
-  13   \# define model
-       
+```-------------------
+# example of batch gradient descent
+from sklearn.datasets import make\_circles
+from keras.layers import Dense
+from keras.models import Sequential
+from keras.optimizers import SGD
+ from matplotlib import pyplot
+# generate dataset
+X, y = make\_circles(n\_samples=1000, noise=0.1, random\_state=1)
+# split into train and test
+n\_train = 500
+ trainX, testX = X[:n\_train, :], X[n\_train:, :]
+trainy, testy = y[:n\_train], y[n\_train:]
+# define model
   14   model = Sequential()
-       
   15   model.add(Dense(50, input\_dim=2, activation='relu'))
-       
   16   model.add(Dense(1, activation='sigmoid'))
-       
-  17   \# compile model
-       
+  17   # compile model
   18   opt = SGD(lr=0.01, momentum=0.9)
-       
   19   model.compile(loss='binary\_crossentropy', optimizer=opt, metrics=['accuracy'])
-       
-  20   \# fit model
-       
+  20   # fit model
   21   history = model.fit(trainX, trainy, validation\_data=(testX, testy), epochs=1000, batch\_size=len(trainX), verbose=0)
-       
-  22   \# evaluate the model
-       
+       # evaluate the model
   23   \_, train\_acc = model.evaluate(trainX, trainy, verbose=0)
-       
   24   \_, test\_acc = model.evaluate(testX, testy, verbose=0)
-       
   25   print('Train: %.3f, Test: %.3f' % (train\_acc, test\_acc))
-       
-  26   \# plot loss learning curves
-       
+  26   # plot loss learning curves
   27   pyplot.subplot(211)
-       
   28   pyplot.title('Cross-Entropy Loss', pad=-40)
-       
   29   pyplot.plot(history.history['loss'], label='train')
-       
   30   pyplot.plot(history.history['val\_loss'], label='test')
-       
   31   pyplot.legend()
-       
-  32   \# plot accuracy learning curves
-       
+  32   # plot accuracy learning curves
   33   pyplot.subplot(212)
-       
   34   pyplot.title('Accuracy', pad=-40)
-       
   35   pyplot.plot(history.history['accuracy'], label='train')
-       
   36   pyplot.plot(history.history['val\_accuracy'], label='test')
-       
   37   pyplot.legend()
-       
   38   pyplot.show()
-  ---- -----------------------------------------------------------------------------------------------------------------------
+```-------------------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson, you must run the code example with each type of
 gradient descent (batch, minibatch, and stochastic) and describe the
@@ -281,12 +244,12 @@ during training.
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **Next** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Next** 
 
 In the next lesson, you will discover how to fine tune a model during
 training with a learning rate schedule
 
-**Lesson 03: Learning Rate Schedule** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 03: Learning Rate Schedule** 
 -------------------------------------
 
 In this lesson, you will discover how to configure an adaptive learning
@@ -306,11 +269,11 @@ adjust the learning rate when a plateau in model performance is
 detected, e.g. no change for a given number of training epochs. For
 example:
 
-  --- ---------------------------------------------------------------------------------------------------
-  1   \# define learning rate schedule
+```------------------------
+  1   # define learning rate schedule
       
   2   rlrp = ReduceLROnPlateau(monitor='val\_loss', factor=0.1, patience=5, min\_delta=1E-7, verbose=1)
-  --- ---------------------------------------------------------------------------------------------------
+```------------------------
 
 This callback is designed to reduce the learning rate after the model
 stops improving with the hope of fine-tuning model weights during
@@ -321,91 +284,51 @@ rate schedule on a binary classification problem, where the learning
 rate will be reduced by an order of magnitude if no change is detected
 in validation loss over 5 training epochs.
 
-  ---- ---------------------------------------------------------------------------------------------------------------
-  1    \# example of a learning rate schedule
-       
-  2    from sklearn.datasets import make\_circles
-       
-  3    from keras.layers import Dense
-       
-  4    from keras.models import Sequential
-       
-  5    from keras.optimizers import SGD
-       
-  6    from keras.callbacks import ReduceLROnPlateau
-       
-  7    from matplotlib import pyplot
-       
-  8    \# generate dataset
-       
-  9    X, y = make\_circles(n\_samples=1000, noise=0.1, random\_state=1)
-       
-  10   \# split into train and test
-       
-  11   n\_train = 500
-       
-  12   trainX, testX = X[:n\_train, :], X[n\_train:, :]
-       
-  13   trainy, testy = y[:n\_train], y[n\_train:]
-       
-  14   \# define model
-       
+```-----------
+# example of a learning rate schedule
+from sklearn.datasets import make\_circles
+from keras.layers import Dense
+from keras.models import Sequential
+from keras.optimizers import SGD
+ from keras.callbacks import ReduceLROnPlateau
+from matplotlib import pyplot
+# generate dataset
+X, y = make\_circles(n\_samples=1000, noise=0.1, random\_state=1)
+# split into train and test
+ n\_train = 500
+trainX, testX = X[:n\_train, :], X[n\_train:, :]
+trainy, testy = y[:n\_train], y[n\_train:]
+  14   # define model
   15   model = Sequential()
-       
   16   model.add(Dense(50, input\_dim=2, activation='relu'))
-       
   17   model.add(Dense(1, activation='sigmoid'))
-       
-  18   \# compile model
-       
+  18   # compile model
   19   opt = SGD(lr=0.01, momentum=0.9)
-       
   20   model.compile(loss='binary\_crossentropy', optimizer=opt, metrics=['accuracy'])
-       
-  21   \# define learning rate schedule
-       
-  22   rlrp = ReduceLROnPlateau(monitor='val\_loss', factor=0.1, patience=5, min\_delta=1E-7, verbose=1)
-       
-  23   \# fit model
-       
+  21   # define learning rate schedule
+       rlrp = ReduceLROnPlateau(monitor='val\_loss', factor=0.1, patience=5, min\_delta=1E-7, verbose=1)
+  23   # fit model
   24   history = model.fit(trainX, trainy, validation\_data=(testX, testy), epochs=300, verbose=0, callbacks=[rlrp])
-       
-  25   \# evaluate the model
-       
+  25   # evaluate the model
   26   \_, train\_acc = model.evaluate(trainX, trainy, verbose=0)
-       
   27   \_, test\_acc = model.evaluate(testX, testy, verbose=0)
-       
   28   print('Train: %.3f, Test: %.3f' % (train\_acc, test\_acc))
-       
-  29   \# plot loss learning curves
-       
+  29   # plot loss learning curves
   30   pyplot.subplot(211)
-       
   31   pyplot.title('Cross-Entropy Loss', pad=-40)
-       
   32   pyplot.plot(history.history['loss'], label='train')
-       
   33   pyplot.plot(history.history['val\_loss'], label='test')
-       
   34   pyplot.legend()
-       
-  35   \# plot accuracy learning curves
-       
+  35   # plot accuracy learning curves
   36   pyplot.subplot(212)
-       
   37   pyplot.title('Accuracy', pad=-40)
-       
   38   pyplot.plot(history.history['accuracy'], label='train')
-       
   39   pyplot.plot(history.history['val\_accuracy'], label='test')
-       
   40   pyplot.legend()
-       
   41   pyplot.show()
-  ---- ---------------------------------------------------------------------------------------------------------------
+```-----------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson, you must run the code example with and without the
 learning rate schedule and describe the effect that the learning rate
@@ -414,12 +337,12 @@ schedule has on the learning curves during training.
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **Next** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Next** 
 
 In the next lesson, you will discover how you can accelerate the
 training process with batch normalization
 
-**Lesson 04: Batch Normalization** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 04: Batch Normalization** 
 ----------------------------------
 
 In this lesson, you will discover how to accelerate the training process
@@ -447,88 +370,49 @@ The example below demonstrates a Multilayer Perceptron model with batch
 normalization on a binary classification problem.
 
   ---- ---------------------------------------------------------------------------------------------
-  1    \# example of batch normalization
-       
-  2    from sklearn.datasets import make\_circles
-       
-  3    from keras.models import Sequential
-       
-  4    from keras.layers import Dense
-       
-  5    from keras.optimizers import SGD
-       
-  6    from keras.layers import BatchNormalization
-       
-  7    from matplotlib import pyplot
-       
-  8    \# generate dataset
-       
-  9    X, y = make\_circles(n\_samples=1000, noise=0.1, random\_state=1)
-       
-  10   \# split into train and test
-       
-  11   n\_train = 500
-       
-  12   trainX, testX = X[:n\_train, :], X[n\_train:, :]
-       
-  13   trainy, testy = y[:n\_train], y[n\_train:]
-       
-  14   \# define model
-       
+# example of batch normalization
+from sklearn.datasets import make\_circles
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.optimizers import SGD
+ from keras.layers import BatchNormalization
+from matplotlib import pyplot
+# generate dataset
+X, y = make\_circles(n\_samples=1000, noise=0.1, random\_state=1)
+# split into train and test
+ n\_train = 500
+trainX, testX = X[:n\_train, :], X[n\_train:, :]
+trainy, testy = y[:n\_train], y[n\_train:]
+  14   # define model
   15   model = Sequential()
-       
   16   model.add(Dense(50, input\_dim=2, activation='relu'))
-       
   17   model.add(BatchNormalization())
-       
   18   model.add(Dense(1, activation='sigmoid'))
-       
-  19   \# compile model
-       
+  19   # compile model
   20   opt = SGD(lr=0.01, momentum=0.9)
-       
   21   model.compile(loss='binary\_crossentropy', optimizer=opt, metrics=['accuracy'])
-       
-  22   \# fit model
-       
+       # fit model
   23   history = model.fit(trainX, trainy, validation\_data=(testX, testy), epochs=300, verbose=0)
-       
-  24   \# evaluate the model
-       
+  24   # evaluate the model
   25   \_, train\_acc = model.evaluate(trainX, trainy, verbose=0)
-       
   26   \_, test\_acc = model.evaluate(testX, testy, verbose=0)
-       
   27   print('Train: %.3f, Test: %.3f' % (train\_acc, test\_acc))
-       
-  28   \# plot loss learning curves
-       
+  28   # plot loss learning curves
   29   pyplot.subplot(211)
-       
   30   pyplot.title('Cross-Entropy Loss', pad=-40)
-       
   31   pyplot.plot(history.history['loss'], label='train')
-       
   32   pyplot.plot(history.history['val\_loss'], label='test')
-       
   33   pyplot.legend()
-       
-  34   \# plot accuracy learning curves
-       
+  34   # plot accuracy learning curves
   35   pyplot.subplot(212)
-       
   36   pyplot.title('Accuracy', pad=-40)
-       
   37   pyplot.plot(history.history['accuracy'], label='train')
-       
   38   pyplot.plot(history.history['val\_accuracy'], label='test')
-       
   39   pyplot.legend()
-       
   40   pyplot.show()
   ---- ---------------------------------------------------------------------------------------------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson, you must run the code example with and without batch
 normalization and describe the effect that batch normalization has on
@@ -537,12 +421,12 @@ the learning curves during training.
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **Next** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Next** 
 
 In the next lesson, you will discover how to reduce overfitting using
 weight regularization.
 
-**Lesson 05: Weight Regularization** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 05: Weight Regularization** 
 ------------------------------------
 
 In this lesson, you will discover how to reduce overfitting of your deep
@@ -564,90 +448,54 @@ argument on a layer, which can be configured to use the [L1 or L2 vector
 norm](https://machinelearningmastery.com/vector-norms-machine-learning/),
 for example:
 
-  --- --------------------------------------------------------------------------------------
+```-----------
   1   model.add(Dense(500, input\_dim=2, activation='relu', kernel\_regularizer=l2(0.01)))
-  --- --------------------------------------------------------------------------------------
+```-----------
 
 The example below demonstrates a Multilayer Perceptron model with weight
 decay on a binary classification problem.
 
   ---- ----------------------------------------------------------------------------------------------
-  1    \# example of weight decay
-       
-  2    from sklearn.datasets import make\_circles
-       
-  3    from keras.models import Sequential
-       
-  4    from keras.layers import Dense
-       
-  5    from keras.regularizers import l2
-       
-  6    from matplotlib import pyplot
-       
-  7    \# generate dataset
-       
-  8    X, y = make\_circles(n\_samples=100, noise=0.1, random\_state=1)
-       
-  9    \# split into train and test
-       
-  10   n\_train = 30
-       
-  11   trainX, testX = X[:n\_train, :], X[n\_train:, :]
-       
-  12   trainy, testy = y[:n\_train], y[n\_train:]
-       
-  13   \# define model
-       
+# example of weight decay
+from sklearn.datasets import make\_circles
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.regularizers import l2
+ from matplotlib import pyplot
+# generate dataset
+X, y = make\_circles(n\_samples=100, noise=0.1, random\_state=1)
+# split into train and test
+n\_train = 30
+ trainX, testX = X[:n\_train, :], X[n\_train:, :]
+trainy, testy = y[:n\_train], y[n\_train:]
+# define model
   14   model = Sequential()
-       
   15   model.add(Dense(500, input\_dim=2, activation='relu', kernel\_regularizer=l2(0.01)))
-       
   16   model.add(Dense(1, activation='sigmoid'))
-       
-  17   \# compile model
-       
+  17   # compile model
   18   model.compile(loss='binary\_crossentropy', optimizer='adam', metrics=['accuracy'])
-       
-  19   \# fit model
-       
+  19   # fit model
   20   history = model.fit(trainX, trainy, validation\_data=(testX, testy), epochs=4000, verbose=0)
-       
-  21   \# evaluate the model
-       
-  22   \_, train\_acc = model.evaluate(trainX, trainy, verbose=0)
-       
+  21   # evaluate the model
+       \_, train\_acc = model.evaluate(trainX, trainy, verbose=0)
   23   \_, test\_acc = model.evaluate(testX, testy, verbose=0)
-       
   24   print('Train: %.3f, Test: %.3f' % (train\_acc, test\_acc))
-       
-  25   \# plot loss learning curves
-       
+  25   # plot loss learning curves
   26   pyplot.subplot(211)
-       
   27   pyplot.title('Cross-Entropy Loss', pad=-40)
-       
   28   pyplot.plot(history.history['loss'], label='train')
-       
   29   pyplot.plot(history.history['val\_loss'], label='test')
-       
   30   pyplot.legend()
-       
-  31   \# plot accuracy learning curves
-       
+  31   # plot accuracy learning curves
   32   pyplot.subplot(212)
-       
   33   pyplot.title('Accuracy', pad=-40)
-       
   34   pyplot.plot(history.history['accuracy'], label='train')
-       
   35   pyplot.plot(history.history['val\_accuracy'], label='test')
-       
   36   pyplot.legend()
-       
   37   pyplot.show()
   ---- ----------------------------------------------------------------------------------------------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson, you must run the code example with and without weight
 regularization and describe the effect that it has on the learning
@@ -656,12 +504,12 @@ curves during training.
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **Next** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Next** 
 
 In the next lesson, you will discover how to reduce overfitting by
 adding noise to your model
 
-**Lesson 06: Adding Noise** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 06: Adding Noise** 
 ---------------------------
 
 In this lesson, you will discover that adding noise to a neural network
@@ -693,84 +541,47 @@ The example below demonstrates a Multilayer Perceptron model with added
 noise between the hidden layers on a binary classification problem.
 
   ---- ----------------------------------------------------------------------------------------------
-  1    \# example of adding noise
-       
-  2    from sklearn.datasets import make\_circles
-       
-  3    from keras.models import Sequential
-       
-  4    from keras.layers import Dense
-       
-  5    from keras.layers import GaussianNoise
-       
-  6    from matplotlib import pyplot
-       
-  7    \# generate dataset
-       
-  8    X, y = make\_circles(n\_samples=100, noise=0.1, random\_state=1)
-       
-  9    \# split into train and test
-       
-  10   n\_train = 30
-       
-  11   trainX, testX = X[:n\_train, :], X[n\_train:, :]
-       
-  12   trainy, testy = y[:n\_train], y[n\_train:]
-       
-  13   \# define model
-       
+# example of adding noise
+from sklearn.datasets import make\_circles
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import GaussianNoise
+ from matplotlib import pyplot
+# generate dataset
+X, y = make\_circles(n\_samples=100, noise=0.1, random\_state=1)
+# split into train and test
+n\_train = 30
+ trainX, testX = X[:n\_train, :], X[n\_train:, :]
+trainy, testy = y[:n\_train], y[n\_train:]
+# define model
   14   model = Sequential()
-       
   15   model.add(Dense(500, input\_dim=2, activation='relu'))
-       
   16   model.add(GaussianNoise(0.1))
-       
   17   model.add(Dense(1, activation='sigmoid'))
-       
-  18   \# compile model
-       
+  18   # compile model
   19   model.compile(loss='binary\_crossentropy', optimizer='adam', metrics=['accuracy'])
-       
-  20   \# fit model
-       
+  20   # fit model
   21   history = model.fit(trainX, trainy, validation\_data=(testX, testy), epochs=4000, verbose=0)
-       
-  22   \# evaluate the model
-       
+       # evaluate the model
   23   \_, train\_acc = model.evaluate(trainX, trainy, verbose=0)
-       
   24   \_, test\_acc = model.evaluate(testX, testy, verbose=0)
-       
   25   print('Train: %.3f, Test: %.3f' % (train\_acc, test\_acc))
-       
-  26   \# plot loss learning curves
-       
+  26   # plot loss learning curves
   27   pyplot.subplot(211)
-       
   28   pyplot.title('Cross-Entropy Loss', pad=-40)
-       
   29   pyplot.plot(history.history['loss'], label='train')
-       
   30   pyplot.plot(history.history['val\_loss'], label='test')
-       
   31   pyplot.legend()
-       
-  32   \# plot accuracy learning curves
-       
+  32   # plot accuracy learning curves
   33   pyplot.subplot(212)
-       
   34   pyplot.title('Accuracy', pad=-40)
-       
   35   pyplot.plot(history.history['accuracy'], label='train')
-       
   36   pyplot.plot(history.history['val\_accuracy'], label='test')
-       
   37   pyplot.legend()
-       
   38   pyplot.show()
   ---- ----------------------------------------------------------------------------------------------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson, you must run the code example with and without the
 addition of noise and describe the effect that it has on the learning
@@ -779,12 +590,12 @@ curves during training.
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **Next** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Next** 
 
 In the next lesson, you will discover how to reduce overfitting using
 early stopping.
 
-**Lesson 07: Early Stopping** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 07: Early Stopping** 
 -----------------------------
 
 In this lesson, you will discover that stopping the training of a neural
@@ -805,97 +616,59 @@ networks is called early stopping.
 Keras supports early stopping via the *EarlyStopping* callback that
 allows you to specify the metric to monitor during training.
 
-  --- ------------------------------------------------------------------------------
-  1   \# patient early stopping
+```---
+  1   # patient early stopping
       
   2   es = EarlyStopping(monitor='val\_loss', mode='min', verbose=1, patience=200)
-  --- ------------------------------------------------------------------------------
+```---
 
 The example below demonstrates a Multilayer Perceptron with early
 stopping on a binary classification problem that will stop when the
 validation loss has not improved for 200 training epochs.
 
-  ---- --------------------------------------------------------------------------------------------------------------
-  1    \# example of early stopping
-       
-  2    from sklearn.datasets import make\_circles
-       
-  3    from keras.models import Sequential
-       
-  4    from keras.layers import Dense
-       
-  5    from keras.callbacks import EarlyStopping
-       
-  6    from matplotlib import pyplot
-       
-  7    \# generate dataset
-       
-  8    X, y = make\_circles(n\_samples=100, noise=0.1, random\_state=1)
-       
-  9    \# split into train and test
-       
-  10   n\_train = 30
-       
-  11   trainX, testX = X[:n\_train, :], X[n\_train:, :]
-       
-  12   trainy, testy = y[:n\_train], y[n\_train:]
-       
-  13   \# define model
-       
+```----------
+# example of early stopping
+from sklearn.datasets import make\_circles
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.callbacks import EarlyStopping
+ from matplotlib import pyplot
+# generate dataset
+X, y = make\_circles(n\_samples=100, noise=0.1, random\_state=1)
+# split into train and test
+n\_train = 30
+ trainX, testX = X[:n\_train, :], X[n\_train:, :]
+trainy, testy = y[:n\_train], y[n\_train:]
+# define model
   14   model = Sequential()
-       
   15   model.add(Dense(500, input\_dim=2, activation='relu'))
-       
   16   model.add(Dense(1, activation='sigmoid'))
-       
-  17   \# compile model
-       
+  17   # compile model
   18   model.compile(loss='binary\_crossentropy', optimizer='adam', metrics=['accuracy'])
-       
-  19   \# patient early stopping
-       
+  19   # patient early stopping
   20   es = EarlyStopping(monitor='val\_loss', mode='min', verbose=1, patience=200)
-       
-  21   \# fit model
-       
-  22   history = model.fit(trainX, trainy, validation\_data=(testX, testy), epochs=4000, verbose=0, callbacks=[es])
-       
-  23   \# evaluate the model
-       
+  21   # fit model
+       history = model.fit(trainX, trainy, validation\_data=(testX, testy), epochs=4000, verbose=0, callbacks=[es])
+  23   # evaluate the model
   24   \_, train\_acc = model.evaluate(trainX, trainy, verbose=0)
-       
   25   \_, test\_acc = model.evaluate(testX, testy, verbose=0)
-       
   26   print('Train: %.3f, Test: %.3f' % (train\_acc, test\_acc))
-       
-  27   \# plot loss learning curves
-       
+  27   # plot loss learning curves
   28   pyplot.subplot(211)
-       
   29   pyplot.title('Cross-Entropy Loss', pad=-40)
-       
   30   pyplot.plot(history.history['loss'], label='train')
-       
   31   pyplot.plot(history.history['val\_loss'], label='test')
-       
   32   pyplot.legend()
-       
-  33   \# plot accuracy learning curves
-       
+  33   # plot accuracy learning curves
   34   pyplot.subplot(212)
-       
   35   pyplot.title('Accuracy', pad=-40)
-       
   36   pyplot.plot(history.history['accuracy'], label='train')
-       
   37   pyplot.plot(history.history['val\_accuracy'], label='test')
-       
   38   pyplot.legend()
-       
   39   pyplot.show()
-  ---- --------------------------------------------------------------------------------------------------------------
+```----------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson, you must run the code example with and without early
 stopping and describe the effect it has on the learning curves during
@@ -904,14 +677,14 @@ training.
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **Next** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Next** 
 
 This was your final lesson.
 
-**The End!** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**The End!** 
 ------------
 
-**(*****Look how far you have come!*****)** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**(*****Look how far you have come!*****)** 
 -------------------------------------------
 
 You made it. Well done!
@@ -948,7 +721,7 @@ Take the next step and check out [my book on getting better performance
 with deep
 learning](https://machinelearningmastery.com/better-deep-learning/).
 
-**Summary** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Summary** 
 -----------
 
 How did you do with the mini-course?

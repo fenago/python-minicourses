@@ -55,7 +55,7 @@ Photo by [Nicholas A.
 Tonelli](https://www.flickr.com/photos/nicholas_t/14840636880/), some
 rights reserved.
 
-**Who Is This Mini-Course For?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Who Is This Mini-Course For?** 
 --------------------------------
 
 Before we get started, let’s make sure you are in the right place.
@@ -108,7 +108,7 @@ After completing this course, you will:
 
 Next, let’s review the lessons.
 
-### **Need help with LSTMs for Sequence Prediction?** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Need help with LSTMs for Sequence Prediction?** 
 
 Take my free 7-day email course and discover 6 different LSTM
 architectures (with code).
@@ -118,7 +118,7 @@ Click to sign-up and also get a free PDF Ebook version of the course.
 [**Start Your FREE Mini-Course
 Now!**](https://machinelearningmastery.lpages.co/leadbox/1403a9373f72a2%3A164f8be4f346dc/5754903989321728/)
 
-**Mini-Course Overview** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Mini-Course Overview** 
 ------------------------
 
 This mini-course is broken down into 14 lessons.
@@ -137,7 +137,7 @@ models, and advanced.
 
 Overview of LSTM Mini-Course
 
-### **Foundations** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Foundations** 
 
 The focus of these lessons are the things that you need to know before
 using LSTMs.
@@ -150,7 +150,7 @@ using LSTMs.
 
 -   **Lesson 04**: How to develop LSTMs in Keras
 
-### **Models** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Models** 
 
 -   **Lesson 05**: How to develop Vanilla LSTMs
 
@@ -166,7 +166,7 @@ using LSTMs.
 
 -   **Lesson 11**: How to develop Generative LSTMs
 
-### **Advanced** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Advanced** 
 
 -   **Lesson 12**: How to tune LSTM hyperparameters
 
@@ -188,22 +188,22 @@ up some confidence and inertia.
 
 Hang in there; don’t give up!
 
-**Foundations** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Foundations** 
 ---------------
 
 The lessons in this section are designed to give you an understanding of
 how LSTMs work and how to implement LSTM models using the Keras library.
 
-**Lesson 1: What are LSTMs?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 1: What are LSTMs?** 
 -----------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to understand LSTMs from a high-level
 sufficiently so that you can explain what they are and how they work to
 a colleague or manager.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   What is sequence prediction and what are some general examples?
 
@@ -216,7 +216,7 @@ a colleague or manager.
 
 -   What are some prominent applications of LSTMs?
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [Crash Course in Recurrent Neural Networks for Deep
     Learning](http://machinelearningmastery.com/crash-course-recurrent-neural-networks-deep-learning/)
@@ -238,15 +238,15 @@ a colleague or manager.
 -   [8 Inspirational Applications of Deep
     Learning](http://machinelearningmastery.com/inspirational-applications-deep-learning/)
 
-**Lesson 2: How LSTMs are trained** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 2: How LSTMs are trained** 
 -----------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to understand how LSTM models are trained on
 example sequences.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   What common problems afflict the training of traditional RNNs?
 
@@ -260,7 +260,7 @@ example sequences.
 
 -   How is BPTT implemented and configured in Keras?
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [A Gentle Introduction to Backpropagation Through
     Time](http://machinelearningmastery.com/gentle-introduction-backpropagation-time/)
@@ -269,15 +269,15 @@ example sequences.
     Through Time in
     Keras](http://machinelearningmastery.com/truncated-backpropagation-through-time-in-keras/)
 
-**Lesson 3: How to prepare data for LSTMs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 3: How to prepare data for LSTMs** 
 -------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to understand how to prepare sequence
 prediction data for use with LSTM models.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   How do you prepare numeric data for use with LSTMs?
 
@@ -293,12 +293,12 @@ prediction data for use with LSTM models.
 
 -   How do you reshape input data for LSTMs in Keras?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Demonstrate how to transform a numerical input sequence into a form
 suitable for training an LSTM.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [How to Scale Data for Long Short-Term Memory Networks in
     Python](http://machinelearningmastery.com/how-to-scale-data-for-long-short-term-memory-networks-in-python/)
@@ -324,15 +324,15 @@ suitable for training an LSTM.
 -   [Data Preparation for Variable-Length Input
     Sequences](http://machinelearningmastery.com/data-preparation-variable-length-input-sequences-sequence-prediction/)
 
-**Lesson 4: How to develop LSTMs in Keras** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 4: How to develop LSTMs in Keras** 
 -------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to understand how to define, fit, and
 evaluate LSTM models using the Keras deep learning library in Python.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   How do you define an LSTM Model?
 
@@ -347,12 +347,12 @@ evaluate LSTM models using the Keras deep learning library in Python.
 -   How can LSTMs be applied to different types of sequence prediction
     problems?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Prepare an example that demonstrates the life-cycle of an LSTM model on
 a sequence prediction problem.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [The 5 Step Life-Cycle for Long Short-Term Memory Models in
     Keras](http://machinelearningmastery.com/5-step-life-cycle-long-short-term-memory-models-keras/)
@@ -361,16 +361,16 @@ a sequence prediction problem.
     Recurrent Neural
     Networks](http://machinelearningmastery.com/handle-long-sequences-long-short-term-memory-recurrent-neural-networks/)
 
-**Models** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Models** 
 ----------
 
 The lessons in this section are designed to teach you how to get results
 with LSTM models on sequence prediction problems.
 
-**Lesson 5: How to develop Vanilla LSTMs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 5: How to develop Vanilla LSTMs** 
 ------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to develop and evaluate vanilla
 LSTM models.
@@ -379,12 +379,12 @@ LSTM models.
 
 -   What are some examples where the vanilla LSTM has been applied?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment that demonstrates a vanilla LSTM on a
 sequence prediction problem.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [Sequence Classification with LSTM Recurrent Neural Networks in
     Python with
@@ -397,15 +397,15 @@ sequence prediction problem.
 -   [Time Series Forecasting with the Long Short-Term Memory Network in
     Python](http://machinelearningmastery.com/time-series-forecasting-long-short-term-memory-network-python/)
 
-**Lesson 6: How to develop Stacked LSTMs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 6: How to develop Stacked LSTMs** 
 ------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to develop and evaluate stacked
 LSTM models.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   What are the difficulties in using a vanilla LSTM on a sequence
     problem with hierarchical structure?
@@ -418,12 +418,12 @@ LSTM models.
 
 -   How can a stacked LSTM be implemented in Keras?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment that demonstrates a stacked LSTM on a
 sequence prediction problem with hierarchical input structure.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [Sequence Classification with LSTM Recurrent Neural Networks in
     Python with
@@ -433,15 +433,15 @@ sequence prediction problem with hierarchical input structure.
     Python with
     Keras](http://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/)
 
-**Lesson 7: How to develop CNN LSTMs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 7: How to develop CNN LSTMs** 
 --------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to develop LSTM models that use
 a Convolutional Neural Network on the front end.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   What are the difficulties of using a vanilla LSTM with spatial input
     data?
@@ -454,26 +454,26 @@ a Convolutional Neural Network on the front end.
 
 -   How can the CNN LSTM architecture be implemented in Keras?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment that demonstrates a CNN LSTM on a
 sequence prediction problem with spatial input.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [Sequence Classification with LSTM Recurrent Neural Networks in
     Python with
     Keras](http://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/)
 
-**Lesson 8: How to develop Encoder-Decoder LSTMs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 8: How to develop Encoder-Decoder LSTMs** 
 --------------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to develop encoder-decoder LSTM
 models.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   What are sequence-to-sequence (seq2seq) prediction problems?
 
@@ -488,12 +488,12 @@ models.
 
 -   How can encoder-decoder LSTMs be implemented in Keras?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment that demonstrates an encoder-decoder
 LSTM on a sequence-to-sequence prediction problem.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [How to Use the TimeDistributed Layer for Long Short-Term Memory
     Networks in
@@ -505,15 +505,15 @@ LSTM on a sequence-to-sequence prediction problem.
 -   [How to use an Encoder-Decoder LSTM to Echo Sequences of Random
     Integers](http://machinelearningmastery.com/how-to-use-an-encoder-decoder-lstm-to-echo-sequences-of-random-integers/)
 
-**Lesson 9: How to develop Bi-directional LSTMs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 9: How to develop Bi-directional LSTMs** 
 -------------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to developer Bidirectional LSTM
 models.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   What is a bidirectional LSTM?
 
@@ -526,26 +526,26 @@ models.
 
 -   How can bidirectional LSTMs be implemented in Keras?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment that compares forward, backward, and
 bidirectional LSTM models on a sequence prediction problem.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [How to Develop a Bidirectional LSTM For Sequence Classification in
     Python with
     Keras](http://machinelearningmastery.com/develop-bidirectional-lstm-sequence-classification-python-keras/)
 
-**Lesson 10: How to develop LSTMs with Attention** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 10: How to develop LSTMs with Attention** 
 --------------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to develop LSTM models with
 attention.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   What impact do long sequences with neutral information have on
     LSTMs?
@@ -558,20 +558,20 @@ attention.
 
 -   How can an attention architecture be implemented in Keras?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment that applies attention to a sequence
 prediction problem with long sequences of neutral information.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [Attention in Long Short-Term Memory Recurrent Neural
     Networks](http://machinelearningmastery.com/attention-long-short-term-memory-recurrent-neural-networks/)
 
-**Lesson 11: How to develop Generative LSTMs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 11: How to develop Generative LSTMs** 
 ----------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to develop LSTMs for use in
 generative models.
@@ -584,30 +584,30 @@ generative models.
 
 -   What benefits do LSTMs have as generative models?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment to learn a corpus of text and generate
 new samples of text with the same syntax, grammar, and style.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [Text Generation With LSTM Recurrent Neural Networks in Python with
     Keras](http://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/)
 
-**Advanced** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Advanced** 
 ------------
 
 The lessons in this section are designed to teach you how to get the
 most from your LSTM models on your own sequence prediction problems.
 
-**Lesson 12: How to tune LSTM hyperparameters** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 12: How to tune LSTM hyperparameters** 
 -----------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to tune LSTM hyperparameters.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   How can we diagnose over-learning or under-learning of an LSTM
     model?
@@ -626,12 +626,12 @@ The goal of this lesson is to learn how to tune LSTM hyperparameters.
 
     -   Learning behavior.
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment to tune one hyperparameter of an LSTM
 and select the best configuration.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [How to Evaluate the Skill of Deep Learning
     Models](http://machinelearningmastery.com/evaluate-skill-deep-learning-models/)
@@ -646,41 +646,41 @@ and select the best configuration.
 -   [How To Improve Deep Learning
     Performance](http://machinelearningmastery.com/improve-deep-learning-performance/)
 
-**Lesson 13: How to update LSTM models** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 13: How to update LSTM models** 
 ----------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to update LSTM models after new
 data becomes available.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   What are the benefits of updating LSTM models in response to new
     data?
 
 -   What are some schemes for updating an LSTM model with new data?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment to fit an LSTM model to a sequence
 prediction problem that contrasts the effect on the model skill of
 different model update schemes.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [How to Update LSTM Networks During Training for Time Series
     Forecasting](http://machinelearningmastery.com/update-lstm-networks-training-time-series-forecasting/)
 
-**Lesson 14: How to make predictions with LSTMs** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 14: How to make predictions with LSTMs** 
 -------------------------------------------------
 
-### **Goal** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Goal** 
 
 The goal of this lesson is to learn how to finalize an LSTM model and
 use it to make predictions on new data.
 
-### **Questions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Questions** 
 
 -   How do you save model structure and weights in Keras?
 
@@ -688,13 +688,13 @@ use it to make predictions on new data.
 
 -   How do you make a prediction with a finalized model?
 
-### **Experiment** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Experiment** 
 
 Design and execute an experiment to fit a final LSTM model, save it to
 file, then later load it and make a prediction on a held back validation
 dataset.
 
-### **Further Reading** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Further Reading** 
 
 -   [Save and Load Your Keras Deep Learning
     Models](http://machinelearningmastery.com/save-load-keras-deep-learning-models/)
@@ -702,10 +702,10 @@ dataset.
 -   [How to Train a Final Machine Learning
     Model](http://machinelearningmastery.com/train-final-machine-learning-model/)
 
-**The End!** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**The End!** 
 ------------
 
-**(*****Look How Far You Have Come*****)** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**(*****Look How Far You Have Come*****)** 
 ------------------------------------------
 
 You made it. Well done!

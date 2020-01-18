@@ -1,4 +1,4 @@
-### **Deep Learning for Time Series Forecasting Crash Course.** {.western align="center" style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Deep Learning for Time Series Forecasting Crash Course.** 
 
 #### **Bring Deep Learning methods to Your Time Series project in 7 Days.** {align="center" style="margin-top: 0in; margin-bottom: 0.08in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
 
@@ -34,7 +34,7 @@ Photo by [Brian
 Richardson](https://www.flickr.com/photos/seriousbri/3736154699/), some
 rights reserved.
 
-**Who Is This Crash-Course For?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Who Is This Crash-Course For?** 
 ---------------------------------
 
 Before we get started, let’s make sure you are in the right place.
@@ -70,7 +70,7 @@ here:
     Learning with
     Anaconda](https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/)
 
-**Crash-Course Overview** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Crash-Course Overview** 
 -------------------------
 
 This crash course is broken down into 7 lessons.
@@ -118,7 +118,7 @@ fleshed out tutorials, see my book on the topic titled “[Deep Learning
 for Time Series
 Forecasting](https://machinelearningmastery.com/deep-learning-for-time-series-forecasting/)“.
 
-### **Need help with Deep Learning for Time Series?** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Need help with Deep Learning for Time Series?** 
 
 Take my free 7-day email crash course now (with sample code).
 
@@ -127,7 +127,7 @@ Click to sign-up and also get a free PDF Ebook version of the course.
 [**Download Your FREE
 Mini-Course**](https://machinelearningmastery.lpages.co/leadbox/14531ee73f72a2%3A164f8be4f346dc/5630742793027584/)
 
-**Lesson 01: Promise of Deep Learning** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 01: Promise of Deep Learning** 
 ---------------------------------------
 
 In this lesson, you will discover the promise of deep learning methods
@@ -154,7 +154,7 @@ capabilities that are offered by few algorithms, such as:
 For these capabilities alone, feedforward neural networks may be useful
 for time series forecasting.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson you must suggest one capability from both Convolutional
 Neural Networks and Recurrent Neural Networks that may be beneficial in
@@ -163,7 +163,7 @@ modeling time series forecasting problems.
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [The Promise of Recurrent Neural Networks for Time Series
     Forecasting](https://machinelearningmastery.com/promise-recurrent-neural-networks-time-series-forecasting/)
@@ -171,7 +171,7 @@ discover.
 In the next lesson, you will discover how to transform time series data
 for time series forecasting.
 
-**Lesson 02: How to Transform Data for Time Series** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 02: How to Transform Data for Time Series** 
 ----------------------------------------------------
 
 In this lesson, you will discover how to transform your time series data
@@ -217,7 +217,7 @@ sliding a window across prior observations that are used as inputs to
 the model in order to predict the next value in the series. In this case
 the window width is 3 time steps.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson you must develop Python code to transform the daily
 female births dataset into a supervised learning format with some number
@@ -229,7 +229,7 @@ You can download the dataset from here:
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [Time Series Forecasting as Supervised
     Learning](https://machinelearningmastery.com/time-series-forecasting-supervised-learning/)
@@ -244,7 +244,7 @@ discover.
 In the next lesson, you will discover how to develop a Multilayer
 Perceptron deep learning model for forecasting a univariate time series.
 
-**Lesson 03: MLP for Time Series Forecasting** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 03: MLP for Time Series Forecasting** 
 ----------------------------------------------
 
 In this lesson, you will discover how to develop a Multilayer Perceptron
@@ -266,42 +266,24 @@ fit model can be used to make a prediction.
 The complete example is listed below.
 
   ---- ---------------------------------------------------------------------
-  1    \# univariate mlp example
-       
-  2    from numpy import array
-       
-  3    from keras.models import Sequential
-       
-  4    from keras.layers import Dense
-       
-  5    \# define dataset
-       
-  6    X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
-       
-  7    y = array([40, 50, 60, 70])
-       
-  8    \# define model
-       
-  9    model = Sequential()
-       
-  10   model.add(Dense(100, activation='relu', input\_dim=3))
-       
-  11   model.add(Dense(1))
-       
-  12   model.compile(optimizer='adam', loss='mse')
-       
-  13   \# fit model
-       
+# univariate mlp example
+from numpy import array
+from keras.models import Sequential
+from keras.layers import Dense
+# define dataset
+ X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
+y = array([40, 50, 60, 70])
+# define model
+model = Sequential()
+model.add(Dense(100, activation='relu', input\_dim=3))
+ model.add(Dense(1))
+model.compile(optimizer='adam', loss='mse')
+# fit model
   14   model.fit(X, y, epochs=2000, verbose=0)
-       
-  15   \# demonstrate prediction
-       
+  15   # demonstrate prediction
   16   x\_input = array([50, 60, 70])
-       
   17   x\_input = x\_input.reshape((1, 3))
-       
   18   yhat = model.predict(x\_input, verbose=0)
-       
   19   print(yhat)
   ---- ---------------------------------------------------------------------
 
@@ -311,7 +293,7 @@ out-of-sample value.
 Given [50, 60, 70] as input, the model correctly predicts 80 as the next
 value in the sequence.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson you must download the daily female births dataset, split
 it into train and test sets and develop a model that can make reasonably
@@ -323,7 +305,7 @@ You can download the dataset from here:
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [Crash Course On Multi-Layer Perceptron Neural
     Networks](https://machinelearningmastery.com/neural-networks-crash-course/)
@@ -338,7 +320,7 @@ discover.
 In the next lesson, you will discover how to develop a Convolutional
 Neural Network model for forecasting a univariate time series.
 
-**Lesson 04: CNN for Time Series Forecasting** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 04: CNN for Time Series Forecasting** 
 ----------------------------------------------
 
 In this lesson, you will discover how to develop a Convolutional Neural
@@ -369,58 +351,32 @@ fit model can be used to make a prediction.
 The complete example is listed below.
 
   ---- ---------------------------------------------------------------------------------------
-  1    \# univariate cnn example
-       
-  2    from numpy import array
-       
-  3    from keras.models import Sequential
-       
-  4    from keras.layers import Dense
-       
-  5    from keras.layers import Flatten
-       
-  6    from keras.layers.convolutional import Conv1D
-       
-  7    from keras.layers.convolutional import MaxPooling1D
-       
-  8    \# define dataset
-       
-  9    X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
-       
-  10   y = array([40, 50, 60, 70])
-       
-  11   \# reshape from [samples, timesteps] into [samples, timesteps, features]
-       
-  12   X = X.reshape((X.shape[0], X.shape[1], 1))
-       
-  13   \# define model
-       
+# univariate cnn example
+from numpy import array
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import Flatten
+ from keras.layers.convolutional import Conv1D
+from keras.layers.convolutional import MaxPooling1D
+# define dataset
+X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
+y = array([40, 50, 60, 70])
+ # reshape from [samples, timesteps] into [samples, timesteps, features]
+X = X.reshape((X.shape[0], X.shape[1], 1))
+# define model
   14   model = Sequential()
-       
   15   model.add(Conv1D(filters=64, kernel\_size=2, activation='relu', input\_shape=(3, 1)))
-       
   16   model.add(MaxPooling1D(pool\_size=2))
-       
   17   model.add(Flatten())
-       
   18   model.add(Dense(50, activation='relu'))
-       
   19   model.add(Dense(1))
-       
   20   model.compile(optimizer='adam', loss='mse')
-       
-  21   \# fit model
-       
-  22   model.fit(X, y, epochs=1000, verbose=0)
-       
-  23   \# demonstrate prediction
-       
+  21   # fit model
+       model.fit(X, y, epochs=1000, verbose=0)
+  23   # demonstrate prediction
   24   x\_input = array([50, 60, 70])
-       
   25   x\_input = x\_input.reshape((1, 3, 1))
-       
   26   yhat = model.predict(x\_input, verbose=0)
-       
   27   print(yhat)
   ---- ---------------------------------------------------------------------------------------
 
@@ -430,7 +386,7 @@ out-of-sample value.
 Given [50, 60, 70] as input, the model correctly predicts 80 as the next
 value in the sequence.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson you must download the daily female births dataset, split
 it into train and test sets and develop a model that can make reasonably
@@ -442,7 +398,7 @@ You can download the dataset from here:
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [Crash Course in Convolutional Neural Networks for Machine
     Learning](https://machinelearningmastery.com/crash-course-convolutional-neural-networks/)
@@ -450,7 +406,7 @@ discover.
 In the next lesson, you will discover how to develop a Long Short-Term
 Memory network model for forecasting a univariate time series.
 
-**Lesson 05: LSTM for Time Series Forecasting** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 05: LSTM for Time Series Forecasting** 
 -----------------------------------------------
 
 In this lesson, you will discover how to develop a Long Short-Term
@@ -482,49 +438,28 @@ fit model can be used to make a prediction.
 The complete example is listed below.
 
   ---- --------------------------------------------------------------------------
-  1    \# univariate lstm example
-       
-  2    from numpy import array
-       
-  3    from keras.models import Sequential
-       
-  4    from keras.layers import LSTM
-       
-  5    from keras.layers import Dense
-       
-  6    \# define dataset
-       
-  7    X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
-       
-  8    y = array([40, 50, 60, 70])
-       
-  9    \# reshape from [samples, timesteps] into [samples, timesteps, features]
-       
-  10   X = X.reshape((X.shape[0], X.shape[1], 1))
-       
-  11   \# define model
-       
-  12   model = Sequential()
-       
-  13   model.add(LSTM(50, activation='relu', input\_shape=(3, 1)))
-       
+# univariate lstm example
+from numpy import array
+from keras.models import Sequential
+from keras.layers import LSTM
+from keras.layers import Dense
+ # define dataset
+X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
+y = array([40, 50, 60, 70])
+# reshape from [samples, timesteps] into [samples, timesteps, features]
+X = X.reshape((X.shape[0], X.shape[1], 1))
+ # define model
+model = Sequential()
+model.add(LSTM(50, activation='relu', input\_shape=(3, 1)))
   14   model.add(Dense(1))
-       
   15   model.compile(optimizer='adam', loss='mse')
-       
-  16   \# fit model
-       
+  16   # fit model
   17   model.fit(X, y, epochs=1000, verbose=0)
-       
-  18   \# demonstrate prediction
-       
+  18   # demonstrate prediction
   19   x\_input = array([50, 60, 70])
-       
   20   x\_input = x\_input.reshape((1, 3, 1))
-       
   21   yhat = model.predict(x\_input, verbose=0)
-       
-  22   print(yhat)
+       print(yhat)
   ---- --------------------------------------------------------------------------
 
 Running the example will fit the model on the data then predict the next
@@ -533,7 +468,7 @@ out-of-sample value.
 Given [50, 60, 70] as input, the model correctly predicts 80 as the next
 value in the sequence.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson you must download the daily female births dataset, split
 it into train and test sets and develop a model that can make reasonably
@@ -545,7 +480,7 @@ You can download the dataset from here:
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [A Gentle Introduction to Long Short-Term Memory Networks by the
     Experts](https://machinelearningmastery.com/gentle-introduction-long-short-term-memory-networks-experts/)
@@ -556,7 +491,7 @@ discover.
 In the next lesson, you will discover how to develop a hybrid CNN-LSTM
 model for a univariate time series forecasting problem.
 
-**Lesson 06: CNN-LSTM for Time Series Forecasting** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 06: CNN-LSTM for Time Series Forecasting** 
 ---------------------------------------------------
 
 In this lesson, you will discover how to develop a hybrid CNN-LSTM model
@@ -591,65 +526,37 @@ fit model can be used to make a prediction.
 
 The complete example is listed below.
 
-  ---- --------------------------------------------------------------------------------------------------------------
-  1    \# univariate cnn-lstm example
-       
-  2    from numpy import array
-       
-  3    from keras.models import Sequential
-       
-  4    from keras.layers import LSTM
-       
-  5    from keras.layers import Dense
-       
-  6    from keras.layers import Flatten
-       
-  7    from keras.layers import TimeDistributed
-       
-  8    from keras.layers.convolutional import Conv1D
-       
-  9    from keras.layers.convolutional import MaxPooling1D
-       
-  10   \# define dataset
-       
-  11   X = array([[10, 20, 30, 40], [20, 30, 40, 50], [30, 40, 50, 60], [40, 50, 60, 70]])
-       
-  12   y = array([50, 60, 70, 80])
-       
-  13   \# reshape from [samples, timesteps] into [samples, subsequences, timesteps, features]
-       
+```----------
+# univariate cnn-lstm example
+from numpy import array
+from keras.models import Sequential
+from keras.layers import LSTM
+from keras.layers import Dense
+ from keras.layers import Flatten
+from keras.layers import TimeDistributed
+from keras.layers.convolutional import Conv1D
+from keras.layers.convolutional import MaxPooling1D
+# define dataset
+ X = array([[10, 20, 30, 40], [20, 30, 40, 50], [30, 40, 50, 60], [40, 50, 60, 70]])
+y = array([50, 60, 70, 80])
+# reshape from [samples, timesteps] into [samples, subsequences, timesteps, features]
   14   X = X.reshape((X.shape[0], 2, 2, 1))
-       
-  15   \# define model
-       
+  15   # define model
   16   model = Sequential()
-       
   17   model.add(TimeDistributed(Conv1D(filters=64, kernel\_size=1, activation='relu'), input\_shape=(None, 2, 1)))
-       
   18   model.add(TimeDistributed(MaxPooling1D(pool\_size=2)))
-       
   19   model.add(TimeDistributed(Flatten()))
-       
   20   model.add(LSTM(50, activation='relu'))
-       
   21   model.add(Dense(1))
-       
-  22   model.compile(optimizer='adam', loss='mse')
-       
-  23   \# fit model
-       
+       model.compile(optimizer='adam', loss='mse')
+  23   # fit model
   24   model.fit(X, y, epochs=500, verbose=0)
-       
-  25   \# demonstrate prediction
-       
+  25   # demonstrate prediction
   26   x\_input = array([50, 60, 70, 80])
-       
   27   x\_input = x\_input.reshape((1, 2, 2, 1))
-       
   28   yhat = model.predict(x\_input, verbose=0)
-       
   29   print(yhat)
-  ---- --------------------------------------------------------------------------------------------------------------
+```----------
 
 Running the example will fit the model on the data then predict the next
 out-of-sample value.
@@ -657,7 +564,7 @@ out-of-sample value.
 Given [50, 60, 70, 80] as input, the model correctly predicts 90 as the
 next value in the sequence.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson you must download the daily female births dataset, split
 it into train and test sets and develop a model that can make reasonably
@@ -669,7 +576,7 @@ You can download the dataset from here:
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [CNN Long Short-Term Memory
     Networks](https://machinelearningmastery.com/cnn-long-short-term-memory-networks/)
@@ -681,7 +588,7 @@ discover.
 In the next lesson, you will discover how to develop an Encoder-Decoder
 LSTM network model for multi-step time series forecasting.
 
-**Lesson 07: Encoder-Decoder LSTM Multi-step Forecasting** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 07: Encoder-Decoder LSTM Multi-step Forecasting** 
 ----------------------------------------------------------
 
 In this lesson, you will discover how to develop an Encoder-Decoder LSTM
@@ -716,58 +623,32 @@ fit model can be used to make a prediction.
 The complete example is listed below.
 
   ---- --------------------------------------------------------------------------
-  1    \# multi-step encoder-decoder lstm example
-       
-  2    from numpy import array
-       
-  3    from keras.models import Sequential
-       
-  4    from keras.layers import LSTM
-       
-  5    from keras.layers import Dense
-       
-  6    from keras.layers import RepeatVector
-       
-  7    from keras.layers import TimeDistributed
-       
-  8    \# define dataset
-       
-  9    X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
-       
-  10   y = array([[40,50],[50,60],[60,70],[70,80]])
-       
-  11   \# reshape from [samples, timesteps] into [samples, timesteps, features]
-       
-  12   X = X.reshape((X.shape[0], X.shape[1], 1))
-       
-  13   y = y.reshape((y.shape[0], y.shape[1], 1))
-       
-  14   \# define model
-       
+# multi-step encoder-decoder lstm example
+from numpy import array
+from keras.models import Sequential
+from keras.layers import LSTM
+from keras.layers import Dense
+ from keras.layers import RepeatVector
+from keras.layers import TimeDistributed
+# define dataset
+X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
+y = array([[40,50],[50,60],[60,70],[70,80]])
+ # reshape from [samples, timesteps] into [samples, timesteps, features]
+X = X.reshape((X.shape[0], X.shape[1], 1))
+y = y.reshape((y.shape[0], y.shape[1], 1))
+  14   # define model
   15   model = Sequential()
-       
   16   model.add(LSTM(100, activation='relu', input\_shape=(3, 1)))
-       
   17   model.add(RepeatVector(2))
-       
   18   model.add(LSTM(100, activation='relu', return\_sequences=True))
-       
   19   model.add(TimeDistributed(Dense(1)))
-       
   20   model.compile(optimizer='adam', loss='mse')
-       
-  21   \# fit model
-       
-  22   model.fit(X, y, epochs=100, verbose=0)
-       
-  23   \# demonstrate prediction
-       
+  21   # fit model
+       model.fit(X, y, epochs=100, verbose=0)
+  23   # demonstrate prediction
   24   x\_input = array([50, 60, 70])
-       
   25   x\_input = x\_input.reshape((1, 3, 1))
-       
   26   yhat = model.predict(x\_input, verbose=0)
-       
   27   print(yhat)
   ---- --------------------------------------------------------------------------
 
@@ -777,7 +658,7 @@ two out-of-sample values.
 Given [50, 60, 70] as input, the model correctly predicts [80, 90] as
 the next two values in the sequence.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson you must download the daily female births dataset, split
 it into train and test sets and develop a model that can make reasonably
@@ -789,7 +670,7 @@ You can download the dataset from here:
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [Encoder-Decoder Long Short-Term Memory
     Networks](https://machinelearningmastery.com/encoder-decoder-long-short-term-memory-networks/)
@@ -801,10 +682,10 @@ discover.
     Networks in
     Python](https://machinelearningmastery.com/multi-step-time-series-forecasting-long-short-term-memory-networks-python/)
 
-**The End!** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**The End!** 
 ------------
 
-**(*****Look How Far You Have Come*****)** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**(*****Look How Far You Have Come*****)** 
 ------------------------------------------
 
 You made it. Well done!

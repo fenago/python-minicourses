@@ -1,4 +1,4 @@
-**Who Is This Crash-Course For?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Who Is This Crash-Course For?** 
 ---------------------------------
 
 Before we get started, let’s make sure you are in the right place.
@@ -35,7 +35,7 @@ step-by-step tutorial here:
     Learning with
     Anaconda](https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/)
 
-**Crash-Course Overview** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Crash-Course Overview** 
 -------------------------
 
 This crash course is broken down into 7 lessons.
@@ -83,7 +83,7 @@ fleshed out tutorials, see my book on the topic titled “[*Deep Learning
 for Natural Language
 Processing*](https://machinelearningmastery.com/deep-learning-for-nlp/)*“.*
 
-### **Need help with Deep Learning for Text Data?** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Need help with Deep Learning for Text Data?** 
 
 Take my free 7-day email crash course now (with code).
 
@@ -92,14 +92,14 @@ Click to sign-up and also get a free PDF Ebook version of the course.
 [**Start Your FREE Crash-Course
 Now**](https://machinelearningmastery.lpages.co/leadbox/144855173f72a2%3A164f8be4f346dc/5655638436741120/)
 
-**Lesson 01: Deep Learning and Natural Language** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 01: Deep Learning and Natural Language** 
 -------------------------------------------------
 
 In this lesson, you will discover a concise definition for natural
 language, deep learning and the promise of deep learning for working
 with text data.
 
-### **Natural Language Processing** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Natural Language Processing** 
 
 Natural Language Processing, or NLP for short, is broadly defined as the
 automatic manipulation of natural language, like speech and text, by
@@ -113,7 +113,7 @@ The problem of understanding text is not solved, and may never be, is
 primarily because language is messy. There are few rules. And yet we can
 easily understand each other most of the time.
 
-### **Deep Learning** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Deep Learning** 
 
 Deep Learning is a subfield of machine learning concerned with
 algorithms inspired by the structure and function of the brain called
@@ -127,7 +127,7 @@ In addition to scalability, another often cited benefit of deep learning
 models is their ability to perform automatic feature extraction from raw
 data, also called feature learning.
 
-### **Promise of Deep Learning for NLP** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Promise of Deep Learning for NLP** 
 
 Deep learning methods are popular for natural language, primarily
 because they are delivering on their promise.
@@ -157,7 +157,7 @@ Natural language processing is not “solved“, but deep learning is
 required to get you to the state-of-the-art on many challenging problems
 in the field.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 For this lesson you must research and list 10 impressive applications of
 deep learning methods in the field of natural language processing. Bonus
@@ -167,7 +167,7 @@ example.
 Post your answer in the comments below. I would love to see what you
 discover.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [What Is Natural Language
     Processing?](https://machinelearningmastery.com/natural-language-processing/)
@@ -184,14 +184,14 @@ discover.
 In the next lesson, you will discover how to clean text data so that it
 is ready for modeling.
 
-**Lesson 02: Cleaning Text Data** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 02: Cleaning Text Data** 
 ---------------------------------
 
 In this lesson, you will discover how you can load and clean text data
 so that it is ready for modeling using both manually and with the NLTK
 Python library.
 
-### **Text is Messy** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Text is Messy** 
 
 You cannot go straight from raw text to fitting a machine learning or
 deep learning model.
@@ -211,7 +211,7 @@ normalizing issues such as:
 
 -   and much more…
 
-### **Manual Tokenization** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Manual Tokenization** 
 
 Generally, we refer to the process of turning raw text into something we
 can model as “tokenization”, where we are left with a list of words or
@@ -233,11 +233,11 @@ tokens by whitespace and convert each token to lowercase.
       
   4   file.close()
       
-  5   \# split into words by white space
+  5   # split into words by white space
       
   6   words = text.split()
       
-  7   \# convert to lowercase
+  7   # convert to lowercase
       
   8   words = [word.lower() for word in words]
   --- ------------------------------------------
@@ -245,7 +245,7 @@ tokens by whitespace and convert each token to lowercase.
 You can imagine how this snippet could be extended to handle and
 normalize Unicode characters, remove punctuation and so on.
 
-### **NLTK Tokenization** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **NLTK Tokenization** 
 
 Many of the best practices for tokenizing raw text have been captured
 and made available in a Python library called the Natural Language
@@ -277,7 +277,7 @@ Once installed, you can use the API to tokenize text. For example, the
 snippet below will load and tokenize an ASCII text file.
 
   --- ------------------------------------------
-  1   \# load data
+  1   # load data
       
   2   filename = '...'
       
@@ -287,7 +287,7 @@ snippet below will load and tokenize an ASCII text file.
       
   5   file.close()
       
-  6   \# split into words
+  6   # split into words
       
   7   from nltk.tokenize import word\_tokenize
       
@@ -298,7 +298,7 @@ There are many tools available in this library and you can further
 refine the clean tokens using your own manual methods, such as removing
 punctuation, removing stop words, stemming and much more.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 Your task is to locate a free classical book on the Project Gutenberg
 website, download the ASCII version of the book and tokenize the text
@@ -308,7 +308,7 @@ manual and NLTK approaches.
 Post your code in the comments below. I would love to see what book you
 choose and how you chose to tokenize it.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [Project Gutenberg](http://www.gutenberg.org/)
 
@@ -320,14 +320,14 @@ choose and how you chose to tokenize it.
 
 In the next lesson, you will discover the bag-of-words model.
 
-**Lesson 03: Bag-of-Words Model** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 03: Bag-of-Words Model** 
 ---------------------------------
 
 In this lesson, you will discover the bag of words model and how to
 encode text using this model so that you can train a model using the
 scikit-learn and Keras Python libraries.
 
-### **Bag-of-Words** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Bag-of-Words** 
 
 The bag-of-words model is a way of representing text data when modeling
 text with machine learning algorithms.
@@ -348,7 +348,7 @@ or structure of words in the document is discarded. The model is only
 concerned with whether known words occur in the document, not where in
 the document.
 
-**Bag-of-Words with scikit-learn** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Bag-of-Words with scikit-learn** 
 ----------------------------------
 
 The scikit-learn Python library for machine learning provides tools for
@@ -368,42 +368,26 @@ The snippet below shows how to train the TfidfVectorizer bag-of-words
 encoder and use it to encode multiple small text documents.
 
   ---- --------------------------------------------------------------
-  1    from sklearn.feature\_extraction.text import TfidfVectorizer
-       
-  2    \# list of text documents
-       
-  3    text = ["The quick brown fox jumped over the lazy dog.",
-       
-  4    "The dog.",
-       
-  5    "The fox"]
-       
-  6    \# create the transform
-       
-  7    vectorizer = TfidfVectorizer()
-       
-  8    \# tokenize and build vocab
-       
-  9    vectorizer.fit(text)
-       
-  10   \# summarize
-       
-  11   print(vectorizer.vocabulary\_)
-       
-  12   print(vectorizer.idf\_)
-       
-  13   \# encode document
-       
+from sklearn.feature\_extraction.text import TfidfVectorizer
+# list of text documents
+text = ["The quick brown fox jumped over the lazy dog.",
+"The dog.",
+"The fox"]
+ # create the transform
+vectorizer = TfidfVectorizer()
+# tokenize and build vocab
+vectorizer.fit(text)
+# summarize
+ print(vectorizer.vocabulary\_)
+print(vectorizer.idf\_)
+# encode document
   14   vector = vectorizer.transform([text[0]])
-       
-  15   \# summarize encoded vector
-       
+  15   # summarize encoded vector
   16   print(vector.shape)
-       
   17   print(vector.toarray())
   ---- --------------------------------------------------------------
 
-### **Bag-of-Words with Keras** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Bag-of-Words with Keras** 
 
 The Keras Python library for deep learning also provides tools for
 encoding text using the bag-of words-model in the Tokenizer class.
@@ -417,46 +401,28 @@ The snippet below demonstrates how to train and encode some small text
 documents using the Keras API and the ‘count’ type scoring of words.
 
   ---- ---------------------------------------------------------
-  1    from keras.preprocessing.text import Tokenizer
-       
-  2    \# define 5 documents
-       
-  3    docs = ['Well done!',
-       
-  4    'Good work',
-       
-  5    'Great effort',
-       
-  6    'nice work',
-       
-  7    'Excellent!']
-       
-  8    \# create the tokenizer
-       
-  9    t = Tokenizer()
-       
-  10   \# fit the tokenizer on the documents
-       
-  11   t.fit\_on\_texts(docs)
-       
-  12   \# summarize what was learned
-       
-  13   print(t.word\_counts)
-       
+from keras.preprocessing.text import Tokenizer
+# define 5 documents
+docs = ['Well done!',
+'Good work',
+'Great effort',
+ 'nice work',
+'Excellent!']
+# create the tokenizer
+t = Tokenizer()
+# fit the tokenizer on the documents
+ t.fit\_on\_texts(docs)
+# summarize what was learned
+print(t.word\_counts)
   14   print(t.document\_count)
-       
   15   print(t.word\_index)
-       
   16   print(t.word\_docs)
-       
-  17   \# integer encode documents
-       
+  17   # integer encode documents
   18   encoded\_docs = t.texts\_to\_matrix(docs, mode='count')
-       
   19   print(encoded\_docs)
   ---- ---------------------------------------------------------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to experiment with the scikit-learn and
 Keras methods for encoding small contrived text documents for the
@@ -467,7 +433,7 @@ the preparation.
 Post your code in the comments below. I would love to see what APIs you
 explore and demonstrate.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [A Gentle Introduction to the Bag-of-Words
     Model](https://machinelearningmastery.com/gentle-introduction-bag-words-model/)
@@ -480,14 +446,14 @@ explore and demonstrate.
 
 In the next lesson, you will discover word embeddings.
 
-**Lesson 04: Word Embedding Representation** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 04: Word Embedding Representation** 
 --------------------------------------------
 
 In this lesson, you will discover the word embedding distributed
 representation and how to develop a word embedding using the Gensim
 Python library.
 
-### **Word Embeddings** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Word Embeddings** 
 
 Word embeddings are a type of word representation that allows words with
 similar meaning to have a similar representation.
@@ -499,7 +465,7 @@ methods on challenging natural language processing problems.
 Word embedding methods learn a real-valued vector representation for a
 predefined fixed sized vocabulary from a corpus of text.
 
-### **Train Word Embeddings** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Train Word Embeddings** 
 
 You can train a word embedding distributed representation using the
 Gensim Python library for topic modeling.
@@ -520,40 +486,25 @@ The snippet below shows how to define a few contrived sentences and
 train a word embedding representation in Gensim.
 
   ---- -----------------------------------------------------------------------------
-  1    from gensim.models import Word2Vec
-       
-  2    \# define training data
-       
-  3    sentences = [['this', 'is', 'the', 'first', 'sentence', 'for', 'word2vec'],
-       
-  4    ['this', 'is', 'the', 'second', 'sentence'],
-       
-  5    ['yet', 'another', 'sentence'],
-       
-  6    ['one', 'more', 'sentence'],
-       
-  7    ['and', 'the', 'final', 'sentence']]
-       
-  8    \# train model
-       
-  9    model = Word2Vec(sentences, min\_count=1)
-       
-  10   \# summarize the loaded model
-       
-  11   print(model)
-       
-  12   \# summarize vocabulary
-       
-  13   words = list(model.wv.vocab)
-       
+from gensim.models import Word2Vec
+# define training data
+sentences = [['this', 'is', 'the', 'first', 'sentence', 'for', 'word2vec'],
+['this', 'is', 'the', 'second', 'sentence'],
+['yet', 'another', 'sentence'],
+ ['one', 'more', 'sentence'],
+['and', 'the', 'final', 'sentence']]
+# train model
+model = Word2Vec(sentences, min\_count=1)
+# summarize the loaded model
+ print(model)
+# summarize vocabulary
+words = list(model.wv.vocab)
   14   print(words)
-       
-  15   \# access vector for one word
-       
+  15   # access vector for one word
   16   print(model['sentence'])
   ---- -----------------------------------------------------------------------------
 
-### **Use Embeddings** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Use Embeddings** 
 
 Once trained, the embedding can be saved to file to be used as part of
 another model, such as the front-end of a deep learning model.
@@ -567,50 +518,30 @@ The snippet below shows how to train a word embedding model and then
 plot a two-dimensional projection of all words in the vocabulary.
 
   ---- -----------------------------------------------------------------------------
-  1    from gensim.models import Word2Vec
-       
-  2    from sklearn.decomposition import PCA
-       
-  3    from matplotlib import pyplot
-       
-  4    \# define training data
-       
-  5    sentences = [['this', 'is', 'the', 'first', 'sentence', 'for', 'word2vec'],
-       
-  6    ['this', 'is', 'the', 'second', 'sentence'],
-       
-  7    ['yet', 'another', 'sentence'],
-       
-  8    ['one', 'more', 'sentence'],
-       
-  9    ['and', 'the', 'final', 'sentence']]
-       
-  10   \# train model
-       
-  11   model = Word2Vec(sentences, min\_count=1)
-       
-  12   \# fit a 2D PCA model to the vectors
-       
-  13   X = model[model.wv.vocab]
-       
+from gensim.models import Word2Vec
+from sklearn.decomposition import PCA
+from matplotlib import pyplot
+# define training data
+sentences = [['this', 'is', 'the', 'first', 'sentence', 'for', 'word2vec'],
+ ['this', 'is', 'the', 'second', 'sentence'],
+['yet', 'another', 'sentence'],
+['one', 'more', 'sentence'],
+['and', 'the', 'final', 'sentence']]
+# train model
+ model = Word2Vec(sentences, min\_count=1)
+# fit a 2D PCA model to the vectors
+X = model[model.wv.vocab]
   14   pca = PCA(n\_components=2)
-       
   15   result = pca.fit\_transform(X)
-       
-  16   \# create a scatter plot of the projection
-       
+  16   # create a scatter plot of the projection
   17   pyplot.scatter(result[:, 0], result[:, 1])
-       
   18   words = list(model.wv.vocab)
-       
   19   for i, word in enumerate(words):
-       
   20   pyplot.annotate(word, xy=(result[i, 0], result[i, 1]))
-       
   21   pyplot.show()
   ---- -----------------------------------------------------------------------------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to train a word embedding using Gensim on a
 text document, such as a book from Project Gutenberg. Bonus points if
@@ -619,7 +550,7 @@ you can generate a plot of common words.
 Post your code in the comments below. I would love to see what book you
 choose and any details of the embedding that you learn.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [What Are Word Embeddings for
     Text?](https://machinelearningmastery.com/what-are-word-embeddings/)
@@ -632,14 +563,14 @@ choose and any details of the embedding that you learn.
 In the next lesson, you will discover how a word embedding can be
 learned as part of a deep learning model.
 
-**Lesson 05: Learned Embedding** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 05: Learned Embedding** 
 --------------------------------
 
 In this lesson, you will discover how to learn a word embedding
 distributed representation for words as part of fitting a deep learning
 model
 
-### **Embedding Layer** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Embedding Layer** 
 
 Keras offers an Embedding layer that can be used for neural networks on
 text data.
@@ -665,7 +596,7 @@ representation of 32 dimensions and an input length of 50 words.
   1   layer = Embedding(200, 32, input\_length=50)
   --- ----------------------------------------------
 
-### **Embedding with Model** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Embedding with Model** 
 
 The Embedding layer can be used as the front-end of a deep learning
 model to provide a rich distributed representation of words, and
@@ -681,36 +612,21 @@ associated output label both the network weights and the distributed
 representation will be tuned to the specific data.
 
   ---- ------------------------------------------------------------------------------------
-  1    from keras.models import Sequential
-       
-  2    from keras.layers import Dense
-       
-  3    from keras.layers import Flatten
-       
-  4    from keras.layers.embeddings import Embedding
-       
-  5    \# define problem
-       
-  6    vocab\_size = 100
-       
-  7    max\_length = 32
-       
-  8    \# define the model
-       
-  9    model = Sequential()
-       
-  10   model.add(Embedding(vocab\_size, 8, input\_length=max\_length))
-       
-  11   model.add(Flatten())
-       
-  12   model.add(Dense(1, activation='sigmoid'))
-       
-  13   \# compile the model
-       
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import Flatten
+from keras.layers.embeddings import Embedding
+# define problem
+ vocab\_size = 100
+max\_length = 32
+# define the model
+model = Sequential()
+model.add(Embedding(vocab\_size, 8, input\_length=max\_length))
+ model.add(Flatten())
+model.add(Dense(1, activation='sigmoid'))
+# compile the model
   14   model.compile(optimizer='adam', loss='binary\_crossentropy', metrics=['accuracy'])
-       
-  15   \# summarize the model
-       
+  15   # summarize the model
   16   print(model.summary())
   ---- ------------------------------------------------------------------------------------
 
@@ -719,7 +635,7 @@ weights, such as those prepared by Gensim and to configure the layer to
 not be trainable. This approach can be useful if a very large corpus of
 text is available to pre-train the word embedding.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to design a small document classification
 problem with 10 documents of one sentence each and associated labels of
@@ -732,7 +648,7 @@ embedding prepared using Gensim.
 Post your code in the comments below. I would love to see what sentences
 you contrive and the skill of your model.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [Data Preparation for Variable Length Input
     Sequences](https://machinelearningmastery.com/data-preparation-variable-length-input-sequences-sequence-prediction/)
@@ -743,13 +659,13 @@ you contrive and the skill of your model.
 In the next lesson, you will discover how to develop deep learning
 models for classifying text.
 
-**Lesson 06: Classifying Text** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 06: Classifying Text** 
 -------------------------------
 
 In this lesson, you will discover the standard deep learning model for
 classifying text used on problems such as sentiment analysis of text.
 
-### **Document Classification** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Document Classification** 
 
 [Text
 classification](https://machinelearningmastery.com/best-practices-document-classification-deep-learning/)
@@ -764,7 +680,7 @@ Deep learning methods are proving very good at text classification,
 achieving state-of-the-art results on a suite of standard academic
 benchmark problems.
 
-### **Embeddings + CNN** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Embeddings + CNN** 
 
 The modus operandi for text classification involves the use of a word
 embedding for representing words and a Convolutional Neural Network or
@@ -789,32 +705,21 @@ library. The snippet below shows an example of a deep learning model for
 classifying text documents as one of two classes.
 
   ---- -------------------------------------------------------------------
-  1    \# define problem
-       
-  2    vocab\_size = 100
-       
-  3    max\_length = 200
-       
-  4    \# define model
-       
-  5    model = Sequential()
-       
-  6    model.add(Embedding(vocab\_size, 100, input\_length=max\_length))
-       
-  7    model.add(Conv1D(filters=32, kernel\_size=8, activation='relu'))
-       
-  8    model.add(MaxPooling1D(pool\_size=2))
-       
-  9    model.add(Flatten())
-       
-  10   model.add(Dense(10, activation='relu'))
-       
-  11   model.add(Dense(1, activation='sigmoid'))
-       
-  12   print(model.summary())
+# define problem
+vocab\_size = 100
+max\_length = 200
+# define model
+model = Sequential()
+ model.add(Embedding(vocab\_size, 100, input\_length=max\_length))
+model.add(Conv1D(filters=32, kernel\_size=8, activation='relu'))
+model.add(MaxPooling1D(pool\_size=2))
+model.add(Flatten())
+model.add(Dense(10, activation='relu'))
+ model.add(Dense(1, activation='sigmoid'))
+print(model.summary())
   ---- -------------------------------------------------------------------
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to research the use of the Embeddings + CNN
 combination of deep learning methods for text classification and report
@@ -827,7 +732,7 @@ n-gram or multiple groups of words as input by varying the kernel size.
 Post your findings in the comments below. I would love to see what you
 discover.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [Best Practices for Document Classification with Deep
     Learning](https://machinelearningmastery.com/best-practices-document-classification-deep-learning/)
@@ -835,7 +740,7 @@ discover.
 In the next lesson, you will discover how to work through a sentiment
 analysis prediction problem.
 
-**Lesson 07: Movie Review Sentiment Analysis Project** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**Lesson 07: Movie Review Sentiment Analysis Project** 
 ------------------------------------------------------
 
 In this lesson, you will discover how to prepare text data, develop and
@@ -845,7 +750,7 @@ reviews.
 I want you to tie together everything you have learned in this crash
 course and work through a real-world problem end-to-end.
 
-### **Movie Review Dataset** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Movie Review Dataset** 
 
 The Movie Review Dataset is a collection of movie reviews retrieved from
 the imdb.com website in the early 2000s by Bo Pang and Lillian Lee. The
@@ -861,7 +766,7 @@ You can download the dataset from here:
 From this dataset you will develop a sentiment analysis deep learning
 model to predict whether a given movie review is positive or negative.
 
-### **Your Task** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **Your Task** 
 
 Your task in this lesson is to develop and evaluate a deep learning
 model on the movie review dataset:
@@ -884,7 +789,7 @@ Post your code and model skill in the comments below. I would love to
 see what you can come up with. Simpler models are preferred, but also
 try going really deep and see what happens.
 
-### **More Information** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+### **More Information** 
 
 -   [How to Prepare Movie Review Data for Sentiment
     Analysis](https://machinelearningmastery.com/prepare-movie-review-data-sentiment-analysis/)
@@ -896,10 +801,10 @@ try going really deep and see what happens.
 -   [How to Develop a Word Embedding Model for Predicting Movie Review
     Sentiment](https://machinelearningmastery.com/develop-word-embedding-model-predicting-movie-review-sentiment/)
 
-**The End!** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**The End!** 
 ------------
 
-**(Look How Far You Have Come)** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+**(Look How Far You Have Come)** 
 --------------------------------
 
 You made it. Well done!

@@ -71,13 +71,13 @@ Photo by
 [cosmoflash](https://www.flickr.com/photos/cosmoflash/2687052480/), some
 rights reserved.
 
-**How Do You Start Machine Learning in Python?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**How Do You Start Machine Learning in Python?** 
 ------------------------------------------------
 
 The best way to learn machine learning is by designing and completing
 small projects.
 
-### **Python Can Be Intimidating When Getting Started** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Python Can Be Intimidating When Getting Started** 
 
 Python is a popular and powerful interpreted language. Unlike R, Python
 is a complete language and platform that you can use for both research
@@ -98,7 +98,7 @@ complete a project.
 -   It will give you confidence, maybe to go on to your own small
     projects.
 
-### **Beginners Need A Small End-to-End Project** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Beginners Need A Small End-to-End Project** 
 
 Books and courses are frustrating. They give you lots of recipes and
 snippets, but you never get to see how they all fit together.
@@ -128,7 +128,7 @@ If you can do that, you have a template that you can use on dataset
 after dataset. You can fill in the gaps such as further data preparation
 and improving result tasks later, once you have more confidence.
 
-### **Hello World of Machine Learning** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Hello World of Machine Learning** 
 
 The best small project to start with on a new tool is the classification
 of iris flowers (e.g. [the iris
@@ -155,10 +155,10 @@ This is a good project because it is so well understood.
 Let’s get started with your hello world machine learning project in
 Python.
 
-**Machine Learning in Python: Step-By-Step Tutorial** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Machine Learning in Python: Step-By-Step Tutorial** 
 -----------------------------------------------------
 
-**(start here)** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**(start here)** 
 ----------------
 
 In this section, we are going to work through a small machine learning
@@ -186,7 +186,7 @@ speed things up.
 If you have any questions at all, please leave a comment at the bottom
 of the post.
 
-### **Need help with Machine Learning in Python?** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Need help with Machine Learning in Python?** 
 
 Take my free 2-week email course and discover data prep, algorithms and
 more (with code).
@@ -197,7 +197,7 @@ course.
 [**Start Your FREE Mini-Course
 Now!**](https://machinelearningmastery.leadpages.co/leadbox/146d399f3f72a2%3A164f8be4f346dc/5655869022797824/)
 
-**1. Downloading, Installing and Starting Python SciPy** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**1. Downloading, Installing and Starting Python SciPy** 
 --------------------------------------------------------
 
 Get the Python and SciPy platform installed on your system if it is not
@@ -207,7 +207,7 @@ I do not want to cover this in great detail, because others already
 have. This is already pretty straightforward, especially if you are a
 developer. If you do need help, ask a question in the comments.
 
-### **1.1 Install SciPy Libraries** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **1.1 Install SciPy Libraries** 
 
 This tutorial assumes Python version 2.7 or 3.6+.
 
@@ -257,7 +257,7 @@ Need more help? See one of these tutorials:
     Python
     3](http://machinelearningmastery.com/linux-virtual-machine-machine-learning-development-python-3/)
 
-### **1.2 Start Python and Check Versions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **1.2 Start Python and Check Versions** 
 
 It is a good idea to make sure your Python environment was installed
 successfully and is working as expected.
@@ -278,44 +278,25 @@ Keep things simple and focus on the machine learning not the toolchain.
 Type or copy and paste the following script:
 
   ---- ------------------------------------------------------------
-  1    \# Check the versions of libraries
-       
-  2    \# Python version
-       
-  3    import sys
-       
-  4    print('Python: {}'.format(sys.version))
-       
-  5    \# scipy
-       
-  6    import scipy
-       
-  7    print('scipy: {}'.format(scipy.\_\_version\_\_))
-       
-  8    \# numpy
-       
-  9    import numpy
-       
-  10   print('numpy: {}'.format(numpy.\_\_version\_\_))
-       
-  11   \# matplotlib
-       
-  12   import matplotlib
-       
-  13   print('matplotlib: {}'.format(matplotlib.\_\_version\_\_))
-       
-  14   \# pandas
-       
+# Check the versions of libraries
+# Python version
+import sys
+print('Python: {}'.format(sys.version))
+# scipy
+ import scipy
+print('scipy: {}'.format(scipy.\_\_version\_\_))
+# numpy
+import numpy
+print('numpy: {}'.format(numpy.\_\_version\_\_))
+ # matplotlib
+import matplotlib
+print('matplotlib: {}'.format(matplotlib.\_\_version\_\_))
+  14   # pandas
   15   import pandas
-       
   16   print('pandas: {}'.format(pandas.\_\_version\_\_))
-       
-  17   \# scikit-learn
-       
+  17   # scikit-learn
   18   import sklearn
-       
   19   print('sklearn: {}'.format(sklearn.\_\_version\_\_))
-       
   20   
   ---- ------------------------------------------------------------
 
@@ -352,7 +333,7 @@ My best advice is to Google search for your error message or post a
 question on [Stack
 Exchange](http://stackoverflow.com/questions/tagged/python).
 
-**2. Load The Data** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**2. Load The Data** 
 --------------------
 
 We are going to use the iris flowers dataset. This dataset is famous
@@ -369,42 +350,27 @@ Wikipedia](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
 In this step we are going to load the iris data from CSV file URL.
 
-### **2.1 Import libraries** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **2.1 Import libraries** 
 
 First, let’s import all of the modules, functions and objects we are
 going to use in this tutorial.
 
   ---- -----------------------------------------------------------------------
-  1    \# Load libraries
-       
-  2    from pandas import read\_csv
-       
-  3    from pandas.plotting import scatter\_matrix
-       
-  4    from matplotlib import pyplot
-       
-  5    from sklearn.model\_selection import train\_test\_split
-       
-  6    from sklearn.model\_selection import cross\_val\_score
-       
-  7    from sklearn.model\_selection import StratifiedKFold
-       
-  8    from sklearn.metrics import classification\_report
-       
-  9    from sklearn.metrics import confusion\_matrix
-       
-  10   from sklearn.metrics import accuracy\_score
-       
-  11   from sklearn.linear\_model import LogisticRegression
-       
-  12   from sklearn.tree import DecisionTreeClassifier
-       
-  13   from sklearn.neighbors import KNeighborsClassifier
-       
+# Load libraries
+from pandas import read\_csv
+from pandas.plotting import scatter\_matrix
+from matplotlib import pyplot
+from sklearn.model\_selection import train\_test\_split
+ from sklearn.model\_selection import cross\_val\_score
+from sklearn.model\_selection import StratifiedKFold
+from sklearn.metrics import classification\_report
+from sklearn.metrics import confusion\_matrix
+from sklearn.metrics import accuracy\_score
+ from sklearn.linear\_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
   14   from sklearn.discriminant\_analysis import LinearDiscriminantAnalysis
-       
   15   from sklearn.naive\_bayes import GaussianNB
-       
   16   from sklearn.svm import SVC
   ---- -----------------------------------------------------------------------
 
@@ -412,7 +378,7 @@ Everything should load without error. If you have an error, stop. You
 need a working SciPy environment before continuing. See the advice above
 about setting up your environment.
 
-### **2.2 Load Dataset** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **2.2 Load Dataset** 
 
 We can load the data directly from the UCI Machine Learning repository.
 
@@ -423,15 +389,15 @@ visualization.
 Note that we are specifying the names of each column when loading the
 data. This will help later when we explore the data.
 
-  --- ---------------------------------------------------------------------------------
-  1   \# Load dataset
+```------
+  1   # Load dataset
       
   2   url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
       
   3   names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
       
   4   dataset = read\_csv(url, names=names)
-  --- ---------------------------------------------------------------------------------
+```------
 
 The dataset should load without incident.
 
@@ -440,7 +406,7 @@ If you do have network problems, you can download the
 file into your working directory and load it using the same method,
 changing URL to the local file name.
 
-**3. Summarize the Dataset** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**3. Summarize the Dataset** 
 ----------------------------
 
 Now it is time to take a look at the data.
@@ -459,13 +425,13 @@ ways:
 Don’t worry, each look at the data is one command. These are useful
 commands that you can use again and again on future projects.
 
-### **3.1 Dimensions of Dataset** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **3.1 Dimensions of Dataset** 
 
 We can get a quick idea of how many instances (rows) and how many
 attributes (columns) the data contains with the shape property.
 
   --- ----------------------
-  1   \# shape
+  1   # shape
       
   2   print(dataset.shape)
   --- ----------------------
@@ -476,12 +442,12 @@ You should see 150 instances and 5 attributes:
   1   (150, 5)
   --- ----------
 
-### **3.2 Peek at the Data** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **3.2 Peek at the Data** 
 
 It is also always a good idea to actually eyeball your data.
 
   --- -------------------------
-  1   \# head
+  1   # head
       
   2   print(dataset.head(20))
   --- -------------------------
@@ -489,50 +455,30 @@ It is also always a good idea to actually eyeball your data.
 You should see the first 20 rows of the data:
 
   ---- ---------------------------------------------------------
-  1    sepal-length sepal-width petal-length petal-width class
-       
-  2    0 5.1 3.5 1.4 0.2 Iris-setosa
-       
-  3    1 4.9 3.0 1.4 0.2 Iris-setosa
-       
-  4    2 4.7 3.2 1.3 0.2 Iris-setosa
-       
-  5    3 4.6 3.1 1.5 0.2 Iris-setosa
-       
-  6    4 5.0 3.6 1.4 0.2 Iris-setosa
-       
-  7    5 5.4 3.9 1.7 0.4 Iris-setosa
-       
-  8    6 4.6 3.4 1.4 0.3 Iris-setosa
-       
-  9    7 5.0 3.4 1.5 0.2 Iris-setosa
-       
-  10   8 4.4 2.9 1.4 0.2 Iris-setosa
-       
-  11   9 4.9 3.1 1.5 0.1 Iris-setosa
-       
-  12   10 5.4 3.7 1.5 0.2 Iris-setosa
-       
-  13   11 4.8 3.4 1.6 0.2 Iris-setosa
-       
+sepal-length sepal-width petal-length petal-width class
+0 5.1 3.5 1.4 0.2 Iris-setosa
+1 4.9 3.0 1.4 0.2 Iris-setosa
+2 4.7 3.2 1.3 0.2 Iris-setosa
+3 4.6 3.1 1.5 0.2 Iris-setosa
+ 4 5.0 3.6 1.4 0.2 Iris-setosa
+5 5.4 3.9 1.7 0.4 Iris-setosa
+6 4.6 3.4 1.4 0.3 Iris-setosa
+7 5.0 3.4 1.5 0.2 Iris-setosa
+8 4.4 2.9 1.4 0.2 Iris-setosa
+ 9 4.9 3.1 1.5 0.1 Iris-setosa
+10 5.4 3.7 1.5 0.2 Iris-setosa
+11 4.8 3.4 1.6 0.2 Iris-setosa
   14   12 4.8 3.0 1.4 0.1 Iris-setosa
-       
   15   13 4.3 3.0 1.1 0.1 Iris-setosa
-       
   16   14 5.8 4.0 1.2 0.2 Iris-setosa
-       
   17   15 5.7 4.4 1.5 0.4 Iris-setosa
-       
   18   16 5.4 3.9 1.3 0.4 Iris-setosa
-       
   19   17 5.1 3.5 1.4 0.3 Iris-setosa
-       
   20   18 5.7 3.8 1.7 0.3 Iris-setosa
-       
   21   19 5.1 3.8 1.5 0.3 Iris-setosa
   ---- ---------------------------------------------------------
 
-### **3.3 Statistical Summary** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **3.3 Statistical Summary** 
 
 Now we can take a look at a summary of each attribute.
 
@@ -540,7 +486,7 @@ This includes the count, mean, the min and max values as well as some
 percentiles.
 
   --- ---------------------------
-  1   \# descriptions
+  1   # descriptions
       
   2   print(dataset.describe())
   --- ---------------------------
@@ -568,13 +514,13 @@ We can see that all of the numerical values have the same scale
   9   max 7.900000 4.400000 6.900000 2.500000
   --- ---------------------------------------------------
 
-### **3.4 Class Distribution** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **3.4 Class Distribution** 
 
 Let’s now take a look at the number of instances (rows) that belong to
 each class. We can view this as an absolute count.
 
   --- ----------------------------------------
-  1   \# class distribution
+  1   # class distribution
       
   2   print(dataset.groupby('class').size())
   --- ----------------------------------------
@@ -592,7 +538,7 @@ of the dataset).
   4   Iris-virginica 50
   --- --------------------
 
-### **3.5 Complete Example** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **3.5 Complete Example** 
 
 For reference, we can tie all of the previous elements together into a
 single script.
@@ -600,36 +546,23 @@ single script.
 The complete example is listed below.
 
   ---- ---------------------------------------------------------------------------------
-  1    \# summarize the data
-       
-  2    from pandas import read\_csv
-       
-  3    \# Load dataset
-       
-  4    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-       
-  5    names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-       
-  6    dataset = read\_csv(url, names=names)
-       
-  7    \# shape
-       
-  8    print(dataset.shape)
-       
-  9    \# head
-       
-  10   print(dataset.head(20))
-       
-  11   \# descriptions
-       
-  12   print(dataset.describe())
-       
-  13   \# class distribution
-       
+# summarize the data
+from pandas import read\_csv
+# Load dataset
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+ dataset = read\_csv(url, names=names)
+# shape
+print(dataset.shape)
+# head
+print(dataset.head(20))
+ # descriptions
+print(dataset.describe())
+# class distribution
   14   print(dataset.groupby('class').size())
   ---- ---------------------------------------------------------------------------------
 
-**4. Data Visualization** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**4. Data Visualization** 
 -------------------------
 
 We now have a basic idea about the data. We need to extend that with
@@ -642,7 +575,7 @@ We are going to look at two types of plots:
 2.  Multivariate plots to better understand the relationships between
     attributes.
 
-### **4.1 Univariate Plots** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **4.1 Univariate Plots** 
 
 We start with some univariate plots, that is, plots of each individual
 variable.
@@ -650,13 +583,13 @@ variable.
 Given that the input variables are numeric, we can create box and
 whisker plots of each.
 
-  --- -----------------------------------------------------------------------------------
-  1   \# box and whisker plots
+```--------
+  1   # box and whisker plots
       
   2   dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
       
   3   pyplot.show()
-  --- -----------------------------------------------------------------------------------
+```--------
 
 This gives us a much clearer idea of the distribution of the input
 attributes:
@@ -670,7 +603,7 @@ We can also create a histogram of each input variable to get an idea of
 the distribution.
 
   --- ----------------
-  1   \# histograms
+  1   # histograms
       
   2   dataset.hist()
       
@@ -685,7 +618,7 @@ exploit this assumption.
 
 Histogram Plots for Each Input Variable for the Iris Flowers Dataset
 
-### **4.2 Multivariate Plots** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **4.2 Multivariate Plots** 
 
 Now we can look at the interactions between the variables.
 
@@ -693,7 +626,7 @@ First, let’s look at scatterplots of all pairs of attributes. This can
 be helpful to spot structured relationships between input variables.
 
   --- --------------------------
-  1   \# scatter plot matrix
+  1   # scatter plot matrix
       
   2   scatter\_matrix(dataset)
       
@@ -707,7 +640,7 @@ high correlation and a predictable relationship.
 
 Scatter Matrix Plot for Each Input Variable for the Iris Flowers Dataset
 
-### **4.3 Complete Example** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **4.3 Complete Example** 
 
 For reference, we can tie all of the previous elements together into a
 single script.
@@ -715,42 +648,26 @@ single script.
 The complete example is listed below.
 
   ---- -----------------------------------------------------------------------------------
-  1    \# visualize the data
-       
-  2    from pandas import read\_csv
-       
-  3    from pandas.plotting import scatter\_matrix
-       
-  4    from matplotlib import pyplot
-       
-  5    \# Load dataset
-       
-  6    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-       
-  7    names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-       
-  8    dataset = read\_csv(url, names=names)
-       
-  9    \# box and whisker plots
-       
-  10   dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
-       
-  11   pyplot.show()
-       
-  12   \# histograms
-       
-  13   dataset.hist()
-       
+# visualize the data
+from pandas import read\_csv
+from pandas.plotting import scatter\_matrix
+from matplotlib import pyplot
+# Load dataset
+ url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+dataset = read\_csv(url, names=names)
+# box and whisker plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+ pyplot.show()
+# histograms
+dataset.hist()
   14   pyplot.show()
-       
-  15   \# scatter plot matrix
-       
+  15   # scatter plot matrix
   16   scatter\_matrix(dataset)
-       
   17   pyplot.show()
   ---- -----------------------------------------------------------------------------------
 
-**5. Evaluate Some Algorithms** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**5. Evaluate Some Algorithms** 
 -------------------------------
 
 Now it is time to create some models of the data and estimate their
@@ -767,7 +684,7 @@ Here is what we are going to cover in this step:
 
 4.  Select the best model.
 
-### **5.1 Create a Validation Dataset** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **5.1 Create a Validation Dataset** 
 
 We need to know that the model we created is good.
 
@@ -784,8 +701,8 @@ We will split the loaded dataset into two, 80% of which we will use to
 train, evaluate and select among our models, and 20% that we will hold
 back as a validation dataset.
 
-  --- ---------------------------------------------------------------------------------------------------------------
-  1   \# Split-out validation dataset
+```------------------------------------
+  1   # Split-out validation dataset
       
   2   array = dataset.values
       
@@ -794,7 +711,7 @@ back as a validation dataset.
   4   y = array[:,4]
       
   5   X\_train, X\_validation, Y\_train, Y\_validation = train\_test\_split(X, y, test\_size=0.20, random\_state=1)
-  --- ---------------------------------------------------------------------------------------------------------------
+```------------------------------------
 
 You now have training data in the *X\_train* and *Y\_train* for
 preparing models and a *X\_validation* and *Y\_validation* sets that we
@@ -807,7 +724,7 @@ array. If this is new to you, you might want to check-out this post:
     in
     Python](https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-learning-python/)
 
-### **5.2 Test Harness** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **5.2 Test Harness** 
 
 We will use stratified 10-fold cross validation to estimate model
 accuracy.
@@ -819,17 +736,17 @@ Stratified means that each fold or split of the dataset will aim to have
 the same distribution of example by class as exist in the whole training
 dataset.
 
-  --- ------------------------------------------------------------------------------------------
+```---------------
   1   ...
       
   2   model = ...
       
-  3   \# Test options and evaluation metric
+  3   # Test options and evaluation metric
       
   4   kfold = StratifiedKFold(n\_splits=10, random\_state=1, shuffle=True)
       
   5   cv\_results = cross\_val\_score(model, X\_train, Y\_train, cv=kfold, scoring='accuracy')
-  --- ------------------------------------------------------------------------------------------
+```---------------
 
 For more on the k-fold cross-validation technique, see the tutorial:
 
@@ -853,7 +770,7 @@ by the total number of instances in the dataset multiplied by 100 to
 give a percentage (e.g. 95% accurate). We will be using the *scoring*
 variable when we run build and evaluate each model next.
 
-### **5.3 Build Models** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **5.3 Build Models** 
 
 We don’t know which algorithms would be good on this problem or what
 configurations to use.
@@ -882,42 +799,26 @@ CART, NB and SVM) algorithms.
 Let’s build and evaluate our models:
 
   ---- ------------------------------------------------------------------------------------------
-  1    \# Spot Check Algorithms
-       
-  2    models = []
-       
-  3    models.append(('LR', LogisticRegression(solver='liblinear', multi\_class='ovr')))
-       
-  4    models.append(('LDA', LinearDiscriminantAnalysis()))
-       
-  5    models.append(('KNN', KNeighborsClassifier()))
-       
-  6    models.append(('CART', DecisionTreeClassifier()))
-       
-  7    models.append(('NB', GaussianNB()))
-       
-  8    models.append(('SVM', SVC(gamma='auto')))
-       
-  9    \# evaluate each model in turn
-       
-  10   results = []
-       
-  11   names = []
-       
-  12   for name, model in models:
-       
-  13   kfold = StratifiedKFold(n\_splits=10, random\_state=1, shuffle=True)
-       
+# Spot Check Algorithms
+models = []
+models.append(('LR', LogisticRegression(solver='liblinear', multi\_class='ovr')))
+models.append(('LDA', LinearDiscriminantAnalysis()))
+models.append(('KNN', KNeighborsClassifier()))
+ models.append(('CART', DecisionTreeClassifier()))
+models.append(('NB', GaussianNB()))
+models.append(('SVM', SVC(gamma='auto')))
+# evaluate each model in turn
+results = []
+ names = []
+for name, model in models:
+kfold = StratifiedKFold(n\_splits=10, random\_state=1, shuffle=True)
   14   cv\_results = cross\_val\_score(model, X\_train, Y\_train, cv=kfold, scoring='accuracy')
-       
   15   results.append(cv\_results)
-       
   16   names.append(name)
-       
   17   print('%s: %f (%f)' % (name, cv\_results.mean(), cv\_results.std()))
   ---- ------------------------------------------------------------------------------------------
 
-### **5.4 Select Best Model** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **5.4 Select Best Model** 
 
 We now have 6 models and accuracy estimations for each. We need to
 compare the models to each other and select the most accurate.
@@ -961,7 +862,7 @@ create a box and whisker plot for each distribution and compare the
 distributions.
 
   --- ---------------------------------------
-  1   \# Compare Algorithms
+  1   # Compare Algorithms
       
   2   pyplot.boxplot(results, labels=names)
       
@@ -979,100 +880,59 @@ down into the high 80% accuracies.
 Box and Whisker Plot Comparing Machine Learning Algorithms on the Iris
 Flowers Dataset
 
-### **5.5 Complete Example** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **5.5 Complete Example** 
 
 For reference, we can tie all of the previous elements together into a
 single script.
 
 The complete example is listed below.
 
-  ---- -----------------------------------------------------------------------------------------------------------------------------
-  1    \# compare algorithms
-       
-  2    from pandas import read\_csv
-       
-  3    from matplotlib import pyplot
-       
-  4    from sklearn.model\_selection import train\_test\_split
-       
-  5    from sklearn.model\_selection import cross\_val\_score
-       
-  6    from sklearn.model\_selection import StratifiedKFold
-       
-  7    from sklearn.linear\_model import LogisticRegression
-       
-  8    from sklearn.tree import DecisionTreeClassifier
-       
-  9    from sklearn.neighbors import KNeighborsClassifier
-       
-  10   from sklearn.discriminant\_analysis import LinearDiscriminantAnalysis
-       
-  11   from sklearn.naive\_bayes import GaussianNB
-       
-  12   from sklearn.svm import SVC
-       
-  13   \# Load dataset
-       
+```-------------------------
+# compare algorithms
+from pandas import read\_csv
+from matplotlib import pyplot
+from sklearn.model\_selection import train\_test\_split
+from sklearn.model\_selection import cross\_val\_score
+ from sklearn.model\_selection import StratifiedKFold
+from sklearn.linear\_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.discriminant\_analysis import LinearDiscriminantAnalysis
+ from sklearn.naive\_bayes import GaussianNB
+from sklearn.svm import SVC
+# Load dataset
   14   url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-       
   15   names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-       
   16   dataset = read\_csv(url, names=names)
-       
-  17   \# Split-out validation dataset
-       
+  17   # Split-out validation dataset
   18   array = dataset.values
-       
   19   X = array[:,0:4]
-       
   20   y = array[:,4]
-       
   21   X\_train, X\_validation, Y\_train, Y\_validation = train\_test\_split(X, y, test\_size=0.20, random\_state=1, shuffle=True)
-       
-  22   \# Spot Check Algorithms
-       
+       # Spot Check Algorithms
   23   models = []
-       
   24   models.append(('LR', LogisticRegression(solver='liblinear', multi\_class='ovr')))
-       
   25   models.append(('LDA', LinearDiscriminantAnalysis()))
-       
   26   models.append(('KNN', KNeighborsClassifier()))
-       
   27   models.append(('CART', DecisionTreeClassifier()))
-       
   28   models.append(('NB', GaussianNB()))
-       
   29   models.append(('SVM', SVC(gamma='auto')))
-       
-  30   \# evaluate each model in turn
-       
+  30   # evaluate each model in turn
   31   results = []
-       
   32   names = []
-       
   33   for name, model in models:
-       
   34   kfold = StratifiedKFold(n\_splits=10, random\_state=1)
-       
   35   cv\_results = cross\_val\_score(model, X\_train, Y\_train, cv=kfold, scoring='accuracy')
-       
   36   results.append(cv\_results)
-       
   37   names.append(name)
-       
   38   print('%s: %f (%f)' % (name, cv\_results.mean(), cv\_results.std()))
-       
-  39   \# Compare Algorithms
-       
+  39   # Compare Algorithms
   40   pyplot.boxplot(results, labels=names)
-       
   41   pyplot.title('Algorithm Comparison')
-       
   42   pyplot.show()
-  ---- -----------------------------------------------------------------------------------------------------------------------------
+```-------------------------
 
-**6. Make Predictions** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**6. Make Predictions** 
 -----------------------
 
 We must choose an algorithm to use to make predictions.
@@ -1088,13 +948,13 @@ model. It is valuable to keep a validation set just in case you made a
 slip during training, such as overfitting to the training set or a data
 leak. Both of these issues will result in an overly optimistic result.
 
-### **6.1 Make Predictions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **6.1 Make Predictions** 
 
 We can fit the model on the entire training dataset and make predictions
 on the validation dataset.
 
   --- --------------------------------------------
-  1   \# Make predictions on validation dataset
+  1   # Make predictions on validation dataset
       
   2   model = SVC(gamma='auto')
       
@@ -1116,7 +976,7 @@ tutorial:
 -   [Save and Load Machine Learning Models in Python with
     scikit-learn](https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/)
 
-### **6.2 Evaluate Predictions** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **6.2 Evaluate Predictions** 
 
 We can evaluate the predictions by comparing them to the expected
 results in the validation set, then calculate classification accuracy,
@@ -1125,7 +985,7 @@ matrix](https://machinelearningmastery.com/ufaqs/what-is-a-confusion-matrix/)
 and a classification report.
 
   --- -----------------------------------------------------------
-  1   \# Evaluate predictions
+  1   # Evaluate predictions
       
   2   print(accuracy\_score(Y\_validation, predictions))
       
@@ -1144,91 +1004,56 @@ precision, recall, f1-score and support showing excellent results
 (granted the validation dataset was small).
 
   ---- -----------------------------------
-  1    0.9666666666666667
-       
-  2    [[11 0 0]
-       
-  3    [ 0 12 1]
-       
-  4    [ 0 0 6]]
-       
-  5    precision recall f1-score support
-       
-  6    Iris-setosa 1.00 1.00 1.00 11
-       
-  7    Iris-versicolor 1.00 0.92 0.96 13
-       
-  8    Iris-virginica 0.86 1.00 0.92 6
-       
-  9    accuracy 0.97 30
-       
-  10   macro avg 0.95 0.97 0.96 30
-       
-  11   weighted avg 0.97 0.97 0.97 30
-       
-  12   
-       
-  13   
+0.9666666666666667
+[[11 0 0]
+[ 0 12 1]
+[ 0 0 6]]
+precision recall f1-score support
+ Iris-setosa 1.00 1.00 1.00 11
+Iris-versicolor 1.00 0.92 0.96 13
+Iris-virginica 0.86 1.00 0.92 6
+accuracy 0.97 30
+macro avg 0.95 0.97 0.96 30
+ weighted avg 0.97 0.97 0.97 30
+
+
   ---- -----------------------------------
 
-### **6.3 Complete Example** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **6.3 Complete Example** 
 
 For reference, we can tie all of the previous elements together into a
 single script.
 
 The complete example is listed below.
 
-  ---- ---------------------------------------------------------------------------------------------------------------
-  1    \# make predictions
-       
-  2    from pandas import read\_csv
-       
-  3    from sklearn.model\_selection import train\_test\_split
-       
-  4    from sklearn.metrics import classification\_report
-       
-  5    from sklearn.metrics import confusion\_matrix
-       
-  6    from sklearn.metrics import accuracy\_score
-       
-  7    from sklearn.svm import SVC
-       
-  8    \# Load dataset
-       
-  9    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-       
-  10   names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-       
-  11   dataset = read\_csv(url, names=names)
-       
-  12   \# Split-out validation dataset
-       
-  13   array = dataset.values
-       
+```-----------
+# make predictions
+from pandas import read\_csv
+from sklearn.model\_selection import train\_test\_split
+from sklearn.metrics import classification\_report
+from sklearn.metrics import confusion\_matrix
+ from sklearn.metrics import accuracy\_score
+from sklearn.svm import SVC
+# Load dataset
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+ dataset = read\_csv(url, names=names)
+# Split-out validation dataset
+array = dataset.values
   14   X = array[:,0:4]
-       
   15   y = array[:,4]
-       
   16   X\_train, X\_validation, Y\_train, Y\_validation = train\_test\_split(X, y, test\_size=0.20, random\_state=1)
-       
-  17   \# Make predictions on validation dataset
-       
+  17   # Make predictions on validation dataset
   18   model = SVC(gamma='auto')
-       
   19   model.fit(X\_train, Y\_train)
-       
   20   predictions = model.predict(X\_validation)
-       
-  21   \# Evaluate predictions
-       
-  22   print(accuracy\_score(Y\_validation, predictions))
-       
+  21   # Evaluate predictions
+       print(accuracy\_score(Y\_validation, predictions))
   23   print(confusion\_matrix(Y\_validation, predictions))
-       
   24   print(classification\_report(Y\_validation, predictions))
-  ---- ---------------------------------------------------------------------------------------------------------------
+```-----------
 
-**You Can Do Machine Learning in Python** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**You Can Do Machine Learning in Python** 
 -----------------------------------------
 
 Work through the tutorial above. It will take you 5-to-10 minutes, max!
@@ -1266,7 +1091,7 @@ loading data, looking at the data, evaluating some algorithms and making
 some predictions. In later tutorials we can look at other data
 preparation and result improvement tasks.
 
-**Summary** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Summary** 
 -----------
 
 In this post, you discovered step-by-step how to complete your first

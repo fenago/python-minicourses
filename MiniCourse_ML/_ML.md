@@ -12,7 +12,7 @@ Tweet **Share**
 
 Last Updated on August 21, 2019
 
-### ***From******Developer******to******Machine Learning Practitioner******in 14 Days*** {.western align="center" style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### ***From******Developer******to******Machine Learning Practitioner******in 14 Days*** 
 
 Python is one of the fastest-growing platforms for applied machine
 learning.
@@ -48,7 +48,7 @@ Photo by [Dave
 Young](https://www.flickr.com/photos/dcysurfer/7056436373/), some rights
 reserved.
 
-**Who Is This Mini-Course For?** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Who Is This Mini-Course For?** 
 --------------------------------
 
 Before we get started, let’s make sure you are in the right place.
@@ -79,7 +79,7 @@ It will take you from a developer that knows a little machine learning
 to a developer who can get results using the Python ecosystem, the
 rising platform for professional machine learning.
 
-### **Need help with Machine Learning in Python?** {.western style="margin-top: 0in; margin-bottom: 0.1in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+### **Need help with Machine Learning in Python?** 
 
 Take my free 2-week email course and discover data prep, algorithms and
 more (with code).
@@ -90,7 +90,7 @@ course.
 [**Start Your FREE Mini-Course
 Now!**](https://machinelearningmastery.leadpages.co/leadbox/146d399f3f72a2%3A164f8be4f346dc/5655869022797824/)
 
-**Mini-Course Overview** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Mini-Course Overview** 
 ------------------------
 
 This mini-course is broken down into 14 lessons.
@@ -145,7 +145,7 @@ up some confidence and inertia.
 
 **Hang in there, don’t give up!**
 
-**Lesson 1: Download and Install Python and SciPy** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 1: Download and Install Python and SciPy** 
 ---------------------------------------------------
 
 You cannot get started with machine learning in Python until you have
@@ -173,41 +173,24 @@ Check the versions of everything you are going to need using the code
 below:
 
   ---- ------------------------------------------------------------
-  1    \# Python version
-       
-  2    import sys
-       
-  3    print('Python: {}'.format(sys.version))
-       
-  4    \# scipy
-       
-  5    import scipy
-       
-  6    print('scipy: {}'.format(scipy.\_\_version\_\_))
-       
-  7    \# numpy
-       
-  8    import numpy
-       
-  9    print('numpy: {}'.format(numpy.\_\_version\_\_))
-       
-  10   \# matplotlib
-       
-  11   import matplotlib
-       
-  12   print('matplotlib: {}'.format(matplotlib.\_\_version\_\_))
-       
-  13   \# pandas
-       
+# Python version
+import sys
+print('Python: {}'.format(sys.version))
+# scipy
+import scipy
+ print('scipy: {}'.format(scipy.__version__))
+# numpy
+import numpy
+print('numpy: {}'.format(numpy.__version__))
+# matplotlib
+ import matplotlib
+print('matplotlib: {}'.format(matplotlib.__version__))
+# pandas
   14   import pandas
-       
-  15   print('pandas: {}'.format(pandas.\_\_version\_\_))
-       
-  16   \# scikit-learn
-       
+  15   print('pandas: {}'.format(pandas.__version__))
+  16   # scikit-learn
   17   import sklearn
-       
-  18   print('sklearn: {}'.format(sklearn.\_\_version\_\_))
+  18   print('sklearn: {}'.format(sklearn.__version__))
   ---- ------------------------------------------------------------
 
 If there are any errors, stop. Now is the time to fix them.
@@ -218,13 +201,13 @@ Need help? See this tutorial:
     Learning with
     Anaconda](https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/)
 
-**Lesson 2: Get Around In Python, NumPy, Matplotlib and Pandas.** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 2: Get Around In Python, NumPy, Matplotlib and Pandas.** 
 -----------------------------------------------------------------
 
 You need to be able to read and write basic Python scripts.
 
 As a developer, you can pick-up new programming languages pretty
-quickly. Python is case sensitive, uses hash (\#) for comments and uses
+quickly. Python is case sensitive, uses hash (#) for comments and uses
 whitespace to indicate code blocks (whitespace matters).
 
 Today’s task is to practice the basic syntax of the Python programming
@@ -242,8 +225,8 @@ environment.
 For example, below is a simple example of creating a Pandas
 **DataFrame**.
 
-  --- ---------------------------------------------------------------------------
-  1   \# dataframe
+```
+  1   # dataframe
       
   2   import numpy
       
@@ -258,9 +241,9 @@ For example, below is a simple example of creating a Pandas
   7   mydataframe = pandas.DataFrame(myarray, index=rownames, columns=colnames)
       
   8   print(mydataframe)
-  --- ---------------------------------------------------------------------------
+```
 
-**Lesson 3: Load Data From CSV** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 3: Load Data From CSV** 
 --------------------------------
 
 Machine learning algorithms need data. You can load your own data from
@@ -284,15 +267,15 @@ repository](http://machinelearningmastery.com/practice-machine-learning-with-sma
     function.
 
 -   Practice loading CSV files using Pandas and the
-    [pandas.read\_csv()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
+    [pandas.read_csv()](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
     function.
 
 To get you started, below is a snippet that will load the Pima Indians
 onset of diabetes dataset using Pandas directly from the UCI Machine
 Learning Repository.
 
-  --- ----------------------------------------------------------------------------------------------------
-  1   \# Load CSV using Pandas from URL
+```-------------------------
+  1   # Load CSV using Pandas from URL
       
   2   import pandas
       
@@ -300,16 +283,16 @@ Learning Repository.
       
   4   names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
       
-  5   data = pandas.read\_csv(url, names=names)
+  5   data = pandas.read_csv(url, names=names)
       
   6   print(data.shape)
-  --- ----------------------------------------------------------------------------------------------------
+```-------------------------
 
 Well done for making it this far! Hang in there.
 
 **Any questions so far? Ask in the comments.**
 
-**Lesson 4: Understand Data with Descriptive Statistics** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 4: Understand Data with Descriptive Statistics** 
 ---------------------------------------------------------
 
 Once you have loaded your data into Python you need to be able to
@@ -340,8 +323,8 @@ the Pandas DataFrame.
 The below example loads the Pima Indians onset of diabetes dataset and
 summarizes the distribution of each attribute.
 
-  --- ----------------------------------------------------------------------------------------------------
-  1   \# Statistical Summary
+```-------------------------
+  1   # Statistical Summary
       
   2   import pandas
       
@@ -349,16 +332,16 @@ summarizes the distribution of each attribute.
       
   4   names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
       
-  5   data = pandas.read\_csv(url, names=names)
+  5   data = pandas.read_csv(url, names=names)
       
   6   description = data.describe()
       
   7   print(description)
-  --- ----------------------------------------------------------------------------------------------------
+```-------------------------
 
 **Try it out!**
 
-**Lesson 5: Understand Data with Visualization** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 5: Understand Data with Visualization** 
 ------------------------------------------------
 
 Continuing on from yesterday’s lesson, you must spend time to better
@@ -376,37 +359,37 @@ using the helper functions provided on the Pandas DataFrame.
 -   Use the **plot(kind=’box’)** function to create box-and-whisker
     plots of each attribute.
 
--   Use the **pandas.scatter\_matrix()** function to create pairwise
+-   Use the **pandas.scatter_matrix()** function to create pairwise
     scatterplots of all attributes.
 
 For example, the snippet below will load the diabetes dataset and create
 a scatterplot matrix of the dataset.
 
-  --- ----------------------------------------------------------------------------------------------------
-  1   \# Scatter Plot Matrix
+```-------------------------
+  1   # Scatter Plot Matrix
       
   2   import matplotlib.pyplot as plt
       
   3   import pandas
       
-  4   from pandas.plotting import scatter\_matrix
+  4   from pandas.plotting import scatter_matrix
       
   5   url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
       
   6   names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
       
-  7   data = pandas.read\_csv(url, names=names)
+  7   data = pandas.read_csv(url, names=names)
       
-  8   scatter\_matrix(data)
+  8   scatter_matrix(data)
       
   9   plt.show()
-  --- ----------------------------------------------------------------------------------------------------
+```-------------------------
 
 ![](../quia_ipsa_html_97bc995fd51d7a83.png)
 
 Sample Scatter Plot Matrix
 
-**Lesson 6: Prepare For Modeling by Pre-Processing Data** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 6: Prepare For Modeling by Pre-Processing Data** 
 ---------------------------------------------------------
 
 Your raw data may not be setup to be in the best shape for modeling.
@@ -435,41 +418,26 @@ For example, the snippet below loads the Pima Indians onset of diabetes
 dataset, calculates the parameters needed to standardize the data, then
 creates a standardized copy of the input data.
 
-  ---- ----------------------------------------------------------------------------------------------------
-  1    \# Standardize data (0 mean, 1 stdev)
-       
-  2    from sklearn.preprocessing import StandardScaler
-       
-  3    import pandas
-       
-  4    import numpy
-       
-  5    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-       
-  6    names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-       
-  7    dataframe = pandas.read\_csv(url, names=names)
-       
-  8    array = dataframe.values
-       
-  9    \# separate array into input and output components
-       
-  10   X = array[:,0:8]
-       
-  11   Y = array[:,8]
-       
-  12   scaler = StandardScaler().fit(X)
-       
-  13   rescaledX = scaler.transform(X)
-       
-  14   \# summarize transformed data
-       
-  15   numpy.set\_printoptions(precision=3)
-       
+```
+# Standardize data (0 mean, 1 stdev)
+from sklearn.preprocessing import StandardScaler
+import pandas
+import numpy
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+ names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataframe = pandas.read_csv(url, names=names)
+array = dataframe.values
+# separate array into input and output components
+X = array[:,0:8]
+ Y = array[:,8]
+scaler = StandardScaler().fit(X)
+rescaledX = scaler.transform(X)
+  14   # summarize transformed data
+  15   numpy.set_printoptions(precision=3)
   16   print(rescaledX[0:5,:])
-  ---- ----------------------------------------------------------------------------------------------------
+```
 
-**Lesson 7: Algorithm Evaluation With Resampling Methods** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 7: Algorithm Evaluation With Resampling Methods** 
 ----------------------------------------------------------
 
 The dataset used to train a machine learning algorithm is called a
@@ -497,50 +465,36 @@ The snippet below uses scikit-learn to estimate the accuracy of the
 Logistic Regression algorithm on the Pima Indians onset of diabetes
 dataset using 10-fold cross validation.
 
-  ---- ----------------------------------------------------------------------------------------------------
-  1    \# Evaluate using Cross Validation
-       
-  2    from pandas import read\_csv
-       
-  3    from sklearn.model\_selection import KFold
-       
-  4    from sklearn.model\_selection import cross\_val\_score
-       
-  5    from sklearn.linear\_model import LogisticRegression
-       
-  6    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-       
-  7    names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-       
-  8    dataframe = read\_csv(url, names=names)
-       
-  9    array = dataframe.values
-       
-  10   X = array[:,0:8]
-       
-  11   Y = array[:,8]
-       
-  12   kfold = KFold(n\_splits=10, random\_state=7)
-       
-  13   model = LogisticRegression(solver='liblinear')
-       
-  14   results = cross\_val\_score(model, X, Y, cv=kfold)
-       
+```
+# Evaluate using Cross Validation
+from pandas import read_csv
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LogisticRegression
+ url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataframe = read_csv(url, names=names)
+array = dataframe.values
+X = array[:,0:8]
+ Y = array[:,8]
+kfold = KFold(n_splits=10, random_state=7)
+model = LogisticRegression(solver='liblinear')
+  14   results = cross_val_score(model, X, Y, cv=kfold)
   15   print("Accuracy: %.3f%% (%.3f%%)") % (results.mean()\*100.0, results.std()\*100.0)
-  ---- ----------------------------------------------------------------------------------------------------
+```
 
 What accuracy did you get? Let me know in the comments.
 
 **Did you realize that this is the halfway point? Well done!**
 
-**Lesson 8: Algorithm Evaluation Metrics** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 8: Algorithm Evaluation Metrics** 
 ------------------------------------------
 
 There are many different metrics that you can use to evaluate the skill
 of a machine learning algorithm on a dataset.
 
 You can specify the metric used for your test harness in scikit-learn
-via the **cross\_validation.cross\_val\_score()** function and defaults
+via the **cross_validation.cross_val_score()** function and defaults
 can be used for regression and classification problems. Your goal with
 today’s lesson is to practice using the different algorithm performance
 metrics available in the scikit-learn package.
@@ -555,43 +509,28 @@ metrics available in the scikit-learn package.
 The snippet below demonstrates calculating the LogLoss metric on the
 Pima Indians onset of diabetes dataset.
 
-  ---- ----------------------------------------------------------------------------------------------------
-  1    \# Cross Validation Classification LogLoss
-       
-  2    from pandas import read\_csv
-       
-  3    from sklearn.model\_selection import KFold
-       
-  4    from sklearn.model\_selection import cross\_val\_score
-       
-  5    from sklearn.linear\_model import LogisticRegression
-       
-  6    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-       
-  7    names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-       
-  8    dataframe = read\_csv(url, names=names)
-       
-  9    array = dataframe.values
-       
-  10   X = array[:,0:8]
-       
-  11   Y = array[:,8]
-       
-  12   kfold = KFold(n\_splits=10, random\_state=7)
-       
-  13   model = LogisticRegression(solver='liblinear')
-       
-  14   scoring = 'neg\_log\_loss'
-       
-  15   results = cross\_val\_score(model, X, Y, cv=kfold, scoring=scoring)
-       
+```
+# Cross Validation Classification LogLoss
+from pandas import read_csv
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LogisticRegression
+ url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataframe = read_csv(url, names=names)
+array = dataframe.values
+X = array[:,0:8]
+ Y = array[:,8]
+kfold = KFold(n_splits=10, random_state=7)
+model = LogisticRegression(solver='liblinear')
+  14   scoring = 'neg_log_loss'
+  15   results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
   16   print("Logloss: %.3f (%.3f)") % (results.mean(), results.std())
-  ---- ----------------------------------------------------------------------------------------------------
+```
 
 What log loss did you get? Let me know in the comments.
 
-**Lesson 9: Spot-Check Algorithms** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 9: Spot-Check Algorithms** 
 -----------------------------------
 
 You cannot possibly know which algorithm will perform best on your data
@@ -617,43 +556,28 @@ learning algorithms.
 For example, the snippet below spot-checks the K-Nearest Neighbors
 algorithm on the Boston House Price dataset.
 
-  ---- -------------------------------------------------------------------------------------------------------------------
-  1    \# KNN Regression
-       
-  2    from pandas import read\_csv
-       
-  3    from sklearn.model\_selection import KFold
-       
-  4    from sklearn.model\_selection import cross\_val\_score
-       
-  5    from sklearn.neighbors import KNeighborsRegressor
-       
-  6    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.data"
-       
-  7    names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
-       
-  8    dataframe = read\_csv(url, delim\_whitespace=True, names=names)
-       
-  9    array = dataframe.values
-       
-  10   X = array[:,0:13]
-       
-  11   Y = array[:,13]
-       
-  12   kfold = KFold(n\_splits=10, random\_state=7)
-       
-  13   model = KNeighborsRegressor()
-       
-  14   scoring = 'neg\_mean\_squared\_error'
-       
-  15   results = cross\_val\_score(model, X, Y, cv=kfold, scoring=scoring)
-       
+```---------------
+# KNN Regression
+from pandas import read_csv
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.neighbors import KNeighborsRegressor
+ url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.data"
+names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
+dataframe = read_csv(url, delim_whitespace=True, names=names)
+array = dataframe.values
+X = array[:,0:13]
+ Y = array[:,13]
+kfold = KFold(n_splits=10, random_state=7)
+model = KNeighborsRegressor()
+  14   scoring = 'neg_mean_squared_error'
+  15   results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
   16   print(results.mean())
-  ---- -------------------------------------------------------------------------------------------------------------------
+```---------------
 
 What mean squared error did you get? Let me know in the comments.
 
-**Lesson 10: Model Comparison and Selection** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 10: Model Comparison and Selection** 
 ---------------------------------------------
 
 Now that you know how to spot check machine learning algorithms on your
@@ -675,68 +599,41 @@ learning algorithms in Python with scikit-learn.
 The example below compares Logistic Regression and Linear Discriminant
 Analysis to each other on the Pima Indians onset of diabetes dataset.
 
-  ---- ----------------------------------------------------------------------------------------------------
-  1    \# Compare Algorithms
-       
-  2    from pandas import read\_csv
-       
-  3    from sklearn.model\_selection import KFold
-       
-  4    from sklearn.model\_selection import cross\_val\_score
-       
-  5    from sklearn.linear\_model import LogisticRegression
-       
-  6    from sklearn.discriminant\_analysis import LinearDiscriminantAnalysis
-       
-  7    \# load dataset
-       
-  8    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-       
-  9    names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-       
-  10   dataframe = read\_csv(url, names=names)
-       
-  11   array = dataframe.values
-       
-  12   X = array[:,0:8]
-       
-  13   Y = array[:,8]
-       
-  14   \# prepare models
-       
+```
+# Compare Algorithms
+from pandas import read_csv
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LogisticRegression
+ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+# load dataset
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataframe = read_csv(url, names=names)
+ array = dataframe.values
+X = array[:,0:8]
+Y = array[:,8]
+  14   # prepare models
   15   models = []
-       
   16   models.append(('LR', LogisticRegression(solver='liblinear')))
-       
   17   models.append(('LDA', LinearDiscriminantAnalysis()))
-       
-  18   \# evaluate each model in turn
-       
+  18   # evaluate each model in turn
   19   results = []
-       
   20   names = []
-       
   21   scoring = 'accuracy'
-       
-  22   for name, model in models:
-       
-  23   kfold = KFold(n\_splits=10, random\_state=7)
-       
-  24   cv\_results = cross\_val\_score(model, X, Y, cv=kfold, scoring=scoring)
-       
-  25   results.append(cv\_results)
-       
+       for name, model in models:
+  23   kfold = KFold(n_splits=10, random_state=7)
+  24   cv_results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
+  25   results.append(cv_results)
   26   names.append(name)
-       
-  27   msg = "%s: %f (%f)" % (name, cv\_results.mean(), cv\_results.std())
-       
+  27   msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
   28   print(msg)
-  ---- ----------------------------------------------------------------------------------------------------
+```
 
 Which algorithm got better results? Can you do better? Let me know in
 the comments.
 
-**Lesson 11: Improve Accuracy with Algorithm Tuning** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 11: Improve Accuracy with Algorithm Tuning** 
 -----------------------------------------------------
 
 Once you have found one or two algorithms that perform well on your
@@ -758,48 +655,31 @@ The snippet below uses is an example of using a grid search for the
 Ridge Regression algorithm on the Pima Indians onset of diabetes
 dataset.
 
-  ---- ----------------------------------------------------------------------------------------------------
-  1    \# Grid Search for Algorithm Tuning
-       
-  2    from pandas import read\_csv
-       
-  3    import numpy
-       
-  4    from sklearn.linear\_model import Ridge
-       
-  5    from sklearn.model\_selection import GridSearchCV
-       
-  6    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-       
-  7    names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-       
-  8    dataframe = read\_csv(url, names=names)
-       
-  9    array = dataframe.values
-       
-  10   X = array[:,0:8]
-       
-  11   Y = array[:,8]
-       
-  12   alphas = numpy.array([1,0.1,0.01,0.001,0.0001,0])
-       
-  13   param\_grid = dict(alpha=alphas)
-       
+```
+# Grid Search for Algorithm Tuning
+from pandas import read_csv
+import numpy
+from sklearn.linear_model import Ridge
+from sklearn.model_selection import GridSearchCV
+ url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataframe = read_csv(url, names=names)
+array = dataframe.values
+X = array[:,0:8]
+ Y = array[:,8]
+alphas = numpy.array([1,0.1,0.01,0.001,0.0001,0])
+param_grid = dict(alpha=alphas)
   14   model = Ridge()
-       
-  15   grid = GridSearchCV(estimator=model, param\_grid=param\_grid, cv=3)
-       
+  15   grid = GridSearchCV(estimator=model, param_grid=param_grid, cv=3)
   16   grid.fit(X, Y)
-       
-  17   print(grid.best\_score\_)
-       
-  18   print(grid.best\_estimator\_.alpha)
-  ---- ----------------------------------------------------------------------------------------------------
+  17   print(grid.best_score_)
+  18   print(grid.best_estimator_.alpha)
+```
 
 Which parameters achieved the best results? Can you do better? Let me
 know in the comments.
 
-**Lesson 12: Improve Accuracy with Ensemble Predictions** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 12: Improve Accuracy with Ensemble Predictions** 
 ---------------------------------------------------------
 
 Another way that you can improve the performance of your models is to
@@ -825,45 +705,29 @@ The snippet below demonstrates how you can use the Random Forest
 algorithm (a bagged ensemble of decision trees) on the Pima Indians
 onset of diabetes dataset.
 
-  ---- ----------------------------------------------------------------------------------------------------
-  1    \# Random Forest Classification
-       
-  2    from pandas import read\_csv
-       
-  3    from sklearn.model\_selection import KFold
-       
-  4    from sklearn.model\_selection import cross\_val\_score
-       
-  5    from sklearn.ensemble import RandomForestClassifier
-       
-  6    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-       
-  7    names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-       
-  8    dataframe = read\_csv(url, names=names)
-       
-  9    array = dataframe.values
-       
-  10   X = array[:,0:8]
-       
-  11   Y = array[:,8]
-       
-  12   num\_trees = 100
-       
-  13   max\_features = 3
-       
-  14   kfold = KFold(n\_splits=10, random\_state=7)
-       
-  15   model = RandomForestClassifier(n\_estimators=num\_trees, max\_features=max\_features)
-       
-  16   results = cross\_val\_score(model, X, Y, cv=kfold)
-       
+```
+# Random Forest Classification
+from pandas import read_csv
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.ensemble import RandomForestClassifier
+ url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataframe = read_csv(url, names=names)
+array = dataframe.values
+X = array[:,0:8]
+ Y = array[:,8]
+num_trees = 100
+max_features = 3
+  14   kfold = KFold(n_splits=10, random_state=7)
+  15   model = RandomForestClassifier(n_estimators=num_trees, max_features=max_features)
+  16   results = cross_val_score(model, X, Y, cv=kfold)
   17   print(results.mean())
-  ---- ----------------------------------------------------------------------------------------------------
+```
 
 Can you devise a better ensemble? Let me know in the comments.
 
-**Lesson 13: Finalize And Save Your Model** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 13: Finalize And Save Your Model** 
 -------------------------------------------
 
 Once you have found a well-performing model on your machine learning
@@ -881,65 +745,40 @@ For example, the snippet below shows how you can create a Logistic
 Regression model, save it to file, then load it later and make
 predictions on unseen data.
 
-  ---- ------------------------------------------------------------------------------------------------------------
-  1    \# Save Model Using Pickle
-       
-  2    from pandas import read\_csv
-       
-  3    from sklearn.model\_selection import train\_test\_split
-       
-  4    from sklearn.linear\_model import LogisticRegression
-       
-  5    import pickle
-       
-  6    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-       
-  7    names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-       
-  8    dataframe = read\_csv(url, names=names)
-       
-  9    array = dataframe.values
-       
-  10   X = array[:,0:8]
-       
-  11   Y = array[:,8]
-       
-  12   test\_size = 0.33
-       
-  13   seed = 7
-       
-  14   X\_train, X\_test, Y\_train, Y\_test = train\_test\_split(X, Y, test\_size=test\_size, random\_state=seed)
-       
-  15   \# Fit the model on 33%
-       
+```--------
+# Save Model Using Pickle
+from pandas import read_csv
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+import pickle
+ url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataframe = read_csv(url, names=names)
+array = dataframe.values
+X = array[:,0:8]
+ Y = array[:,8]
+test_size = 0.33
+seed = 7
+  14   X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=test_size, random_state=seed)
+  15   # Fit the model on 33%
   16   model = LogisticRegression(solver='liblinear')
-       
-  17   model.fit(X\_train, Y\_train)
-       
-  18   \# save the model to disk
-       
-  19   filename = 'finalized\_model.sav'
-       
+  17   model.fit(X_train, Y_train)
+  18   # save the model to disk
+  19   filename = 'finalized_model.sav'
   20   pickle.dump(model, open(filename, 'wb'))
-       
   21   \
         \
-  22   
-       \# some time later...
+       # some time later...
   23   
        \
   24    \
-       
-  25   \# load the model from disk
-       
-  26   loaded\_model = pickle.load(open(filename, 'rb'))
-       
-  27   result = loaded\_model.score(X\_test, Y\_test)
-       
+  25   # load the model from disk
+  26   loaded_model = pickle.load(open(filename, 'rb'))
+  27   result = loaded_model.score(X_test, Y_test)
        print(result)
-  ---- ------------------------------------------------------------------------------------------------------------
+```--------
 
-**Lesson 14: Hello World End-to-End Project** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**Lesson 14: Hello World End-to-End Project** 
 ---------------------------------------------
 
 You now know how to complete each task of a predictive modeling machine
@@ -972,10 +811,10 @@ Take it slowly and record your results along the way.
 What model did you use? What results did you get? Let me know in the
 comments.
 
-**The End!** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**The End!** 
 ------------
 
-**(*****Look How Far You Have Come*****)** {.western style="margin-top: 0in; margin-bottom: 0.13in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; page-break-after: auto"}
+**(*****Look How Far You Have Come*****)** 
 ------------------------------------------
 
 You made it. Well done!
