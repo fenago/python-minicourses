@@ -346,7 +346,11 @@ In this step we had created a form to take input from user and submit to call FL
 <h4>Step 5 </h4>
 
 !!!Important!!!
-make sure that flask server is up and running we disscussed in part1
+
+- Make sure that flask server is up and running we disscussed in part 1.
+- Also, update `RestClientAngularWeb\src\app\app.component.ts` line no **25** with `public-ip` on which jupyterLab is running. 
+Use`localhost` if you running jupyterLab container locally. We will send rest call to flask api from the angular application.
+
 !!!!!!!!!!!!!!!
 
 
