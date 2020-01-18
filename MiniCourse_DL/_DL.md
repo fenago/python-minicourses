@@ -1,4 +1,3 @@
-Last Updated on December 11, 2019
 
 Deep learning is a fascinating field of study and the techniques are
 achieving world class results in a range of challenging machine learning
@@ -22,13 +21,6 @@ with 18 step-by-step tutorials and 9 projects.
 
 Let’s get started.
 
-(**Tip**: *you might want to print or bookmark this page so that you can
-refer back to it later.*)
-
--   **Update Mar/2018**: Added alternate link to download the dataset as
-    the original appears to have been taken down.
-
--   **Update Oct/2019**: Updated for Keras 2.3.0.
 
 ![](../vero_iure_incidunt_html_bf3e62ac2050280a.jpg)
 
@@ -156,28 +148,41 @@ that demonstrates the symbolic nature of Theano programs.
 
 For example, you can install Theano using pip as follows:
 
-  --- -------------------------
-  1   sudo pip install Theano
-  --- -------------------------
+```
+sudo pip install Theano
+```
+
 
 A small example of a Theano program that you can use as a starting point
 is listed below:
 
-  ---- -------------------------------------------------------------------
+```
 import theano
+
 from theano import tensor
+
 # declare two symbolic floating-point scalars
+
 a = tensor.dscalar()
+
 b = tensor.dscalar()
- # create a simple expression
+
+# create a simple expression
+
 c = a + b
+
 # convert the expression into a callable object that takes (a,b)
+
 # values as input and computes a value for c
+
 f = theano.function([a,b], c)
- # bind 1.5 to 'a', 2.5 to 'b', and evaluate 'c'
+
+# bind 1.5 to 'a', 2.5 to 'b', and evaluate 'c'
+
 result = f(1.5, 2.5)
+
 print(result)
-  ---- -------------------------------------------------------------------
+```
 
 Learn more about Theano on the [Theano
 homepage](http://deeplearning.net/software/theano/).
@@ -208,22 +213,35 @@ For example, you can install TensorFlow using pip:
 A small example of a TensorFlow program that you can use as a starting
 point is listed below:
 
-  ---- ---------------------------------------------------------------
+```
 # Example of TensorFlow library
+
 import tensorflow as tf
+
 import tensorflow.compat.v1 as tf
-tf.disable\_v2\_behavior()
+
+tf.disable_v2_behavior()
+
 # declare two symbolic floating-point scalars
- a = tf.placeholder(tf.float32)
+
+a = tf.placeholder(tf.float32)
+
 b = tf.placeholder(tf.float32)
+
 # create a simple symbolic expression using the add function
+
 add = tf.add(a, b)
+
 # bind 1.5 to 'a', 2.5 to 'b', and evaluate 'c'
- sess = tf.Session()
+
+sess = tf.Session()
+
 binding = {a: 1.5, b: 2.5}
-c = sess.run(add, feed\_dict=binding)
-  14   print(c)
-  ---- ---------------------------------------------------------------
+
+c = sess.run(add, feed_dict=binding)
+
+print(c)
+```
 
 Learn more about TensorFlow on the [TensorFlow
 homepage](https://www.tensorflow.org/).
@@ -268,9 +286,8 @@ Your goal for this lesson is to install Keras.
 
 For example, you can install Keras using pip:
 
-  --- ------------------------
-  1   sudo pip install keras
-  --- ------------------------
+```
+```
 
 Start to familiarize yourself with the Keras library ready for the
 upcoming lessons where we will implement our first model.
@@ -354,25 +371,41 @@ Download the dataset and place it in your current working directory.
 -   [Dataset
     Details](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.names).
 
-  ---- -------------------------------------------------------------------------------------
+```
 from keras.models import Sequential
+
 from keras.layers import Dense
+
 # Load the dataset
+
 dataset = numpy.loadtxt("pima-indians-diabetes.csv", delimiter=",")
+
 X = dataset[:,0:8]
- Y = dataset[:,8]
+
+Y = dataset[:,8]
+
 # Define and Compile
+
 model = Sequential()
-model.add(Dense(12, input\_dim=8, activation='relu'))
+
+model.add(Dense(12, input_dim=8, activation='relu'))
+
 model.add(Dense(8, activation='relu'))
- model.add(Dense(1, activation='sigmoid'))
-model.compile(loss='binary\_crossentropy' , optimizer='adam', metrics=['accuracy'])
+
+model.add(Dense(1, activation='sigmoid'))
+
+model.compile(loss='binary_crossentropy' , optimizer='adam', metrics=['accuracy'])
+
 # Fit the model
-  14   model.fit(X, Y, epochs=150, batch\_size=10)
-  15   # Evaluate the model
-  16   scores = model.evaluate(X, Y)
-  17   print("%s: %.2f%%" % (model.metrics\_names[1], scores[1]\*100))
-  ---- -------------------------------------------------------------------------------------
+
+model.fit(X, Y, epochs=150, batch_size=10)
+
+# Evaluate the model
+
+scores = model.evaluate(X, Y)
+
+print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+```
 
 Now develop your own model on a different dataset, or adapt this
 example.
@@ -406,28 +439,23 @@ evaluate it using k-fold cross validation.
 For example, you can define an instance of the KerasClassifier and the
 custom function to create your model as follows:
 
-  ---- ---------------------------------------------------------------------------------
+```
 # Function to create model, required for KerasClassifier
-def create\_model():
-# Create model
-model = Sequential()
-...
- # Compile model
-model.compile(...)
-return model
-\
-        \
-
-       # create classifier for use in scikit-learn
+def create_model():
+	# Create model
+	model = Sequential()
+	...
+	# Compile model
+	model.compile(...)
+	return model
  
-       model = KerasClassifier(build\_fn=create\_model, nb\_epoch=150, batch\_size=10)
+# create classifier for use in scikit-learn
+model = KerasClassifier(build_fn=create_model, nb_epoch=150, batch_size=10)
+# evaluate model using 10-fold cross validation in scikit-learn
+kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=seed)
+results = cross_val_score(model, X, Y, cv=kfold)
+```
 
-       # evaluate model using 10-fold cross validation in scikit-learn
-
-       kfold = StratifiedKFold(n\_splits=10, shuffle=True, random\_state=seed)
-  14   
-       results = cross\_val\_score(model, X, Y, cv=kfold)
-  ---- ---------------------------------------------------------------------------------
 
 Learn more about using your Keras deep learning models with scikit-learn
 on the [Wrappers for the Sciki-Learn API
@@ -458,13 +486,11 @@ create plots of model performance during training.
 For example, you can print the list of metrics collected by your history
 object as follows:
 
-  --- -------------------------------
-  1   # list all data in history
-      
-  2   history = model.fit(...)
-      
-  3   print(history.history.keys())
-  --- -------------------------------
+```
+# list all data in history
+history = model.fit(...)
+print(history.history.keys())
+```
 
 You can learn more about the [History object and the callback API in
 Keras](http://keras.io/callbacks/#history).
@@ -493,19 +519,14 @@ Keras to keep track of the best model observed during training.
 You could define a ModelCheckpoint that saves network weights to the
 same file each time an improvement is observed. For example:
 
-```------------------------------------
-  1   from keras.callbacks import ModelCheckpoint
-      
-  2   ...
-      
-  3   checkpoint = ModelCheckpoint('weights.best.hdf5', monitor='val\_accuracy', save\_best\_only=True, mode='max')
-      
-  4   callbacks\_list = [checkpoint]
-      
-  5   # Fit the model
-      
-  6   model.fit(..., callbacks=callbacks\_list)
-```------------------------------------
+```
+from keras.callbacks import ModelCheckpoint
+...
+checkpoint = ModelCheckpoint('weights.best.hdf5', monitor='val_accuracy', save_best_only=True, mode='max')
+callbacks_list = [checkpoint]
+# Fit the model
+model.fit(..., callbacks=callbacks_list)
+```
 
 Learn more about using the [ModelCheckpoint callback in
 Keras](http://keras.io/callbacks/#modelcheckpoint).
@@ -535,13 +556,11 @@ of dropout values.
 For example, you can create a dropout layer with the probability of 20%
 and add it to your model as follows:
 
-  --- ----------------------------------
-  1   from keras.layers import Dropout
-      
-  2   ...
-      
-  3   model.add(Dropout(0.2))
-  --- ----------------------------------
+```
+from keras.layers import Dropout
+...
+model.add(Dropout(0.2))
+```
 
 You can learn more [about dropout in
 Keras](http://keras.io/layers/core/#dropout).
@@ -572,15 +591,12 @@ rate schedule built into Keras.
 For example, you can specify a learning rate schedule that starts at 0.1
 and drops by 0.0001 each epoch as follows:
 
-  --- ---------------------------------------------------------------
-  1   from keras.optimizers import SGD
-      
-  2   ...
-      
-  3   sgd = SGD(lr=0.1, momentum=0.9, decay=0.0001, nesterov=False)
-      
-  4   model.compile(..., optimizer=sgd)
-  --- ---------------------------------------------------------------
+```
+from keras.optimizers import SGD
+...
+sgd = SGD(lr=0.1, momentum=0.9, decay=0.0001, nesterov=False)
+model.compile(..., optimizer=sgd)
+```
 
 You can learn more about the [SGD class in Keras
 here](http://keras.io/optimizers/#sgd).
@@ -647,13 +663,11 @@ layer, one max pooling layer and one dense layer to make predictions.
 
 For example, you can load the MNIST dataset in Keras as follows:
 
-  --- ---------------------------------------------------------------
-  1   from keras.datasets import mnist
-      
-  2   ...
-      
-  3   (X\_train, y\_train), (X\_test, y\_test) = mnist.load\_data()
-  --- ---------------------------------------------------------------
+```
+from keras.datasets import mnist
+...
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+```
 
 It may take a moment to download the files to your computer.
 
@@ -663,45 +677,35 @@ the format width x height x channels, where the MNIST data has 1 channel
 because the images are gray scale and a width and height of 28 pixels.
 You can easily reshape the MNIST dataset as follows:
 
-  --- -------------------------------------------------------------
-  1   X\_train = X\_train.reshape((X\_train.shape[0], 28, 28, 1))
-      
-  2   X\_test = X\_test.reshape((X\_test.shape[0], 28, 28, 1))
-  --- -------------------------------------------------------------
+```
+X_train = X_train.reshape((X_train.shape[0], 28, 28, 1))
+X_test = X_test.reshape((X_test.shape[0], 28, 28, 1))
+```
 
 You will also need to one-hot encode the output class value, that Keras
 also provides a handy helper function to achieve:
 
-  --- ------------------------------------------------
-  1   from keras.utils import np\_utils
-      
-  2   ...
-      
-  3   y\_train = np\_utils.to\_categorical(y\_train)
-      
-  4   y\_test = np\_utils.to\_categorical(y\_test)
-  --- ------------------------------------------------
+```
+from keras.utils import np_utils
+...
+y_train = np_utils.to_categorical(y_train)
+y_test = np_utils.to_categorical(y_test)
+```
 
 As a final tip, here is a model definition that you can use as a
 starting point:
 
-```--------------
-  1   model = Sequential()
-      
-  2   model.add(Conv2D(32, (3, 3), padding='valid', input\_shape=(28, 28, 1),
-      
-  3   activation='relu'))
-      
-  4   model.add(MaxPooling2D())
-      
-  5   model.add(Flatten())
-      
-  6   model.add(Dense(128, activation='relu'))
-      
-  7   model.add(Dense(num\_classes, activation='softmax'))
-      
-  8   model.compile(loss='categorical\_crossentropy', optimizer='adam', metrics=['accuracy'])
-```--------------
+```
+model = Sequential()
+model.add(Conv2D(32, (3, 3), padding='valid', input_shape=(28, 28, 1),
+activation='relu'))
+model.add(MaxPooling2D())
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dense(num_classes, activation='softmax'))
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+```
+
 
 **Lesson 13: Object Recognition in Small Photographs** 
 ------------------------------------------------------
@@ -735,19 +739,19 @@ and long training times.
 For example, you can load the CIFAR-10 dataset in Keras and prepare it
 for use with a convolutional neural network as follows:
 
-  ---- ---------------------------------------------------------------------------
+```
 from keras.datasets import cifar10
-from keras.utils import np\_utils
+from keras.utils import np_utils
 # load data
-(X\_train, y\_train), (X\_test, y\_test) = cifar10.load\_data()
+(X_train, y_train), (X_test, y_test) = cifar10.load_data()
 # normalize inputs from 0-255 to 0.0-1.0
- X\_train = X\_train.astype('float32') X\_test = X\_test.astype('float32')
-X\_train = X\_train / 255.0
-X\_test = X\_test / 255.0
+X_train = X_train.astype('float32') X_test = X_test.astype('float32')
+X_train = X_train / 255.0
+X_test = X_test / 255.0
 # one hot encode outputs
-y\_train = np\_utils.to\_categorical(y\_train)
- y\_test = np\_utils.to\_categorical(y\_test)
-  ---- ---------------------------------------------------------------------------
+y_train = np_utils.to_categorical(y_train)
+y_test = np_utils.to_categorical(y_test)
+```
 
 **Lesson 14: Improve Generalization With Data Augmentation** 
 ------------------------------------------------------------
@@ -776,33 +780,33 @@ previous lesson like MNIST or CIFAR-10.
 For example, the example below creates random rotations of up to 90
 degrees of images in the MNIST dataset.
 
-  ---- ----------------------------------------------------------------------------
+```
 # Random Rotations
 from keras.datasets import mnist
 from keras.preprocessing.image import ImageDataGenerator
 from matplotlib import pyplot
 # load data
- (X\_train, y\_train), (X\_test, y\_test) = mnist.load\_data()
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
 # reshape to be [samples][pixels][width][height]
-X\_train = X\_train.reshape((X\_train.shape[0], 28, 28, 1))
-X\_test = X\_test.reshape((X\_test.shape[0], 28, 28, 1))
+X_train = X_train.reshape((X_train.shape[0], 28, 28, 1))
+X_test = X_test.reshape((X_test.shape[0], 28, 28, 1))
 # convert from int to float
- X\_train = X\_train.astype('float32')
-X\_test = X\_test.astype('float32')
+X_train = X_train.astype('float32')
+X_test = X_test.astype('float32')
 # define data preparation
-  14   datagen = ImageDataGenerator(rotation\_range=90)
-  15   # fit parameters from data
-  16   datagen.fit(X\_train)
-  17   # configure batch size and retrieve one batch of images
-  18   for X\_batch, y\_batch in datagen.flow(X\_train, y\_train, batch\_size=9):
-  19   # create a grid of 3 \* 3 images
-  20   for i in range(0, 9):
-  21   pyplot.subplot(330 + 1 + i)
-       pyplot.imshow(X\_batch[i].reshape(28, 28), cmap=pyplot.get\_cmap('gray'))
-  23   # show the plot
-  24   pyplot.show()
-  25   break
-  ---- ----------------------------------------------------------------------------
+datagen = ImageDataGenerator(rotation_range=90)
+# fit parameters from data
+datagen.fit(X_train)
+# configure batch size and retrieve one batch of images
+for X_batch, y_batch in datagen.flow(X_train, y_train, batch_size=9):
+	# create a grid of 3 * 3 images
+	for i in range(0, 9):
+		pyplot.subplot(330 + 1 + i)
+		pyplot.imshow(X_batch[i].reshape(28, 28), cmap=pyplot.get_cmap('gray'))
+	# show the plot
+	pyplot.show()
+	break
+```
 
 You can learn more about the [Keras image augmentation
 API](http://keras.io/preprocessing/image/).

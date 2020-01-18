@@ -192,7 +192,7 @@ argument to the *fit()* function, for example:
 The example below demonstrates a Multilayer Perceptron with batch
 gradient descent on a binary classification problem.
 
-```-------------------
+```-
 # example of batch gradient descent
 from sklearn.datasets import make\_circles
 from keras.layers import Dense
@@ -231,7 +231,7 @@ trainy, testy = y[:n\_train], y[n\_train:]
   36   pyplot.plot(history.history['val\_accuracy'], label='test')
   37   pyplot.legend()
   38   pyplot.show()
-```-------------------
+```-
 
 ### **Your Task** 
 
@@ -269,11 +269,11 @@ adjust the learning rate when a plateau in model performance is
 detected, e.g. no change for a given number of training epochs. For
 example:
 
-```------------------------
+
   1   # define learning rate schedule
       
   2   rlrp = ReduceLROnPlateau(monitor='val\_loss', factor=0.1, patience=5, min\_delta=1E-7, verbose=1)
-```------------------------
+
 
 This callback is designed to reduce the learning rate after the model
 stops improving with the hope of fine-tuning model weights during
@@ -369,7 +369,8 @@ example:
 The example below demonstrates a Multilayer Perceptron model with batch
 normalization on a binary classification problem.
 
-  ---- ---------------------------------------------------------------------------------------------
+```
+------------
 # example of batch normalization
 from sklearn.datasets import make\_circles
 from keras.models import Sequential
@@ -410,7 +411,8 @@ trainy, testy = y[:n\_train], y[n\_train:]
   38   pyplot.plot(history.history['val\_accuracy'], label='test')
   39   pyplot.legend()
   40   pyplot.show()
-  ---- ---------------------------------------------------------------------------------------------
+```
+------------
 
 ### **Your Task** 
 
@@ -455,8 +457,7 @@ for example:
 The example below demonstrates a Multilayer Perceptron model with weight
 decay on a binary classification problem.
 
-  ---- ----------------------------------------------------------------------------------------------
-# example of weight decay
+```# example of weight decay
 from sklearn.datasets import make\_circles
 from keras.models import Sequential
 from keras.layers import Dense
@@ -493,7 +494,7 @@ trainy, testy = y[:n\_train], y[n\_train:]
   35   pyplot.plot(history.history['val\_accuracy'], label='test')
   36   pyplot.legend()
   37   pyplot.show()
-  ---- ----------------------------------------------------------------------------------------------
+```
 
 ### **Your Task** 
 
@@ -540,8 +541,7 @@ layers.
 The example below demonstrates a Multilayer Perceptron model with added
 noise between the hidden layers on a binary classification problem.
 
-  ---- ----------------------------------------------------------------------------------------------
-# example of adding noise
+```# example of adding noise
 from sklearn.datasets import make\_circles
 from keras.models import Sequential
 from keras.layers import Dense
@@ -579,8 +579,7 @@ trainy, testy = y[:n\_train], y[n\_train:]
   36   pyplot.plot(history.history['val\_accuracy'], label='test')
   37   pyplot.legend()
   38   pyplot.show()
-  ---- ----------------------------------------------------------------------------------------------
-
+```
 ### **Your Task** 
 
 For this lesson, you must run the code example with and without the

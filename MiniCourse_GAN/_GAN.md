@@ -311,7 +311,8 @@ Also following best practice, the convolutional layers are followed by a
 LeakyReLU activation with a slope of 0.2 and a batch normalization
 layer.
 
-  ---- --------------------------------------------------------------------------------------
+```
+-----
 ...
 # define the discriminator model
 model = Sequential()
@@ -326,7 +327,8 @@ model.add(BatchNormalization())
 # classify
 model.add(Flatten())
   14   model.add(Dense(1, activation='sigmoid'))
-  ---- --------------------------------------------------------------------------------------
+```
+-----
 
 ### **Generator Model** 
 
@@ -440,7 +442,8 @@ The composite model uses the same categorical cross entropy loss as the
 standalone discriminator model and the same Adam version of stochastic
 gradient descent to perform the optimization.
 
-  ---- ------------------------------------------------------------------------------------
+```
+---
 # create the composite model for training the generator
 generator = ...
 discriminator = ...
@@ -455,7 +458,8 @@ model.add(generator)
 model.add(discriminator)
 # compile model
   14   model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
-  ---- ------------------------------------------------------------------------------------
+```
+---
 
 ### **Your Task** 
 

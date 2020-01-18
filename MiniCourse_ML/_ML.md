@@ -274,7 +274,7 @@ To get you started, below is a snippet that will load the Pima Indians
 onset of diabetes dataset using Pandas directly from the UCI Machine
 Learning Repository.
 
-```-------------------------
+-
   1   # Load CSV using Pandas from URL
       
   2   import pandas
@@ -286,7 +286,7 @@ Learning Repository.
   5   data = pandas.read_csv(url, names=names)
       
   6   print(data.shape)
-```-------------------------
+-
 
 Well done for making it this far! Hang in there.
 
@@ -323,7 +323,7 @@ the Pandas DataFrame.
 The below example loads the Pima Indians onset of diabetes dataset and
 summarizes the distribution of each attribute.
 
-```-------------------------
+-
   1   # Statistical Summary
       
   2   import pandas
@@ -337,7 +337,7 @@ summarizes the distribution of each attribute.
   6   description = data.describe()
       
   7   print(description)
-```-------------------------
+-
 
 **Try it out!**
 
@@ -365,7 +365,7 @@ using the helper functions provided on the Pandas DataFrame.
 For example, the snippet below will load the diabetes dataset and create
 a scatterplot matrix of the dataset.
 
-```-------------------------
+-
   1   # Scatter Plot Matrix
       
   2   import matplotlib.pyplot as plt
@@ -383,7 +383,7 @@ a scatterplot matrix of the dataset.
   8   scatter_matrix(data)
       
   9   plt.show()
-```-------------------------
+-
 
 ![](../quia_ipsa_html_97bc995fd51d7a83.png)
 
@@ -556,7 +556,7 @@ learning algorithms.
 For example, the snippet below spot-checks the K-Nearest Neighbors
 algorithm on the Boston House Price dataset.
 
-```---------------
+```
 # KNN Regression
 from pandas import read_csv
 from sklearn.model_selection import KFold
@@ -573,7 +573,7 @@ model = KNeighborsRegressor()
   14   scoring = 'neg_mean_squared_error'
   15   results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
   16   print(results.mean())
-```---------------
+```
 
 What mean squared error did you get? Let me know in the comments.
 

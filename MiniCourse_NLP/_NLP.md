@@ -611,7 +611,8 @@ When the model is trained on examples of padded documents and their
 associated output label both the network weights and the distributed
 representation will be tuned to the specific data.
 
-  ---- ------------------------------------------------------------------------------------
+```
+---
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Flatten
@@ -628,7 +629,8 @@ model.add(Dense(1, activation='sigmoid'))
   14   model.compile(optimizer='adam', loss='binary\_crossentropy', metrics=['accuracy'])
   15   # summarize the model
   16   print(model.summary())
-  ---- ------------------------------------------------------------------------------------
+```
+---
 
 It is also possible to initialize the Embedding layer with pre-trained
 weights, such as those prepared by Gensim and to configure the layer to

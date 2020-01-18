@@ -545,7 +545,8 @@ single script.
 
 The complete example is listed below.
 
-  ---- ---------------------------------------------------------------------------------
+```
+
 # summarize the data
 from pandas import read\_csv
 # Load dataset
@@ -560,7 +561,8 @@ print(dataset.head(20))
 print(dataset.describe())
 # class distribution
   14   print(dataset.groupby('class').size())
-  ---- ---------------------------------------------------------------------------------
+```
+
 
 **4. Data Visualization** 
 -------------------------
@@ -647,7 +649,8 @@ single script.
 
 The complete example is listed below.
 
-  ---- -----------------------------------------------------------------------------------
+```
+--
 # visualize the data
 from pandas import read\_csv
 from pandas.plotting import scatter\_matrix
@@ -665,7 +668,8 @@ dataset.hist()
   15   # scatter plot matrix
   16   scatter\_matrix(dataset)
   17   pyplot.show()
-  ---- -----------------------------------------------------------------------------------
+```
+--
 
 **5. Evaluate Some Algorithms** 
 -------------------------------
@@ -701,7 +705,7 @@ We will split the loaded dataset into two, 80% of which we will use to
 train, evaluate and select among our models, and 20% that we will hold
 back as a validation dataset.
 
-```------------------------------------
+------------
   1   # Split-out validation dataset
       
   2   array = dataset.values
@@ -711,7 +715,7 @@ back as a validation dataset.
   4   y = array[:,4]
       
   5   X\_train, X\_validation, Y\_train, Y\_validation = train\_test\_split(X, y, test\_size=0.20, random\_state=1)
-```------------------------------------
+------------
 
 You now have training data in the *X\_train* and *Y\_train* for
 preparing models and a *X\_validation* and *Y\_validation* sets that we
@@ -736,7 +740,7 @@ Stratified means that each fold or split of the dataset will aim to have
 the same distribution of example by class as exist in the whole training
 dataset.
 
-```---------------
+```
   1   ...
       
   2   model = ...
@@ -746,7 +750,7 @@ dataset.
   4   kfold = StratifiedKFold(n\_splits=10, random\_state=1, shuffle=True)
       
   5   cv\_results = cross\_val\_score(model, X\_train, Y\_train, cv=kfold, scoring='accuracy')
-```---------------
+```
 
 For more on the k-fold cross-validation technique, see the tutorial:
 
@@ -798,7 +802,8 @@ CART, NB and SVM) algorithms.
 
 Let’s build and evaluate our models:
 
-  ---- ------------------------------------------------------------------------------------------
+```
+---------
 # Spot Check Algorithms
 models = []
 models.append(('LR', LogisticRegression(solver='liblinear', multi\_class='ovr')))
@@ -816,7 +821,8 @@ kfold = StratifiedKFold(n\_splits=10, random\_state=1, shuffle=True)
   15   results.append(cv\_results)
   16   names.append(name)
   17   print('%s: %f (%f)' % (name, cv\_results.mean(), cv\_results.std()))
-  ---- ------------------------------------------------------------------------------------------
+```
+---------
 
 ### **5.4 Select Best Model** 
 
@@ -887,7 +893,7 @@ single script.
 
 The complete example is listed below.
 
-```-------------------------
+-
 # compare algorithms
 from pandas import read\_csv
 from matplotlib import pyplot
@@ -930,7 +936,7 @@ from sklearn.svm import SVC
   40   pyplot.boxplot(results, labels=names)
   41   pyplot.title('Algorithm Comparison')
   42   pyplot.show()
-```-------------------------
+-
 
 **6. Make Predictions** 
 -----------------------

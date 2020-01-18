@@ -350,7 +350,8 @@ fit model can be used to make a prediction.
 
 The complete example is listed below.
 
-  ---- ---------------------------------------------------------------------------------------
+```
+------
 # univariate cnn example
 from numpy import array
 from keras.models import Sequential
@@ -378,7 +379,8 @@ X = X.reshape((X.shape[0], X.shape[1], 1))
   25   x\_input = x\_input.reshape((1, 3, 1))
   26   yhat = model.predict(x\_input, verbose=0)
   27   print(yhat)
-  ---- ---------------------------------------------------------------------------------------
+```
+------
 
 Running the example will fit the model on the data then predict the next
 out-of-sample value.

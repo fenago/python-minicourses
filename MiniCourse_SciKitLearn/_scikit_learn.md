@@ -1373,7 +1373,8 @@ order to predict the class values for each instance in the array.
 Let’s make this concrete with an example of predicting multiple data
 instances at once.
 
-  ---- ---------------------------------------------------------------------------------
+```
+
 # example of training a final classification model
 from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import make_blobs
@@ -1389,7 +1390,8 @@ ynew = model.predict(Xnew)
 # show the inputs and predicted outputs
   14   for i in range(len(Xnew)):
   15   print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
-  ---- ---------------------------------------------------------------------------------
+```
+
 
 Running the example predicts the class for the three new data instances,
 then prints the data and the predictions together.
@@ -1465,7 +1467,8 @@ of making a probability prediction, which is most, but not all, models.
 The example below makes a probability prediction for each example in the
 *Xnew* array of data instance.
 
-  ---- ---------------------------------------------------------------------------------
+```
+
 # example of making multiple probability predictions
 from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import make_blobs
@@ -1481,7 +1484,8 @@ ynew = model.predict_proba(Xnew)
 # show the inputs and predicted probabilities
   14   for i in range(len(Xnew)):
   15   print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
-  ---- ---------------------------------------------------------------------------------
+```
+
 
 Running the instance makes the probability predictions and then prints
 the input data instance and the probability of each instance belonging
@@ -1538,7 +1542,8 @@ one or more data instances.
 The example below demonstrates how to make regression predictions on
 multiple data instances with an unknown expected outcome.
 
-  ---- --------------------------------------------------------------------------------------
+```
+-----
 # example of training a final regression model
 from sklearn.linear_model import LinearRegression
 from sklearn.datasets import make_regression
@@ -1554,7 +1559,8 @@ ynew = model.predict(Xnew)
 # show the inputs and predicted outputs
   14   for i in range(len(Xnew)):
   15   print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
-  ---- --------------------------------------------------------------------------------------
+```
+-----
 
 Running the example makes multiple predictions, then prints the inputs
 and predictions side-by-side for review.
