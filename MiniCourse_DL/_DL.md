@@ -1,14 +1,9 @@
 
 Deep learning is a fascinating field of study and the techniques are
 achieving world class results in a range of challenging machine learning
-problems.
-
-It can be hard to get started in deep learning.
-
+problems. It can be hard to get started in deep learning.
 Which library should you use and which techniques should you focus on?
 
-In this post you will discover a 14-part crash course into deep learning
-in Python with the easy to use and powerful Keras library.
 
 This mini-course is intended for python machine learning practitioners
 that are already comfortable with scikit-learn on the SciPy ecosystem
@@ -107,25 +102,7 @@ You’re going to have to do some work though, a little reading, a little
 research and a little programming. You want to learn deep learning
 right?
 
-(**Tip**: *All of the answers these lessons can be found on this blog,
-use the search feature*)
-
-Any questions at all, please post in the comments below.
-
-Share your results in the comments.
-
 Hang in there, don’t give up!
-
-### **Need help with Deep Learning in Python?** 
-
-Take my free 2-week email course and discover MLPs, CNNs and LSTMs (with
-code).
-
-Click to sign-up now and also get a free PDF Ebook version of the
-course.
-
-[**Start Your FREE Mini-Course
-Now!**](https://machinelearningmastery.leadpages.co/leadbox/142d6e873f72a2%3A164f8be4f346dc/5657382461898752/)
 
 **Lesson 01: Introduction to Theano** 
 -------------------------------------
@@ -206,9 +183,10 @@ the syntax of the symbolic expressions used in TensorFlow programs.
 
 For example, you can install TensorFlow using pip:
 
-  --- -----------------------------
-  1   sudo pip install TensorFlow
-  --- -----------------------------
+
+```
+sudo pip install TensorFlow
+```
 
 A small example of a TensorFlow program that you can use as a starting
 point is listed below:
@@ -221,6 +199,9 @@ import tensorflow as tf
 import tensorflow.compat.v1 as tf
 
 tf.disable_v2_behavior()
+
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
 
 # declare two symbolic floating-point scalars
 
