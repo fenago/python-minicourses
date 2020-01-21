@@ -21,7 +21,7 @@ There should be two terminals opened already. Run following command in these ter
 
 **Terminal 1:** `cd ~/work/python-minicourses/Machine-Learning-REST-API/ML_REST` 
 
-**Terminal 2:** `cd ~/work/python-minicourses/Machine-Learning-REST-API/RestClientAngular` 
+**Terminal 2:** `cd ~/work/python-minicourses/Machine-Learning-REST-API/RestClientAngularWeb` 
 
 
 <h2>****  PART1 ****</h2>

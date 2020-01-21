@@ -10,11 +10,6 @@ hesitation from beginners looking get started. In this blog post I want
 to give a few very simple examples of using scikit-learn for some
 supervised classification algorithms.
 
-Discover how to prepare data with pandas, fit and evaluate models with
-scikit-learn, and more [in my new
-book](https://machinelearningmastery.com/machine-learning-with-python/),
-with 16 step-by-step tutorials, 3 projects, and full python code.
-
 Let’s get started.
 
 ![](../soluta_consectetur_iusto_html_fbf5dc5d29b9b23c.png)
@@ -26,7 +21,7 @@ You don’t need to know about and use all of the algorithms in
 scikit-learn, at least initially, pick one or two (or a handful) and
 practice with only those.
 
-In this post you will see 5 recipes of supervised classification
+In this lab, you will see 5 recipes of supervised classification
 algorithms applied to small standard datasets that are provided with the
 scikit-learn library.
 The recipes are principled. Each example is:
@@ -250,7 +245,7 @@ guide](http://scikit-learn.org/stable/modules/svm.html#svm).
 **Summary** 
 -----------
 
-In this post you have seen 5 self-contained recipes demonstrating some
+In this lab, you have seen 5 self-contained recipes demonstrating some
 of the most popular and powerful supervised classification problems.
 
 Each example is less than 20 lines that you can copy and paste and start
@@ -266,7 +261,7 @@ what effect that has on the results.
 If you are a Python programmer or you are looking for a robust library
 you can use to bring machine learning into a production system then a
 library that you will want to seriously consider is scikit-learn.
-In this post you will get an overview of the scikit-learn library and
+In this lab, you will get an overview of the scikit-learn library and
 useful references of where you can learn more.
 
 Discover how to prepare data with pandas, fit and evaluate models with
@@ -504,7 +499,7 @@ it’s vision, there are some papers you may want to check-out.
 
 It is important to compare the performance of multiple different machine
 learning algorithms consistently.
-In this post you will discover how you can create a test harness to
+In this lab, you will discover how you can create a test harness to
 compare multiple different machine learning algorithms in Python with
 scikit-learn.
 You can use this test harness as a template on your own machine learning
@@ -673,7 +668,7 @@ problem.
 **Summary** 
 -----------
 
-In this post you discovered how to evaluate multiple different machine
+In this lab, you discovered how to evaluate multiple different machine
 learning algorithms on a dataset in Python with scikit-learn.
 
 You learned how to both use the same test harness to evaluate the

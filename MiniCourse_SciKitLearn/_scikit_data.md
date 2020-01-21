@@ -5,7 +5,7 @@
 Before you can build machine learning models, you need to load your data
 into memory.
 
-In this post you will discover how to load data for machine learning in
+In this lab, you will discover how to load data for machine learning in
 Python using
 [scikit-learn](http://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/).
 
@@ -82,7 +82,7 @@ Click notebook `12.ipynb` in jupterLab UI and run jupyter notebook.
 **Summary** 
 -----------
 
-In this post you discovered that the scikit-learn method comes with
+In this lab, you discovered that the scikit-learn method comes with
 packaged data sets including the iris flowers dataset. These datasets
 can be loaded easily and used for explore and experiment with different
 machine learning models.

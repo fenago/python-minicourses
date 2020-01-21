@@ -11,7 +11,7 @@ You may be confused as to how best prepare your data for machine
 learning, which algorithms to use or how to choose one model over
 another.
 
-In this post you will discover a 14-part crash course into applied
+In this lab, you will discover a 14-part crash course into applied
 machine learning using the Weka platform without a single mathematical
 equation or line of programming code.
 

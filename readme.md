@@ -4,7 +4,7 @@
 # Python Machine Learning Mini Courses
 
 ### Overview
-Get started with Machine Learning with Mini Courses.
+Get started with Machine Learning & Deep Learning in Python using Mini Courses.
 
 ### Labs
 

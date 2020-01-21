@@ -22,7 +22,7 @@ export class AppComponent {
 
   onSubmit(formData) {
     console.log(formData);
-    this.httpClient.post('http://127.0.0.1:5002/predict',
+    this.httpClient.post('http://<host-ip>:5002/predict',
     formData).subscribe(data => {
       this.prediction = data as JSON;
       this.result=this.prediction.Prediction;
