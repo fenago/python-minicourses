@@ -18,8 +18,8 @@ Labs for this course are available at path shared below. Elev8ed Notebooks (powe
 		* <host-ip>:<port>/lab/workspaces/lab3_Deep_Learning_Python
 4. ##### Better Deep Learning Mini-Course
 		* <host-ip>:<port>/lab/workspaces/lab4_Better_Deep_Learning
-5. ##### Generative Adversarial Networks With Python Crash Course
-		* <host-ip>:<port>/lab/workspaces/lab5_Generative_Adversarial_Networks
+5. ##### Deep Learning for Time Series Forecasting Crash Course.
+		* <host-ip>:<port>/lab/workspaces/lab5_Time_Series_Forecasting
 6. ##### Python Machine Learning Mini-Course
 		* <host-ip>:<port>/lab/workspaces/lab6_Python_Machine_Learning
 7. ##### Your First Machine Learning Project in Python Step-By-Step
@@ -32,7 +32,7 @@ Labs for this course are available at path shared below. Elev8ed Notebooks (powe
 		* <host-ip>:<port>/lab/workspaces/lab10_Load_Data_Scikit_Learn
 11. ##### How to Make Predictions with scikit-learn
 		* <host-ip>:<port>/lab/workspaces/lab11_Make_Predictions_Scikit_Learn
-12. ##### Deep Learning for Time Series Forecasting Crash Course.
-		* <host-ip>:<port>/lab/workspaces/lab12_Time_Series_Forecasting
+12. ##### Generative Adversarial Networks With Python Crash Course
+		* <host-ip>:<port>/lab/workspaces/lab12_Generative_Adversarial_Networks
 13. ##### Weka Machine Learning Mini-Course
 		* <host-ip>:<port>/lab/workspaces/lab13_Weka_Machine_Learning

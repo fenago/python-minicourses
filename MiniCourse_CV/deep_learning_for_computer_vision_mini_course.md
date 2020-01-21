@@ -490,6 +490,11 @@ pyplot.show()
 
 ```
 
+
+##### Run Notebook
+Click notebook `6.ipynb` in jupterLab UI and run jupyter notebook.
+
+
 **Your Task**
 
 Your task in this lesson is to run the example and describe the result. For bonus points, try the
