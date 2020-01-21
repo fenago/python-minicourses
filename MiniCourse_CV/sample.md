@@ -1,8 +1,7 @@
+<img align="right" src="../logo-small.png">
 
-```
-Deep Learning for Computer Vision Crash Course
-```
 
+# Deep Learning for Computer Vision Crash Course
 
 ## Contents
 
@@ -114,7 +113,7 @@ better-performing approach.
 Computer vision is notsolvedbut deep learning is required to get you to the state-of-the-art
 on many challenging problems in the field.
 
-Your Task
+**Your Task**
 
 For this lesson, you must research and list five impressive applications of deep learning methods
 in the field of computer vision. Bonus points if you can link to a research paper that demonstrates
@@ -131,19 +130,19 @@ In this lesson, you will discover how to prepare image data for modeling. Images
 of matrices of pixel values. Pixel values are often unsigned integers in the range between 0 and
 
 Although these pixel values can be presented directly to neural network models in their
-    raw format, this can result in challenges during modeling, such as slower than expected training
-    of the model.
-       Instead, there can be great benefit in preparing the image pixel values prior to modeling,
-    such as simply scaling pixel values to the range 0-1 to centering and even standardizing the
+raw format, this can result in challenges during modeling, such as slower than expected training
+of the model.
+   Instead, there can be great benefit in preparing the image pixel values prior to modeling,
+such as simply scaling pixel values to the range 0-1 to centering and even standardizing the
 values. This is called normalization and can be performed directly on a loaded image. The
-    example below uses the PIL library (the standard image handling library in Python) to load an
-    image and normalize its pixel values. First, confirm that you have the Pillow library installed;
+example below uses the PIL library (the standard image handling library in Python) to load an
+ image and normalize its pixel values. First, confirm that you have the Pillow library installed;
     it is installed with most SciPy environments, but you can learn more here:
-       - PIL/Pillow Installation Instructions.^1
+- PIL/Pillow Installation Instructions.^1
        Next, download a photograph of Bondi Beach in Sydney Australia, taken by Isabell Schulz^2
     and released under a permissive license. Save the image in your current working directory with
     the filenamebondibeach.jpg.
-       - Download a Photograph of Bondi Beach (bondibeach.jpg).^3
+- Download a Photograph of Bondi Beach (bondibeach.jpg).^3
        Next, we can use the Pillow library to load the photo, confirm the min and max pixel values,
     normalize the values, and confirm the normalization was performed.
 
@@ -165,7 +164,7 @@ pixels /= 255.0
 print('Min: %.3f, Max: %.3f' % (pixels.min(), pixels.max()))
 ```
 
-Your Task
+**Your Task**
 
 Your task in this lesson is to run the example code on the provided photograph and report the
 min and max pixel values before and after the normalization. For bonus points, you can update
@@ -228,7 +227,7 @@ model.summary()
 
 ```
 
-Your Task
+**Your Task**
 
 Your task in this lesson is to run the example and describe how the shape of an input image
 would be changed by the convolutional and pooling layers. For extra points, you could try
@@ -285,7 +284,7 @@ label = label[0][0]
 print('%s (%.2f%%)' % (label[1], label[2]*100))
 ```
 
-Your Task
+**Your Task**
 
 Your task in this lesson is to run the example and report the result. For bonus points, try
 running the example on another photograph of a common object. Post your findings online. I
@@ -344,7 +343,7 @@ print(loss, acc)
 
 ```
 
-Your Task
+**Your Task**
 
 Your task in this lesson is to run the example and report the performance of the model on the
 test dataset. For bonus points, try varying the configuration of the model, or try saving the
@@ -406,7 +405,7 @@ pyplot.show()
 
 ```
 
-Your Task
+**Your Task**
 
 Your task in this lesson is to run the example and report the effect that the image augmentation
 has had on the original image. For bonus points, try additional types of image augmentation,
@@ -474,7 +473,7 @@ pyplot.show()
 
 ```
 
-Your Task
+**Your Task**
 
 Your task in this lesson is to run the example and describe the result. For bonus points, try the
 model on another photograph with multiple faces and update the code example to draw a box

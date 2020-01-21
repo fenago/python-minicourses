@@ -1,3 +1,5 @@
+<img align="right" src="../logo-small.png">
+
 **Mini-Course on Long Short-Term Memory Recurrent Neural Networks with Keras** ust 14, 2019
 
 Long Short-Term Memory (LSTM) recurrent neural networks are one of the

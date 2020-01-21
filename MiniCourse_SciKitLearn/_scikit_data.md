@@ -1,3 +1,5 @@
+<img align="right" src="../logo-small.png">
+
 **How to Load Data in Python with Scikit-Learn**
 
 Before you can build machine learning models, you need to load your data

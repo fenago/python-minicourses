@@ -1,3 +1,6 @@
+<img align="right" src="../logo-small.png">
+
+
 **Your First Machine Learning Project in Python Step-By-Step**
 ==============================================================
 

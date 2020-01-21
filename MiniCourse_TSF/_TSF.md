@@ -1,6 +1,8 @@
-### **Deep Learning for Time Series Forecasting Crash Course.** 
+<img align="right" src="../logo-small.png">
 
-#### **Bring Deep Learning methods to Your Time Series project in 7 Days.** {align="center" style="margin-top: 0in; margin-bottom: 0.08in; border: none; padding: 0in; line-height: 150%; page-break-inside: auto; background: #ffffff; page-break-after: auto"}
+# **Deep Learning for Time Series Forecasting Crash Course.** 
+
+**Bring Deep Learning methods to Your Time Series project in 7 Days.**
 
 [Time series
 forecasting](https://machinelearningmastery.com/time-series-forecasting/)

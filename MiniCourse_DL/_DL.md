@@ -1,3 +1,5 @@
+<img align="right" src="../logo-small.png">
+
 
 Deep learning is a fascinating field of study and the techniques are
 achieving world class results in a range of challenging machine learning

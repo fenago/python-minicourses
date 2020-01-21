@@ -1,3 +1,6 @@
+<img align="right" src="../logo-small.png">
+
+
 **Machine Learning Algorithm Recipes in scikit-learn**
 
 The [scikit-learn Python
@@ -26,7 +29,6 @@ practice with only those.
 In this post you will see 5 recipes of supervised classification
 algorithms applied to small standard datasets that are provided with the
 scikit-learn library.
-
 The recipes are principled. Each example is:
 
 -   **Standalone**: Each code example is a self-contained, complete and
@@ -53,7 +55,6 @@ scikit-learn right now. Stop putting it off.
 
 Logistic regression fits a logistic model to data and makes predictions
 about the probability of an event (between 0 and 1).
-
 This recipe shows the fitting of a logistic regression model to the iris
 dataset. Because this is a mutli-class classification problem and
 logistic regression makes predictions between 0 and 1, a one-vs-all
@@ -93,7 +94,6 @@ guide](http://scikit-learn.org/stable/modules/linear_model.html#logistic-regress
 
 Naive Bayes uses Bayes Theorem to model the conditional relationship of
 each attribute to the class variable.
-
 This recipe shows the fitting of an Naive Bayes model to the iris
 dataset.
 
@@ -266,7 +266,6 @@ what effect that has on the results.
 If you are a Python programmer or you are looking for a robust library
 you can use to bring machine learning into a production system then a
 library that you will want to seriously consider is scikit-learn.
-
 In this post you will get an overview of the scikit-learn library and
 useful references of where you can learn more.
 
@@ -282,7 +281,6 @@ Let’s get started.
 
 Scikit-learn was initially developed by David Cournapeau as a Google
 summer of code project in 2007.
-
 Later Matthieu Brucher joined the project and started to use it as apart
 of his thesis work. In 2010 INRIA got involved and the first public
 release (v0.1 beta) was published in late January 2010.

@@ -1,7 +1,8 @@
+<img align="right" src="../logo-small.png">
+
+
 **Python Machine Learning Mini-Course**
 =======================================
-
-### ***From******Developer******to******Machine Learning Practitioner******in 14 Days*** 
 
 Python is one of the fastest-growing platforms for applied machine
 learning.

@@ -1,8 +1,8 @@
-**How to Get Started With Generative Adversarial Networks**
+<img align="right" src="../logo-small.png">
 
-#### **Generative Adversarial Networks With Python Crash Course.**
+# Generative Adversarial Networks With Python Crash Course
 
-#### **Bring Generative Adversarial Networks to Your Project in 7 Days.**
+**Bring Generative Adversarial Networks to Your Project in 7 Days.**
 
 Generative Adversarial Networks, or GANs for short, are a deep learning
 technique for training generative models.

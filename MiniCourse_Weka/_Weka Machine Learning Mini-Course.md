@@ -1,7 +1,8 @@
-**Weka Machine Learning Mini-Course**
+<img align="right" src="../logo-small.png">
 
+# Weka Machine Learning Mini-Course
 
-### ***Become A Machine Learning Practitioner in 14-Days*** 
+***Become A Machine Learning Practitioner in 14-Days*** 
 
 Machine learning is a fascinating study, but how do you actually use it
 on your own problems?

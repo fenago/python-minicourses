@@ -1,3 +1,6 @@
+<img align="right" src="../logo-small.png">
+
+
 <h2>Run Your Machine Learning Model as a REST API using jupyterLab
 </h2>
 

@@ -1,3 +1,7 @@
+<img align="right" src="../logo-small.png">
+
+# Natural Language Processing
+
 **Who Is This Crash-Course For?** 
 ---------------------------------
 

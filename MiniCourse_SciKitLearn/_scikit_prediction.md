@@ -1,7 +1,8 @@
+<img align="right" src="../logo-small.png">
 
-**How to Make Predictions with scikit-learn**
+# How to Make Predictions with scikit-learn
 
-#### **How to predict classification or regression outcomes**
+**How to predict classification or regression outcomes**
 
 Once you choose and fit a final machine learning model in scikit-learn,
 you can use it to make predictions on new data instances.

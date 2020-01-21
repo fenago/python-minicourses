@@ -1,3 +1,7 @@
+<img align="right" src="../logo-small.png">
+
+# Better Deep Learning
+
 **Who Is This Crash-Course For?** 
 ---------------------------------
 
