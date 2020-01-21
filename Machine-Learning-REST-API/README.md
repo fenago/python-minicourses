@@ -225,24 +225,6 @@ Okay, are you ready?
 
 ![](./images/mlGUI.png)
 
-
-First, create a file  `requirements.txt` to add all the librairies require for our app
-Add the following text to newly created  `requirements.txt`
-
-```
-flask
-flask-restful
-scikit-learn
-scipy 
-matplotlib
-flask-cors
-```
-
-
-![](./images/mlGUI.png)
-   
-
-
    
   <h2>****  PART2 ****</h2>
 
@@ -253,8 +235,8 @@ First we need to create a new angular project using following command in termina
 
 ```
 npm install -g @angular/cli
-ng new RestClientAngularWeb
-cd RestClientAngularWeb
+ng new RestClientAngularWebPractice
+cd RestClientAngularWebPractice
 ng serve
 ```
 if everything works as expected then open browser and navigate to `http://<host-ip>:4200/` and you should see the default angular homepage
