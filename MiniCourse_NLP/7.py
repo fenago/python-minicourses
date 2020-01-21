@@ -1,5 +1,6 @@
 from gensim.models import Word2Vec
 from sklearn.decomposition import PCA
+%notebook inline
 from matplotlib import pyplot
 # define training data
 sentences = [['this', 'is', 'the', 'first', 'sentence', 'for', 'word2vec'],

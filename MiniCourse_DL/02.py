@@ -4,6 +4,7 @@ from keras.layers import Dense
 from keras.models import Sequential
 from keras.optimizers import SGD
 from keras.callbacks import ReduceLROnPlateau
+%notebook inline
 from matplotlib import pyplot
 # generate dataset
 X, y = make_circles(n_samples=1000, noise=0.1, random_state=1)

@@ -1,6 +1,7 @@
 # visualize the data
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
+%notebook inline
 from matplotlib import pyplot
 # Load dataset
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"

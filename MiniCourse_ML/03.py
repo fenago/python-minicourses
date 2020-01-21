@@ -1,5 +1,6 @@
 # compare algorithms
 from pandas import read_csv
+%notebook inline
 from matplotlib import pyplot
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score

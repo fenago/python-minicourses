@@ -3,6 +3,7 @@ from numpy import expand_dims
 from keras.preprocessing.image import load_img
 from keras.preprocessing.image import img_to_array
 from keras.preprocessing.image import ImageDataGenerator
+%notebook inline
 from matplotlib import pyplot
 # load the image
 img = load_img('bird.jpg')

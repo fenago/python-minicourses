@@ -1,4 +1,5 @@
 from sklearn.datasets import make_blobs
+%notebook inline
 from matplotlib import pyplot
 from pandas import DataFrame
 # generate 2d classification dataset

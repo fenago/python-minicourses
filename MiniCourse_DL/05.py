@@ -3,6 +3,7 @@ from sklearn.datasets import make_circles
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import GaussianNoise
+%notebook inline
 from matplotlib import pyplot
 # generate dataset
 X, y = make_circles(n_samples=100, noise=0.1, random_state=1)
