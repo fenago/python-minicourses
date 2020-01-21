@@ -67,7 +67,7 @@ the lessons at your own pace. The lessons expect you to go off and find out how 
 will give you hints, but part of the point of each lesson is to force you to learn where to go to
 look for help (hint, I have all of the answers directly on this blog; use the search box). I do
 provide more help in the form of links to related posts because I want you to build up some
-confidence and inertia. Post your results online, I’ll cheer you on!
+confidence and inertia.
 
 Hang in there, don’t give up!
 

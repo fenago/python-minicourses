@@ -5,12 +5,10 @@
 
 Python is one of the fastest-growing platforms for applied machine
 learning.
-
 In this mini-course, you will discover how you can get started, build
 accurate models and confidently complete predictive modeling machine
 learning projects using Python in 14 days.
 
-This is a big and important post. You might want to bookmark it.
 
 Discover how to prepare data with pandas, fit and evaluate models with
 scikit-learn, and more [in my new
@@ -49,17 +47,6 @@ machine learning.
 It will take you from a developer that knows a little machine learning
 to a developer who can get results using the Python ecosystem, the
 rising platform for professional machine learning.
-
-### **Need help with Machine Learning in Python?** 
-
-Take my free 2-week email course and discover data prep, algorithms and
-more (with code).
-
-Click to sign-up now and also get a free PDF Ebook version of the
-course.
-
-[**Start Your FREE Mini-Course
-Now!**](https://machinelearningmastery.leadpages.co/leadbox/146d399f3f72a2%3A164f8be4f346dc/5655869022797824/)
 
 **Mini-Course Overview** 
 ------------------------
@@ -107,12 +94,7 @@ post results in the comments below.
 
 The lessons expect you to go off and find out how to do things. I will
 give you hints, but part of the point of each lesson is to force you to
-learn where to go to look for help on and about the Python platform
-(hint, I have all of the answers directly on this blog, use the search
-feature).
-
-I do provide more help in the early lessons because I want you to build
-up some confidence and inertia.
+learn where to go to look for help on and about the Python platform.
 
 **Hang in there, don’t give up!**
 
@@ -165,6 +147,10 @@ print('sklearn: {}'.format(sklearn.__version__))
 ```
 
 
+##### Run Notebook
+Click notebook `1.ipynb` in jupterLab UI and run jupyter notebook.
+
+
 **Lesson 2: Get Around In Python, NumPy, Matplotlib and Pandas.** 
 -----------------------------------------------------------------
 
@@ -199,6 +185,10 @@ colnames = ['one', 'two', 'three']
 mydataframe = pandas.DataFrame(myarray, index=rownames, columns=colnames)
 print(mydataframe)
 ```
+
+##### Run Notebook
+Click notebook `2.ipynb` in jupterLab UI and run jupyter notebook.
+
 
 **Lesson 3: Load Data From CSV** 
 --------------------------------
@@ -239,6 +229,9 @@ names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 data = pandas.read_csv(url, names=names)
 print(data.shape)
 ```
+
+##### Run Notebook
+Click notebook `3.ipynb` in jupterLab UI and run jupyter notebook.
 
 Well done for making it this far! Hang in there.
 
@@ -285,6 +278,9 @@ description = data.describe()
 print(description)
 ```
 
+##### Run Notebook
+Click notebook `4.ipynb` in jupterLab UI and run jupyter notebook.
+
 **Try it out!**
 
 **Lesson 5: Understand Data with Visualization** 
@@ -292,7 +288,6 @@ print(description)
 
 Continuing on from yesterday’s lesson, you must spend time to better
 understand your data.
-
 A second way to improve your understanding of your data is by using data
 visualization techniques (e.g. plotting).
 
@@ -322,6 +317,10 @@ data = pandas.read_csv(url, names=names)
 scatter_matrix(data)
 plt.show()
 ```
+
+
+##### Run Notebook
+Click notebook `5.ipynb` in jupterLab UI and run jupyter notebook.
 
 ![](../quia_ipsa_html_97bc995fd51d7a83.png)
 
@@ -375,6 +374,11 @@ numpy.set_printoptions(precision=3)
 print(rescaledX[0:5,:])
 ```
 
+
+##### Run Notebook
+Click notebook `6.ipynb` in jupterLab UI and run jupyter notebook.
+
+
 **Lesson 7: Algorithm Evaluation With Resampling Methods** 
 ----------------------------------------------------------
 
@@ -421,7 +425,13 @@ results = cross_val_score(model, X, Y, cv=kfold)
 print("Accuracy: %.3f%% (%.3f%%)") % (results.mean()*100.0, results.std()*100.0)
 ```
 
-What accuracy did you get? Let me know in the comments.
+
+##### Run Notebook
+Click notebook `7.ipynb` in jupterLab UI and run jupyter notebook.
+
+
+What accuracy did you get?
+
 
 **Did you realize that this is the halfway point? Well done!**
 
@@ -465,6 +475,10 @@ scoring = 'neg_log_loss'
 results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
 print("Logloss: %.3f (%.3f)") % (results.mean(), results.std())
 ```
+
+##### Run Notebook
+Click notebook `8.ipynb` in jupterLab UI and run jupyter notebook.
+
 
 What log loss did you get? Let me know in the comments.
 
@@ -512,6 +526,10 @@ scoring = 'neg_mean_squared_error'
 results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
 print(results.mean())
 ```
+
+##### Run Notebook
+Click notebook `9.ipynb` in jupterLab UI and run jupyter notebook.
+
 
 What mean squared error did you get? Let me know in the comments.
 
@@ -568,6 +586,10 @@ for name, model in models:
 	print(msg)
 ```
 
+##### Run Notebook
+Click notebook `10.ipynb` in jupterLab UI and run jupyter notebook.
+
+
 Which algorithm got better results? Can you do better? Let me know in
 the comments.
 
@@ -613,6 +635,9 @@ grid.fit(X, Y)
 print(grid.best_score_)
 print(grid.best_estimator_.alpha)
 ```
+
+##### Run Notebook
+Click notebook `11.ipynb` in jupterLab UI and run jupyter notebook.
 
 Which parameters achieved the best results? Can you do better? Let me
 know in the comments.
@@ -663,6 +688,11 @@ results = cross_val_score(model, X, Y, cv=kfold)
 print(results.mean())
 ```
 
+
+##### Run Notebook
+Click notebook `12.ipynb` in jupterLab UI and run jupyter notebook.
+
+
 Can you devise a better ensemble? Let me know in the comments.
 
 **Lesson 13: Finalize And Save Your Model** 
@@ -670,13 +700,10 @@ Can you devise a better ensemble? Let me know in the comments.
 
 Once you have found a well-performing model on your machine learning
 problem, you need to finalize it.
-
 In today’s lesson, you will practice the tasks related to finalizing
 your model.
-
 Practice making predictions with your model on new data (data unseen
 during training and testing).
-
 Practice saving trained models to file and loading them up again.
 
 For example, the snippet below shows how you can create a Logistic
@@ -712,6 +739,10 @@ loaded_model = pickle.load(open(filename, 'rb'))
 result = loaded_model.score(X_test, Y_test)
 print(result)
 ```
+
+##### Run Notebook
+Click notebook `13.ipynb` in jupterLab UI and run jupyter notebook.
+
 
 **Lesson 14: Hello World End-to-End Project** 
 ---------------------------------------------

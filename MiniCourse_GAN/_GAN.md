@@ -1,16 +1,4 @@
-**How to Get Started With Generative Adversarial Networks (7-Day Mini-Course)** {style="margin-top: 0in; margin-bottom: 0.15in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; page-break-after: auto"}
-===============================================================================
-
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on July
-11, 2019 in [**Generative Adversarial
-Networks**](https://machinelearningmastery.com/category/generative-adversarial-networks/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on July 12, 2019
+**How to Get Started With Generative Adversarial Networks**
 
 #### **Generative Adversarial Networks With Python Crash Course.**
 
@@ -18,7 +6,6 @@ Last Updated on July 12, 2019
 
 Generative Adversarial Networks, or GANs for short, are a deep learning
 technique for training generative models.
-
 The study and application of GANs are only a few years old, yet the
 results achieved have been nothing short of remarkable. Because the
 field is so young, it can be challenging to know how to get started,
@@ -26,21 +13,12 @@ what to focus on, and how to best use the available techniques.
 
 In this crash course, you will discover how you can get started and
 confidently develop deep learning Generative Adversarial Networks using
-Python in seven days.
-
-**Note**: This is a big and important post. You might want to bookmark
-it.
+Python.
 
 Let’s get started.
 
 ![](../recusandae_ut_doloremque_html_c2085eb9f9febb16.jpg)
 
-How to Get Started With Generative Adversarial Networks (7-Day
-Mini-Course)
-
-Photo by [Matthias
-Ripp](https://www.flickr.com/photos/56218409@N03/15238615085/), some
-rights reserved.
 
 **Who Is This Crash-Course For?** 
 ---------------------------------
@@ -110,26 +88,10 @@ and even post results in the comments below.
 The lessons might expect you to go off and find out how to do things. I
 will give you hints, but part of the point of each lesson is to force
 you to learn where to go to look for help on and about deep learning and
-GANs (hint: I have all of the answers on this blog; just use the search
-box).
-
-Post your results in the comments; I’ll cheer you on!
+GANs.
 
 **Hang in there; don’t give up.**
 
-**Note**: This is just a crash course. For a lot more detail and fleshed
-out tutorials, see my book on the topic titled “[Generative Adversarial
-Networks with
-Python](https://machinelearningmastery.com/generative_adversarial_networks/).”
-
-### **Want to Develop GANs from Scratch?** 
-
-Take my free 7-day email crash course now (with sample code).
-
-Click to sign-up and also get a free PDF Ebook version of the course.
-
-[**Download Your FREE
-Mini-Course**](https://machinelearningmastery.lpages.co/leadbox/162526e1b172a2%3A164f8be4f346dc/5926953912500224/)
 
 **Lesson 01: What Are Generative Adversarial Networks?** 
 --------------------------------------------------------
@@ -162,10 +124,8 @@ generator model is generating plausible examples.
 
 The generator model takes a fixed-length random vector as input and
 generates an image in the domain.
-
 The vector is drawn randomly from a Gaussian distribution (called the
 latent space), and the vector is used to seed the generative process.
-
 After training, the generator model is kept and used to generate new
 samples.
 
@@ -174,24 +134,19 @@ samples.
 The discriminator model takes an example from the domain as input (real
 or generated) and predicts a binary class label of real or fake
 (generated).
-
 The real example comes from the training dataset. The generated examples
 are output by the generator model.
-
 The discriminator is a normal (and well understood) classification
 model.
-
 After the training process, the discriminator model is discarded as we
 are interested in the generator.
 
 ### **GAN Training** 
 
 The two models, the generator and discriminator, are trained together.
-
 A single training cycle involves first selecting a batch of real images
 from the problem domain. A batch of latent points is generated and fed
 to the generator model to synthesize a batch of images.
-
 The discriminator is then updated using the batch of real and generated
 images, minimizing binary cross-entropy loss used in any binary
 classification problem.
@@ -201,7 +156,6 @@ that generated images are presented to the discriminator as though they
 are real (not generated) and the error is propagated back through the
 generator model. This has the effect of updating the generator model
 toward generating images that are more likely to fool the discriminator.
-
 This process is then repeated for a given number of training iterations.
 
 ### **Your Task** 
@@ -210,18 +164,11 @@ Your task in this lesson is to list three possible applications for
 Generative Adversarial Networks. You may get ideas from looking at
 recently published research papers.
 
-Post your findings in the comments below. I would love to see what you
-discover.
-
-In the next lesson, you will discover tips and tricks for the successful
-training of GAN models.
-
 **Lesson 02: GAN Tips, Tricks, and Hacks** 
 ------------------------------------------
 
 In this lesson, you will discover the tips, tricks, and hacks that you
 need to know to successfully train GAN models.
-
 Generative Adversarial Networks are challenging to train.
 
 This is because the architecture involves both a generator and a
@@ -271,23 +218,11 @@ These heuristics have been hard won by practitioners testing and
 evaluating hundreds or thousands of combinations of configuration
 operations on a range of problems.
 
-### **Your Task** 
-
-Your task in this lesson is to list three additional GAN tips or hacks
-that can be used during training.
-
-Post your findings in the comments below. I would love to see what you
-discover.
-
-In the next lesson, you will discover how to implement simple
-discriminator and generator models.
-
 **Lesson 03: Discriminator and Generator Models** 
 -------------------------------------------------
 
 In this lesson, you will discover how to implement a simple
 discriminator and generator model using the Keras deep learning library.
-
 We will assume the images in our domain are 28×28 pixels in size and
 color, meaning they have three color channels.
 
@@ -370,12 +305,9 @@ model.add(Conv2D(3, (3,3), activation='tanh', padding='same'))
 
 Your task in this lesson is to implement both the discriminator models
 and summarize their structure.
-
 For bonus points, update the models to support an image with the size
 64×64 pixels.
 
-Post your findings in the comments below. I would love to see what you
-discover.
 
 In the next lesson, you will discover how to configure the loss
 functions for training the GAN models.
@@ -416,10 +348,8 @@ model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
 
 The generator is not updated directly and there is no loss for this
 model.
-
 Instead, the discriminator is used to provide a learned or indirect loss
 function for the generator.
-
 This is achieved by creating a composite model where the generator
 outputs an image that feeds directly into the discriminator for
 classification.
@@ -432,7 +362,6 @@ classified as real by the discriminator.
 
 Importantly, the discriminator weights are not updated during this
 process and are marked as not trainable.
-
 The composite model uses the same categorical cross entropy loss as the
 standalone discriminator model and the same Adam version of stochastic
 gradient descent to perform the optimization.
@@ -458,10 +387,6 @@ model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.0002, beta_1=0.5))
 
 Your task in this lesson is to research and summarize three additional
 types of loss function that can be used to train the GAN models.
-
-Post your findings in the comments below. I would love to see what you
-discover.
-
 In the next lesson, you will discover the training algorithm used to
 update the model weights for the GAN.
 
@@ -469,23 +394,19 @@ update the model weights for the GAN.
 -------------------------------------
 
 In this lesson, you will discover the GAN training algorithm.
-
 Defining the GAN models is the hard part. The GAN training algorithm is
 relatively straightforward.
 
 One cycle of the algorithm involves first selecting a batch of real
 images and using the current generator model to generate a batch of fake
 images. You can develop small functions to perform these two operations.
-
 These real and fake images are then used to update the discriminator
 model directly via a call to the *train_on_batch()* Keras function.
 
 Next, points in latent space can be generated as input for the composite
 generator-discriminator model and labels of “real” (class=1) can be
 provided to update the weights of the generator model.
-
 The training process is then repeated thousands of times.
-
 The generator model can be saved periodically and later loaded to check
 the quality of the generated images.
 
@@ -524,9 +445,6 @@ the prior lessons and train a GAN on a small image dataset such as
 or
 [CIFAR-10](https://machinelearningmastery.com/how-to-develop-a-cnn-from-scratch-for-cifar-10-photo-classification/).
 
-Post your findings in the comments below. I would love to see what you
-discover.
-
 In the next lesson, you will discover the application of GANs for image
 translation.
 
@@ -542,14 +460,12 @@ black and white photographs to color photographs.
 Image-to-image translation is a challenging problem and often requires
 specialized models and loss functions for a given translation task or
 dataset.
-
 GANs can be trained to perform image-to-image translation and two
 examples include the Pix2Pix and the CycleGAN.
 
 ### **Pix2Pix** 
 
 The Pix2Pix GAN is a general approach for image-to-image translation.
-
 The model is trained on a dataset of paired examples, where each pair
 involves an example of the image before and after the desired
 translation.
@@ -557,7 +473,6 @@ translation.
 The Pix2Pix model is based on the conditional generative adversarial
 network, where a target image is generated, conditional on a given input
 image.
-
 The discriminator model is given an input image and a real or generated
 paired image and must determine whether the paired image is real or
 fake.
@@ -579,7 +494,6 @@ generated and expected translated image.
 
 A limitation of the Pix2Pix model is that it requires a dataset of
 paired examples before and after the desired translation.
-
 There are many image-to-image translation tasks where we may not have
 examples of the translation, such as translating photos of zebra to
 horses. There are other image translation tasks where such paired
@@ -590,7 +504,6 @@ The CycleGAN is a technique that involves the automatic training of
 image-to-image translation models without paired examples. The models
 are trained in an unsupervised manner using a collection of images from
 the source and target domain that do not need to be related in any way.
-
 The CycleGAN is an extension of the GAN architecture that involves the
 simultaneous training of two generator models and two discriminator
 models.
@@ -613,10 +526,6 @@ second generator.
 
 Your task in this lesson is to list five examples of image-to-image
 translation you might like to explore with GAN models.
-
-Post your findings in the comments below. I would love to see what you
-discover.
-
 In the next lesson, you will discover some of the recent advancements in
 GAN models.
 
@@ -655,7 +564,6 @@ It involves starting with a very small image and incrementally adding
 blocks of layers that increase the output size of the generator model
 and the input size of the discriminator model until the desired image
 size is achieved.
-
 Perhaps the most impressive accomplishment of the Progressive Growing
 GAN is the generation of large 1024×1024 pixel photorealistic generated
 faces.
@@ -687,20 +595,12 @@ freckles and placement of hair strands.
 Your task in this lesson is to list 3 examples of how you might use
 models capable of generating large photorealistic images.
 
-Post your findings in the comments below. I would love to see what you
-discover.
-
 This was the final lesson.
 
 **The End!** 
 ------------
 
-**(Look How Far You Have Come)** 
---------------------------------
-
-You made it. Well done!
-
-Take a moment and look back at how far you have come.
+You made it. Well done! Take a moment and look back at how far you have come.
 
 You discovered:
 
@@ -730,6 +630,3 @@ You discovered:
 Take the next step and check out my [book on generative adversarial
 networks with
 python](https://machinelearningmastery.com/generative_adversarial_networks/).
-
-\
-

@@ -16,8 +16,6 @@ In this crash course, you will discover how you can get started and
 confidently develop deep learning models for time series forecasting
 problems using Python in 7 days.
 
-This is a big and important post. You might want to bookmark it.
-
 Discover how to build models for multivariate and multi-step time series
 forecasting with LSTMs and more [in my new
 book](https://machinelearningmastery.com/deep-learning-for-time-series-forecasting/),
@@ -25,23 +23,12 @@ with 25 step-by-step tutorials and full source code.
 
 Let’s get started.
 
-![](../velit_ullam_html_aeb8d25c741d5e6b.jpg)
-
-How to Get Started with Deep Learning for Time Series Forecasting (7-Day
-Mini-Course)
-
-Photo by [Brian
-Richardson](https://www.flickr.com/photos/seriousbri/3736154699/), some
-rights reserved.
-
 **Who Is This Crash-Course For?** 
 ---------------------------------
 
 Before we get started, let’s make sure you are in the right place.
-
 The list below provides some general guidelines as to who this course
 was designed for.
-
 You need to know:
 
 -   You need to know the basics of time series forecasting.
@@ -74,7 +61,6 @@ here:
 -------------------------
 
 This crash course is broken down into 7 lessons.
-
 You could complete one lesson per day (recommended) or complete all of
 the lessons in one day (hardcore). It really depends on the time you
 have available and your level of enthusiasm.
@@ -100,32 +86,10 @@ Each lesson could take you 60 seconds or up to 30 minutes. Take your
 time and complete the lessons at your own pace. Ask questions and even
 post results in the comments below.
 
-The lessons expect you to go off and find out how to do things. I will
-give you hints, but part of the point of each lesson is to force you to
-learn where to go to look for help on and about the deep learning, time
-series forecasting and the best-of-breed tools in Python (hint, *I have
-all of the answers directly on this blog, use the search box*).
-
-I do provide more help in the form of links to related posts because I
-want you to build up some confidence and inertia.
-
-Post your results in the comments, I’ll cheer you on!
-
-Hang in there, don’t give up.
-
 **Note**: This is just a crash course. For a lot more detail and 25
 fleshed out tutorials, see my book on the topic titled “[Deep Learning
 for Time Series
 Forecasting](https://machinelearningmastery.com/deep-learning-for-time-series-forecasting/)“.
-
-### **Need help with Deep Learning for Time Series?** 
-
-Take my free 7-day email crash course now (with sample code).
-
-Click to sign-up and also get a free PDF Ebook version of the course.
-
-[**Download Your FREE
-Mini-Course**](https://machinelearningmastery.lpages.co/leadbox/14531ee73f72a2%3A164f8be4f346dc/5630742793027584/)
 
 **Lesson 01: Promise of Deep Learning** 
 ---------------------------------------
@@ -159,15 +123,6 @@ for time series forecasting.
 For this lesson you must suggest one capability from both Convolutional
 Neural Networks and Recurrent Neural Networks that may be beneficial in
 modeling time series forecasting problems.
-
-Post your answer in the comments below. I would love to see what you
-discover.
-
-### **More Information** 
-
--   [The Promise of Recurrent Neural Networks for Time Series
-    Forecasting](https://machinelearningmastery.com/promise-recurrent-neural-networks-time-series-forecasting/)
-
 In the next lesson, you will discover how to transform time series data
 for time series forecasting.
 
@@ -176,7 +131,6 @@ for time series forecasting.
 
 In this lesson, you will discover how to transform your time series data
 into a supervised learning format.
-
 The majority of practical machine learning uses supervised learning.
 
 Supervised learning is where you have input variables (X) and an output
@@ -186,7 +140,6 @@ mapping so well that when you have new input data, you can predict the
 output variables for that data.
 
 Time series data can be phrased as supervised learning.
-
 Given a sequence of numbers for a time series dataset, we can
 restructure the data to look like a supervised learning problem. We can
 do this by using previous time steps as input variables and use the next
@@ -194,23 +147,20 @@ time step as the output variable.
 
 For example, the series:
 
-  --- --------------------
-  1   1, 2, 3, 4, 5, ...
-  --- --------------------
+```
+1, 2, 3, 4, 5, ...
+```
 
 Can be transformed into samples with input and output components that
 can be used as part of a training set to train a supervised learning
 model like a deep learning neural network.
 
-  --- -------------
-  1   X, y
-      
-  2   [1, 2, 3] 4
-      
-  3   [2, 3, 4] 5
-      
-  4   ...
-  --- -------------
+```
+X,				y
+[1, 2, 3]		4
+[2, 3, 4]		5
+...
+```
 
 This is called a sliding window transformation as it is just like
 sliding a window across prior observations that are used as inputs to
@@ -226,8 +176,7 @@ of inputs and one output.
 You can download the dataset from here:
 [daily-total-female-births.csv](https://raw.githubusercontent.com/jbrownlee/Datasets/master/daily-total-female-births.csv)
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **More Information** 
 
@@ -262,34 +211,36 @@ descent and optimizes the mean squared error (‘*mse*‘) loss function.
 
 Once the model is defined, it can be fit on the training data and the
 fit model can be used to make a prediction.
-
 The complete example is listed below.
 
-  ---- ---------------------------------------------------------------------
+
+```
 # univariate mlp example
 from numpy import array
 from keras.models import Sequential
 from keras.layers import Dense
 # define dataset
- X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
+X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
 y = array([40, 50, 60, 70])
 # define model
 model = Sequential()
-model.add(Dense(100, activation='relu', input\_dim=3))
- model.add(Dense(1))
+model.add(Dense(100, activation='relu', input_dim=3))
+model.add(Dense(1))
 model.compile(optimizer='adam', loss='mse')
 # fit model
-  14   model.fit(X, y, epochs=2000, verbose=0)
-  15   # demonstrate prediction
-  16   x\_input = array([50, 60, 70])
-  17   x\_input = x\_input.reshape((1, 3))
-  18   yhat = model.predict(x\_input, verbose=0)
-  19   print(yhat)
-  ---- ---------------------------------------------------------------------
+model.fit(X, y, epochs=2000, verbose=0)
+# demonstrate prediction
+x_input = array([50, 60, 70])
+x_input = x_input.reshape((1, 3))
+yhat = model.predict(x_input, verbose=0)
+print(yhat)
+```
+
+##### Run Notebook
+Click notebook `1.ipynb` in jupterLab UI and run jupyter notebook.
 
 Running the example will fit the model on the data then predict the next
 out-of-sample value.
-
 Given [50, 60, 70] as input, the model correctly predicts 80 as the next
 value in the sequence.
 
@@ -302,8 +253,7 @@ accurate predictions on the test set.
 You can download the dataset from here:
 [daily-total-female-births.csv](https://raw.githubusercontent.com/jbrownlee/Datasets/master/daily-total-female-births.csv)
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **More Information** 
 
@@ -338,7 +288,6 @@ it accordingly.
 
 We will define the number of input time steps as 3 and the number of
 features as 1 via the *input\_shape* argument on the first hidden layer.
-
 We will use one convolutional hidden layer followed by a max pooling
 layer. The filter maps are then flattened before being interpreted by a
 Dense layer and outputting a prediction. The model uses the efficient
@@ -347,44 +296,45 @@ squared error (‘*mse*‘) loss function.
 
 Once the model is defined, it can be fit on the training data and the
 fit model can be used to make a prediction.
-
 The complete example is listed below.
 
+
 ```
-------
 # univariate cnn example
 from numpy import array
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Flatten
- from keras.layers.convolutional import Conv1D
+from keras.layers.convolutional import Conv1D
 from keras.layers.convolutional import MaxPooling1D
 # define dataset
 X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
 y = array([40, 50, 60, 70])
- # reshape from [samples, timesteps] into [samples, timesteps, features]
+# reshape from [samples, timesteps] into [samples, timesteps, features]
 X = X.reshape((X.shape[0], X.shape[1], 1))
 # define model
-  14   model = Sequential()
-  15   model.add(Conv1D(filters=64, kernel\_size=2, activation='relu', input\_shape=(3, 1)))
-  16   model.add(MaxPooling1D(pool\_size=2))
-  17   model.add(Flatten())
-  18   model.add(Dense(50, activation='relu'))
-  19   model.add(Dense(1))
-  20   model.compile(optimizer='adam', loss='mse')
-  21   # fit model
-       model.fit(X, y, epochs=1000, verbose=0)
-  23   # demonstrate prediction
-  24   x\_input = array([50, 60, 70])
-  25   x\_input = x\_input.reshape((1, 3, 1))
-  26   yhat = model.predict(x\_input, verbose=0)
-  27   print(yhat)
+model = Sequential()
+model.add(Conv1D(filters=64, kernel_size=2, activation='relu', input_shape=(3, 1)))
+model.add(MaxPooling1D(pool_size=2))
+model.add(Flatten())
+model.add(Dense(50, activation='relu'))
+model.add(Dense(1))
+model.compile(optimizer='adam', loss='mse')
+# fit model
+model.fit(X, y, epochs=1000, verbose=0)
+# demonstrate prediction
+x_input = array([50, 60, 70])
+x_input = x_input.reshape((1, 3, 1))
+yhat = model.predict(x_input, verbose=0)
+print(yhat)
 ```
-------
+
+
+##### Run Notebook
+Click notebook `2.ipynb` in jupterLab UI and run jupyter notebook.
 
 Running the example will fit the model on the data then predict the next
 out-of-sample value.
-
 Given [50, 60, 70] as input, the model correctly predicts 80 as the next
 value in the sequence.
 
@@ -397,8 +347,7 @@ accurate predictions on the test set.
 You can download the dataset from here:
 [daily-total-female-births.csv](https://raw.githubusercontent.com/jbrownlee/Datasets/master/daily-total-female-births.csv)
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **More Information** 
 
@@ -427,46 +376,48 @@ that the LSTM model expects three-dimensional input with the shape
 
 We will define the number of input time steps as 3 and the number of
 features as 1 via the *input\_shape* argument on the first hidden layer.
-
 We will use one LSTM layer to process each input sub-sequence of 3 time
 steps, followed by a Dense layer to interpret the summary of the input
 sequence. The model uses the efficient Adam version of stochastic
 gradient descent and optimizes the mean squared error (‘*mse*‘) loss
 function.
-
 Once the model is defined, it can be fit on the training data and the
 fit model can be used to make a prediction.
 
 The complete example is listed below.
 
-  ---- --------------------------------------------------------------------------
+
+```
 # univariate lstm example
 from numpy import array
 from keras.models import Sequential
 from keras.layers import LSTM
 from keras.layers import Dense
- # define dataset
+# define dataset
 X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
 y = array([40, 50, 60, 70])
 # reshape from [samples, timesteps] into [samples, timesteps, features]
 X = X.reshape((X.shape[0], X.shape[1], 1))
- # define model
+# define model
 model = Sequential()
-model.add(LSTM(50, activation='relu', input\_shape=(3, 1)))
-  14   model.add(Dense(1))
-  15   model.compile(optimizer='adam', loss='mse')
-  16   # fit model
-  17   model.fit(X, y, epochs=1000, verbose=0)
-  18   # demonstrate prediction
-  19   x\_input = array([50, 60, 70])
-  20   x\_input = x\_input.reshape((1, 3, 1))
-  21   yhat = model.predict(x\_input, verbose=0)
-       print(yhat)
-  ---- --------------------------------------------------------------------------
+model.add(LSTM(50, activation='relu', input_shape=(3, 1)))
+model.add(Dense(1))
+model.compile(optimizer='adam', loss='mse')
+# fit model
+model.fit(X, y, epochs=1000, verbose=0)
+# demonstrate prediction
+x_input = array([50, 60, 70])
+x_input = x_input.reshape((1, 3, 1))
+yhat = model.predict(x_input, verbose=0)
+print(yhat)
+```
+
+
+##### Run Notebook
+Click notebook `3.ipynb` in jupterLab UI and run jupyter notebook.
 
 Running the example will fit the model on the data then predict the next
 out-of-sample value.
-
 Given [50, 60, 70] as input, the model correctly predicts 80 as the next
 value in the sequence.
 
@@ -479,8 +430,7 @@ accurate predictions on the test set.
 You can download the dataset from here:
 [daily-total-female-births.csv](https://raw.githubusercontent.com/jbrownlee/Datasets/master/daily-total-female-births.csv)
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **More Information** 
 
@@ -498,7 +448,6 @@ model for a univariate time series forecasting problem.
 
 In this lesson, you will discover how to develop a hybrid CNN-LSTM model
 for univariate time series forecasting.
-
 The benefit of this model is that the model can support very long input
 sequences that can be read as blocks or subsequences by the CNN model,
 then pieced together by the LSTM model.
@@ -522,47 +471,50 @@ a prediction.
 
 The model uses the efficient Adam version of stochastic gradient descent
 and optimizes the mean squared error (‘mse’) loss function.
-
 Once the model is defined, it can be fit on the training data and the
 fit model can be used to make a prediction.
 
 The complete example is listed below.
 
-```----------
+
+```
 # univariate cnn-lstm example
 from numpy import array
 from keras.models import Sequential
 from keras.layers import LSTM
 from keras.layers import Dense
- from keras.layers import Flatten
+from keras.layers import Flatten
 from keras.layers import TimeDistributed
 from keras.layers.convolutional import Conv1D
 from keras.layers.convolutional import MaxPooling1D
 # define dataset
- X = array([[10, 20, 30, 40], [20, 30, 40, 50], [30, 40, 50, 60], [40, 50, 60, 70]])
+X = array([[10, 20, 30, 40], [20, 30, 40, 50], [30, 40, 50, 60], [40, 50, 60, 70]])
 y = array([50, 60, 70, 80])
 # reshape from [samples, timesteps] into [samples, subsequences, timesteps, features]
-  14   X = X.reshape((X.shape[0], 2, 2, 1))
-  15   # define model
-  16   model = Sequential()
-  17   model.add(TimeDistributed(Conv1D(filters=64, kernel\_size=1, activation='relu'), input\_shape=(None, 2, 1)))
-  18   model.add(TimeDistributed(MaxPooling1D(pool\_size=2)))
-  19   model.add(TimeDistributed(Flatten()))
-  20   model.add(LSTM(50, activation='relu'))
-  21   model.add(Dense(1))
-       model.compile(optimizer='adam', loss='mse')
-  23   # fit model
-  24   model.fit(X, y, epochs=500, verbose=0)
-  25   # demonstrate prediction
-  26   x\_input = array([50, 60, 70, 80])
-  27   x\_input = x\_input.reshape((1, 2, 2, 1))
-  28   yhat = model.predict(x\_input, verbose=0)
-  29   print(yhat)
-```----------
+X = X.reshape((X.shape[0], 2, 2, 1))
+# define model
+model = Sequential()
+model.add(TimeDistributed(Conv1D(filters=64, kernel_size=1, activation='relu'), input_shape=(None, 2, 1)))
+model.add(TimeDistributed(MaxPooling1D(pool_size=2)))
+model.add(TimeDistributed(Flatten()))
+model.add(LSTM(50, activation='relu'))
+model.add(Dense(1))
+model.compile(optimizer='adam', loss='mse')
+# fit model
+model.fit(X, y, epochs=500, verbose=0)
+# demonstrate prediction
+x_input = array([50, 60, 70, 80])
+x_input = x_input.reshape((1, 2, 2, 1))
+yhat = model.predict(x_input, verbose=0)
+print(yhat)
+```
+
+
+##### Run Notebook
+Click notebook `4.ipynb` in jupterLab UI and run jupyter notebook.
 
 Running the example will fit the model on the data then predict the next
 out-of-sample value.
-
 Given [50, 60, 70, 80] as input, the model correctly predicts 90 as the
 next value in the sequence.
 
@@ -575,8 +527,7 @@ accurate predictions on the test set.
 You can download the dataset from here:
 [daily-total-female-births.csv](https://raw.githubusercontent.com/jbrownlee/Datasets/master/daily-total-female-births.csv)
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **More Information** 
 
@@ -605,7 +556,6 @@ The LSTM model expects three-dimensional input with the shape [*samples,
 timesteps, features*]. We will define the data in the form [*samples,
 timesteps*] and reshape it accordingly. The output must also be shaped
 this way when using the Encoder-Decoder model.
-
 We will define the number of input time steps as 3 and the number of
 features as 1 via the *input\_shape* argument on the first hidden layer.
 
@@ -618,45 +568,45 @@ output for each step in the output sequence.
 
 The model uses the efficient Adam version of stochastic gradient descent
 and optimizes the mean squared error (‘*mse*‘) loss function.
-
 Once the model is defined, it can be fit on the training data and the
 fit model can be used to make a prediction.
-
 The complete example is listed below.
 
-  ---- --------------------------------------------------------------------------
+```
 # multi-step encoder-decoder lstm example
 from numpy import array
 from keras.models import Sequential
 from keras.layers import LSTM
 from keras.layers import Dense
- from keras.layers import RepeatVector
+from keras.layers import RepeatVector
 from keras.layers import TimeDistributed
 # define dataset
 X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
 y = array([[40,50],[50,60],[60,70],[70,80]])
- # reshape from [samples, timesteps] into [samples, timesteps, features]
+# reshape from [samples, timesteps] into [samples, timesteps, features]
 X = X.reshape((X.shape[0], X.shape[1], 1))
 y = y.reshape((y.shape[0], y.shape[1], 1))
-  14   # define model
-  15   model = Sequential()
-  16   model.add(LSTM(100, activation='relu', input\_shape=(3, 1)))
-  17   model.add(RepeatVector(2))
-  18   model.add(LSTM(100, activation='relu', return\_sequences=True))
-  19   model.add(TimeDistributed(Dense(1)))
-  20   model.compile(optimizer='adam', loss='mse')
-  21   # fit model
-       model.fit(X, y, epochs=100, verbose=0)
-  23   # demonstrate prediction
-  24   x\_input = array([50, 60, 70])
-  25   x\_input = x\_input.reshape((1, 3, 1))
-  26   yhat = model.predict(x\_input, verbose=0)
-  27   print(yhat)
-  ---- --------------------------------------------------------------------------
+# define model
+model = Sequential()
+model.add(LSTM(100, activation='relu', input_shape=(3, 1)))
+model.add(RepeatVector(2))
+model.add(LSTM(100, activation='relu', return_sequences=True))
+model.add(TimeDistributed(Dense(1)))
+model.compile(optimizer='adam', loss='mse')
+# fit model
+model.fit(X, y, epochs=100, verbose=0)
+# demonstrate prediction
+x_input = array([50, 60, 70])
+x_input = x_input.reshape((1, 3, 1))
+yhat = model.predict(x_input, verbose=0)
+print(yhat)
+```
+
+##### Run Notebook
+Click notebook `5.ipynb` in jupterLab UI and run jupyter notebook.
 
 Running the example will fit the model on the data then predict the next
 two out-of-sample values.
-
 Given [50, 60, 70] as input, the model correctly predicts [80, 90] as
 the next two values in the sequence.
 
@@ -669,8 +619,7 @@ accurate predictions on the test set.
 You can download the dataset from here:
 [daily-total-female-births.csv](https://raw.githubusercontent.com/jbrownlee/Datasets/master/daily-total-female-births.csv)
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **More Information** 
 
@@ -719,9 +668,3 @@ You discovered:
 
 This is just the beginning of your journey with deep learning for time
 series forecasting. Keep practicing and developing your skills.
-
-Take the next step and check out my book on [deep learning for time
-series](https://machinelearningmastery.com/deep-learning-for-time-series-forecasting/).
-
-\
-

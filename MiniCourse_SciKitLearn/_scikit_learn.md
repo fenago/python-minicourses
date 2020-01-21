@@ -78,6 +78,10 @@ print(metrics.classification_report(expected, predicted))
 print(metrics.confusion_matrix(expected, predicted))
 ```
 
+##### Run Notebook
+Click notebook `1.ipynb` in jupterLab UI and run jupyter notebook.
+
+
 For more information see the [API reference for Logistic
 Regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression)
 for details on configuring the algorithm parameters. Also see the
@@ -111,6 +115,9 @@ predicted = model.predict(dataset.data)
 print(metrics.classification_report(expected, predicted))
 print(metrics.confusion_matrix(expected, predicted))
 ```
+
+##### Run Notebook
+Click notebook `2.ipynb` in jupterLab UI and run jupyter notebook.
 
 For more information see the [API reference for the Gaussian Naive
 Bayes](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html#sklearn.naive_bayes.GaussianNB)
@@ -148,6 +155,10 @@ print(metrics.classification_report(expected, predicted))
 print(metrics.confusion_matrix(expected, predicted))
 ```
 
+##### Run Notebook
+Click notebook `3.ipynb` in jupterLab UI and run jupyter notebook.
+
+
 For more information see the [API reference for the k-Nearest
 Neighbor](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier)
 for details on configuring the algorithm parameters. Also see the
@@ -166,14 +177,14 @@ This recipe shows use of the CART model to make predictions for the iris
 dataset.
 
 ```
-# k-Nearest Neighbor
+# Decision Tree Classifier
 from sklearn import datasets
 from sklearn import metrics
-from sklearn.neighbors import KNeighborsClassifier
-# load iris the datasets
+from sklearn.tree import DecisionTreeClassifier
+# load the iris datasets
 dataset = datasets.load_iris()
-# fit a k-nearest neighbor model to the data
-model = KNeighborsClassifier()
+# fit a CART model to the data
+model = DecisionTreeClassifier()
 model.fit(dataset.data, dataset.target)
 print(model)
 # make predictions
@@ -183,6 +194,9 @@ predicted = model.predict(dataset.data)
 print(metrics.classification_report(expected, predicted))
 print(metrics.confusion_matrix(expected, predicted))
 ```
+
+##### Run Notebook
+Click notebook `4.ipynb` in jupterLab UI and run jupyter notebook.
 
 For more information see the [API reference for
 CART](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier)
@@ -221,6 +235,11 @@ predicted = model.predict(dataset.data)
 print(metrics.classification_report(expected, predicted))
 print(metrics.confusion_matrix(expected, predicted))
 ```
+
+
+##### Run Notebook
+Click notebook `5.ipynb` in jupterLab UI and run jupyter notebook.
+
 
 For more information see the [API reference for
 SVM](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
@@ -397,6 +416,9 @@ print(metrics.classification_report(expected, predicted))
 print(metrics.confusion_matrix(expected, predicted))
 ```
 
+##### Run Notebook
+Click notebook `6.ipynb` in jupterLab UI and run jupyter notebook.
+
 Running this example produces the following output, showing you the
 details of the trained model, the skill of the model according to some
 common metrics and a confusion matrix.
@@ -484,11 +506,9 @@ it’s vision, there are some papers you may want to check-out.
 
 It is important to compare the performance of multiple different machine
 learning algorithms consistently.
-
 In this post you will discover how you can create a test harness to
 compare multiple different machine learning algorithms in Python with
 scikit-learn.
-
 You can use this test harness as a template on your own machine learning
 problems and add more and different algorithms to compare.
 
@@ -508,7 +528,6 @@ How To Compare Machine Learning Algorithms in Python with scikit-learn
 ------------------------------------------
 
 How do you choose the best model for your problem?
-
 When you work on a machine learning project, you often end up with
 multiple good models to choose from. Each model will have different
 performance characteristics.
@@ -523,7 +542,6 @@ of models that you have created.
 When you have a new dataset, it is a good idea to visualize the data
 using different techniques in order to look at the data from different
 perspectives.
-
 The same idea applies to model selection. You should use a number of
 different ways of looking at the estimated accuracy of your machine
 learning algorithms in order to choose the one or two to finalize.
@@ -626,6 +644,10 @@ ax.set_xticklabels(names)
 plt.show()
 ```
 
+
+##### Run Notebook
+Click notebook `7.ipynb` in jupterLab UI and run jupyter notebook.
+
 Running the example provides a list of each algorithm short name, the
 mean accuracy and the standard deviation accuracy.
 
@@ -659,7 +681,6 @@ learning algorithms on a dataset in Python with scikit-learn.
 You learned how to both use the same test harness to evaluate the
 algorithms and how to summarize the results both numerically and using a
 box and whisker plot.
-
 You can use this recipe as a template for evaluating multiple algorithms
 on your own problems.
 
@@ -693,8 +714,6 @@ book](https://machinelearningmastery.com/machine-learning-with-python/),
 with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started.
-
--   **Updated Jan/2020**: Updated for changes in scikit-learn v0.22 API.
 
 **Tutorial Overview** 
 ---------------------
@@ -759,7 +778,6 @@ distribution.
 
 You can control how many blobs to generate and the number of samples to
 generate, as well as a host of other properties.
-
 The problem is suitable for linear classification problems given the
 linearly separable nature of the blobs.
 
@@ -790,6 +808,9 @@ for key, group in grouped:
 pyplot.show()
 ```
 
+##### Run Notebook
+Click notebook `8.ipynb` in jupterLab UI and run jupyter notebook.
+
 Running the example generates the inputs and outputs for the problem and
 then creates a handy 2D plot showing points for the different classes
 using different colors.
@@ -799,8 +820,6 @@ stochastic nature of the problem generator. This is a feature, not a
 bug.
 
 ![](../soluta_consectetur_iusto_html_972a17efe84e5d5c.png)
-
-Scatter Plot of Blobs Test Classification Problem
 
 We will use this same example structure for the following examples.
 
@@ -813,7 +832,6 @@ moons.
 
 You can control how noisy the moon shapes are and the number of samples
 to generate.
-
 This test problem is suitable for algorithms that are capable of
 learning nonlinear class boundaries.
 
@@ -842,6 +860,9 @@ for key, group in grouped:
 pyplot.show()
 ```
 
+##### Run Notebook
+Click notebook `9.ipynb` in jupterLab UI and run jupyter notebook.
+
 Running the example generates and plots the dataset for review, again
 coloring samples by their assigned class.
 
@@ -855,10 +876,8 @@ The [make_circles()
 function](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_circles.html)
 generates a binary classification problem with datasets that fall into
 concentric circles.
-
 Again, as with the moons test problem, you can control the amount of
 noise in the shapes.
-
 This test problem is suitable for algorithms that can learn complex
 non-linear manifolds.
 
@@ -887,6 +906,9 @@ for key, group in grouped:
 pyplot.show()
 ```
 
+##### Run Notebook
+Click notebook `10.ipynb` in jupterLab UI and run jupyter notebook.
+
 Running the example generates and plots the dataset for review.
 
 ![](../soluta_consectetur_iusto_html_17dd3944091dbc1f.png)
@@ -905,10 +927,8 @@ outputs.
 
 You can configure the number of samples, number of input features, level
 of noise, and much more.
-
 This dataset is suitable for algorithms that can learn a linear
 regression function.
-
 The example below will generate 100 examples with one input feature and
 one output feature with modest noise.
 
@@ -928,6 +948,9 @@ X, y = make_regression(n_samples=100, n_features=1, noise=0.1)
 pyplot.scatter(X,y)
 pyplot.show()
 ```
+
+##### Run Notebook
+Click notebook `11.ipynb` in jupterLab UI and run jupyter notebook.
 
 Running the example will generate the data and plot the X and y
 relationship, which, given that it is linear, is quite boring.
@@ -983,467 +1006,3 @@ Specifically, you learned:
 
 ![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
 
-**How to Load Data in Python with Scikit-Learn**
-
-Before you can build machine learning models, you need to load your data
-into memory.
-
-In this post you will discover how to load data for machine learning in
-Python using
-[scikit-learn](http://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/).
-
-Discover how to prepare data with pandas, fit and evaluate models with
-scikit-learn, and more [in my new
-book](https://machinelearningmastery.com/machine-learning-with-python/),
-with 16 step-by-step tutorials, 3 projects, and full python code.
-
-Let’s get started.
-
-
-![](../soluta_consectetur_iusto_html_c35324a7b4a5064f.jpg)
-
-Load CSV Data
-
-
-**Packaged Datasets** 
----------------------
-
-The scikit-learn library is [packaged with
-datasets](http://scikit-learn.org/stable/datasets/). These datasets are
-useful for getting a handle on a given machine learning algorithm or
-library feature before using it in your own work.
-
-This recipe demonstrates how to load the famous [Iris flowers
-dataset](http://en.wikipedia.org/wiki/Iris_flower_data_set).
-
-```
-# Load the packaged iris flowers dataset
-# Iris flower dataset (4x150, reals, multi-label classification)
-iris = load_iris()
-print(iris)
-```
-
-**Load from CSV** 
------------------
-
-It is very common for you to have a dataset as a CSV file on your local
-workstation or on a remote server.
-
-This recipe show you how to load a CSV file from a URL, in this case the
-Pima Indians diabetes classification dataset.
-
-You can learn more about the dataset here:
-
--   [Dataset
-    File](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.csv).
-
--   [Dataset
-    Details](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.names)
-
-From the prepared X and y variables, you can train a machine learning
-model.
-
-```
-# Load the Pima Indians diabetes dataset from CSV URL
-import numpy as np
-import urllib
-# URL for the Pima Indians Diabetes dataset (UCI Machine Learning Repository)
-url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
-# download the file
-raw_data = urllib.urlopen(url)
-# load the CSV file as a numpy matrix
-dataset = np.loadtxt(raw_data, delimiter=",")
-print(dataset.shape)
-# separate the data from the target attributes
-X = dataset[:,0:7]
-y = dataset[:,8]
-```
-
-**Summary** 
------------
-
-In this post you discovered that the scikit-learn method comes with
-packaged data sets including the iris flowers dataset. These datasets
-can be loaded easily and used for explore and experiment with different
-machine learning models.
-
-You also saw how you can load CSV data with scikit-learn. You learned a
-way of opening CSV files from the web using the [urllib
-library](https://docs.python.org/2/library/urllib.html) and how you can
-read that data as a NumPy matrix for use in scikit-learn.
-
-![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
-
-**How to Make Predictions with scikit-learn**
-
-#### **How to predict classification or regression outcomes**
-
-Once you choose and fit a final machine learning model in scikit-learn,
-you can use it to make predictions on new data instances.
-
-There is some confusion amongst beginners about how exactly to do this.
-I often see questions such as:
-
-How do I make predictions with my model in scikit-learn?
-
-In this tutorial, you will discover exactly how you can make
-classification and regression predictions with a finalized machine
-learning model in the scikit-learn Python library.
-
-After completing this tutorial, you will know:
-
--   How to finalize a model in order to make it ready for making
-    predictions.
-
--   How to make class and probability predictions in scikit-learn.
-
--   How to make regression predictions in scikit-learn.
-
-Discover how to prepare data with pandas, fit and evaluate models with
-scikit-learn, and more [in my new
-book](https://machinelearningmastery.com/machine-learning-with-python/),
-with 16 step-by-step tutorials, 3 projects, and full python code.
-
-Let’s get started.
-
-![](../soluta_consectetur_iusto_html_13af4d9855a2406f.jpg)
-
-Gentle Introduction to Vector Norms in Machine Learning
-
-Photo by Cosimo, some rights reserved.
-
-**Tutorial Overview** 
----------------------
-
-This tutorial is divided into 3 parts; they are:
-
-1.  First Finalize Your Model
-
-2.  How to Predict With Classification Models
-
-3.  How to Predict With Regression Models
-
-**1. First Finalize Your Model** 
---------------------------------
-
-Before you can make predictions, you must train a final model.
-
-You may have trained models using k-fold cross validation or train/test
-splits of your data. This was done in order to give you an estimate of
-the skill of the model on out-of-sample data, e.g. new data.
-
-These models have served their purpose and can now be discarded.
-
-You now must train a final model on all of your available data.
-
-You can learn more about how to train a final model here:
-
--   [How to Train a Final Machine Learning
-    Model](https://machinelearningmastery.com/train-final-machine-learning-model/)
-
-**2. How to Predict With Classification Models** 
-------------------------------------------------
-
-Classification problems are those where the model learns a mapping
-between input features and an output feature that is a label, such as
-“*spam*” and “*not spam*.”
-
-Below is sample code of a finalized
-[LogisticRegression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
-model for a simple binary classification problem.
-
-Although we are using *LogisticRegression* in this tutorial, the same
-functions are available on practically all classification algorithms in
-scikit-learn.
-
-```
-# example of training a final classification model
-from sklearn.linear_model import LogisticRegression
-from sklearn.datasets import make_blobs
-# generate 2d classification dataset
-X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
-# fit final model
-model = LogisticRegression()
-model.fit(X, y)
-```
-
-After finalizing your model, you may want to save the model to file,
-e.g. via pickle. Once saved, you can load the model any time and use it
-to make predictions. For an example of this, see the post:
-
--   [Save and Load Machine Learning Models in Python with
-    scikit-learn](https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/)
-
-For simplicity, we will skip this step for the examples in this
-tutorial.
-
-There are two types of classification predictions we may wish to make
-with our finalized model; they are class predictions and probability
-predictions.
-
-### **Class Predictions** 
-
-A class prediction is: given the finalized model and one or more data
-instances, predict the class for the data instances.
-
-We do not know the outcome classes for the new data. That is why we need
-the model in the first place.
-
-We can predict the class for new data instances using our finalized
-classification model in scikit-learn using the *predict()* function.
-
-For example, we have one or more data instances in an array called
-*Xnew*. This can be passed to the *predict()* function on our model in
-order to predict the class values for each instance in the array.
-
-```
-Xnew = [[...], [...]]
-ynew = model.predict(Xnew)
-```
-
-### **Multiple Class Predictions** 
-
-Let’s make this concrete with an example of predicting multiple data
-instances at once.
-
-```
-# example of training a final classification model
-from sklearn.linear_model import LogisticRegression
-from sklearn.datasets import make_blobs
-# generate 2d classification dataset
-X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
-# fit final model
-model = LogisticRegression()
-model.fit(X, y)
-# new instances where we do not know the answer
-Xnew, _ = make_blobs(n_samples=3, centers=2, n_features=2, random_state=1)
-# make a prediction
-ynew = model.predict(Xnew)
-# show the inputs and predicted outputs
-for i in range(len(Xnew)):
-	print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
-```
-
-Running the example predicts the class for the three new data instances,
-then prints the data and the predictions together.
-
-```
-X=[-0.79415228  2.10495117], Predicted=0
-X=[-8.25290074 -4.71455545], Predicted=1
-X=[-2.18773166  3.33352125], Predicted=0
-```
-
-### **Single Class Prediction** 
-
-If you had just one new data instance, you can provide this as instance
-wrapped in an array to the *predict()* function; for example:
-
-```
-# example of making a single class prediction
-from sklearn.linear_model import LogisticRegression
-from sklearn.datasets import make_blobs
-# generate 2d classification dataset
-X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
-# fit final model
-model = LogisticRegression()
-model.fit(X, y)
-# define one new instance
-Xnew = [[-0.79415228, 2.10495117]]
-# make a prediction
-ynew = model.predict(Xnew)
-print("X=%s, Predicted=%s" % (Xnew[0], ynew[0]))
-```
-
-Running the example prints the single instance and the predicted class.
-
-```
-X=[-0.79415228, 2.10495117], Predicted=0
-```
-
-### **A Note on Class Labels** 
-
-When you prepared your data, you will have mapped the class values from
-your domain (such as strings) to integer values. You may have used a
-[LabelEncoder](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html#sklearn.preprocessing.LabelEncoder).
-
-This *LabelEncoder* can be used to convert the integers back into string
-values via the *inverse_transform()* function.
-
-For this reason, you may want to save (pickle) the *LabelEncoder* used
-to encode your y values when fitting your final model.
-
-### **Probability Predictions** 
-
-Another type of prediction you may wish to make is the probability of
-the data instance belonging to each class.
-
-This is called a probability prediction where given a new instance, the
-model returns the probability for each outcome class as a value between
-0 and 1.
-
-You can make these types of predictions in scikit-learn by calling the
-*predict_proba()* function, for example:
-
-```
-Xnew = [[...], [...]]
-ynew = model.predict_proba(Xnew)
-```
-
-This function is only available on those classification models capable
-of making a probability prediction, which is most, but not all, models.
-
-The example below makes a probability prediction for each example in the
-*Xnew* array of data instance.
-
-```
-# example of making multiple probability predictions
-from sklearn.linear_model import LogisticRegression
-from sklearn.datasets import make_blobs
-# generate 2d classification dataset
-X, y = make_blobs(n_samples=100, centers=2, n_features=2, random_state=1)
-# fit final model
-model = LogisticRegression()
-model.fit(X, y)
-# new instances where we do not know the answer
-Xnew, _ = make_blobs(n_samples=3, centers=2, n_features=2, random_state=1)
-# make a prediction
-ynew = model.predict_proba(Xnew)
-# show the inputs and predicted probabilities
-for i in range(len(Xnew)):
-	print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
-```
-
-Running the instance makes the probability predictions and then prints
-the input data instance and the probability of each instance belonging
-to the first and second classes (0 and 1).
-
-```
-X=[-0.79415228 2.10495117], Predicted=[0.94556472 0.05443528]
-X=[-8.25290074 -4.71455545], Predicted=[3.60980873e-04 9.99639019e-01]
-X=[-2.18773166 3.33352125], Predicted=[0.98437415 0.01562585]
-```
-
-This can be helpful in your application if you want to present the
-probabilities to the user for expert interpretation.
-
-**3. How to Predict With Regression Models** 
---------------------------------------------
-
-Regression is a supervised learning problem where, given input examples,
-the model learns a mapping to suitable output quantities, such as “0.1”
-and “0.2”, etc.
-
-Below is an example of a finalized *LinearRegression* model. Again, the
-functions demonstrated for making regression predictions apply to all of
-the regression models available in scikit-learn.
-
-```
-# example of training a final regression model
-from sklearn.linear_model import LinearRegression
-from sklearn.datasets import make_regression
-# generate regression dataset
-X, y = make_regression(n_samples=100, n_features=2, noise=0.1, random_state=1)
-# fit final model
-model = LinearRegression()
-model.fit(X, y)
-```
-
-We can predict quantities with the finalized regression model by calling
-the *predict()* function on the finalized model.
-
-As with classification, the predict() function takes a list or array of
-one or more data instances.
-
-### **Multiple Regression Predictions** 
-
-The example below demonstrates how to make regression predictions on
-multiple data instances with an unknown expected outcome.
-
-```
-# example of training a final regression model
-from sklearn.linear_model import LinearRegression
-from sklearn.datasets import make_regression
-# generate regression dataset
-X, y = make_regression(n_samples=100, n_features=2, noise=0.1)
-# fit final model
-model = LinearRegression()
-model.fit(X, y)
-# new instances where we do not know the answer
-Xnew, _ = make_regression(n_samples=3, n_features=2, noise=0.1, random_state=1)
-# make a prediction
-ynew = model.predict(Xnew)
-# show the inputs and predicted outputs
-for i in range(len(Xnew)):
-	print("X=%s, Predicted=%s" % (Xnew[i], ynew[i]))
-```
-
-Running the example makes multiple predictions, then prints the inputs
-and predictions side-by-side for review.
-
-```
-X=[-1.07296862 -0.52817175], Predicted=-61.32459258381131
-X=[-0.61175641 1.62434536], Predicted=-30.922508147981667
-X=[-2.3015387 0.86540763], Predicted=-127.34448527071137
-```
-
-### **Single Regression Prediction** 
-
-The same function can be used to make a prediction for a single data
-instance as long as it is suitably wrapped in a surrounding list or
-array.
-
-For example:
-
-```
-# example of training a final regression model
-from sklearn.linear_model import LinearRegression
-from sklearn.datasets import make_regression
-# generate regression dataset
-X, y = make_regression(n_samples=100, n_features=2, noise=0.1)
-# fit final model
-model = LinearRegression()
-model.fit(X, y)
-# define one new data instance
-Xnew = [[-1.07296862, -0.52817175]]
-# make a prediction
-ynew = model.predict(Xnew)
-# show the inputs and predicted outputs
-print("X=%s, Predicted=%s" % (Xnew[0], ynew[0]))
-```
-
-Running the example makes a single prediction and prints the data
-instance and prediction for review.
-
-```
-X=[-1.07296862, -0.52817175], Predicted=-77.17947088762787
-```
-
-**Further Reading** 
--------------------
-
-This section provides more resources on the topic if you are looking to
-go deeper.
-
--   [How to Train a Final Machine Learning
-    Model](https://machinelearningmastery.com/train-final-machine-learning-model/)
-
--   [Save and Load Machine Learning Models in Python with
-    scikit-learn](https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/)
-
--   [scikit-learn API
-    Reference](http://scikit-learn.org/stable/modules/classes.html)
-
-### **Summary** 
-
-In this tutorial, you discovered how you can make classification and
-regression predictions with a finalized machine learning model in the
-scikit-learn Python library.
-
-Specifically, you learned:
-
--   How to finalize a model in order to make it ready for making
-    predictions.
-
--   How to make class and probability predictions in scikit-learn.
-
--   How to make regression predictions in scikit-learn.

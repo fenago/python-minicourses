@@ -123,9 +123,6 @@ Python.
 **Machine Learning in Python: Step-By-Step Tutorial** 
 -----------------------------------------------------
 
-**(start here)** 
-----------------
-
 In this section, we are going to work through a small machine learning
 project end-to-end.
 
@@ -499,6 +496,8 @@ print(dataset.describe())
 print(dataset.groupby('class').size())
 ```
 
+##### Run Notebook
+Click notebook `01.ipynb` in jupterLab UI and run jupyter notebook.
 
 
 **4. Data Visualization** 
@@ -602,6 +601,9 @@ scatter_matrix(dataset)
 pyplot.show()
 ```
 
+
+##### Run Notebook
+Click notebook `02.ipynb` in jupterLab UI and run jupyter notebook.
 
 
 **5. Evaluate Some Algorithms** 
@@ -749,8 +751,6 @@ for name, model in models:
 	print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
 ```
 
-
-
 ### **5.4 Select Best Model** 
 
 We now have 6 models and accuracy estimations for each. We need to
@@ -774,8 +774,6 @@ learning algorithms. For more on this see the post:
     Learning](https://machinelearningmastery.com/randomness-in-machine-learning/)
 
 **What scores did you get?**
-
-Post your results in the comments below.
 
 In this case, we can see that it looks like Support Vector Machines
 (SVM) has the largest estimated accuracy score at about 0.98 or 98%.
@@ -811,6 +809,11 @@ For reference, we can tie all of the previous elements together into a
 single script.
 
 The complete example is listed below.
+
+
+##### Run Notebook
+Click notebook `03.ipynb` in jupterLab UI and run jupyter notebook.
+
 
 ```
 # compare algorithms
@@ -862,10 +865,8 @@ pyplot.show()
 -----------------------
 
 We must choose an algorithm to use to make predictions.
-
 The results in the previous section suggest that the SVM was perhaps the
 most accurate model. We will use this model as our final model.
-
 Now we want to get an idea of the accuracy of the model on our
 validation set.
 
@@ -915,11 +916,8 @@ print(confusion_matrix(Y_validation, predictions))
 print(classification_report(Y_validation, predictions))
 ```
 
-
-
 We can see that the accuracy is 0.966 or about 96% on the hold out
 dataset.
-
 The confusion matrix provides an indication of the three errors made.
 
 Finally, the classification report provides a breakdown of each class by
@@ -949,6 +947,11 @@ For reference, we can tie all of the previous elements together into a
 single script.
 
 The complete example is listed below.
+
+
+##### Run Notebook
+Click notebook `04.ipynb` in jupterLab UI and run jupyter notebook.
+
 
 ```
 # make predictions

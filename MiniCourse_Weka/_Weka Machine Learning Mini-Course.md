@@ -41,18 +41,14 @@ Let’s get started.
 Before we get started, let’s make sure you are in the right place. The
 list below provides some general guidelines as to who this course was
 designed for.
-
 Don’t panic if you don’t match these points exactly, you might just need
 to brush up in one area or another to keep up.
 
 You are a developer that knows a little machine learning.
-
 This means you know about some of the basics of machine learning like
 cross validation, some algorithms and the bias-variance trade-off. It
 does not mean that you are a machine learning PhD, just that you know
 the landmarks or know where to look them up.
-
-This mini-course is not a textbook on machine learning.
 
 It will take you from a developer that knows a little machine learning
 to a developer who can use the Weka platform to work through a dataset
@@ -63,7 +59,6 @@ performance model.
 -----------------------------------------
 
 This mini-course is divided into 14 parts.
-
 Each lesson was designed to take you about 30 minutes. You might finish
 some much sooner and for others you may choose to go deeper and spend
 more time.
@@ -103,7 +98,6 @@ The topics you will cover over the next 14 lessons are as follows:
 -   **Lesson 14**: Save Your Model.
 
 This is going to be a lot of fun.
-
 You’re going to have to do some work though, a little reading, a little
 tinkering in Weka. You want to get started in applied machine learning
 right?
@@ -113,25 +107,48 @@ right?
 ----------------------------------------
 
 The first thing to do is install the Weka software on your workstation.
-
 Weka is free open source software. It is written in Java and can run on
 any platform that supports Java, including:
 
 -   Windows.
-
 -   Mac OS X.
-
 -   Linux.
 
 You can download Weka as standalone software or as a version bundled
 with Java.
-
 If you do not already have Java installed on your system, I recommend
 downloading and installing a version bundled with Java.
 
 1.  Your task for this lesson is to visit the [Weka download
     page](http://www.cs.waikato.ac.nz/ml/weka/downloading.html),
     download and install Weka on your workstation.
+
+#### Docker Image
+
+**Note:** You can also use weka docker image to run the lab. You will need docker environment for that.
+
+`docker run -d --network host --privileged --name kali-desktop fenago/kali-weka`
+
+`docker exec -it kali-desktop bash -c "mkdir -p /root/Desktop/weka && cp -r /usr/share/doc/weka/ /root/Desktop && cd /root/Desktop && wget https://netix.dl.sourceforge.net/project/weka/datasets/datasets-numeric/datasets-numeric.jar && unzip datasets-numeric.jar && cp /root/Desktop/numeric/housing.arff /root/Desktop/numeric/housing-numeric.arff && sed -i 's/@attribute CHAS { 0, 1}/@attribute CHAS real/g' /root/Desktop/numeric/housing-numeric.arff"`
+
+After setup is complete. You can open the kali Linux Desktop Notebook at http://host-ip:6080/vnc_auto.html
+
+#### Open Weka GUI
+- Select `Use Default Config` option first time.
+- Open Terminal and enter following command as shown in the image below:
+    `weka > /dev/null 2>&1`
+    ![](https://github.com/fenago/katacoda-scenarios/raw/master/machine-learning-mastery-weka/1.png)
+
+**Note:**
+- If you get any error while connecting to `kali desktop`, restart the container.
+- All weka directories which contains datasets/.arff/.arff.gz files have been created already on desktop at following locations:
+        * /root/Desktop/weka/examples
+        * /root/Desktop/numeric
+    ![](2.png)
+- Select `File of type` option as **All files** when opening dataset to view all files.
+    ![](3.png)
+
+
 
 **Lesson 02: Load Standard Machine Learning Datasets** 
 ------------------------------------------------------
@@ -165,9 +182,7 @@ download webpage](http://www.cs.waikato.ac.nz/ml/weka/downloading.html),
 unzip it and access the data/ directory.
 
 You have just loaded your first dataset in Weka.
-
 Try loading some of the other datasets in the data/ directory.
-
 Try downloading a raw CSV file from the [UCI Machine Learning
 repository](http://archive.ics.uci.edu/ml/) and loading it in Weka.
 
@@ -175,7 +190,6 @@ repository](http://archive.ics.uci.edu/ml/) and loading it in Weka.
 --------------------------------------------------
 
 Once you can load data in Weka, it is important to take a look at it.
-
 Weka lets you review descriptive statistics calculated from your data.
 It also provides visualization tools.
 

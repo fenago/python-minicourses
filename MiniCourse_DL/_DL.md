@@ -21,8 +21,6 @@ Let’s get started.
 
 Applied Deep Learning in Python Mini-Course
 
-Photo by [darkday](https://www.flickr.com/photos/drainrat/15783392494/),
-some rights reserved.
 
 **Who Is This Mini-Course For?** 
 --------------------------------
@@ -159,7 +157,57 @@ f = theano.function([a,b], c)
 result = f(1.5, 2.5)
 
 print(result)
+
 ```
+
+
+##### Run Notebook
+Click notebook `1.ipynb` in jupterLab UI and run jupyter notebook.
+
+
+
+**Calculating multiple results at once**
+
+Let’s say we have to compute the elementwise difference, absolute difference and difference squared between two matrices ‘x’ and ‘y’. Doing this at the same time optimizes program with significant duration as we don’t have to go to each element again and again for each operation.
+
+```
+
+import theano
+from theano import tensor
+
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
+
+# declare variables
+x, y = tensor.dmatrices('x', 'y')
+
+# create simple expression for each operation
+diff = x - y
+
+abs_diff = abs(diff)
+diff_squared = diff**2
+
+# convert the expression into callable object
+f = theano.function([x, y], [diff, abs_diff, diff_squared])
+
+# call the function and store the result in a variable
+result= f([[1, 1], [1, 1]], [[0, 1], [2, 3]])
+
+# format print for readability
+print('Difference: ')
+print(result[0])
+
+print('Absolute Difference: ')
+print(result[1])
+
+print('Squared Difference: ')
+print(result[2])
+```
+
+##### Run Notebook
+Click notebook `2.ipynb` in jupterLab UI and run jupyter notebook.
+
+When we run this program, we can see the output as multiple results being printed.
 
 Learn more about Theano on the [Theano
 homepage](http://deeplearning.net/software/theano/).
@@ -177,7 +225,6 @@ that we cannot ignore.
 
 Unlike Theano, TensorFlow does have more of a production focus with a
 capability to run on CPUs, GPUs and even very large clusters.
-
 In this lesson your goal is to install TensorFlow become familiar with
 the syntax of the symbolic expressions used in TensorFlow programs.
 
@@ -224,6 +271,11 @@ c = sess.run(add, feed_dict=binding)
 print(c)
 ```
 
+
+##### Run Notebook
+Click notebook `3.ipynb` in jupterLab UI and run jupyter notebook.
+
+
 Learn more about TensorFlow on the [TensorFlow
 homepage](https://www.tensorflow.org/).
 
@@ -253,12 +305,11 @@ can be summarized as follows:
     layers.
 
 2.  Compile your model. Specify loss function and optimizers and call
-    the compile()\
+    the compile() 
      function on the model.
 
 3.  Fit your model. Train the model on a sample of data by calling the
-    fit() function on\
-     the model.
+    fit() function on the model.
 
 4.  Make predictions. Use the model to generate predictions on new data
     by calling functions such as evaluate() or predict() on the model.
@@ -268,6 +319,7 @@ Your goal for this lesson is to install Keras.
 For example, you can install Keras using pip:
 
 ```
+sudo pip install keras
 ```
 
 Start to familiarize yourself with the Keras library ready for the
@@ -281,39 +333,31 @@ homepage](http://keras.io/).
 
 Artificial neural networks are a fascinating area of study, although
 they can be intimidating
-
 when just getting started.
-
 The field of artificial neural networks is often just called neural
 networks or multi-layer
-
 Perceptrons after perhaps the most useful type of neural network.
 
 The building block for neural networks are artificial neurons. These are
 simple computational
-
 units that have weighted input signals and produce an output signal
 using an activation function.
 
 Neurons are arranged into networks of neurons. A row of neurons is
 called a layer and one
-
 network can have multiple layers. The architecture of the neurons in the
 network is often called the network topology.
 
 Once configured, the neural network needs to be trained on your dataset.
 The classical and still preferred training algorithm for neural networks
 is called stochastic
-
 gradient descent.
 
 ![](../vero_iure_incidunt_html_5d664c63585d17f0.png)
 
-Model of a Simple Neuron
 
 Your goal for this lesson is to become familiar with neural network
 terminology.
-
 Dig a little deeper into terms like neuron, weights, activation
 function, learning rate and more.
 
@@ -322,7 +366,6 @@ function, learning rate and more.
 
 Keras allows you to develop and evaluate deep learning models in very
 few lines of code.
-
 In this lesson your goal is to develop your first neural network using
 the Keras library.
 
@@ -357,6 +400,8 @@ from keras.models import Sequential
 
 from keras.layers import Dense
 
+import numpy
+
 # Load the dataset
 
 dataset = numpy.loadtxt("pima-indians-diabetes.csv", delimiter=",")
@@ -388,9 +433,11 @@ scores = model.evaluate(X, Y)
 print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
 ```
 
+##### Run Notebook
+Click notebook `4.ipynb` in jupterLab UI and run jupyter notebook.
+
 Now develop your own model on a different dataset, or adapt this
 example.
-
 Learn more about the [Keras API for simple model
 development](http://keras.io/models/sequential/).
 
@@ -416,7 +463,6 @@ later, like the number of epochs and batch size.
 
 In this lesson your goal is to develop a deep learning model and
 evaluate it using k-fold cross validation.
-
 For example, you can define an instance of the KerasClassifier and the
 custom function to create your model as follows:
 
@@ -447,7 +493,6 @@ webpage](http://keras.io/scikit-learn-api/).
 
 You can learn a lot about neural networks and deep learning models by
 observing their performance over time during training.
-
 Keras provides the capability to register callbacks when training a deep
 learning model.
 
@@ -460,7 +505,6 @@ if one is set.
 The history object is returned from calls to the fit() function used to
 train the model. Metrics are stored in a dictionary in the history
 member of the object returned.
-
 Your goal for this lesson is to investigate the history object and
 create plots of model performance during training.
 
@@ -481,13 +525,10 @@ Keras](http://keras.io/callbacks/#history).
 
 Application checkpointing is a fault tolerance technique for long
 running processes.
-
 The Keras library provides a checkpointing capability by a callback API.
 The ModelCheckpoint
-
 callback class allows you to define where to checkpoint the model
 weights, how the file should
-
 be named and under what circumstances to make a checkpoint of the model.
 
 Checkpointing can be useful to keep track of the model weights in case
@@ -496,7 +537,6 @@ track of the best model observed during training.
 
 In this lesson, your goal is to use the ModelCheckpoint callback in
 Keras to keep track of the best model observed during training.
-
 You could define a ModelCheckpoint that saves network weights to the
 same file each time an improvement is observed. For example:
 
@@ -517,7 +557,6 @@ Keras](http://keras.io/callbacks/#modelcheckpoint).
 
 A big problem with neural networks is that they can overlearn your
 training dataset.
-
 Dropout is a simple yet very effective technique for reducing dropout
 and has proven useful in large deep learning models.
 
@@ -529,7 +568,6 @@ the neuron on the backward pass.
 
 You can add a dropout layer to your deep learning model using the
 Dropout layer class.
-
 In this lesson your goal is to experiment with adding dropout at
 different points in your neural network and set to different probability
 of dropout values.
@@ -587,7 +625,6 @@ here](http://keras.io/optimizers/#sgd).
 
 Convolutional Neural Networks are a powerful artificial neural network
 technique.
-
 They expect and preserve the spatial relationship between pixels in
 images by learning internal feature representations using small squares
 of input data.
@@ -610,7 +647,6 @@ There are three types of layers in a Convolutional Neural Network:
 
 In this lesson you are to familiarize yourself with the terminology used
 when describing convolutional neural networks.
-
 This may require a little research on your behalf.
 
 Don’t worry too much about how they work just yet, just learn the
@@ -677,16 +713,28 @@ As a final tip, here is a model definition that you can use as a
 starting point:
 
 ```
-model = Sequential()
-model.add(Conv2D(32, (3, 3), padding='valid', input_shape=(28, 28, 1),
-activation='relu'))
-model.add(MaxPooling2D())
-model.add(Flatten())
-model.add(Dense(128, activation='relu'))
-model.add(Dense(num_classes, activation='softmax'))
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+from keras.utils import plot_model
+from keras.models import Model
+from keras.layers import Input
+from keras.layers import Dense
+from keras.layers.convolutional import Conv2D
+from keras.layers.pooling import MaxPooling2D
+visible = Input(shape=(64,64,1))
+conv1 = Conv2D(32, kernel_size=4, activation='relu')(visible)
+pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
+conv2 = Conv2D(16, kernel_size=4, activation='relu')(pool1)
+pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
+hidden1 = Dense(10, activation='relu')(pool2)
+output = Dense(1, activation='sigmoid')(hidden1)
+model = Model(inputs=visible, outputs=output)
+# summarize layers
+model.summary()
+    
 ```
 
+##### Run Notebook
+Click notebook `5.ipynb` in jupterLab UI and run jupyter notebook.
 
 **Lesson 13: Object Recognition in Small Photographs** 
 ------------------------------------------------------
@@ -726,13 +774,18 @@ from keras.utils import np_utils
 # load data
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
 # normalize inputs from 0-255 to 0.0-1.0
-X_train = X_train.astype('float32') X_test = X_test.astype('float32')
+X_train = X_train.astype('float32') 
+X_test = X_test.astype('float32')
 X_train = X_train / 255.0
 X_test = X_test / 255.0
 # one hot encode outputs
 y_train = np_utils.to_categorical(y_train)
 y_test = np_utils.to_categorical(y_test)
 ```
+
+##### Run Notebook
+Click notebook `6.ipynb` in jupterLab UI and run jupyter notebook.
+
 
 **Lesson 14: Improve Generalization With Data Augmentation** 
 ------------------------------------------------------------
@@ -757,7 +810,6 @@ your model.
 Your goal with this lesson is to experiment with the Keras image
 augmentation API using a dataset you are already familiar with from a
 previous lesson like MNIST or CIFAR-10.
-
 For example, the example below creates random rotations of up to 90
 degrees of images in the MNIST dataset.
 
@@ -765,6 +817,7 @@ degrees of images in the MNIST dataset.
 # Random Rotations
 from keras.datasets import mnist
 from keras.preprocessing.image import ImageDataGenerator
+%notebook inline
 from matplotlib import pyplot
 # load data
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
@@ -788,6 +841,9 @@ for X_batch, y_batch in datagen.flow(X_train, y_train, batch_size=9):
 	pyplot.show()
 	break
 ```
+
+##### Run Notebook
+Click notebook `7.ipynb` in jupterLab UI and run jupyter notebook.
 
 You can learn more about the [Keras image augmentation
 API](http://keras.io/preprocessing/image/).
@@ -818,11 +874,4 @@ Take a moment and look back at how far you have come:
 Don’t make light of this, you have come a long way in a short amount of
 time. This is just the beginning of your journey with deep learning in
 python. Keep practicing and developing your skills.
-
-Did you enjoy this mini-course? Do you have any questions or sticking
-points?
-
-Leave a comment and let me know.
-
-\
 

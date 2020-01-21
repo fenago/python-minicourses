@@ -1,20 +1,7 @@
-**Mini-Course on Long Short-Term Memory Recurrent Neural Networks with Keras** {style="margin-top: 0in; margin-bottom: 0.15in; border: none; padding: 0in; line-height: 110%; page-break-inside: auto; page-break-after: auto"}
-==============================================================================
-
-by [**Jason
-Brownlee**](https://machinelearningmastery.com/author/jasonb/) on August
-16, 2017 in [**Long Short-Term Memory
-Networks**](https://machinelearningmastery.com/category/lstm/)
-
-Tweet **Share**
-
-**Share**
-
-Last Updated on August 14, 2019
+**Mini-Course on Long Short-Term Memory Recurrent Neural Networks with Keras** ust 14, 2019
 
 Long Short-Term Memory (LSTM) recurrent neural networks are one of the
 most interesting types of deep learning at the moment.
-
 They have been used to demonstrate world-class results in complex
 problem domains such as language translation, automatic image
 captioning, and text generation.
@@ -22,7 +9,6 @@ captioning, and text generation.
 LSTMs are different to multilayer Perceptrons and convolutional neural
 networks in that they are designed specifically for sequence prediction
 problems.
-
 In this mini-course, you will discover how you can quickly bring LSTM
 models to your own sequence forecasting problems.
 
@@ -47,13 +33,6 @@ Let’s get started.
 **Note**: This is a big guide; you may want to bookmark it.
 
 ![](../earum_voluptatem_provident_html_3056e60733b87f25.jpg)
-
-Mini-Course on Long Short-Term Memory Recurrent Neural Networks with
-Keras
-
-Photo by [Nicholas A.
-Tonelli](https://www.flickr.com/photos/nicholas_t/14840636880/), some
-rights reserved.
 
 **Who Is This Mini-Course For?** 
 --------------------------------
@@ -108,24 +87,12 @@ After completing this course, you will:
 
 Next, let’s review the lessons.
 
-### **Need help with LSTMs for Sequence Prediction?** 
-
-Take my free 7-day email course and discover 6 different LSTM
-architectures (with code).
-
-Click to sign-up and also get a free PDF Ebook version of the course.
-
-[**Start Your FREE Mini-Course
-Now!**](https://machinelearningmastery.lpages.co/leadbox/1403a9373f72a2%3A164f8be4f346dc/5754903989321728/)
-
 **Mini-Course Overview** 
 ------------------------
 
 This mini-course is broken down into 14 lessons.
-
 You could complete one lesson per day (recommended) or complete all of
 the lessons in one day (hardcore!).
-
 It really depends on the time you have available and your level of
 enthusiasm.
 
@@ -174,15 +141,11 @@ using LSTMs.
 
 -   **Lesson 14**: How to make predictions with LSTMs
 
-Each lesson could take you 60 seconds or up to 60 minutes. Take your
-time and complete the lessons at your own pace. Ask questions, and even
-post results in the comments below.
 
 The lessons expect you to go off and find out how to do things. I will
 give you hints, but part of the point of each lesson is to force you to
 learn where to go to look for help (hint, I have all of the answers on
 this blog; use the search).
-
 I do provide more help in the early lessons because I want you to build
 up some confidence and inertia.
 

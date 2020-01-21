@@ -1224,8 +1224,7 @@ Your task in this lesson is to run the example and report the
 performance of the model on the test dataset. For bonus points, try
 varying the con guration of the model, or try saving the model and later
 loading it and using it to make a prediction on new grayscale
-photographs of clothing. Post your ndings online. I would love to see
-what you can come up with.
+photographs of clothing. 
 
 \
 
@@ -1395,8 +1394,7 @@ Your Task
 Your task in this lesson is to run the example and report the e ect that
 the image augmentation has had on the original image. For bonus points,
 try additional types of image augmentation, supported by the
-ImageDataGenerator class. Post your ndings online. I would love to see
-what you can come up with.
+ImageDataGenerator class. 
 
 \
 

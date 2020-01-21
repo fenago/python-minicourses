@@ -32,7 +32,6 @@ with your environment, you can follow the step-by-step tutorial here:
 -------------------------
 
 This crash course is broken down into seven lessons.
-
 You could complete one lesson per day (recommended) or complete all of
 the lessons in one day (hardcore). It really depends on the time you
 have available and your level of enthusiasm.
@@ -54,25 +53,6 @@ performance of your deep learning model:
 
 -   **Lesson 07**: Early Stopping
 
-Each lesson could take you 60 seconds or up to 30 minutes. Take your
-time and complete the lessons at your own pace. Ask questions and even
-post results in the comments below.
-
-The lessons expect you to go off and find out how to do things. I will
-give you hints, but part of the point of each lesson is to force you to
-learn where to go to look for help (hint, I have all of the answers
-directly on this blog; use the search box).
-
-I do provide more help in the form of links to related posts because I
-want you to build up some confidence and inertia.
-
-Post your results in the comments; I’ll cheer you on!
-
-Hang in there; don’t give up.
-
-**Note**: This is just a crash course. For a lot more detail and fleshed
-out tutorials, see my book on the topic titled “[Better Deep
-Learning](https://machinelearningmastery.com/better-deep-learning/).”
 
 **Lesson 01: Better Deep Learning Framework** 
 ---------------------------------------------
@@ -86,7 +66,6 @@ a few lines of code.
 
 Nevertheless, it is still challenging to configure a neural network to
 get good performance on a new predictive modeling problem.
-
 There are three types of problems that are straightforward to diagnose
 with regard to the poor performance of a deep learning neural network
 model; they are:
@@ -209,12 +188,15 @@ pyplot.legend()
 # plot accuracy learning curves
 pyplot.subplot(212)
 pyplot.title('Accuracy', pad=-40)
-pyplot.plot(history.history['accuracy'], label='train')
-pyplot.plot(history.history['val_accuracy'], label='test')
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
 pyplot.legend()
 pyplot.show()
 ```
 
+
+##### Run Notebook
+Click notebook `01.ipynb` in jupterLab UI and run jupyter notebook.
 
 ### **Your Task** 
 
@@ -224,8 +206,7 @@ effect that it has on the [learning
 curves](https://machinelearningmastery.com/how-to-control-neural-network-model-capacity-with-nodes-and-layers/)
 during training.
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **Next** 
 
@@ -306,11 +287,14 @@ pyplot.legend()
 # plot accuracy learning curves
 pyplot.subplot(212)
 pyplot.title('Accuracy', pad=-40)
-pyplot.plot(history.history['accuracy'], label='train')
-pyplot.plot(history.history['val_accuracy'], label='test')
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
 pyplot.legend()
 pyplot.show()
 ```
+
+##### Run Notebook
+Click notebook `02.ipynb` in jupterLab UI and run jupyter notebook.
 
 ### **Your Task** 
 
@@ -318,8 +302,7 @@ For this lesson, you must run the code example with and without the
 learning rate schedule and describe the effect that the learning rate
 schedule has on the learning curves during training.
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **Next** 
 
@@ -392,11 +375,14 @@ pyplot.legend()
 # plot accuracy learning curves
 pyplot.subplot(212)
 pyplot.title('Accuracy', pad=-40)
-pyplot.plot(history.history['accuracy'], label='train')
-pyplot.plot(history.history['val_accuracy'], label='test')
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
 pyplot.legend()
 pyplot.show()
 ```
+
+##### Run Notebook
+Click notebook `03.ipynb` in jupterLab UI and run jupyter notebook.
 
 ### **Your Task** 
 
@@ -404,8 +390,7 @@ For this lesson, you must run the code example with and without batch
 normalization and describe the effect that batch normalization has on
 the learning curves during training.
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **Next** 
 
@@ -477,11 +462,15 @@ pyplot.legend()
 # plot accuracy learning curves
 pyplot.subplot(212)
 pyplot.title('Accuracy', pad=-40)
-pyplot.plot(history.history['accuracy'], label='train')
-pyplot.plot(history.history['val_accuracy'], label='test')
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
 pyplot.legend()
 pyplot.show()
 ```
+
+
+##### Run Notebook
+Click notebook `04.ipynb` in jupterLab UI and run jupyter notebook.
 
 ### **Your Task** 
 
@@ -505,14 +494,12 @@ better generalization and faster learning.
 Training a neural network with a small dataset can cause the network to
 memorize all training examples, in turn leading to poor performance on a
 holdout dataset.
-
 One approach to making the input space smoother and easier to learn is
 to add noise to inputs during training.
 
 The addition of noise during the training of a neural network model has
 a regularization effect and, in turn, improves the robustness of the
 model.
-
 Noise can be added to your model in Keras via the *GaussianNoise* layer.
 For example:
 
@@ -562,11 +549,14 @@ pyplot.legend()
 # plot accuracy learning curves
 pyplot.subplot(212)
 pyplot.title('Accuracy', pad=-40)
-pyplot.plot(history.history['accuracy'], label='train')
-pyplot.plot(history.history['val_accuracy'], label='test')
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
 pyplot.legend()
 pyplot.show()
 ```
+
+##### Run Notebook
+Click notebook `05.ipynb` in jupterLab UI and run jupyter notebook.
 
 ### **Your Task** 
 
@@ -574,8 +564,7 @@ For this lesson, you must run the code example with and without the
 addition of noise and describe the effect that it has on the learning
 curves during training.
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **Next** 
 
@@ -648,11 +637,15 @@ pyplot.legend()
 # plot accuracy learning curves
 pyplot.subplot(212)
 pyplot.title('Accuracy', pad=-40)
-pyplot.plot(history.history['accuracy'], label='train')
-pyplot.plot(history.history['val_accuracy'], label='test')
+pyplot.plot(history.history['acc'], label='train')
+pyplot.plot(history.history['val_acc'], label='test')
 pyplot.legend()
 pyplot.show()
 ```
+
+
+##### Run Notebook
+Click notebook `06.ipynb` in jupterLab UI and run jupyter notebook.
 
 
 **The End!** 

@@ -2,10 +2,8 @@
 ---------------------------------
 
 Before we get started, let’s make sure you are in the right place.
-
 The list below provides some general guidelines as to who this course
 was designed for.
-
 Don’t panic if you don’t match these points exactly, you might just need
 to brush up in one area or another to keep up.
 
@@ -70,27 +68,11 @@ give you hints, but part of the point of each lesson is to force you to
 learn where to go to look for help on and about the deep learning,
 natural language processing and the best-of-breed tools in Python (hint,
 I have all of the answers directly on this blog, use the search box).
-
 I do provide more help in the form of links to related posts because I
 want you to build up some confidence and inertia.
 
-Post your results in the comments, I’ll cheer you on!
-
 Hang in there, don’t give up.
 
-**Note**: This is just a crash course. For a lot more detail and 30
-fleshed out tutorials, see my book on the topic titled “[*Deep Learning
-for Natural Language
-Processing*](https://machinelearningmastery.com/deep-learning-for-nlp/)*“.*
-
-### **Need help with Deep Learning for Text Data?** 
-
-Take my free 7-day email crash course now (with code).
-
-Click to sign-up and also get a free PDF Ebook version of the course.
-
-[**Start Your FREE Crash-Course
-Now**](https://machinelearningmastery.lpages.co/leadbox/144855173f72a2%3A164f8be4f346dc/5655638436741120/)
 
 **Lesson 01: Deep Learning and Natural Language** 
 -------------------------------------------------
@@ -104,7 +86,6 @@ with text data.
 Natural Language Processing, or NLP for short, is broadly defined as the
 automatic manipulation of natural language, like speech and text, by
 software.
-
 The study of natural language processing has been around for more than
 50 years and grew out of the field of linguistics with the rise of
 computers.
@@ -118,7 +99,6 @@ easily understand each other most of the time.
 Deep Learning is a subfield of machine learning concerned with
 algorithms inspired by the structure and function of the brain called
 artificial neural networks.
-
 A property of deep learning is that the performance of these type of
 model improves by training them with more examples by increasing their
 depth or representational capacity.
@@ -135,7 +115,6 @@ because they are delivering on their promise.
 Some of the first large demonstrations of the power of deep learning
 were in natural language processing, specifically speech recognition.
 More recently in machine translation.
-
 The 3 key promises of deep learning for natural language processing are
 as follows:
 
@@ -164,8 +143,7 @@ deep learning methods in the field of natural language processing. Bonus
 points if you can link to a research paper that demonstrates the
 example.
 
-Post your answer in the comments below. I would love to see what you
-discover.
+
 
 ### **More Information** 
 
@@ -225,7 +203,7 @@ For example, the snippet of code below will load a text file, split
 tokens by whitespace and convert each token to lowercase.
 
 ```
-filename = '...'
+filename = 'sample.txt'
 file = open(filename, 'rt')
 text = file.read()
 file.close()
@@ -234,6 +212,10 @@ words = text.split()
 # convert to lowercase
 words = [word.lower() for word in words]
 ```
+
+
+##### Run Notebook
+Click notebook `1.ipynb` in jupterLab UI and run jupyter notebook.
 
 You can imagine how this snippet could be extended to handle and
 normalize Unicode characters, remove punctuation and so on.
@@ -260,6 +242,10 @@ nltk.download()
 
 ```
 
+
+##### Run Notebook
+Click notebook `2.ipynb` in jupterLab UI and run jupyter notebook.
+
 or via a command line:
 
 ```
@@ -282,6 +268,9 @@ tokens = word_tokenize(text)
 
 ```
 
+##### Run Notebook
+Click notebook `3.ipynb` in jupterLab UI and run jupyter notebook.
+
 There are many tools available in this library and you can further
 refine the clean tokens using your own manual methods, such as removing
 punctuation, removing stop words, stemming and much more.
@@ -292,9 +281,6 @@ Your task is to locate a free classical book on the Project Gutenberg
 website, download the ASCII version of the book and tokenize the text
 and save the result to a new file. Bonus points for exploring both
 manual and NLTK approaches.
-
-Post your code in the comments below. I would love to see what book you
-choose and how you chose to tokenize it.
 
 ### **More Information** 
 
@@ -319,10 +305,8 @@ scikit-learn and Keras Python libraries.
 
 The bag-of-words model is a way of representing text data when modeling
 text with machine learning algorithms.
-
 The approach is very simple and flexible, and can be used in a myriad of
 ways for extracting features from documents.
-
 A bag-of-words is a representation of text that describes the occurrence
 of words within a document.
 
@@ -341,7 +325,6 @@ the document.
 
 The scikit-learn Python library for machine learning provides tools for
 encoding documents for a bag-of-words model.
-
 An instance of the encoder can be created, trained on a corpus of text
 documents and then used again and again to encode training, test,
 validation and any new data that needs to be encoded for your model.
@@ -374,6 +357,9 @@ vector = vectorizer.transform([text[0]])
 print(vector.shape)
 print(vector.toarray())
 ```
+
+##### Run Notebook
+Click notebook `4.ipynb` in jupterLab UI and run jupyter notebook.
 
 ### **Bag-of-Words with Keras** 
 
@@ -410,6 +396,10 @@ encoded_docs = t.texts_to_matrix(docs, mode='count')
 print(encoded_docs)
 ```
 
+
+##### Run Notebook
+Click notebook `5.ipynb` in jupterLab UI and run jupyter notebook.
+
 ### **Your Task** 
 
 Your task in this lesson is to experiment with the scikit-learn and
@@ -418,8 +408,6 @@ bag-of-words model. Bonus points if you use a small standard text
 dataset of documents to practice on and perform data cleaning as part of
 the preparation.
 
-Post your code in the comments below. I would love to see what APIs you
-explore and demonstrate.
 
 ### **More Information** 
 
@@ -449,7 +437,6 @@ similar meaning to have a similar representation.
 They are a distributed representation for text that is perhaps one of
 the key breakthroughs for the impressive performance of deep learning
 methods on challenging natural language processing problems.
-
 Word embedding methods learn a real-valued vector representation for a
 predefined fixed sized vocabulary from a corpus of text.
 
@@ -457,7 +444,6 @@ predefined fixed sized vocabulary from a corpus of text.
 
 You can train a word embedding distributed representation using the
 Gensim Python library for topic modeling.
-
 Gensim offers an implementation of the [word2vec
 algorithm](https://machinelearningmastery.com/what-are-word-embeddings/),
 developed at Google for the fast training of word embedding
@@ -491,6 +477,10 @@ print(words)
 # access vector for one word
 print(model['sentence'])
 ```
+
+
+##### Run Notebook
+Click notebook `6.ipynb` in jupterLab UI and run jupyter notebook.
 
 ### **Use Embeddings** 
 
@@ -529,14 +519,15 @@ for i, word in enumerate(words):
 pyplot.show()
 ```
 
+
+##### Run Notebook
+Click notebook `7.ipynb` in jupterLab UI and run jupyter notebook.
+
 ### **Your Task** 
 
 Your task in this lesson is to train a word embedding using Gensim on a
 text document, such as a book from Project Gutenberg. Bonus points if
 you can generate a plot of common words.
-
-Post your code in the comments below. I would love to see what book you
-choose and any details of the embedding that you learn.
 
 ### **More Information** 
 
@@ -618,6 +609,8 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']
 print(model.summary())
 ```
 
+##### Run Notebook
+Click notebook `8.ipynb` in jupterLab UI and run jupyter notebook.
 
 It is also possible to initialize the Embedding layer with pre-trained
 weights, such as those prepared by Gensim and to configure the layer to
@@ -633,9 +626,6 @@ embedding on these data. Note that each sentence will need to be padded
 to the same maximum length prior to training the model using the Keras
 pad\_sequences() function. Bonus points if you load a pre-trained word
 embedding prepared using Gensim.
-
-Post your code in the comments below. I would love to see what sentences
-you contrive and the skill of your model.
 
 ### **More Information** 
 
@@ -664,7 +654,6 @@ not.
 
 It is an important area of natural language processing and a great place
 to get started using deep learning techniques on text data.
-
 Deep learning methods are proving very good at text classification,
 achieving state-of-the-art results on a suite of standard academic
 benchmark problems.
@@ -708,18 +697,19 @@ model.add(Dense(1, activation='sigmoid'))
 print(model.summary())
 ```
 
+
+##### Run Notebook
+Click notebook `9.ipynb` in jupterLab UI and run jupyter notebook.
+
+
 ### **Your Task** 
 
 Your task in this lesson is to research the use of the Embeddings + CNN
 combination of deep learning methods for text classification and report
 on examples or best practices for configuring this model, such as the
 number of layers, kernel size, vocabulary size and so on.
-
 Bonus points if you can find and describe the variation that supports
 n-gram or multiple groups of words as input by varying the kernel size.
-
-Post your findings in the comments below. I would love to see what you
-discover.
 
 ### **More Information** 
 
@@ -735,7 +725,6 @@ analysis prediction problem.
 In this lesson, you will discover how to prepare text data, develop and
 evaluate a deep learning model to predict the sentiment of movie
 reviews.
-
 I want you to tie together everything you have learned in this crash
 course and work through a real-world problem end-to-end.
 
@@ -777,7 +766,6 @@ model on the movie review dataset:
 --------------------------------
 
 You made it. Well done!
-
 Take a moment and look back at how far you have come.
 
 You discovered:
