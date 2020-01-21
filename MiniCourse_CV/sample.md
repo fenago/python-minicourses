@@ -164,6 +164,9 @@ pixels /= 255.0
 print('Min: %.3f, Max: %.3f' % (pixels.min(), pixels.max()))
 ```
 
+##### Run Notebook
+Click notebook `1.ipynb` in jupterLab UI and run jupyter notebook.
+
 **Your Task**
 
 Your task in this lesson is to run the example code on the provided photograph and report the
@@ -227,6 +230,9 @@ model.summary()
 
 ```
 
+##### Run Notebook
+Click notebook `2.ipynb` in jupterLab UI and run jupyter notebook.
+
 **Your Task**
 
 Your task in this lesson is to run the example and describe how the shape of an input image
@@ -283,6 +289,11 @@ label = label[0][0]
 # print the classification
 print('%s (%.2f%%)' % (label[1], label[2]*100))
 ```
+
+
+##### Run Notebook
+Click notebook `3.ipynb` in jupterLab UI and run jupyter notebook.
+
 
 **Your Task**
 
@@ -343,6 +354,10 @@ print(loss, acc)
 
 ```
 
+
+##### Run Notebook
+Click notebook `4.ipynb` in jupterLab UI and run jupyter notebook.
+
 **Your Task**
 
 Your task in this lesson is to run the example and report the performance of the model on the
@@ -352,9 +367,8 @@ clothing. Post your findings online. I would love to see what you can come up wi
 
 Next
 
-```
 In the next lesson, you will discover how to use image augmentation on training data.
-```
+
 
 ## Lesson 06: Image Augmentation
 
@@ -405,6 +419,10 @@ pyplot.show()
 
 ```
 
+
+##### Run Notebook
+Click notebook `5.ipynb` in jupterLab UI and run jupyter notebook.
+
 **Your Task**
 
 Your task in this lesson is to run the example and report the effect that the image augmentation
@@ -414,10 +432,9 @@ what you can come up with.
 
 Next
 
-```
-In the next lesson, you will discover how to use a deep convolutional network to detect faces in
-photographs.
-```
+
+In the next lesson, you will discover how to use a deep convolutional network to detect faces in photographs.
+
 
 ## Lesson 07: Face Detection
 
