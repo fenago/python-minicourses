@@ -12,7 +12,7 @@ supervised classification algorithms.
 
 Let’s get started.
 
-![](../soluta_consectetur_iusto_html_fbf5dc5d29b9b23c.png)
+![](./images/1.png)
 
 **Scikit-Learn Recipes** 
 ------------------------
@@ -253,8 +253,6 @@ using scikit-learn, right now. Stop reading and start practicing. Pick
 one recipe and run it, then start to play with the parameters and see
 what effect that has on the results.
 
-![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
-
 
 **A Gentle Introduction to Scikit-Learn: A Python Machine Learning Library**
 
@@ -285,7 +283,7 @@ sponsorship from [INRIA](http://www.inria.fr/en/), Google,
 [Tinyclues](http://www.tinyclues.com/) and the [Python Software
 Foundation](https://www.python.org/psf/).
 
-![](../soluta_consectetur_iusto_html_5ae794f3280fea8a.png)
+![](./images/2.png)
 
 [Scikit-learn Homepage](http://scikit-learn.org/stable/index.html)
 
@@ -336,7 +334,7 @@ The library is focused on modeling data. It is not focused on loading,
 manipulating and summarizing data. For these features, refer to NumPy
 and Pandas.
 
-![](../soluta_consectetur_iusto_html_fbf5dc5d29b9b23c.png)
+![](./images/3.png)
 
 Screenshot taken from[a demo of the mean-shift clustering
 algorithm](http://scikit-learn.org/stable/auto_examples/cluster/plot_mean_shift.html)
@@ -493,8 +491,6 @@ it’s vision, there are some papers you may want to check-out.
 -   [API design for machine learning software: experiences from the
     scikit-learn project](http://arxiv.org/abs/1309.0238) (2013)
 
-![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
-
 **How To Compare Machine Learning Algorithms in Python with scikit-learn**
 
 It is important to compare the performance of multiple different machine
@@ -511,11 +507,6 @@ book](https://machinelearningmastery.com/machine-learning-with-python/),
 with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started.
-
-![](../soluta_consectetur_iusto_html_d2b6f6ef1950fe9b.jpg)
-
-How To Compare Machine Learning Algorithms in Python with scikit-learn
-
 
 **Choose The Best Machine Learning Model** 
 ------------------------------------------
@@ -657,9 +648,7 @@ The example also provides a box and whisker plot showing the spread of
 the accuracy scores across each cross validation fold for each
 algorithm.
 
-![](../soluta_consectetur_iusto_html_c54f05f8ebd9fab7.png)
-
-Compare Machine Learning Algorithms
+![](./images/4.png)
 
 From these results, it would suggest that both logistic regression and
 linear discriminate analysis are perhaps worthy of further study on this
@@ -676,8 +665,6 @@ algorithms and how to summarize the results both numerically and using a
 box and whisker plot.
 You can use this recipe as a template for evaluating multiple algorithms
 on your own problems.
-
-![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
 
 **How to Generate Test Datasets in Python with scikit-learn**
 
@@ -812,7 +799,7 @@ Note, your specific dataset and resulting plot will vary given the
 stochastic nature of the problem generator. This is a feature, not a
 bug.
 
-![](../soluta_consectetur_iusto_html_972a17efe84e5d5c.png)
+![](./images/5.png)
 
 We will use this same example structure for the following examples.
 
@@ -859,7 +846,7 @@ Click notebook `9.ipynb` in jupterLab UI and run jupyter notebook.
 Running the example generates and plots the dataset for review, again
 coloring samples by their assigned class.
 
-![](../soluta_consectetur_iusto_html_2d16330de430e194.png)
+![](./images/6.png)
 
 Scatter plot of Moons Test Classification Problem
 
@@ -904,7 +891,7 @@ Click notebook `10.ipynb` in jupterLab UI and run jupyter notebook.
 
 Running the example generates and plots the dataset for review.
 
-![](../soluta_consectetur_iusto_html_17dd3944091dbc1f.png)
+![](./images/7.png)
 
 Scatter Plot of Circles Test Classification Problem
 
@@ -948,7 +935,8 @@ Click notebook `11.ipynb` in jupterLab UI and run jupyter notebook.
 Running the example will generate the data and plot the X and y
 relationship, which, given that it is linear, is quite boring.
 
-![](../soluta_consectetur_iusto_html_fb3d0044212c9d21.png)
+![](./images/8.png)
+
 
 Scatter Plot of Regression Test Problem
 
@@ -996,6 +984,4 @@ Specifically, you learned:
 -   How to generate binary classification prediction test problems.
 
 -   How to generate linear regression prediction test problems.
-
-![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)
 

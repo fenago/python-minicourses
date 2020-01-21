@@ -19,9 +19,6 @@ with 18 step-by-step tutorials and 9 projects.
 
 Let’s get started.
 
-
-![](../vero_iure_incidunt_html_bf3e62ac2050280a.jpg)
-
 Applied Deep Learning in Python Mini-Course
 
 
@@ -356,7 +353,7 @@ The classical and still preferred training algorithm for neural networks
 is called stochastic
 gradient descent.
 
-![](../vero_iure_incidunt_html_5d664c63585d17f0.png)
+![](./images/1.png)
 
 
 Your goal for this lesson is to become familiar with neural network
@@ -669,7 +666,7 @@ handwriting digit recognition. It contains 60,000 images of digits that
 can be used to train a model, and 10,000 images that can be used to
 evaluate its performance.
 
-![](../vero_iure_incidunt_html_191e4bbf3ddb4301.png)
+![](./images/2.png)
 
 Example MNIST images
 
@@ -754,7 +751,7 @@ is called
 It contains 60,000 small photographs, each of one of 10 objects, like a
 cat, ship or airplane.
 
-![](../vero_iure_incidunt_html_29ac3e37bcf24715.png)
+![](./images/3.png)
 
 Small Sample of CIFAR-10 Images
 

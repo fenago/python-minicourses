@@ -138,7 +138,7 @@ After setup is complete. You can open the kali Linux Desktop Notebook at http://
 - Select `Use Default Config` option first time.
 - Open Terminal and enter following command as shown in the image below:
     `weka > /dev/null 2>&1`
-    ![](https://github.com/fenago/katacoda-scenarios/raw/master/machine-learning-mastery-weka/1.png)
+    ![](1.png)
 
 **Note:**
 - If you get any error while connecting to `kali desktop`, restart the container.

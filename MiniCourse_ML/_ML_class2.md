@@ -31,13 +31,6 @@ with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started!
 
-![](../qui_deserunt_html_7874cb086d6607f3.jpg)
-
-Your First Machine Learning Project in Python Step-By-Step
-
-Photo by
-[cosmoflash](https://www.flickr.com/photos/cosmoflash/2687052480/), some
-rights reserved.
 
 **How Do You Start Machine Learning in Python?** 
 ------------------------------------------------
@@ -534,7 +527,7 @@ pyplot.show()
 This gives us a much clearer idea of the distribution of the input
 attributes:
 
-![](../qui_deserunt_html_a6126c06803af14e.png)
+![](./images/2.png)
 
 Box and Whisker Plots for Each Input Variable for the Iris Flowers
 Dataset
@@ -553,7 +546,7 @@ It looks like perhaps two of the input variables have a Gaussian
 distribution. This is useful to note as we can use algorithms that can
 exploit this assumption.
 
-![](../qui_deserunt_html_b6af2a62cc89b593.png)
+![](./images/3.png)
 
 Histogram Plots for Each Input Variable for the Iris Flowers Dataset
 
@@ -573,7 +566,7 @@ pyplot.show()
 Note the diagonal grouping of some pairs of attributes. This suggests a
 high correlation and a predictable relationship.
 
-![](../qui_deserunt_html_aac3c9a471682210.png)
+![](./images/4.png)
 
 Scatter Matrix Plot for Each Input Variable for the Iris Flowers Dataset
 
@@ -801,7 +794,7 @@ We can see that the box and whisker plots are squashed at the top of the
 range, with many evaluations achieving 100% accuracy, and some pushing
 down into the high 80% accuracies.
 
-![](../qui_deserunt_html_a8213fa13072b4c5.png)
+![](./images/5.png)
 
 Box and Whisker Plot Comparing Machine Learning Algorithms on the Iris
 Flowers Dataset

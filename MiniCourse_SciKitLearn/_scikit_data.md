@@ -16,10 +16,7 @@ with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started.
 
-
-![](../soluta_consectetur_iusto_html_c35324a7b4a5064f.jpg)
-
-Load CSV Data
+![](./images/9.png)
 
 
 **Packaged Datasets** 
@@ -91,5 +88,3 @@ You also saw how you can load CSV data with scikit-learn. You learned a
 way of opening CSV files from the web using the [urllib
 library](https://docs.python.org/2/library/urllib.html) and how you can
 read that data as a NumPy matrix for use in scikit-learn.
-
-![](../soluta_consectetur_iusto_html_237499165a11f2b9.gif)

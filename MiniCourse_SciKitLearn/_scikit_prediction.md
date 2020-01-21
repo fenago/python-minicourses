@@ -31,9 +31,6 @@ with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started.
 
-![](../soluta_consectetur_iusto_html_13af4d9855a2406f.jpg)
-
-
 **Tutorial Overview** 
 ---------------------
 

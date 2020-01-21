@@ -37,13 +37,13 @@ ML-Deploy
 
 <h4>Step 2</h4>
 
-First we need to install following libraries (Python 3) using pip3(or pip in some cases) command
+First we need to install following libraries (Python 3) using pip command
 
 ```
-pip3 install -U scikit-learn scipy matplotlib
-pip3 install Flask
-pip3 install Flask-RESTful
-pip3 install -U flask-cors
+pip install -U scikit-learn scipy matplotlib
+pip install Flask
+pip install Flask-RESTful
+pip install -U flask-cors
 
 ```
 

@@ -323,7 +323,7 @@ plt.show()
 ##### Run Notebook
 Click notebook `5.ipynb` in jupterLab UI and run jupyter notebook.
 
-![](../quia_ipsa_html_97bc995fd51d7a83.png)
+![](./images/1.png)
 
 Sample Scatter Plot Matrix
 
