@@ -33,6 +33,7 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 - Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
 - To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
+- Incase you get an error running any notebook, try running it again. 
 
 All Notebooks are present in `work/python-minicourses` folder.
 

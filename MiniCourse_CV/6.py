@@ -1,5 +1,5 @@
 # face detection with mtcnn on a photograph
-%notebook inline
+# %notebook inline
 from matplotlib import pyplot
 from matplotlib.patches import Rectangle
 from mtcnn.mtcnn import MTCNN

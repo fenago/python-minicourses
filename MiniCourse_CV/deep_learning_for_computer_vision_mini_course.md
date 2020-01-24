@@ -26,6 +26,7 @@ Notebooks are ready to run. All packages have been installed. There is no requir
 
 - Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
 - To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
+- Incase you get an error running any notebook, try running it again. 
 
 All Notebooks are present in `work/python-minicourses` folder.
 
@@ -502,14 +503,13 @@ pyplot.show()
 ##### Run Notebook
 Click notebook `6.ipynb` in jupterLab UI and run jupyter notebook.
 
+*Note:* Incase you get an error running above notebook, try running it again. 
 
 **Your Task**
 
 Your task in this lesson is to run the example and describe the result. For bonus points, try the
 model on another photograph with multiple faces and update the code example to draw a box
-around each detected face. Post your findings online. I would love to see what you can come up
-with.
-
+around each detected face.
 
 ## Final Word Before You Go...
 
