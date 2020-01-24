@@ -21,6 +21,9 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Reshape
 from keras.layers import Conv2DTranspose
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
+
 # define model
 model = Sequential()
 # define input shape, output enough activations for for 128 5x5 image
