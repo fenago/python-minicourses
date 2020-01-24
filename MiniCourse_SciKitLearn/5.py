@@ -2,6 +2,8 @@
 from sklearn import datasets
 from sklearn import metrics
 from sklearn.svm import SVC
+import warnings
+warnings.simplefilter("ignore")
 # load the iris datasets
 dataset = datasets.load_iris()
 # fit a SVM model to the data

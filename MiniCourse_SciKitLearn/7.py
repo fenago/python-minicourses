@@ -1,5 +1,6 @@
 # Compare Algorithms
 import pandas
+%notebook inline
 import matplotlib.pyplot as plt
 from sklearn import model_selection
 from sklearn.linear_model import LogisticRegression
@@ -8,6 +9,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+import warnings
+warnings.simplefilter("ignore")
+
 # load dataset
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']

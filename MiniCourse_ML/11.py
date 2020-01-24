@@ -3,6 +3,10 @@ from pandas import read_csv
 import numpy
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import GridSearchCV
+import warnings
+warnings.simplefilter("ignore")
+
+
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 dataframe = read_csv(url, names=names)

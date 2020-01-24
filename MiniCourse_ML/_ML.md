@@ -10,11 +10,6 @@ In this mini-course, you will discover how you can get started, build
 accurate models and confidently complete predictive modeling machine
 learning projects using Python in 14 days.
 
-Discover how to prepare data with pandas, fit and evaluate models with
-scikit-learn, and more [in my new
-book](https://machinelearningmastery.com/machine-learning-with-python/),
-with 16 step-by-step tutorials, 3 projects, and full python code.
-
 Let’s get started.
 
 #### Pre-reqs:
@@ -438,7 +433,7 @@ Y = array[:,8]
 kfold = KFold(n_splits=10, random_state=7)
 model = LogisticRegression(solver='liblinear')
 results = cross_val_score(model, X, Y, cv=kfold)
-print("Accuracy: %.3f%% (%.3f%%)") % (results.mean()*100.0, results.std()*100.0)
+print(results)
 ```
 
 
@@ -489,7 +484,7 @@ kfold = KFold(n_splits=10, random_state=7)
 model = LogisticRegression(solver='liblinear')
 scoring = 'neg_log_loss'
 results = cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
-print("Logloss: %.3f (%.3f)") % (results.mean(), results.std())
+print(results)
 ```
 
 ##### Run Notebook

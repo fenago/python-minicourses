@@ -3,6 +3,10 @@ from pandas import read_csv
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.neighbors import KNeighborsRegressor
+import warnings
+warnings.simplefilter("ignore")
+
+
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.data"
 names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
 dataframe = read_csv(url, delim_whitespace=True, names=names)

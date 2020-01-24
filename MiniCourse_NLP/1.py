@@ -6,3 +6,4 @@ file.close()
 words = text.split()
 # convert to lowercase
 words = [word.lower() for word in words]
+print(words)

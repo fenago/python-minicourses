@@ -6,3 +6,4 @@ file.close()
 # split into words
 from nltk.tokenize import word_tokenize
 tokens = word_tokenize(text)
+print(tokens)

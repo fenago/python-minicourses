@@ -2,6 +2,9 @@
 from pandas import read_csv
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
+import warnings
+warnings.simplefilter("ignore")
+
 import pickle
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']

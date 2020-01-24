@@ -4,6 +4,9 @@ import tensorflow.python.util.deprecation as deprecation
 deprecation._PRINT_DEPRECATION_WARNINGS = False
 from keras.layers import Flatten
 from keras.layers.embeddings import Embedding
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
+
 # define problem
 vocab_size = 100
 max_length = 32

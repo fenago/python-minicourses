@@ -3,6 +3,10 @@ from pandas import read_csv
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestClassifier
+import warnings
+warnings.simplefilter("ignore")
+
+
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 dataframe = read_csv(url, names=names)
