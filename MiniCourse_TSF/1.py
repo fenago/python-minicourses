@@ -2,6 +2,8 @@
 from numpy import array
 from keras.models import Sequential
 from keras.layers import Dense
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
 # define dataset
 X = array([[10, 20, 30], [20, 30, 40], [30, 40, 50], [40, 50, 60]])
 y = array([40, 50, 60, 70])

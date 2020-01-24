@@ -2,6 +2,8 @@ from keras.utils import plot_model
 from keras.models import Model
 from keras.layers import Input
 from keras.layers import Dense
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
 from keras.layers.convolutional import Conv2D
 from keras.layers.pooling import MaxPooling2D
 visible = Input(shape=(64,64,1))

@@ -1,5 +1,7 @@
 from keras.models import Sequential
 from keras.layers import Dense
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
 from keras.layers import Flatten
 from keras.layers.embeddings import Embedding
 # define problem

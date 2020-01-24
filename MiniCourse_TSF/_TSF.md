@@ -4,8 +4,7 @@
 
 **Bring Deep Learning methods to Your Time Series project in 7 Days.**
 
-[Time series
-forecasting](https://machinelearningmastery.com/time-series-forecasting/)
+Time series forecasting
 is challenging, especially when working with long sequences, noisy data,
 multi-step forecasts and multiple input and output variables.
 
@@ -17,11 +16,6 @@ seasonality.
 In this crash course, you will discover how you can get started and
 confidently develop deep learning models for time series forecasting
 problems using Python in 7 days.
-
-Discover how to build models for multivariate and multi-step time series
-forecasting with LSTMs and more [in my new
-book](https://machinelearningmastery.com/deep-learning-for-time-series-forecasting/),
-with 25 step-by-step tutorials and full source code.
 
 Let’s get started.
 

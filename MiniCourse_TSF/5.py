@@ -3,6 +3,8 @@ from numpy import array
 from keras.models import Sequential
 from keras.layers import LSTM
 from keras.layers import Dense
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
 from keras.layers import RepeatVector
 from keras.layers import TimeDistributed
 # define dataset

@@ -2,6 +2,8 @@
 from sklearn.datasets import make_circles
 from keras.models import Sequential
 from keras.layers import Dense
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
 from keras.callbacks import EarlyStopping
 %notebook inline
 from matplotlib import pyplot
