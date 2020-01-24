@@ -155,14 +155,12 @@ After setup is complete. You can open the kali Linux Desktop Notebook at http://
 ------------------------------------------------------
 
 Now that you have Weka installed, you need to load data.
-
 Weka is designed to load data in a native format called ARFF. It is a
 modified CSV format that includes additional information about the types
 of each attribute (column).
 
 Your Weka installation includes a subdirectory with a number of standard
 machine learning datasets in ARFF format ready for you to load.
-
 Weka also supports loading data from raw CSV files as well as a database
 and converts the data to ARFF as needed.
 
@@ -219,7 +217,6 @@ tab.
 --------------------------------
 
 Raw data is often not suitable for modeling.
-
 Often you can improve the performance of your machine learning models by
 rescaling attributes.
 
@@ -289,9 +286,7 @@ Explore selecting features to removal from your dataset in the
 
 A key benefit of the Weka workbench is the large number of machine
 learning algorithms it provides.
-
 You need to know your way around machine learning algorithms.
-
 In this lesson you will take a closer look at machine learning
 algorithms in Weka.
 
@@ -332,7 +327,6 @@ Get confidence choosing and configuring algorithms.
 
 Now that you know how to choose and configure different algorithms, you
 need to know how to evaluate the performance of an algorithm.
-
 In this lesson you are going to learn about the different ways to
 evaluate the performance of an algorithm in Weka.
 
@@ -405,10 +399,8 @@ classes, it will predict the first category value.
 
 On the diabetes dataset, this results in a classification accuracy of
 65%.
-
 For regression problems, the ZeroR algorithm will always predict the
 mean output value.
-
 Experiment with the ZeroR algorithm on a range of different datasets. It
 is the algorithm you should always run first before all others to
 develop a baseline.
@@ -451,7 +443,6 @@ two classes and those with more.
 
 Classification algorithms is Weka’s specialty, but many of these
 algorithms can be used for regression.
-
 Regression is the prediction of a real valued outcome (like a dollar
 amount), different from classification that predicts a category (like
 "dog" or "cat").
@@ -543,7 +534,6 @@ Try them out on different classification and regression datasets.
 
 Weka provides a different tool specifically designed for comparing
 algorithms called the Weka Experiment Environment.
-
 The Weka Experiment Environment allows you to design and execute
 controlled experiments with machine learning algorithms and then analyze
 the results.
@@ -572,14 +562,12 @@ performance of machine learning algorithms.
 
 You just designed, executed and analysed the results of your first
 controlled experiment in Weka.
-
 You compared the ZeroR algorithm to the IBk algorithm with default
 configuration on the diabetes dataset.
 
 The results show that IBK has a higher classification accuracy than
 ZeroR and that this difference is statistically significant (the little
 "v" character next to the result).
-
 Expand the experiment and add more algorithms and rerun the experiment.
 
 Change the "Test base" on the "Analyse" tab to change which set of
@@ -590,10 +578,8 @@ results is taken as the reference for comparison to the other results.
 
 To get the most out of a machine learning algorithm you must tune the
 parameters of the method to your problem.
-
 You cannot know how to best do this before hand, therefore you must try
 out lots of different parameters.
-
 The Weka Experiment Environment allows you to design controlled
 experiments to compare the results of different algorithm parameters and
 whether the differences are statistically significant.
@@ -625,10 +611,8 @@ parameters of the k-Nearest Neighbors algorithm.
 
 You just designed, executed and analyzed the results of a controlled
 experiment to compare algorithm parameters.
-
 We can see that the results for large K values is better than the
 default of 1 and the difference is significant.
-
 Explore changing other configuration properties of KNN and build
 confidence in developing experiments to tune machine learning
 algorithms.
@@ -638,7 +622,6 @@ algorithms.
 
 Once you have found a top performing model on your problem you need to
 finalize it for later use.
-
 In this final lesson you will discover how to train a final model and
 save it to a file for later use.
 
@@ -656,7 +639,6 @@ save it to a file for later use.
 
 You have just trained a final model on the entire training dataset and
 saved the resulting model to a file.
-
 You can load this model back into Weka and use it to make predictions on
 new data.
 

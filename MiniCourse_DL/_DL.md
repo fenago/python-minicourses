@@ -7,20 +7,26 @@ achieving world class results in a range of challenging machine learning
 problems. It can be hard to get started in deep learning.
 Which library should you use and which techniques should you focus on?
 
-
 This mini-course is intended for python machine learning practitioners
 that are already comfortable with scikit-learn on the SciPy ecosystem
-for machine learning.
-
-Discover how to develop deep learning models for a range of predictive
-modeling problems with just a few lines of code [in my new
-book](https://machinelearningmastery.com/deep-learning-with-python/),
-with 18 step-by-step tutorials and 9 projects.
-
-Let’s get started.
+for machine learning. Let’s get started.
 
 Applied Deep Learning in Python Mini-Course
 
+#### Pre-reqs:
+- Google Chrome (Recommended)
+
+#### Lab Environment
+Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
+
+**Note:** 
+
+- Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
+- To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
+
+All Notebooks are present in `work/python-minicourses` folder.
+
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab3_Deep_Learning_Python`
 
 **Who Is This Mini-Course For?** 
 --------------------------------
@@ -218,7 +224,6 @@ homepage](http://deeplearning.net/software/theano/).
 TensorFlow is a Python library for fast numerical computing created and
 released by Google. Like Theano, TensorFlow is intended to be used to
 develop deep learning models.
-
 With the backing of Google, perhaps used in some of it’s production
 systems and used by the Google DeepMind research group, it is a platform
 that we cannot ignore.

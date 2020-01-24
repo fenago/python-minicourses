@@ -17,8 +17,20 @@ Python.
 
 Let’s get started.
 
-![](../recusandae_ut_doloremque_html_c2085eb9f9febb16.jpg)
+#### Pre-reqs:
+- Google Chrome (Recommended)
 
+#### Lab Environment
+Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
+
+**Note:** 
+
+- Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
+- To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
+
+All Notebooks are present in `work/python-minicourses` folder.
+
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab12_Generative_Adversarial_Networks`
 
 **Who Is This Crash-Course For?** 
 ---------------------------------
@@ -265,7 +277,6 @@ model.add(Dense(1, activation='sigmoid'))
 
 The generator model takes a 100-dimensional point in the latent space as
 input and generates a 28x28x3.
-
 The point in latent space is a vector of [Gaussian random
 numbers](https://machinelearningmastery.com/how-to-generate-random-numbers-in-python/).
 This is projected using a Dense layer to the basis of 64 tiny 7×7
@@ -324,7 +335,6 @@ used for training the GAN model weights.
 The discriminator model is optimized to maximize the probability of
 correctly identifying real images from the dataset and fake or synthetic
 images output by the generator.
-
 This can be implemented as a binary classification problem where the
 discriminator outputs a probability for a given image between 0 and 1
 for fake and real respectively.

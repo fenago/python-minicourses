@@ -16,6 +16,21 @@
 - Final Word Before You Go...
 
 
+#### Pre-reqs:
+- Google Chrome (Recommended)
+
+#### Lab Environment
+Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
+
+**Note:** 
+
+- Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
+- To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
+
+All Notebooks are present in `work/python-minicourses` folder.
+
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab2_Deep_Learning_Computer_Vision`
+
 ## Before We Get Started...
 
 We are awash in digital images from photos, videos, Instagram, YouTube, and increasingly
@@ -119,7 +134,7 @@ For this lesson, you must research and list five impressive applications of deep
 in the field of computer vision. Bonus points if you can link to a research paper that demonstrates
 the example. Post your findings online. I would love to see what you discover.
 
-Next
+**Next**
 
 In the next lesson, you will discover how to prepare image data for modeling.
 
@@ -128,23 +143,19 @@ In the next lesson, you will discover how to prepare image data for modeling.
 
 In this lesson, you will discover how to prepare image data for modeling. Images are comprised
 of matrices of pixel values. Pixel values are often unsigned integers in the range between 0 and
-
-Although these pixel values can be presented directly to neural network models in their
+255. Although these pixel values can be presented directly to neural network models in their
 raw format, this can result in challenges during modeling, such as slower than expected training
 of the model.
-   Instead, there can be great benefit in preparing the image pixel values prior to modeling,
+
+Instead, there can be great benefit in preparing the image pixel values prior to modeling,
 such as simply scaling pixel values to the range 0-1 to centering and even standardizing the
 values. This is called normalization and can be performed directly on a loaded image. The
 example below uses the PIL library (the standard image handling library in Python) to load an
- image and normalize its pixel values. First, confirm that you have the Pillow library installed;
-    it is installed with most SciPy environments, but you can learn more here:
-- PIL/Pillow Installation Instructions.^1
-       Next, download a photograph of Bondi Beach in Sydney Australia, taken by Isabell Schulz^2
-    and released under a permissive license. Save the image in your current working directory with
-    the filenamebondibeach.jpg.
-- Download a Photograph of Bondi Beach (bondibeach.jpg).^3
-       Next, we can use the Pillow library to load the photo, confirm the min and max pixel values,
-    normalize the values, and confirm the normalization was performed.
+image and normalize its pixel values. First, confirm that you have the Pillow library installed;
+it is installed with most SciPy environmentswe can use the Pillow library to load the photo, confirm the min and max pixel values, normalize the values, and confirm the normalization was performed.
+
+We can use the Pillow library to load the photo, confirm the min and max pixel values,
+normalize the values, and confirm the normalization was performed.
 
 ```
 # example of pixel normalization
@@ -174,7 +185,7 @@ min and max pixel values before and after the normalization. For bonus points, y
 the example to standardize the pixel values. Post your findings online. I would love to see what
 you can come up with.
 
-Next
+**Next**
 
 In the next lesson, you will discover information about convolutional neural network models.
 
@@ -241,7 +252,7 @@ adding more convolutional or pooling layers and describe the effect it has on th
 flows through the model. Post your findings online. I would love to see what you can come up
 with.
 
-Next
+**Next**
 
 
 In the next lesson, you will learn how to use a deep convolutional neural network to classify
@@ -254,9 +265,8 @@ Deep convolutional neural network models may take days, or even weeks, to train 
 large datasets. A way to short-cut this process is to re-use the model weights from pre-trained
 models that were developed for standard computer vision benchmark datasets, such as the
 ImageNet image recognition tasks. The example below uses the VGG-16 pre-trained model to
-classify photographs of objects into one of 1,000 known classes. Download this photograph of a
-dog taken by Justin Morgan^4 and released under a permissive license. Save it in your current
-working directory with the filenamedog.jpg.
+classify photographs of objects into one of 1,000 known classes. Photograph of a
+dog taken by Justin Morgan has been altrady downloaded and released under a permissive license. it is saved in your current working directory with the filename `dog.jpg`.
 
 The example below will load the photograph and output a prediction, classifying the object
 in the photograph.Note: The first time you run the example, the pre-trained model will have
@@ -301,7 +311,7 @@ Your task in this lesson is to run the example and report the result. For bonus 
 running the example on another photograph of a common object. Post your findings online. I
 would love to see what you can come up with.
 
-Next
+**Next**
 
 In the next lesson, you will discover how to fit and evaluate a model for image classification.
 
@@ -365,7 +375,7 @@ test dataset. For bonus points, try varying the configuration of the model, or t
 model and later loading it and using it to make a prediction on new grayscale photographs of
 clothing. Post your findings online. I would love to see what you can come up with.
 
-Next
+**Next**
 
 In the next lesson, you will discover how to use image augmentation on training data.
 
@@ -379,8 +389,6 @@ on more data can result in more skillful models, and the augmentation techniques
 variations of the images that can improve the ability of the fit models to generalize what they
 have learned to new images. The Keras deep learning neural network library provides the
 capability to fit models using image data augmentation via theImageDataGeneratorclass.
-Download a photograph of a bird by AndYaDontStop^6 , released under a permissive license.
-Save it into your current working directory with the namebird.jpg.
 
 The example below will load the photograph as a dataset and use image augmentation to
 create flipped and rotated versions of the image that can be used to train a convolutional neural

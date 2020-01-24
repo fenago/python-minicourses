@@ -25,6 +25,21 @@ with 25 step-by-step tutorials and full source code.
 
 Let’s get started.
 
+#### Pre-reqs:
+- Google Chrome (Recommended)
+
+#### Lab Environment
+Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
+
+**Note:** 
+
+- Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
+- To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
+
+All Notebooks are present in `work/python-minicourses` folder.
+
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab5_Time_Series_Forecasting`
+
 **Who Is This Crash-Course For?** 
 ---------------------------------
 
@@ -87,11 +102,6 @@ learning for time series forecasting in Python:
 Each lesson could take you 60 seconds or up to 30 minutes. Take your
 time and complete the lessons at your own pace. Ask questions and even
 post results in the comments below.
-
-**Note**: This is just a crash course. For a lot more detail and 25
-fleshed out tutorials, see my book on the topic titled “[Deep Learning
-for Time Series
-Forecasting](https://machinelearningmastery.com/deep-learning-for-time-series-forecasting/)“.
 
 **Lesson 01: Promise of Deep Learning** 
 ---------------------------------------

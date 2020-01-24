@@ -23,14 +23,20 @@ This crash course will take you from a developer that knows a little
 deep learning to a developer who can get better performance on your deep
 learning project.
 
-Note: This crash course assumes you have a working Python 2 or 3 SciPy
-environment with at least NumPy and Keras 2 installed. If you need help
-with your environment, you can follow the step-by-step tutorial here:
+#### Pre-reqs:
+- Google Chrome (Recommended)
 
--   [How to Set Up a Python Environment for Machine Learning and Deep
-    Learning With
-    Anaconda](https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/)
+#### Lab Environment
+Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
 
+**Note:** 
+
+- Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
+- To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
+
+All Notebooks are present in `work/python-minicourses` folder.
+
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab4_Better_Deep_Learning`
 
 **Crash-Course Overview** 
 -------------------------

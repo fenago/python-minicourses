@@ -7,7 +7,7 @@
 Do you want to do machine learning using Python, but you’re having
 trouble getting started?
 
-In this post, you will complete your first machine learning project
+In this lab, you will complete your first machine learning project
 using Python.
 
 In this step-by-step tutorial you will:
@@ -24,12 +24,22 @@ In this step-by-step tutorial you will:
 If you are a machine learning beginner and looking to finally get
 started using Python, this tutorial was designed for you.
 
-Discover how to prepare data with pandas, fit and evaluate models with
-scikit-learn, and more [in my new
-book](https://machinelearningmastery.com/machine-learning-with-python/),
-with 16 step-by-step tutorials, 3 projects, and full python code.
-
 Let’s get started!
+
+#### Pre-reqs:
+- Google Chrome (Recommended)
+
+#### Lab Environment
+Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
+
+**Note:** 
+
+- Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
+- To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
+
+All Notebooks are present in `work/python-minicourses` folder.
+
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab7_First_Machine_Learning_Project`
 
 
 **How Do You Start Machine Learning in Python?** 
@@ -324,7 +334,6 @@ about setting up your environment.
 ### **2.2 Load Dataset** 
 
 We can load the data directly from the UCI Machine Learning repository.
-
 We are using pandas to load the data. We will also use pandas next to
 explore the data both with descriptive statistics and data
 visualization.
@@ -1019,7 +1028,7 @@ preparation and result improvement tasks.
 **Summary** 
 -----------
 
-In this post, you discovered step-by-step how to complete your first
+In this lab, you discovered step-by-step how to complete your first
 machine learning project in Python.
 
 You discovered that completing a small end-to-end project from loading

@@ -10,13 +10,27 @@ In this mini-course, you will discover how you can get started, build
 accurate models and confidently complete predictive modeling machine
 learning projects using Python in 14 days.
 
-
 Discover how to prepare data with pandas, fit and evaluate models with
 scikit-learn, and more [in my new
 book](https://machinelearningmastery.com/machine-learning-with-python/),
 with 16 step-by-step tutorials, 3 projects, and full python code.
 
 Let’s get started.
+
+#### Pre-reqs:
+- Google Chrome (Recommended)
+
+#### Lab Environment
+Notebooks are ready to run. All packages have been installed. There is no requirement for any setup.
+
+**Note:** 
+
+- Elev8ed Notebooks (powered by Jupyter) will be accessible at the port given to you by your instructor. Password for jupyterLab : `1234`
+- To copy and paste: use **Control-C** and to paste inside of a terminal, use **Control-V**
+
+All Notebooks are present in `work/python-minicourses` folder.
+
+You can access jupyter lab at `<host-ip>:<port>/lab/workspaces/lab6_Python_Machine_Learning`
 
 **Who Is This Mini-Course For?** 
 --------------------------------

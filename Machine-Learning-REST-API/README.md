@@ -220,8 +220,9 @@ if __name__ == '__main__':
 Okay, are you ready?
 
 <h4>Step 5</h4>
- Run the file `app.py` if no error occur open browser and navigate to `http://host-ip:5002/` and you will see 'Hello World!'.
-   Now our server is online and listening to request.
+Start the server by running `python app.py` in **terminal 1** . If no error occurs, open browser and navigate to `http://host-ip:5002/` and you will see 'Hello World!'.
+
+Now our server is online and listening to request.
 
 ![](./images/mlGUI.png)
 
@@ -233,12 +234,18 @@ First we need to create a new angular project using following command in termina
 
 <h4>Step 1</h4>
 
+Install Angular using npm by running following command in terminal 2:
+
+`npm install -g @angular/cli`
+
+**Note**: Source code for Angular app is already checked out in `RestClientAngularWeb`. If you want to create application from scratch your self. You can run following commands and create application. 
+
 ```
-npm install -g @angular/cli
 ng new RestClientAngularWebPractice
 cd RestClientAngularWebPractice
-ng serve
+ng serve --host 0.0.0.0
 ```
+
 if everything works as expected then open browser and navigate to `http://<host-ip>:4200/` and you should see the default angular homepage
 
 
@@ -353,6 +360,7 @@ In this step we had created a form to take input from user and submit to call FL
 - Also, update `RestClientAngularWeb\src\app\app.component.ts` line no **25** with `public-ip` on which jupyterLab is running. 
 Use`localhost` if you running jupyterLab container locally. We will send rest call to flask api from the angular application.
 
+Install node modules by running `sudo npm install` in the second terminal.
 
 Now run the command `ng serve --host 0.0.0.0` from terminal inside the angular project folder 
 if everything works as expected then open browser and navigate to `http://host-ip:4200/` and you will see the homepage with form to enter the data for prediction and you result will be on bottom coming from REST server
