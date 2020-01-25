@@ -1,5 +1,5 @@
 # face detection with mtcnn on a photograph
-# %notebook inline
+# # %notebook inline
 from matplotlib import pyplot
 from matplotlib.patches import Rectangle
 from mtcnn.mtcnn import MTCNN
@@ -21,4 +21,5 @@ rect = Rectangle((x, y), width, height, fill=False, color='red')
 # draw the box
 ax.add_patch(rect)
 # show the plot
+pyplot.show()
 pyplot.show()

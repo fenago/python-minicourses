@@ -1,6 +1,6 @@
 # compare algorithms
 from pandas import read_csv
-%notebook inline
+# %notebook inline
 from matplotlib import pyplot
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
@@ -42,4 +42,5 @@ for name, model in models:
 # Compare Algorithms
 pyplot.boxplot(results, labels=names)
 pyplot.title('Algorithm Comparison')
+pyplot.show()
 pyplot.show()

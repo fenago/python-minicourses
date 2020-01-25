@@ -1,6 +1,6 @@
 from gensim.models import Word2Vec
 from sklearn.decomposition import PCA
-%notebook inline
+# %notebook inline
 from matplotlib import pyplot
 import warnings
 warnings.simplefilter("ignore")
@@ -22,4 +22,5 @@ pyplot.scatter(result[:, 0], result[:, 1])
 words = list(model.wv.vocab)
 for i, word in enumerate(words):
 	pyplot.annotate(word, xy=(result[i, 0], result[i, 1]))
+pyplot.show()
 pyplot.show()

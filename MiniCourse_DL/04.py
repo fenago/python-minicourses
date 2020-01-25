@@ -5,7 +5,7 @@ from keras.layers import Dense
 import tensorflow.python.util.deprecation as deprecation
 deprecation._PRINT_DEPRECATION_WARNINGS = False
 from keras.regularizers import l2
-%notebook inline
+# %notebook inline
 from matplotlib import pyplot
 # generate dataset
 X, y = make_circles(n_samples=100, noise=0.1, random_state=1)
@@ -37,4 +37,5 @@ pyplot.title('Accuracy', pad=-40)
 pyplot.plot(history.history['acc'], label='train')
 pyplot.plot(history.history['val_acc'], label='test')
 pyplot.legend()
+pyplot.show()
 pyplot.show()

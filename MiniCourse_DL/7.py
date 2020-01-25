@@ -1,7 +1,7 @@
 # Random Rotations
 from keras.datasets import mnist
 from keras.preprocessing.image import ImageDataGenerator
-# %notebook inline
+# # %notebook inline
 from matplotlib import pyplot
 # load data
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
@@ -23,4 +23,5 @@ for X_batch, y_batch in datagen.flow(X_train, y_train, batch_size=9):
 		pyplot.imshow(X_batch[i].reshape(28, 28), cmap=pyplot.get_cmap('gray'))
 	# show the plot
 	pyplot.show()
+pyplot.show()
 	break
