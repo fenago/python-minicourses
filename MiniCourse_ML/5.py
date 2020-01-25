@@ -1,5 +1,5 @@
 # Scatter Plot Matrix
-# %notebook inline
+%matplotlib inline
 import matplotlib.pyplot as plt
 import pandas
 from pandas.plotting import scatter_matrix

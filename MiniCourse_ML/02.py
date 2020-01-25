@@ -1,7 +1,7 @@
 # visualize the data
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
-# %notebook inline
+%matplotlib inline
 from matplotlib import pyplot
 # Load dataset
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
@@ -10,12 +10,9 @@ dataset = read_csv(url, names=names)
 # box and whisker plots
 dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
 pyplot.show()
-pyplot.show()
 # histograms
 dataset.hist()
 pyplot.show()
-pyplot.show()
 # scatter plot matrix
 scatter_matrix(dataset)
-pyplot.show()
 pyplot.show()

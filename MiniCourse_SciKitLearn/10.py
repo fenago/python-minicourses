@@ -1,5 +1,5 @@
 from sklearn.datasets import make_circles
-# %notebook inline
+%matplotlib inline
 from matplotlib import pyplot
 from pandas import DataFrame
 # generate 2d classification dataset
@@ -11,5 +11,4 @@ fig, ax = pyplot.subplots()
 grouped = df.groupby('label')
 for key, group in grouped:
     group.plot(ax=ax, kind='scatter', x='x', y='y', label=key, color=colors[key])
-pyplot.show()
 pyplot.show()

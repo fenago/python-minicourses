@@ -1,6 +1,6 @@
 # Compare Algorithms
 import pandas
-# %notebook inline
+%matplotlib inline
 import matplotlib.pyplot as plt
 from sklearn import model_selection
 from sklearn.linear_model import LogisticRegression
